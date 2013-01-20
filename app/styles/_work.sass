@@ -1,0 +1,209 @@
+#work
+  background: lighten( $blue, 30% )
+
+.mobile-screen a
+  @extend %button
+  background: #ea4c89
+  text-align: center
+  width: 100%
+
+.prev, .next,
+.project
+  display: none
+
+@media screen and (min-width: #{$tablet})
+
+  #work
+    color: #fff
+    display: block
+    overflow: hidden
+    padding-top: 0
+
+    .mobile-screen
+      display: none
+
+    h3
+      font-size: 3em
+      font-weight: 100
+      line-height: 1
+
+    .visit
+      display: inline
+      white-space: nowrap
+
+      &:after
+        content: " »"
+
+  .prev, .next
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWw6c3BhY2U9InByZXNlcnZlIiBoZWlnaHQ9IjEwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgd2lkdGg9IjEwMHB4IiB2ZXJzaW9uPSIxLjEiIHk9IjBweCIgeD0iMHB4IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCI+CjxwYXRoIGQ9Im0wIDB2MTAwaDEwMHYtMTAwaC0xMDB6bTQ2IDY1bC01LTUgMTAtMTAtMTAtMTAgNS01IDE1IDE1LTE1IDE1eiIgZmlsbD0iIzIzMUYyMCIvPgo8L3N2Zz4K) 50% 50% no-repeat
+    color: transparent
+    display: block
+    height: 60px
+    opacity: .25
+    overflow: hidden
+    position: absolute
+    margin-top: -30px
+    top: 50%
+    @include transition( opacity .5s )
+    width: 60px
+    z-index: 10
+
+    &:hover
+      color: transparent
+      opacity: .8
+
+  .prev
+    left: 0
+    @include transform( rotate(180deg) )
+
+  .next
+    right: 0
+    @include transform( rotate(0deg) )
+
+
+  article
+    background: #fff
+    color: #000
+    display: none
+    overflow: hidden
+
+  .box
+    font-size: .9em
+    margin-bottom: 2em
+    opacity: 0
+    padding: 0 10%
+    text-align: center
+    @include transition( opacity 1.5s $ease )
+
+    h3
+      margin: 0 0 .5em
+
+    a
+      color: #fff
+
+  .image-set
+    position: relative
+
+    span
+      background-repeat: no-repeat
+      background-size: 100%
+      color: transparent
+      cursor: default
+      display: block
+      height: 700px
+      left: 50%
+      position: absolute
+      @include transition( all .5 $ease )
+
+  .project
+    display: block
+    height: 500px
+    left: 0
+    padding-top: 125px
+    position: absolute
+    opacity: 0
+    width: 100%
+    top: 0
+    @include transition( opacity 1.5s )
+    z-index: -1
+
+    .browser
+      margin-left: -325px
+      top: 0
+      width: 650px
+
+    .desktop
+      margin-left: -250px
+      top: 0
+      width: 500px
+
+    .tablet
+      margin-left: 90px
+      top: 138px
+      width: 225px
+
+    .phone
+      margin-left: -300px
+      top: 248px
+      width: 90px
+
+    &.is-active
+      opacity: 1
+      z-index: 1
+
+      .box
+        opacity: 1
+
+      .browser
+        @include animation( browserFadeIn .5s 1.25s both $ease )
+
+      .desktop
+        @include animation( desktopFadeIn .35s 1.25s both $ease )
+
+      .tablet
+        @include animation( tabletFadeIn .35s 1.5s both $ease )
+
+      .phone
+        @include animation( phoneFadeIn .35s 1.75s both $ease )
+
+  .koala-pay
+    background-color: #ff9200
+    .desktop
+      background-image: url(../img/hero-koalapay-desktop.png)
+    .tablet
+      background-image: url(../img/hero-koalapay-tablet.png)
+    .phone
+      background-image: url(../img/hero-koalapay-phone.png)
+
+  .who-is
+    background-color: #1cbbb4
+    .browser
+      background-image: url(../img/hero-whois-browser.png)
+
+  .cornerstone-bible-church
+    background-color: #59481c
+    .desktop
+      background-image: url(../img/hero-cornerstone-desktop.png)
+    .tablet
+      background-image: url(../img/hero-cornerstone-tablet.png)
+    .phone
+      background-image: url(../img/hero-cornerstone-phone.png)
+
+  .sweet-hat-club
+    background-color: #00a69c
+    .desktop
+      background-image: url(../img/hero-sweethatclub-desktop.png)
+    .tablet
+      background-image: url(../img/hero-sweethatclub-tablet.png)
+    .phone
+      background-image: url(../img/hero-sweethatclub-phone.png)
+
+  .daily-task-tracker
+    background-color: #55c9f4
+    .browser
+      background-image: url(../img/hero-dailytasktracker-browser.png)
+
+
+@media screen and (min-width: #{$desktop})
+
+  .project
+
+    .browser
+      margin-left: -450px
+      top: 0
+      width: 900px
+
+    .desktop
+      margin-left: -350px
+      top: 0
+      width: 700px
+
+    .tablet
+      margin-left: 120px
+      top: 138px
+      width: 350px
+
+    .phone
+      margin-left: -445px
+      top: 288px
+      width: 150px

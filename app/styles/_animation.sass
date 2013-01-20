@@ -1,0 +1,33 @@
+@include keyframes(browserFadeIn)
+  0%
+    opacity: 0
+    @include transform( translateY(15px) )
+  100%
+    opacity: 1
+    @include transform( translateY(0) )
+
+@include keyframes(desktopFadeIn)
+  0%
+    opacity: 0
+    @include transform( translateY(-15px) )
+  100%
+    opacity: 1
+    @include transform( translateY(0) )
+
+@include keyframes(tabletFadeIn)
+  0%
+    opacity: 0
+    @include transform( translateX(15px) )
+  100%
+    opacity: 1
+    @include transform( translateX(0) )
+
+@include keyframes(phoneFadeIn)
+  0%
+    opacity: 0
+    @include transform( translateX(-15px) )
+  100%
+    opacity: 1
+    @include transform( translateX(0) )
+
+
