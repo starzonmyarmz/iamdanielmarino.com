@@ -177,7 +177,14 @@ action="https://starzonmyarmz.wufoo.com/forms/z7x3p3/#public">
                     if (window.jQuery) {
                         $('nav ul').onePageNav({
                             currentClass: 'is-active',
-                            scrollSpeed: 500
+                            scrollSpeed: 500,
+                            begin: function() {
+                                // iOS Hack so you can click other menu items after the initial click
+                                $('body').append('<div class="ios-nav-hack" style="height:1px;"></div>');
+                            },
+                            end: function() {
+                                $('.ios-nav-hack').remove();
+                            }
                         });
                         App.init();
                     } else {
