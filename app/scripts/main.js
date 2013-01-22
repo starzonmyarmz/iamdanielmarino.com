@@ -74,9 +74,15 @@ var s, App = {
 
     positionContent : function() {
         $('section > .container').each(function() {
+            var el = $(this);
             var elHeight = $(this).height();
             var winHeight = $(window).height();
-            $(this).css("margin-top", (((winHeight - 125) - elHeight) / 2) + "px");
+            var heightAdj = ((winHeight - 125) - elHeight) / 2;
+            if (heightAdj > 0) {
+                el.css("margin-top", heightAdj + "px");
+            } else {
+                el.css("margin-top", "30px")
+            }
         });
     },
 
