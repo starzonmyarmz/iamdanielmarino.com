@@ -18,9 +18,7 @@
             html { opacity: 0; }
         </style>
 
-        <!-- build:js scripts/utils.js -->
         <script src="scripts/vendor/modernizr.min.js"></script>
-        <!-- endbuild -->
     </head>
     <body>
         <header>
@@ -192,22 +190,18 @@ action="https://starzonmyarmz.wufoo.com/forms/z7x3p3/#public">
                     }
                 }
             });
-        </script>
 
-        <!--
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
-        <script src="scripts/vendor/jquery.scrollTo.js"></script>
-        <script src="scripts/vendor/jquery.nav.js"></script>
-        <script src="scripts/main.js"></script>
-        -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+            // Google Analytics
             var _gaq=[['_setAccount','UA-6248486-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/vendor/jquery.scrollTo.js"></script>
+        <script src="scripts/vendor/jquery.nav.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
     </body>
 </html>
