@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daniel Marino &mdash; Product Designer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600">
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+  </head>
+  <body>
+    <div id="{{ pageType }}" class="wrapper">
+      {% block content %}
+      {% endblock content %}
+
+      {% if pageType == 'home' %}
+        <img id="headshot" src="/img/marino.jpg" alt="Headshot of Daniel Marino">
+      {% endif %}
+
+      <nav id="navigation">
+        <ul>
+          {% if pageType != 'home' %}
+            <li><a href="/">Home</a></li>
+          {% endif %}
+          <li><a href="/feed.xml">RSS Feed</a></li>
+          <li><a href="https://twitter.com/starzonmyarmz" rel="noopener">Twitter</a></li>
+          <li><a href="https://dribbble.com/starzonmyarmz" rel="noopener">Dribbble</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
