@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  color: var(--primary);
+  color: var(--primary-dark);
   display: inline-block;
 }
 
@@ -147,7 +147,7 @@ small {
 }
 
 .post-meta {
-  color: #777;
+  color: #555;
   font-size: 1rem;
 }
 
