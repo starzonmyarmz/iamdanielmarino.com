@@ -2,10 +2,42 @@
   --primary: #eb4d55;
   --primary-dark: #d61e23;
   --gray: #555;
+
+  --sans: 'Source Sans', helvetica, arial, sans-serif;
+  --serif: 'Source Serif', georgia, serif;
 }
+
+
+
+@font-face {
+  font-family: 'Source Sans';
+  src: url('/font/SourceSansVariable-Roman.ttf.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url('/font/SourceSerifVariable-Roman.otf.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url('/font/SourceSerifVariable-Italic.otf.woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
 }
 
 html, body {
@@ -15,9 +47,11 @@ html, body {
 body {
   background-color: #fff;
   color: #333;
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-family: var(--serif);
   font-size: 1.25rem;
-  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "wght" 375;
+  font-feature-settings: 'liga', 'clig';
   line-height: 1.5;
   margin: 0;
   text-rendering: optimizelegibility;
@@ -26,9 +60,13 @@ body {
 a {
   color: var(--primary-dark);
   display: inline-block;
+  text-decoration-thickness: 1px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans);
+  font-variation-settings: "wght" 400;
+  letter-spacing: -.03rem;
   margin: 0
 }
 
@@ -38,7 +76,7 @@ img, svg {
 }
 
 small {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 
@@ -69,8 +107,9 @@ small {
 /*  Home */
 
 #headline {
-  font-size: 2rem;
-  line-height: 1.2;
+  font-size: 2.25rem;
+  font-variation-settings: "wght" 525;
+  line-height: 1.15;
   margin: 1rem 0;
 }
 
@@ -92,6 +131,10 @@ small {
 #recent-posts h3 {
   font-size: 1.4rem;
   margin: 0;
+}
+
+#recent-posts li {
+  color: var(--gray);
 }
 
 
@@ -127,19 +170,19 @@ small {
 
 .post-title {
   font-size: 2.75rem;
-  letter-spacing: -.05rem;
+  font-variation-settings: "wght" 525;
   line-height: 1.2;
   margin: 2rem 0 0.5rem;
 }
 
 .post-meta {
   color: var(--gray);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .post-content h3 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
 }
 
 
