@@ -32,6 +32,13 @@
 
 
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -45,6 +52,7 @@ html, body {
 }
 
 body {
+  animation: fadeIn 250ms 250ms both;
   background-color: #fff;
   color: #333;
   font-family: var(--serif);
