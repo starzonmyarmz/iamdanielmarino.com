@@ -1,14 +1,27 @@
 :root {
+  --background: 255, 255, 255;
+  --text: #333;
+  --text-medium: #555;
   --primary: #eb4d55;
   --primary-dark: #d61e23;
-  --gray: #555;
-
   --sans: 'Source Sans', helvetica, arial, sans-serif;
   --serif: 'Source Serif', georgia, serif;
-
   --gutter-pad: 4.5rem;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --background: 40, 44, 52;
+    --text: #dedede;
+    --text-medium: #aaa;
+    --primary: #FA838C;
+    --primary-dark: #FB5B65;
+  }
+
+  img {
+    opacity: 0.75;
+  }
+}
 
 
 @font-face {
@@ -55,8 +68,8 @@ html, body {
 
 body {
   animation: fadeIn 250ms 250ms both;
-  background-color: #fff;
-  color: #333;
+  background-color: rgb(var(--background));
+  color: var(--text);
   font-family: var(--serif);
   font-size: 1.25rem;
   -webkit-font-smoothing: antialiased;
@@ -114,14 +127,14 @@ small {
 }
 
 #site-footer {
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--text-medium);
   grid-area: footer;
   margin-top: 3rem;
   padding-top: 1rem;
 }
 
 #site-footer a {
-  color: var(--gray);
+  color: var(--text-medium);
 }
 
 
@@ -157,7 +170,7 @@ small {
 }
 
 #recent-posts li {
-  color: var(--gray);
+  color: var(--text-medium);
 }
 
 
@@ -190,7 +203,7 @@ small {
 }
 
 #logo span {
-  color: var(--gray);
+  color: var(--text-medium);
 }
 
 
@@ -209,7 +222,7 @@ small {
 }
 
 .post-meta {
-  color: var(--gray);
+  color: var(--text-medium);
   font-size: 1.1rem;
 }
 
@@ -269,7 +282,7 @@ small {
   }
 
   #site-footer {
-    background: linear-gradient(rgba(255, 255, 255, 0), #fff 25%);
+    background: linear-gradient(rgba(var(--background), 0), rgb(var(--background)) 25%);
     border: 0;
     margin: 0;
     padding: 3rem var(--gutter-pad) 2rem var(--gutter-pad);
