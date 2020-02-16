@@ -13,6 +13,12 @@
   </head>
   <body>
     <div id="{{ pageType }}" class="wrapper">
+      {% if pageType == 'post' %}
+        <header id="site-header" role="banner">
+          <a id="logo" href="/">Daniel Marino</a>
+        </header>
+      {% endif %}
+
       {% block content %}
       {% endblock content %}
 
@@ -20,16 +26,18 @@
         <img id="headshot" src="/img/marino.jpg" alt="Headshot of Daniel Marino">
       {% endif %}
 
-      <nav id="navigation">
-        <ul>
-          {% if pageType != 'home' %}
-            <li><a href="/">Home</a></li>
-          {% endif %}
-          <li><a href="/feed.xml">RSS Feed</a></li>
-          <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
-          <li><a href="https://dribbble.com/starzonmyarmz">Dribbble</a></li>
-        </ul>
-      </nav>
+      <footer id="site-footer">
+        <nav class="nav">
+          <ul>
+            {% if pageType != 'home' %}
+              <li><a href="/">Home</a></li>
+            {% endif %}
+            <li><a href="/feed.xml">RSS Feed</a></li>
+            <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
+            <li><a href="https://dribbble.com/starzonmyarmz">Dribbble</a></li>
+          </ul>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>
