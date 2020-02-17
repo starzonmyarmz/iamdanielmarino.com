@@ -1,5 +1,6 @@
 ---
 title: How I Manage Projects
+date: 2020-02-12
 tags:
   - project management
 ---
