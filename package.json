@@ -2,6 +2,10 @@
   "name": "iamdanielmarino.com",
   "version": "1.0.0",
   "description": "My personal site",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/starzonmyarmz/iamdanielmarino.com"
