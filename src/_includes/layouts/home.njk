@@ -6,13 +6,15 @@
     <h1 id="headline">Daniel Marino is passionate about crafting simple, high-quality experiences.</h1>
     <p>He’s currently a Product Designer at <a href="http://getharvest.com" rel="noopener" target="_blank">Harvest</a>. In his spare time he chills with his family, makes <a href="https://js13kgames.com/entries/onoff" rel="noopener" target="_blank">video games</a>, hand-letters <a href="http://www.statemottoprints.com" rel="noopener" target="_blank">US state mottos</a>, and drums really loud. Recently, he wrote:</p>
 
-    <ul id="recent-posts">
-      {% for post in collections.posts %}
+    <ul id="recent-posts" class="posts">
+      {% for post in collections.recent_posts %}
         <li>
           <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
           <small>{{ post.date | dateFilter }}</small>
         </li>
       {% endfor %}
     </ul>
+
+    <a href="/posts" id="view-all">View all posts</a>
   </main>
 {% endblock %}

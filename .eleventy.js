@@ -12,14 +12,23 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/css')
   eleventyConfig.addPassthroughCopy('src/font')
   eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/js')
   eleventyConfig.addPassthroughCopy('CNAME')
 
   eleventyConfig.addFilter('dateFilter', dateFilter)
 
-  eleventyConfig.addCollection('posts', collection => {
+  eleventyConfig.addCollection('all_posts', collection => {
     return [
       ...collection.getFilteredByGlob('./src/posts/*.md')
     ].reverse()
+  })
+
+  eleventyConfig.addCollection('recent_posts', collection => {
+    return [
+      ...collection.getFilteredByGlob('./src/posts/*.md')
+    ]
+      .reverse()
+      .slice(0, 2)
   })
 
   return {
