@@ -13,9 +13,9 @@
     
     <entry>
       <title>Trying Out Eleventy</title>
-      <link href="https://iamdanielmarino.com/posts/trying-out-elevnty/"/>
+      <link href="https://iamdanielmarino.com/posts/trying-out-eleventy/"/>
       <updated>2020-02-18T00:00:00-00:00</updated>
-      <id>https://iamdanielmarino.com/posts/trying-out-elevnty/</id>
+      <id>https://iamdanielmarino.com/posts/trying-out-eleventy/</id>
       <content type="html"><![CDATA[
         <p>As I started to think about blogging again, I began looking at options for hosting, CMS frameworks, static site generators, etc. <a href="http://www.11ty.dev">Eleventy</a> has been in the mainstream for sometime now, and I've heard nothing but good things about it. I figured I should give it a shot.</p>
 <p>There are no shortage of examples for using Eleventy, but I particularly found <a href="https://hankchizljaw.com/">Andy Bell’s</a> <a href="https://hebra.dev/">Hebra</a> starter kit, as well as the <a href="https://github.com/11ty/eleventy-base-blog">Eleventy Base Blog</a> to be excellent resources. I'm using <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> for templating. It more or less feels like <a href="https://shopify.github.io/liquid/">Liquid</a> which I'm familiar with from having used <a href="https://jekyllrb.com/">Jekyll</a>, as well as creating <a href="https://www.statemottoprints.com/">State Motto Prints</a>.</p>

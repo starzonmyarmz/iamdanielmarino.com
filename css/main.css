@@ -82,7 +82,6 @@ body {
 
 a {
   color: var(--primary-dark);
-  display: inline-block;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
@@ -91,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--sans);
   font-variation-settings: "wght" 400;
   letter-spacing: -0.03rem;
-  margin: 0
+  margin: 0;
 }
 
 img, svg {
@@ -108,10 +107,6 @@ small {
 /* Layout */
 
 .wrapper {
-  display: grid;
-  grid-template-areas: "headshot" "content" "footer";
-  grid-template-columns: auto;
-  grid-template-rows: auto;
   padding: 1.5rem;
 }
 
@@ -151,26 +146,33 @@ small {
 
 
 
-/*  Recent Posts  */
+/*  Posts List  */
 
-#recent-posts {
+.posts {
   list-style: none;
   margin: 1rem 0 0;
   padding: 0;
 }
 
-#recent-posts li {
+.posts li {
   line-height: 1.2;
   margin-top: 1rem;
 }
 
-#recent-posts h3 {
+.posts h3 {
   font-size: 1.4rem;
   margin: 0;
 }
 
-#recent-posts li {
+.posts li {
   color: var(--text-medium);
+}
+
+#view-all {
+  display: inline-block;
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 
@@ -197,13 +199,18 @@ small {
   font-family: var(--sans);
   font-size: 1.5rem;
   font-variation-settings: "wght" 250;
-  letter-spacing: -0.03rem;
   line-height: 1;
+  margin-bottom: 2.75rem;
+}
+
+#logo a {
+  letter-spacing: -0.03rem;
   text-decoration: none;
 }
 
-#logo span {
+#logo small {
   color: var(--text-medium);
+  font-variation-settings: "wght" 350;
 }
 
 
@@ -211,7 +218,7 @@ small {
 /*  Post Content  */
 
 .post-header {
-  margin: 2.75rem 0;
+  margin-bottom: 2.75rem;
 }
 
 .post-title {
@@ -238,7 +245,11 @@ small {
   /*  Layout  */
 
   .wrapper {
+    display: grid;
     grid-template-areas: "header aside" "content aside" "footer aside";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    min-height: 100vh;
     padding: 0;
     position: relative;
   }
@@ -258,8 +269,10 @@ small {
     grid-template-rows: min-content 1fr min-content;
   }
 
-  #post {
+  #post,
+  #archives {
     grid-template-columns: minmax(auto, 832px) 1fr;
+    grid-template-rows: min-content 1fr min-content;
   }
 
   #content {
@@ -276,9 +289,9 @@ small {
     width: 100%;
   }
 
-  #site-header {
+  #logo {
     grid-area: header;
-    padding: 4rem 0 0 var(--gutter-pad);
+    margin: 4rem 0 4rem var(--gutter-pad);
   }
 
   #site-footer {
@@ -321,4 +334,166 @@ small {
     line-height: 1.3;
     margin: 0;
   }
+}
+
+
+
+/**
+ * a11y-dark theme for JavaScript, CSS, and HTML
+ * @author ericwbailey
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1rem;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.4;
+	-moz-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1rem 1.25rem;
+	margin: 1.25rem 0;
+	overflow: auto;
+	border-radius: 0.3rem;
+  width: 100%;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: rgb(40, 44, 52);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: 0.1rem;
+	border-radius: 0.3rem;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #d4d0ab;
+}
+
+.token.punctuation {
+	color: #fefefe;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #ffa07a;
+}
+
+.token.boolean,
+.token.number {
+	color: #00e0e0;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #abe338;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #00e0e0;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+	color: #ffd700;
+}
+
+.token.keyword {
+	color: #00e0e0;
+}
+
+.token.regex,
+.token.important {
+	color: #ffd700;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+@media screen and (-ms-high-contrast: active) {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		color: windowText;
+		background: window;
+	}
+
+	:not(pre) > code[class*="language-"],
+	pre[class*="language-"] {
+		background: window;
+	}
+
+	.token.important {
+		background: highlight;
+		color: window;
+		font-weight: normal;
+	}
+
+	.token.atrule,
+	.token.attr-value,
+	.token.function,
+	.token.keyword,
+	.token.operator,
+	.token.selector {
+		font-weight: bold;
+	}
+
+	.token.attr-value,
+	.token.comment,
+	.token.doctype,
+	.token.function,
+	.token.keyword,
+	.token.operator,
+	.token.property,
+	.token.string {
+		color: highlight;
+	}
+
+	.token.attr-value,
+	.token.url {
+		font-weight: normal;
+	}
 }
