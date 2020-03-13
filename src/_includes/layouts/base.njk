@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Daniel Marino &mdash; Product Designer</title>
+    {% if pageType == 'home' %}
+      <title>Daniel Marino</title>
+    {% else %}
+      <title>{{ title }} &mdash; Daniel Marino</title>
+    {% endif %}
 
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
