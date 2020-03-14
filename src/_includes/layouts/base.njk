@@ -2,12 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
+    <title>{{ title }}{% if pageType != 'home' %} &mdash; Daniel Marino{% endif %}</title>
+
+    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% if pageType == 'home' %}
-      <title>Daniel Marino</title>
-    {% else %}
-      <title>{{ title }} &mdash; Daniel Marino</title>
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:image" content="{{ site.url }}/img/marino.jpg">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ site.authorHandle }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:image" content="{{ site.url }}/img/marino.jpg">
+
+    {% if description %}
+      <meta property="og:description" content="{{ description }}">
+      <meta name="twitter:description" content="{{ description }}">
     {% endif %}
 
     <link rel="icon" href="/favicon.png" type="image/png">
@@ -20,9 +33,7 @@
     <div id="{{ pageType }}" class="wrapper">
       {% if pageType == 'home' %}
         <img id="headshot" src="/img/marino.jpg" alt="Headshot of Daniel Marino">
-      {% endif %}
-
-      {% if pageType != 'home' %}
+      {% else %}
         <header id="logo" role="banner">
           <a href="/">Daniel Marino</a>
         </header>
