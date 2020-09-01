@@ -233,9 +233,18 @@ small {
   font-size: 1.1rem;
 }
 
+.post-content h2 {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+}
+
 .post-content h3 {
   font-size: 1.75rem;
   margin-top: 2.5rem;
+}
+
+.post-content li + li {
+  margin-top: 0.5rem;
 }
 
 
