@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: ’10.x’
+          node-version: '10.x'
 
       - run: npm ci
 
