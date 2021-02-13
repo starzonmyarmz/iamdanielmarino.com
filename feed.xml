@@ -3,7 +3,7 @@
   <title>Daniel Marino</title>
 	<link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
 	<link href="https://iamdanielmarino.com/"/>
-	<updated>2018-10-15T00:00:00-00:00</updated>
+	<updated>2021-02-13T00:00:00Z</updated>
 	<id>https://iamdanielmarino.com</id>
 	<author>
     <name>Daniel Marino</name>
@@ -14,7 +14,7 @@
     <entry>
       <title>My GIF Workflow</title>
       <link href="https://iamdanielmarino.com/posts/my-gif-workflow/"/>
-      <updated>2021-02-13T00:00:00-00:00</updated>
+      <updated>2021-02-13T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/my-gif-workflow/</id>
       <content type="html"><![CDATA[
         <p>I used to keep my GIFs on Dropbox in the <code>/public</code> directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an <a href="https://destroytoday.com/blog/gif-workflow">Alfred workflow</a> for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the <code>/public</code> directory, and thus this workflow stopped working.</p>
@@ -33,7 +33,7 @@
     <entry>
       <title>How to Process Customer Criticism</title>
       <link href="https://iamdanielmarino.com/posts/how-to-process-customer-criticism/"/>
-      <updated>2020-09-01T00:00:00-00:00</updated>
+      <updated>2020-09-01T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/how-to-process-customer-criticism/</id>
       <content type="html"><![CDATA[
         <p>Why do us product designers opt into a career where we’re regularly challenged to be vulnerable?! Design is super subjective, and everyone is a critic! Regardless of your education or how sharp your <em>design eye</em> is, you’ll never be able to please everyone. This is especially true when you work on a product that has thousands upon thousands of users!</p>
@@ -63,7 +63,7 @@
     <entry>
       <title>Don’t Overthink Remote Working</title>
       <link href="https://iamdanielmarino.com/posts/dont-overthink-remote-working/"/>
-      <updated>2020-03-13T00:00:00-00:00</updated>
+      <updated>2020-03-13T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/dont-overthink-remote-working/</id>
       <content type="html"><![CDATA[
         <p>The coronavirus is here, and as a result a lot of employers are asking employees to work remotely if possible. I’ve seen a fair share of <em>tips for remote working</em> blog posts this past week. I figured I’d cash in on the action and share my thoughts.</p>
@@ -81,7 +81,7 @@
     <entry>
       <title>Deploying My Eleventy Site to GitHub Pages</title>
       <link href="https://iamdanielmarino.com/posts/deploying-my-eleventy-site-to-github-pages/"/>
-      <updated>2020-03-02T00:00:00-00:00</updated>
+      <updated>2020-03-02T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/deploying-my-eleventy-site-to-github-pages/</id>
       <content type="html"><![CDATA[
         <p>I really like <a href="https://pages.github.com/">GitHub Pages</a>, and have used it to host my site for a while. The biggest challenge of switching my site to <a href="https://www.11ty.dev/">Eleventy</a> was getting deployments to GitHub pages set up. I suppose I could have built my site locally, and then push that to the <code>gh-pages</code> branch, but that felt <em>wrong</em>. I prefer my <code>master</code> branch to be the source of my site, while <code>gh-pages</code> to only be the published content.</p>
@@ -111,7 +111,7 @@
     <entry>
       <title>Trying Out Eleventy</title>
       <link href="https://iamdanielmarino.com/posts/trying-out-eleventy/"/>
-      <updated>2020-02-18T00:00:00-00:00</updated>
+      <updated>2020-02-18T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/trying-out-eleventy/</id>
       <content type="html"><![CDATA[
         <p>As I started to think about blogging again, I began looking at options for hosting, CMS frameworks, static site generators, etc. <a href="http://www.11ty.dev">Eleventy</a> has been in the mainstream for sometime now, and I've heard nothing but good things about it. I figured I should give it a shot.</p>
@@ -125,7 +125,7 @@
     <entry>
       <title>How I Manage Projects</title>
       <link href="https://iamdanielmarino.com/posts/how-i-manage-projects/"/>
-      <updated>2020-02-12T00:00:00-00:00</updated>
+      <updated>2020-02-12T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/how-i-manage-projects/</id>
       <content type="html"><![CDATA[
         <p>As a Product Designer at <a href="https://getharvest.com">Harvest</a>, part of my role is running projects. While I don’t believe there is a <em>right</em> or <em>wrong</em> way to manage projects, I do think there are some methods that can yield better results. I’m hardly an expert in this area, but I’d like to share some of the ways I find success in managing projects.</p>
@@ -152,7 +152,7 @@
     <entry>
       <title>JS13K 2018 Retrospective</title>
       <link href="https://iamdanielmarino.com/posts/js13k-2018-retrospective/"/>
-      <updated>2018-10-15T00:00:00-00:00</updated>
+      <updated>2018-10-15T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/js13k-2018-retrospective/</id>
       <content type="html"><![CDATA[
         <p>In one of my weekly developer emails, I saw a link for <a href="https://2018.js13kgames.com/">JS13KGames</a>. I've always wanted to create a video game. I asked my JavaScript-whiz buddy, <a href="https://github.com/braddunbar">Brad</a>, if he was interested in building a game with me. Without hesitation, he said “Yes!”</p>
