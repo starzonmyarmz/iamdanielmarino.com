@@ -1,5 +1,5 @@
 ---
-title: My GIF Workflow
+title: My GIF Workflow Using Eleventy, Netlify, and Alfred
 date: 2021-02-13
 tags:
   - development
