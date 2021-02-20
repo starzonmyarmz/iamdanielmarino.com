@@ -12,10 +12,10 @@
 	
     
     <entry>
-      <title>My GIF Workflow</title>
-      <link href="https://iamdanielmarino.com/posts/my-gif-workflow/"/>
+      <title>My GIF Workflow Using Eleventy, Netlify, and Alfred</title>
+      <link href="https://iamdanielmarino.com/posts/my-gif-workflow-using-eleventy-netlify-alfred/"/>
       <updated>2021-02-13T00:00:00Z</updated>
-      <id>https://iamdanielmarino.com/posts/my-gif-workflow/</id>
+      <id>https://iamdanielmarino.com/posts/my-gif-workflow-using-eleventy-netlify-alfred/</id>
       <content type="html"><![CDATA[
         <p>I used to keep my GIFs on Dropbox in the <code>/public</code> directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an <a href="https://destroytoday.com/blog/gif-workflow">Alfred workflow</a> for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the <code>/public</code> directory, and thus this workflow stopped working.</p>
 <p>Since then I’ve been keeping my personal collection of GIFs in a GitHub repo—which has been just okay. I really missed having a quick way to search and copy URLs. To use a GIF I’d have to go to the repo, find the image, view the raw image, and  finally manually copy the url from the browser. Lame.</p>
