@@ -1,0 +1,166 @@
+:root {
+  --text: #333;
+  --text-medium: #555;
+  --primary: #eb4d55;
+  --primary-dark: #d61e23;
+  --sans: 'Source Sans', helvetica, arial, sans-serif;
+  --serif: 'Source Serif', georgia, serif;
+}
+
+@font-face {
+  font-family: 'Source Sans';
+  src: url('/font/SourceSansVariable-Roman.ttf.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url('/font/SourceSerifVariable-Roman.otf.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url('/font/SourceSerifVariable-Italic.otf.woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+html:before {
+  background: linear-gradient(-135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  content: "";
+  height: 100vh;
+  position: fixed;
+  width: 0.5rem;
+}
+
+body {
+  background-color: #fff;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-variation-settings: "wght" 400;
+  font-feature-settings: 'liga', 'clig';
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 1.5rem;
+  text-rendering: optimizelegibility;
+}
+
+header {
+  margin-bottom: 2.5rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+article:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--primary-dark);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans);
+  font-variation-settings: "wght" 500;
+  letter-spacing: -0.03rem;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-variation-settings: "wght" 650;
+}
+
+h2, h3 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  margin: 0 0 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
+
+small {
+  color: var(--text-medium);
+}
+
+span {
+  color: var(--text-medium);
+  font-variation-settings: "wght" 300;
+}
+
+span:before {
+  content: " / "
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+li:not(:last-child):after {
+  content: ' / '
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding-left: calc(768px / 5);
+  }
+
+  section {
+    display: flex;
+  }
+
+  h3 {
+    max-width: calc(768px / 5);
+    min-width: calc(768px / 5);
+  }
+}
+
+@media print {
+  html:before {
+    display: none;
+  }
+
+  header {
+    padding-left: calc(768px / 5);
+  }
+
+  section {
+    display: flex;
+  }
+
+  h3 {
+    max-width: calc(768px / 5);
+    min-width: calc(768px / 5);
+  }
+}
