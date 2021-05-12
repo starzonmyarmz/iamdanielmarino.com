@@ -1,0 +1,297 @@
+[
+  {
+    "name": "Alabama",
+    "abbreviation": "al",
+    "motto": "We dare defend our rights",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Alaska",
+    "abbreviation": "ak",
+    "motto": "North to the future",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Arizona",
+    "abbreviation": "az",
+    "motto": "God enriches",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Arkansas",
+    "abbreviation": "ar",
+    "motto": "The people rule",
+    "orientation": "landscape"
+  },
+  {
+    "name": "California",
+    "abbreviation": "ca",
+    "motto": "Eureka",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Colorado",
+    "abbreviation": "co",
+    "motto": "Nothing without the Deity",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Connecticut",
+    "abbreviation": "ct",
+    "motto": "He who is transplanted still sustains",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Delaware",
+    "abbreviation": "de",
+    "motto": "Liberty and prosperity",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Florida",
+    "abbreviation": "fl",
+    "motto": "In God we trust",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Georgia",
+    "abbreviation": "ga",
+    "motto": "Wisdom, justice, and moderation",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Hawaii",
+    "abbreviation": "hi",
+    "motto": "The life of the land is perpetuated in righteousness",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Idaho",
+    "abbreviation": "id",
+    "motto": "Let it be perpetual",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Illinois",
+    "abbreviation": "il",
+    "motto": "State sovereignty, national union",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Indiana",
+    "abbreviation": "in",
+    "motto": "The crossroads of America",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Iowa",
+    "abbreviation": "ia",
+    "motto": "Our liberties we prize and our rights we will maintain",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Kansas",
+    "abbreviation": "ks",
+    "motto": "To the stars through difficulty",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Kentucky",
+    "abbreviation": "ky",
+    "motto": "United we stand, divided we fall",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Louisiana",
+    "abbreviation": "la",
+    "motto": "Union, justice, confidence",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Maine",
+    "abbreviation": "me",
+    "motto": "I direct",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Maryland",
+    "abbreviation": "md",
+    "motto": "Strong deeds, gentle words",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Massachusetts",
+    "abbreviation": "ma",
+    "motto": "Of the sword we seek peace, but peace only under liberty",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Michigan",
+    "abbreviation": "mi",
+    "motto": "If you seek a pleasant peninsula, look about you",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Minnesota",
+    "abbreviation": "mn",
+    "motto": "The star of the north",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Mississippi",
+    "abbreviation": "ms",
+    "motto": "By valor and arms",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Missouri",
+    "abbreviation": "mo",
+    "motto": "The welfare of the people shall be the supreme law",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Montana",
+    "abbreviation": "mt",
+    "motto": "Gold and silver",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Nebraska",
+    "abbreviation": "ne",
+    "motto": "Equality before the law",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Nevada",
+    "abbreviation": "nv",
+    "motto": "All for our country",
+    "orientation": "portrait"
+  },
+  {
+    "name": "New Hampshire",
+    "abbreviation": "nh",
+    "motto": "Live free or die",
+    "orientation": "portrait"
+  },
+  {
+    "name": "New Jersey",
+    "abbreviation": "nj",
+    "motto": "Liberty and prosperity",
+    "orientation": "portrait"
+  },
+  {
+    "name": "New Mexico",
+    "abbreviation": "nm",
+    "motto": "It grows as it goes",
+    "orientation": "portrait"
+  },
+  {
+    "name": "New York",
+    "abbreviation": "ny",
+    "motto": "Ever upward",
+    "orientation": "landscape"
+  },
+  {
+    "name": "North Carolina",
+    "abbreviation": "nc",
+    "motto": "To be rather than to seem",
+    "orientation": "landscape"
+  },
+  {
+    "name": "North Dakota",
+    "abbreviation": "nd",
+    "motto": "Liberty and union now and forever, one and inseparable",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Ohio",
+    "abbreviation": "oh",
+    "motto": "With God all things are possible",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Oklahoma",
+    "abbreviation": "ok",
+    "motto": "Work conquers all",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Oregon",
+    "abbreviation": "or",
+    "motto": "She flies with her own wings",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Pennsylvania",
+    "abbreviation": "pa",
+    "motto": "Virtue, liberty, and independence",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Rhode Island",
+    "abbreviation": "ri",
+    "motto": "Hope",
+    "orientation": "portrait"
+  },
+  {
+    "name": "South Carolina",
+    "abbreviation": "sc",
+    "motto": "Animis Opibusque Parati",
+    "orientation": "landscape",
+    "translation": "Prepared in Mind and Resources"
+  },
+  {
+    "name": "South Dakota",
+    "abbreviation": "sd",
+    "motto": "Under God the people rule",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Tennessee",
+    "abbreviation": "tn",
+    "motto": "Agriculture and commerce",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Texas",
+    "abbreviation": "tx",
+    "motto": "Friendship",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Utah",
+    "abbreviation": "ut",
+    "motto": "Industry",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Vermont",
+    "abbreviation": "vt",
+    "motto": "Freedom and unity",
+    "orientation": "portrait"
+  },
+  {
+    "name": "Virginia",
+    "abbreviation": "va",
+    "motto": "Thus always to tyrants",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Washington",
+    "abbreviation": "wa",
+    "motto": "Into the future",
+    "orientation": "landscape"
+  },
+  {
+    "name": "West Virginia",
+    "abbreviation": "wv",
+    "motto": "Mountaineers are always free",
+    "orientation": "landscape"
+  },
+  {
+    "name": "Wyoming",
+    "abbreviation": "wy",
+    "motto": "Equal rights",
+    "orientation": "landscape"
+  }
+]

@@ -1,0 +1,13 @@
+---
+layout: layouts/states.njk
+permalink: /state-mottos/
+---
+
+<section>
+  {% for state in states %}
+    <button type="button" data-enlarge>
+      <img src="/img/smp/{{ state.abbreviation }}.jpg" alt="{{ state.name }} &mdash; {{ state.motto }}" loading="lazy">
+      <span>{{ state.name }} &mdash; {{ state.motto }}</span>
+    </button>
+  {% endfor %}
+</section>

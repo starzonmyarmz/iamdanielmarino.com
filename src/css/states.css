@@ -1,0 +1,101 @@
+:root {
+  --text: #333;
+  --primary: #eb4d55;
+  --sans: 'Source Sans', helvetica, arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Source Sans';
+  src: url('/font/SourceSansVariable-Roman.ttf.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url('/font/SourceSerifVariable-Roman.otf.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Serif';
+  src: url('/font/SourceSerifVariable-Italic.otf.woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  background: #fff;
+  color: var(--sans);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+body {
+  font-size: 1rem;
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button span {
+  display: none;
+}
+
+h1 {
+  font-variation-settings: "wght" 650;
+  margin: 10vh 0;
+  text-align: center;
+}
+
+img {
+  height: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+  width: 100%;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.big {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  padding: 48px 48px 72px;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.big span {
+  color: #fff;
+  display: block;
+  font-size: 1.2rem;
+  margin: 24px;
+}
+
+@media (min-width: 768px) {
+  section {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
