@@ -289,6 +289,12 @@
     "orientation": "landscape"
   },
   {
+    "name": "Wisconsin",
+    "abbreviation": "wi",
+    "motto": "Forward",
+    "orientation": "portrait"
+  },
+  {
     "name": "Wyoming",
     "abbreviation": "wy",
     "motto": "Equal rights",
