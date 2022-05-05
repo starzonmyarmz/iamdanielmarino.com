@@ -17,7 +17,7 @@
       <updated>2022-05-05T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/</id>
       <content type="html"><![CDATA[
-        <p>As I've composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with.</p>
+        <p>As I've composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the <a href="https://starzonmyarmz.github.io/rmg/">RMG-2021</a>.</p>
 <h2>Design</h2>
 <p>I love how sequencers look and feel—and there is so much variety as to how they're designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
 It was a bit of a balancing act to capture the essence of a physical sequencer while adapting it to a screen.</p>
