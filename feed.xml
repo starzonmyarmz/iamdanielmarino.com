@@ -13,9 +13,9 @@
     
     <entry>
       <title>Building a Random Music Sequencer with Preact</title>
-      <link href="https://iamdanielmarino.com/posts/rmg-tinymusic-sequencer/"/>
+      <link href="https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/"/>
       <updated>2022-05-05T00:00:00Z</updated>
-      <id>https://iamdanielmarino.com/posts/rmg-tinymusic-sequencer/</id>
+      <id>https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/</id>
       <content type="html"><![CDATA[
         <p>As I've composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with.</p>
 <h2>Design</h2>
