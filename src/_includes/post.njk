@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+    <div>{{ page.date | dateFilter }}</div>
+  </header>
+
+  <section class="post-content">
+    {{ content | safe }}
+  </section>
+</article>

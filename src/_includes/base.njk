@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ title }}{% if pageType != 'home' %} &mdash; Daniel Marino{% endif %}</title>
+    <title>{{ title }} &mdash; Daniel Marino</title>
     <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,40 +15,28 @@
     <meta name="twitter:site" content="{{ site.authorHandle }}">
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:image" content="{{ site.url }}/img/marino.jpg">
-    {% if description %}
-      <meta property="og:description" content="{{ description }}">
-      <meta name="twitter:description" content="{{ description }}">
-    {% endif %}
 
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="mask-icon" href="/favicon.svg" color="black">
     <link rel="stylesheet" href="/css/main.css">
   </head>
+
   <body>
-    <div id="{{ pageType }}" class="wrapper">
-      {% if pageType == 'home' %}
-        <img id="headshot" src="/img/marino.jpg" alt="Headshot of Daniel Marino">
-      {% else %}
-        <header id="logo" role="banner">
-          <a href="/">Daniel Marino</a>
-        </header>
-      {% endif %}
+    <nav>
+      <ul>
+        <li><a href="/">Daniel Marino</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
+      </ul>
+    </nav>
 
-      {% block content %}
-      {% endblock content %}
+    {% if page.url == '/' %}
+      <img src="/img/headshot.jpg" alt="Headshot of Daniel Marino" width="128" height="128" id="headshot">
+    {% endif %}
 
-      <footer id="site-footer">
-        <nav class="nav">
-          <ul>
-            {% if pageType != 'home' %}
-              <li><a href="/">Home</a></li>
-            {% endif %}
-            <li><a href="/posts">Posts</a></li>
-            <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
+    <main>
+      {{ content | safe }}
+    </main>
   </body>
 </html>
