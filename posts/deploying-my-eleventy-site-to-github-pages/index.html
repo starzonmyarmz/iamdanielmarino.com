@@ -15,33 +15,34 @@
     <meta name="twitter:site" content="@starzonmyarmz">
     <meta name="twitter:title" content="Deploying My Eleventy Site to GitHub Pages">
     <meta name="twitter:image" content="https://iamdanielmarino.com/img/marino.jpg">
-    
 
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="mask-icon" href="/favicon.svg" color="black">
     <link rel="stylesheet" href="/css/main.css">
   </head>
+
   <body>
-    <div id="post" class="wrapper">
-      
-        <header id="logo" role="banner">
-          <a href="/">Daniel Marino</a>
-        </header>
-      
+    <nav>
+      <ul>
+        <li><a href="/">Daniel Marino</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
+      </ul>
+    </nav>
 
-      
-  <main id="content">
-    <article>
-      <header class="post-header">
-        <h1 class="post-title">Deploying My Eleventy Site to GitHub Pages</h1>
-        <div class="post-meta">
-          March 2, 2020
-        </div>
-      </header>
+    
 
-      <section class="post-content">
-        <p>I really like <a href="https://pages.github.com/">GitHub Pages</a>, and have used it to host my site for a while. The biggest challenge of switching my site to <a href="https://www.11ty.dev/">Eleventy</a> was getting deployments to GitHub pages set up. I suppose I could have built my site locally, and then push that to the <code>gh-pages</code> branch, but that felt <em>wrong</em>. I prefer my <code>master</code> branch to be the source of my site, while <code>gh-pages</code> to only be the published content.</p>
+    <main>
+      
+<article>
+  <header>
+    <h1>Deploying My Eleventy Site to GitHub Pages</h1>
+    <div>March 2, 2020</div>
+  </header>
+
+  <section class="post-content">
+    <p>I really like <a href="https://pages.github.com/">GitHub Pages</a>, and have used it to host my site for a while. The biggest challenge of switching my site to <a href="https://www.11ty.dev/">Eleventy</a> was getting deployments to GitHub pages set up. I suppose I could have built my site locally, and then push that to the <code>gh-pages</code> branch, but that felt <em>wrong</em>. I prefer my <code>master</code> branch to be the source of my site, while <code>gh-pages</code> to only be the published content.</p>
 <p>I’m aware of tools such as <a href="https://www.netlify.com/">Netlify</a> and <a href="https://travis-ci.com/">Travis CI</a> which aid in hosting or deployment processes. However I wasn’t looking to add another service into my tech stack. With some digging into <a href="https://github.com/features/actions">GitHub Actions</a>, this seemed like a plausible route for getting my site deployed without having to rely on an external service.</p>
 <h3>Setting Up a GitHub Action</h3>
 <p>GitHub Actions allow you to automate workflows such as code deployment, running tests, compressing images, and so much more. GitHub has a whole <em>Marketplace</em> where you can explore community-created actions. I’m using the <a href="https://github.com/marketplace/actions/github-pages-action">GitHub Pages action</a> which handles everything I need for deploying. My workflow is fairly simple, and is largely based on the instructions for <a href="https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-static-site-generators-with-nodejs">Static Site Generators with Node.js</a>. In <code>/.github/workflows/eleventy_build.yml</code>, I have the following:</p>
@@ -61,22 +62,9 @@
 <h3>Wrapping Up</h3>
 <p>While I’m not sure if this is the best way to get my Eleventy site deployed to GitHub Pages, it meets my needs. As far as I can tell, this general deployment process would be fairly similar to set up with a service like Netlify or Travis CI. However I find it extremely satisfying not being dependent on extra services.</p>
 
-      </section>
-    </article>
-  </main>
+  </section>
+</article>
 
-
-      <footer id="site-footer">
-        <nav class="nav">
-          <ul>
-            
-              <li><a href="/">Home</a></li>
-            
-            <li><a href="/posts">Posts</a></li>
-            <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
+    </main>
   </body>
 </html>

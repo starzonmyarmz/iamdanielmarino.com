@@ -15,33 +15,34 @@
     <meta name="twitter:site" content="@starzonmyarmz">
     <meta name="twitter:title" content="My GIF Workflow Using Eleventy, Netlify, and Alfred">
     <meta name="twitter:image" content="https://iamdanielmarino.com/img/marino.jpg">
-    
 
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="mask-icon" href="/favicon.svg" color="black">
     <link rel="stylesheet" href="/css/main.css">
   </head>
+
   <body>
-    <div id="post" class="wrapper">
-      
-        <header id="logo" role="banner">
-          <a href="/">Daniel Marino</a>
-        </header>
-      
+    <nav>
+      <ul>
+        <li><a href="/">Daniel Marino</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
+      </ul>
+    </nav>
 
-      
-  <main id="content">
-    <article>
-      <header class="post-header">
-        <h1 class="post-title">My GIF Workflow Using Eleventy, Netlify, and Alfred</h1>
-        <div class="post-meta">
-          February 13, 2021
-        </div>
-      </header>
+    
 
-      <section class="post-content">
-        <p>I used to keep my GIFs on Dropbox in the <code>/public</code> directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an <a href="https://destroytoday.com/blog/gif-workflow">Alfred workflow</a> for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the <code>/public</code> directory, and thus this workflow stopped working.</p>
+    <main>
+      
+<article>
+  <header>
+    <h1>My GIF Workflow Using Eleventy, Netlify, and Alfred</h1>
+    <div>February 13, 2021</div>
+  </header>
+
+  <section class="post-content">
+    <p>I used to keep my GIFs on Dropbox in the <code>/public</code> directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an <a href="https://destroytoday.com/blog/gif-workflow">Alfred workflow</a> for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the <code>/public</code> directory, and thus this workflow stopped working.</p>
 <p>Since then I’ve been keeping my personal collection of GIFs in a GitHub repo—which has been just okay. I really missed having a quick way to search and copy URLs. To use a GIF I’d have to go to the repo, find the image, view the raw image, and  finally manually copy the url from the browser. Lame.</p>
 <p>A few weeks ago, I decided to give my GIF workflow an upgrade!</p>
 <p>I started by turning my <a href="https://github.com/starzonmyarmz/gifs">GIFs repo</a> into a static site using <a href="https://www.11ty.dev/">Eleventy</a>. The static site consists of two primary things: a directory with all of my GIFs, and a <a href="https://github.com/starzonmyarmz/gifs/blob/main/src/gifs.njk">generated JSON file</a> listing all my GIFs (more on this in a bit).</p>
@@ -50,22 +51,9 @@
 <p><img src="/img/gif_workflow.gif" alt="My gif flow using Alfred App"></p>
 <p>This update was well-needed, and I find myself using my personal GIFs much more often now! I only wish I had done something like this much sooner.</p>
 
-      </section>
-    </article>
-  </main>
+  </section>
+</article>
 
-
-      <footer id="site-footer">
-        <nav class="nav">
-          <ul>
-            
-              <li><a href="/">Home</a></li>
-            
-            <li><a href="/posts">Posts</a></li>
-            <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
+    </main>
   </body>
 </html>
