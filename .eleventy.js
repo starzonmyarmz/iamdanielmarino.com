@@ -14,18 +14,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('dateFilter', dateFilter)
 
-  eleventyConfig.addCollection('all_posts', collection => {
+  eleventyConfig.addCollection('posts', collection => {
     return [
       ...collection.getFilteredByGlob('./src/posts/*.md')
     ].reverse()
-  })
-
-  eleventyConfig.addCollection('recent_posts', collection => {
-    return [
-      ...collection.getFilteredByGlob('./src/posts/*.md')
-    ]
-      .reverse()
-      .slice(0, 2)
   })
 
   return {
