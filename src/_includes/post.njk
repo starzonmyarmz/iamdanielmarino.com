@@ -5,7 +5,14 @@ layout: base.njk
 <article>
   <header>
     <h1>{{ title }}</h1>
-    <div>{{ page.date | dateFilter }}</div>
+
+    {% if '/posts' in page.url %}
+      <div>{{ page.date | dateFilter }}</div>
+    {% endif %}
+
+    {% if '/work' in page.url %}
+      <div>{{ blurb }}</div>
+    {% endif %}
   </header>
 
   <section class="post-content">

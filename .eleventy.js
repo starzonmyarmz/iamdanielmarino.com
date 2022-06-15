@@ -20,6 +20,14 @@ module.exports = function(eleventyConfig) {
     ].reverse()
   })
 
+  eleventyConfig.addCollection("work", collection => {
+    const work = collection.getFilteredByGlob("src/work/*.md")
+      .sort((a, b) => {
+        return Number(a.data.order) - Number(b.data.order)
+      })
+    return work
+  })
+
   return {
     dir: {
       input: 'src',
