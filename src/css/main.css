@@ -85,20 +85,39 @@ small {
 /* Navigation */
 
 nav ul {
-  display: flex;
+  align-items: baseline;
+  background: #fff;
+  color: var(--text-medium);
+  display: inline-flex;
   font-size: 1rem;
   gap: 1rem;
+  line-height: 1;
   list-style: none;
   margin: 0 0 4rem;
-  padding: 0;
+  padding: 0 1rem 0 0;
   position: relative;
   z-index: 1;
 }
 
 nav a {
-  color: var(--text-medium);
+  color: inherit;
+  display: block;
   text-decoration: none;
+  transition: all 0.2s;
 }
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav li:first-child a {
+  font-family: var(--sans);
+  font-size: 1.25rem;
+  font-variation-settings: "wght" 900;
+  border: 1px solid;
+  padding: 0.3ch;
+}
+
 
 /* Layout */
 
