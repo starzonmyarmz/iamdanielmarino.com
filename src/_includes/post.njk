@@ -6,13 +6,13 @@ layout: base.njk
   <header>
     <h1>{{ title }}</h1>
 
-    {% if '/posts' in page.url %}
+    {%- if '/posts' in page.url %}
       <div>{{ page.date | dateFilter }}</div>
-    {% endif %}
+    {%- endif %}
 
-    {% if '/work' in page.url %}
+    {%- if '/work' in page.url %}
       <div>{{ blurb }}</div>
-    {% endif %}
+    {%- endif %}
   </header>
 
   <section class="post-content">
