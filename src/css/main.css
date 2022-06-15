@@ -85,6 +85,7 @@ img, svg {
 }
 
 small {
+  color: var(--text-medium);
   font-size: 1rem;
 }
 
@@ -149,7 +150,6 @@ main {
 /*  Posts  */
 
 .posts {
-  color: var(--text-medium);
   display: flex;
   flex-direction: column;
   gap: 1rem;
