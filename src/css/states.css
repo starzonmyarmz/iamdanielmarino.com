@@ -1,28 +1,9 @@
 :root {
-  --text: #333;
-  --primary: #eb4d55;
-  --sans: 'Source Sans', helvetica, arial, sans-serif;
-}
-
-@font-face {
-  font-family: 'Source Sans';
-  src: url('/font/SourceSansVariable-Roman.ttf.woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Source Serif';
-  src: url('/font/SourceSerifVariable-Roman.otf.woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Source Serif';
-  src: url('/font/SourceSerifVariable-Italic.otf.woff2');
-  font-weight: normal;
-  font-style: italic;
+  --background: #fff;
+  --text: #001219;
+  --text-medium: #555;
+  --primary: #d61e23;
+  --sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 
 *, *:before, *:after {
@@ -30,16 +11,16 @@
 }
 
 html {
-  background: #fff;
-  color: var(--sans);
+  background: var(--background);
+  color: var(--text);
   font-family: var(--sans);
-  font-weight: 400;
+  font-variation-settings: "wght" 300;
   line-height: 1.4;
 }
 
 body {
   font-size: 1rem;
-  margin: 0;
+  margin: 1rem;
 }
 
 a {
@@ -60,7 +41,7 @@ button span {
 }
 
 h1 {
-  font-variation-settings: "wght" 650;
+  font-variation-settings: "wght" 900;
   margin: 10vh 0;
   text-align: center;
 }
@@ -74,7 +55,7 @@ img {
 
 section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .big {
