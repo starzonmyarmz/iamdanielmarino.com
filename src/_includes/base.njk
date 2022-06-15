@@ -27,6 +27,10 @@
       <ul>
         <li><a href="/" aria-label="Daniel Marino">DM</a></li>
         <li><a href="/posts">Posts</a></li>
+        {% if env.environment == 'localhost' %}
+          <li><a href="/work">Work</a></li>
+          <li><a href="/resume">Resume</a></li>
+        {% endif %}
         <li><a href="https://twitter.com/starzonmyarmz">Twitter</a></li>
         <li><a href="https://github.com/starzonmyarmz">GitHub</a></li>
       </ul>

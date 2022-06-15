@@ -4,7 +4,7 @@
   "description": "My personal site",
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve"
+    "serve": "ELEVENTY_ENV=localhost eleventy --serve"
   },
   "repository": {
     "type": "git",
