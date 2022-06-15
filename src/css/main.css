@@ -38,6 +38,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
 html {
   font-size: 18px;
 }
@@ -116,8 +121,8 @@ nav li:first-child a {
   font-variation-settings: "wght" 900;
   border: 1px solid;
   padding: 0.3ch;
+  user-select: none;
 }
-
 
 /* Layout */
 
@@ -128,6 +133,7 @@ main {
 #headshot {
   margin-bottom: 2rem;
   object-fit: cover;
+  user-select: none;
 }
 
 #hero h1 {
