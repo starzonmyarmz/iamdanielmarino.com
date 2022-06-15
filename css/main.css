@@ -178,17 +178,20 @@ header div {
 
 article h2 {
   font-size: 2rem;
-  margin-top: 2.5rem;
+  font-variation-settings: "wght" 700;
+  margin-top: 2.75rem;
 }
 
 article h3 {
   font-size: 1.5rem;
-  margin-top: 2.5rem;
+  font-variation-settings: "wght" 600;
+  margin-top: 2.25rem;
 }
 
 article h4 {
   font-size: 1.25rem;
-  margin-top: 2.5rem;
+  font-variation-settings: "wght" 500;
+  margin-top: 2.25rem;
 }
 
 article li + li {
@@ -229,6 +232,12 @@ article img {
   article img {
     margin: 1.5rem 0 1.5rem -2rem;
     width: 125%;
+  }
+}
+
+@media print {
+  nav {
+    display: none;
   }
 }
 
