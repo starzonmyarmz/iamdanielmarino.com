@@ -9,10 +9,10 @@
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
-    --background: 40, 44, 52;
-    --text: #dedede;
-    --text-medium: #aaa;
-    --primary: #FB5B65;
+    --background: #282c34;
+    --text: #eee;
+    --text-medium: #ccc;
+    --primary: #fb5b65;
   }
 
   img {
@@ -97,7 +97,7 @@ strong {
 
 nav ul {
   align-items: baseline;
-  background: #fff;
+  background: var(--background);
   color: var(--text-medium);
   display: inline-flex;
   font-size: 1rem;
