@@ -1,6 +1,6 @@
 ---
 title: New Timer from Calendar
-blurb:
+blurb: A faster way to track time with Harvest.
 order: 4
 ---
 

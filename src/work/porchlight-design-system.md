@@ -1,10 +1,11 @@
 ---
 title: Porchlight Design System
-blurb:
+blurb: Uniting Harvesters around a common visual language.
 order: 1
 ---
 
 ## Why are We Evaluating a Design System
+
 As part of Harvest’s Product Vision, we want to be a first-in-class design-focused product—meaning our products should be thoughtfully and intentionally designed. Having a design system would push this objective forward in a variety of ways:
 
 - Following the 6-week project cycle—while great for continually shipping new features—limits the amount of time teams have to explore design. We often find ourselves having to settle on the implemented design. A design system would elevate our design. Having a set of common patterns/components takes some of the mundane busy-work out of the design process—leaving more time to focus on exploring design as it relates to user experience.

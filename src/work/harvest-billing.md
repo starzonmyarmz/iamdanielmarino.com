@@ -1,6 +1,6 @@
 ---
 title: Billing
-blurb:
+blurb: Creating a better experience to manage Harvest billing.
 order: 6
 ---
 

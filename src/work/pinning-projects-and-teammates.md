@@ -1,6 +1,6 @@
 ---
 title: Pinning Projects and Teammates
-blurb:
+blurb: Making it easier to report on the projects and teamates that matter.
 order: 5
 ---
 

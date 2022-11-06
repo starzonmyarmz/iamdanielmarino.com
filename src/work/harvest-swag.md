@@ -1,6 +1,6 @@
 ---
 title: Harvest Swag
-blurb:
+blurb: Miscellanious fun projects.
 order: 7
 ---
 

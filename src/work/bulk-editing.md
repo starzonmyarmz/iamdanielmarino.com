@@ -1,6 +1,6 @@
 ---
-title: Bulk Editing
-blurb:
+title: Bulk Editing Time and Expenses
+blurb: Making it easier to edit Harvest time and expenses.
 order: 3
 ---
 

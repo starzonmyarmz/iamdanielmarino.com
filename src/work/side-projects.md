@@ -1,6 +1,6 @@
 ---
 title: Side Projects
-blurb:
+blurb: All work and no play makes Dan a dull boy.
 order: 11
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Project Overview and Analysis
-blurb:
+title: Projects Overview and Analysis
+blurb: Making better sense of all the data you put into Harvest.
 order: 2
 ---
 
