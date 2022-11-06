@@ -21,11 +21,12 @@ module.exports = function(eleventyConfig) {
   })
 
   eleventyConfig.addCollection("work", collection => {
-    const work = collection.getFilteredByGlob("src/work/*.md")
-      .sort((a, b) => {
-        return Number(a.data.order) - Number(b.data.order)
-      })
-    return work
+    return [
+      ...collection.getFilteredByGlob("src/work/*.md")
+        .sort((a, b) => {
+          return a.data.order - b.data.order
+        })
+    ]
   })
 
   return {
