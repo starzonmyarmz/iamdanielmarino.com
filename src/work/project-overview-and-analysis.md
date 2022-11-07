@@ -9,8 +9,6 @@ order: 2
 
 Our goal with this section is to make better sense of all the data you put into Harvest. You’ll have a better grasp of budget, profit, costs, and trend.
 
-We still have a ways to go, at least a few months till completion. But instead of a waiting for a big splashy launch of a fully completed section, we’re trying something unprecedented for us: we’re opening our new Projects section for early access. You can start taking advantage of our new features as soon as they’re ready.
-
 First New Feature: Tracking Project Costs
 Harvest is great at figuring out each project’s billable amount—the key piece of data that you need to get paid and that you use to measure against your budget. To get your project’s full picture, however, you need the flip side of that equation: the project’s costs. What does your project cost you as a business?
 
