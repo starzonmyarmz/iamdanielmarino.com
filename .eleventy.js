@@ -1,7 +1,9 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const dateFilter = require('./src/filters/date-filter.js')
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight)
 
   eleventyConfig.addPassthroughCopy('src/favicon.png')
