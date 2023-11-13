@@ -1,8 +1,14 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const dateFilter = require('./src/filters/date-filter.js')
+const md = require('markdown-it')
+const implicitFigures = require('markdown-it-image-figures');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.amendLibrary("md", mdLib => mdLib.use(implicitFigures, {
+    figcaption: true,
+    lazy: true
+  }))
 
   eleventyConfig.addPassthroughCopy('src/favicon.png')
   eleventyConfig.addPassthroughCopy('src/favicon.svg')
