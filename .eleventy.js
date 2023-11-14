@@ -1,10 +1,16 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const dateFilter = require('./src/filters/date-filter.js')
+const md = require('markdown-it')
+const implicitFigures = require('markdown-it-image-figures');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.amendLibrary("md", mdLib => mdLib.use(implicitFigures, {
+    figcaption: true,
+    lazy: true
+  }))
 
   eleventyConfig.addPassthroughCopy('src/favicon.png')
   eleventyConfig.addPassthroughCopy('src/favicon.svg')
@@ -23,11 +29,12 @@ module.exports = function(eleventyConfig) {
   })
 
   eleventyConfig.addCollection("work", collection => {
-    const work = collection.getFilteredByGlob("src/work/*.md")
-      .sort((a, b) => {
-        return Number(a.data.order) - Number(b.data.order)
-      })
-    return work
+    return [
+      ...collection.getFilteredByGlob("src/work/*.md")
+        .sort((a, b) => {
+          return a.data.order - b.data.order
+        })
+    ]
   })
 
   return {
