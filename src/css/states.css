@@ -1,12 +1,11 @@
 :root {
   --background: #fff;
   --text: #001219;
-  --text-medium: #555;
   --primary: #d61e23;
   --sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -14,7 +13,7 @@ html {
   background: var(--background);
   color: var(--text);
   font-family: var(--sans);
-  font-variation-settings: "wght" 300;
+  font-weight: 300;
   line-height: 1.4;
 }
 
@@ -41,7 +40,7 @@ button span {
 }
 
 h1 {
-  font-variation-settings: "wght" 900;
+  font-family: 900;
   margin: 10vh 0;
   text-align: center;
 }
@@ -59,17 +58,14 @@ section {
 }
 
 .big {
-  background: rgba(0, 0, 0, 0.8);
-  bottom: 0;
-  left: 0;
+  background: rgb(0 0 0 / 0.8);
+  inset: 0;
   padding: 48px 48px 72px;
   position: fixed;
-  right: 0;
-  top: 0;
 }
 
 .big span {
-  color: #fff;
+  color: var(--background);
   display: block;
   font-size: 1.2rem;
   margin: 24px;
