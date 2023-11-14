@@ -22,25 +22,25 @@
 
 @font-face {
   font-family: 'Source Serif';
-  src: url('/font/SourceSerifVariable-Roman.otf.woff2');
-  font-weight: normal;
+  src: url('/font/SourceSerifVariable-Roman.otf.woff2') format('woff2-variations');
   font-style: normal;
+  font-weight: 375 600;
 }
 
 @font-face {
   font-family: 'Source Serif';
-  src: url('/font/SourceSerifVariable-Italic.otf.woff2');
-  font-weight: normal;
+  src: url('/font/SourceSerifVariable-Italic.otf.woff2') format('woff2-variations');
   font-style: italic;
+  font-weight: 375 600;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 ::selection {
   background: var(--primary);
-  color: #fff;
+  color: var(--background);
 }
 
 html {
@@ -55,10 +55,10 @@ body {
   background: var(--background);
   color: var(--text);
   font-family: var(--serif);
+  font-feature-settings: 'liga', 'clig';
   font-size: 1.25rem;
   -webkit-font-smoothing: antialiased;
-  font-feature-settings: 'liga', 'clig';
-  font-variation-settings: "wght" 375;
+  font-weight: 375;
   line-height: 1.45;
   margin: 0;
   padding: 1rem;
@@ -81,7 +81,7 @@ blockquote {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--sans);
-  font-variation-settings: "wght" 800;
+  font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.03rem;
   margin: 0;
@@ -98,7 +98,7 @@ small {
 }
 
 strong {
-  font-variation-settings: "wght" 500;
+  font-weight: 600;
 }
 
 /* Navigation */
@@ -132,7 +132,7 @@ nav a:hover {
 nav li:first-child a {
   font-family: var(--sans);
   font-size: 1.25rem;
-  font-variation-settings: "wght" 900;
+  font-weight: 900;
   border: 1px solid currentColor;
   padding: 0.3ch;
   user-select: none;
@@ -186,19 +186,19 @@ header div {
 
 article h2 {
   font-size: 2rem;
-  font-variation-settings: "wght" 700;
+  font-weight: 700;
   margin-top: 2.75rem;
 }
 
 article h3 {
   font-size: 1.5rem;
-  font-variation-settings: "wght" 600;
+  font-weight: 600;
   margin-top: 2.25rem;
 }
 
 article h4 {
   font-size: 1.25rem;
-  font-variation-settings: "wght" 500;
+  font-weight: 400;
   margin-top: 2.25rem;
 }
 

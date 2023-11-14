@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://iamdanielmarino.com/">
-  <title>Daniel Marino | Posts</title>
+  <title>Daniel Marino</title>
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
@@ -8,7 +8,7 @@
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
-    <email>iamdanielmarino@gmail.com</email>
+    <email></email>
   </author>
   <entry>
     <title>JS13K 2018 Retrospective</title>
