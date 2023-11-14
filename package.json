@@ -1,6 +1,6 @@
 {
   "name": "iamdanielmarino.com",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "My personal site",
   "scripts": {
     "build": "eleventy",
@@ -15,7 +15,7 @@
     "url": "https://iamdanielmarino.com"
   },
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
