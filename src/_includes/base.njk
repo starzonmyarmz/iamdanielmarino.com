@@ -10,16 +10,6 @@
       <meta name="robots" content="noindex">
     {%- endif %}
 
-    <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:image" content="{{ site.url }}/img/marino.jpg">
-    <meta property="og:url" content="{{ site.url }}">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="{{ site.authorHandle }}">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:image" content="{{ site.url }}/img/marino.jpg">
-
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="mask-icon" href="/favicon.svg" color="black">
@@ -31,11 +21,6 @@
       <ul>
         <li><a href="/" aria-label="Daniel Marino">DM</a></li>
         <li><a href="/posts">Posts</a></li>
-        {%- if env.environment == 'localhost' %}
-          <li><a href="/work">Work</a></li>
-          <li><a href="/resume">Resume</a></li>
-        {%- endif %}
-        <li><a href="https://github.com/starzonmyarmz">GitHub</a></li>
       </ul>
     </nav>
 

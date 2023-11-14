@@ -210,6 +210,17 @@ article img {
   width: 100%;
 }
 
+article figure {
+  margin: 1.5em 0;
+}
+
+article figcaption {
+  color: var(--text-medium);
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 0.75em;
+}
+
 @media (min-width: 768px) {
   body {
     padding: 2rem calc(100vw - 2rem - 70ch) 2rem 4rem;
@@ -243,12 +254,8 @@ article img {
   }
 
   article figcaption {
-    color: var(--text-medium);
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 0.75em;
-    padding: 0 2rem;
-    width: 50%;
+    padding: 0 0 0 2rem;
+    width: 85%;
   }
 }
 

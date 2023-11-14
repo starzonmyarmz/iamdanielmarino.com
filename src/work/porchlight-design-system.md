@@ -1,91 +1,133 @@
 ---
 title: Porchlight Design System
-blurb: Uniting Harvesters around a common visual language.
+blurb: A case study detailing detailing the creation of a design system to unite individuals at Harvest on a common visual language.
 order: 1
 ---
 
-## Why are We Evaluating a Design System
+Recognizing the need for a unified design strategy across its product line, Harvest tackled challenges such as disparate user interfaces, extended design cycles, and the struggle to maintain a consistent brand identity.
 
-As part of Harvest’s Product Vision, we want to be a first-in-class design-focused product—meaning our products should be thoughtfully and intentionally designed. Having a design system would push this objective forward in a variety of ways:
+Over the span of a year, we established processes, introduced new work tools, and laid the groundwork for the Porchlight design system. This initiative was implemented with dedicated design and engineering resources specifically allocated to the design system. Our journey involved developing a systematic approach, facilitating ongoing progress amidst a substantial flow of concurrent tasks and evolving priorities.
 
-- Following the 6-week project cycle—while great for continually shipping new features—limits the amount of time teams have to explore design. We often find ourselves having to settle on the implemented design. A design system would elevate our design. Having a set of common patterns/components takes some of the mundane busy-work out of the design process—leaving more time to focus on exploring design as it relates to user experience.
-- As Harvest begins making products responsive to devices, a design system would greatly simplify implementation and development. Having predefined responsive patterns in place means we don’t have to spend extra time thinking through these implementations on a project-by-project basis.
-- As Harvest continues to grow its team, a design system will greatly reduce confusion and adoption surrounding UI patterns we use within Harvest, and how they’re implemented. A design system will help reduce onboarding overhead for new teammates, and provide reference in the long term.
-- Having multiple products, there’s a lot of opportunity to have them share common UI patterns. A shared design system would reduce overhead, resulting in less code to maintain. This would lead to faster development, more consistent experiences for our customers, strengthen the Harvest brand, and allow for time to explore design solutions.
-- In an effort to make Harvest more accessible for our customers, we can bake accessibility patterns into our UI components. This will make our products much more accessible across the board which will result in a more inclusive experience without having to invest unnecessary extra resources.
+![](/img/work/pds-logo.png)
 
-## Problems Solved by a Design System
+My responsibility was to spearhead the creation of the design system, overseeing a dedicated team to bring it to fruition. I played a key role in UX/UI design, engineering, management, and documentation of the design system, ensuring its accessibility in design, and successfully integrating it across our product portfolio.
 
-### Speed
+## The Problem
 
-Historically, we’ve been limited to the amount of time we have to explore design considerations, and have often found ourselves having to settle. A design system would provide Harvest a set of modular components, taking some of the time-consuming busy-work out of the design process—leaving more time to focus on exploring design as it relates to user experience. These components would also have code counterparts which would lead to faster development.
+The absence of a comprehensive design system has resulted in a disjointed user experience. Ad-hoc approaches to website technology and design have led to fragmented workflows and inconsistent brand encounters. Here are the identified issues:
 
-### Consistency
+### Lack of Guidelines and Direction
 
-We often find ourselves creating and dealing with “snowflake” implementations. This results in an inconsistent UI/UX, which increases cognitive load when customers use our products. Creating consistency is like making small promises throughout the interface. When people can be confident of what will happen, they can rely on the product which helps build trust.
+- **Objective:** Align our teams by providing a structured and guided approach to product development.
+- **Solution:** Introduce comprehensive guidelines to streamline the creation of products.
 
-### Simplicity
+### Elimination of Component Duplication
 
-This is the glue that bonds Speed and Consistency. Having to regularly tackle time-consuming, low-level designing and coding tasks, as well as dealing with snowflake implementations just makes our jobs more difficult in general. Taking some of these complications out of the equation allows us to spend more time and energy into creating the best experiences for our customers.
+- **Objective:** Expedite the design and development process by reducing redundancy in common components.
+- **Solution:** Implement a ready-made library and standardized patterns to enable teams to create and test layouts more efficiently.
 
-### Accessibility
+### Poor Accessibility
 
-While we’ve made leaps and bounds in the last few years, lack of accessible experiences still remain. Part of the problem is lack of awareness and education internally, but not having pre-baked accessible solutions is also an issue. A design system would address this by containing the knowledge our consumers need to make accessible UIs, as well as modular components with accessibility built-in. By building accessible experiences, we’ll create a more inclusive UI.
+- **Objective:** Enhance the accessibility and inclusivity of our products.
+- **Solution:** Integrate accessibility features into our component libraries, addressing both design and code repositories to ensure a more universally accessible user experience.
 
-### Responsive
+### Inconsistencies Across Products
 
-Currently, Harvest’s mobile story is fragmented. Mobile/Desktop apps don’t provide all the same functionality or experience as our web app. Our web app doesn’t respond to mobile/tablet devices. The combination of these issues makes it extremely difficult for individuals to achieve certain tasks. As Harvest begins embarking in making our products responsive, having a design system would greatly simplify implementation and development, by having predefined responsive patterns in place and ready to go. This would result in less time thinking through certain implementations on a project-by-project basis.
+- **Objective:** Improve brand perception and user trust through consistent experiences.
+- **Solution:** Establish uniform experiences that cater to everyone, enabling users to achieve their goals seamlessly.
 
-### Principles and Guidelines
+By addressing these concerns and implementing a robust design system, we aim to create a more cohesive and user-friendly environment, fostering better collaboration among teams and elevating our overall brand image.
 
-There are a lot of “guidelines” that we try to follow at Harvest, however a lot of these are undocumented or are assumed. This makes it difficult for us to reach the same goal in how we solve problems for our customers. Having an agreed upon set of principles, guidelines, and best practices will unify our teams in building new, and improving existing features.
+## The Challenges
 
-Did we meet our success state hypotheses?
+While the incorporation of a Design System holds significant potential for enhancing Harvest, our team faces several notable challenges in its adoption:
 
-Hypothesis 1 – By introducing modular components, we’ll be able to build designs faster, more consistently/predictably, and have a simpler codebase.
+- **Complex Migration Process:** Transitioning to a design system poses a formidable challenge due to the extensive number of components distributed across various products and toolchains. The sheer scale of this migration demands careful planning and execution.
+- **Ongoing Commitment to Maintenance:** Recognizing that a design system is a dynamic entity, sustained commitment from leadership is crucial. Regular maintenance, requiring dedicated time within our project cadence, is imperative to ensure the system's continued relevance and effectiveness.
+- **Decision-Making for System Evolution:** The maintenance process includes decisions about incorporating new patterns, modifying existing ones, and potentially phasing out outdated patterns. Apart from the actual implementation, significant time and effort are required to facilitate team discussions and secure buy-in for these decisions. This collaborative aspect is integral to the system's evolution.
 
-Goal: 20% reduction in design time spent in Figma
-Actual: Goal met — 50% reduction in design spent when using the Porchlight Figma library
-Goal: 30% reduction in engineer time spent in HTML, CSS, and JS
-Actual: Goal met — A little over 50% reduction when using Porchlight code patterns. The amount of resulting custom code is also significantly reduced leaving less overhead in code maintenance. In reality, over the lifetime of an interface, the reduction in engineering time is probably much larger than 50%.
-Goal: 90% Porchlight coverage in harvestapp
-Actual: Goal met — 95% Porchlight coverage in harvestapp
+Addressing these hurdles strategically will pave the way for a smoother integration of the Design System into our workflow, ultimately optimizing our design and development processes.
 
-With the company rebrand, we were able to update Porchlight Foundations to use rebranded colors, type, and other tokens—which trickle down into Porchlight Utilities and Components. Then when pulling in the updated version of Porchlight into our products (with these rebranded tweaks) these changes propagate to all instances of Porchlight components.
+## UI Inventory
 
-We spent a couple of weeks updating Porchlight to use rebranded styles, and about six weeks updating our products’ UI. Because the vast majority of Harvestapp and Harvest ID (and others) consume Porchlight at such a large percentage, we were able to spend the vast majority of that time to focus on areas that cannot consume Porchlight—overall site layout, navigation, running timer aura, logos and favicons, etc.
+To gain deeper insights into the current landscape of our design ecosystem, we initiated a comprehensive UI Inventory focusing on our key interface components. We meticulously documented unique instances of critical design assets, encompassing elements such as typography, buttons, icons, input forms, drop-downs, etc., and centralized them within a collaborative Figma file.
 
-As a bonus, we also added the Harvest and Forecast/API Help Centers as consumers of Porchlight, bringing the number of Porchlight consumers up to a total of seven!
+This meticulous examination uncovered a multitude of inconsistencies within our design assets, underscoring the imperative for a more methodical approach to documenting, communicating, and sustaining our design system.
 
-Hypothesis 2 – By focusing on accessibility, we’ll meet the needs of customers with certain disabilities.
+![](/img/work/pds-inventory.png)
 
-Goal: 90/100 aggregate Lighthouse score of all Porchlight components
-Actual: Goal met — 96/100 aggregate score
+The inventory process proved instrumental in highlighting discrepancies and incongruities throughout our site and product, establishing a robust foundation for our subsequent design system endeavors. Armed with the audit findings, we curated a list of core components that would form the cornerstone of our design system.
 
-A lot of this work happened before rebranding, but overall we’ve put a lot of work into making sure colors meet minimum contrast requirements, and making sure Components use properly accessible markup. Shortly after making Timesheets day view responsive, as well as swapping out old Chosen components, we got this email from our friends at Accessible 360:
+Key activities in this phase included:
 
-I wanted to say thank you for deploying some improvements to Harvest. Many of our employees use screen readers and these changes improve their experience many times a day. I'm not sure exactly what you changed but heard:
-Improvements to the previously inaccessible project/task drop downs on the "day view". It is now much easier to add rows when using the day view in Harvest.
-An issue was corrected where each row in the "day view" was marked up as a separate table. All of the rows you have added to your day now reads as a nice single table on the day view.
+- **Researching Best Practices:** Delving into other design systems and interfaces to glean insights into common practices and draw inspiration.
+- **Analyzing Audit Instances:** Scrutinizing the instances and use cases identified during the audit, engaging in thoughtful ideation to formulate solutions aligned with our overarching goals.
+- **Standardization of Components:** Unifying diverse variations of components, retaining only the essential elements. For instance, we found over 60 variations of buttons!
 
-— Kelly Heikkila, CTO, Accessibile360
+This approach not only enhances the cohesiveness of our design elements but also positions us to cultivate a more efficient and harmonized design system.
 
-As we continue to use accessible patterns, we’ll also continue to monitor customer feedback in relation to accessibility. We’re also putting effort into educating the Harvest team about accessibility-related topics. Karla has been focused on auditing and improving accessibility within harvestapp, and a group of us has been in communication with A360 about running an Accessibility Workshop for the entire Harvest team!
+## Foundations
 
-Hypothesis 3 – By introducing responsive components, we’ll improve and increase usage across our mobile/tablet web experience.
+Critical to the success of the system was the alignment of all our teams on the foundations. Porchlight is structured to be scaled, meaning that our foundational system needed to account for every potential UI element. Our foundations include a grid system, breakpoints, spacing, and color systems.
 
-Goal: Make Harvest App and Harvest ID responsive
-Actual: Goal met — both apps among others are responsive
+![](/img/work/pds-foundations.png)
 
-This outcome is primarily a pass/fail grade. Wherever Porchlight components are used, those components will function properly, and look decent on mobile devices. Porchlight also gave us the tools necessary to make more complex sections responsive, such as Timesheets and Expenses.
+In addition, we introduced a typescale based on display headings, utility headings, paragraph styles, and supporting styles. This comprehensive approach ensures scalability and consistency.
 
-By meeting this goal, we set Harvest up for success by working where our customers work (mobile/tablet devices) and setting ourselves up for future work in the mobile space.
+![](/img/work/pds-colors.png "Our color scale enables a branded palette that remains flexible with light and dark color variations while adhering to WCAG AA minimum contrast accessibility standards.")
 
-It should also be noted that this ties back to our first hypothesis about reduction in engineer time. Not only are we saving time from using Porchlight components, but we also save a lot of time from not having to create one-off mobile solutions.
+## Components
 
-Hypothesis 4 – By creating documented principles and guidelines, we’ll be more unified in how we approach design.
+We've created a comprehensive set of reusable interface elements for integration throughout Harvest products. These elements are constructed on a solid foundation to ensure consistency and durability. They prioritize accessibility, responsiveness, and adherence to Harvest branding, thereby maintaining a uniform experience across our product range. Notable examples include buttons, form inputs, grids, and tables.
 
-A short survey was sent to Harvesters that are involved in Design Club—a recurring meeting where Designers and PMs come together to discuss design work-in-progress. The questions were focused on gauging how we feel as a team how useful Porchlight is in guiding our work.
+![](/img/work/pds-buttons.png)
 
-- https://3.basecamp.com/3059193/buckets/16105760/messages/3121136981
-- https://3.basecamp.com/3059193/buckets/18397372/messages/4921034373
+To enhance user understanding, each component comes with detailed interaction examples, clearly illustrating expected interactive states. These are complemented by specific specifications covering tab stops, keyboard control requirements, spacing, and application.
+
+Moreover, each component undergoes meticulous refinement to accommodate additional breakpoints. This meticulous process ensures our components perform seamlessly across a diverse range of devices, allowing for a consistent and reliable user experience without the need for unnecessary adjustments.
+
+![](/img/work/pds-responsive.png)
+
+## Accessibility
+
+One of Harvest's design principles is _Treat customers like real humans_. We were insistent on making sure we built components to be accessible to customers with disabilities. Each component was designed with accessibility in mind, striving to comply with WCAG AA accessibility standards.
+
+![](/img/work/pds-a11y.png)
+
+We aimed to involve all internal teams in the process by offering transparent explanations, comprehensive documentation, and educational materials about the UX team's initiatives to develop an inclusive system.
+
+## Workshop Environment
+
+Brad Frost emphasizes the significance of establishing and sustaining a design system in a workshop setting, as discussed in his article on creating a [frontend workshop environment](https://bradfrost.com/blog/post/a-frontend-workshop-environment/). Our firsthand experience revealed the challenges of maintaining design and code consistency across various products, prompting us to develop Porchlight in its dedicated environment.
+
+Our choice was to construct Porchlight using [Storybook](https://storybook.js.org/), an open-source, versatile tool enabling the creation of an interactive pattern library for code in isolation. Storybook is compatible with all major frontend frameworks, facilitating the documentation of use cases as stories and offering seamless sharing and reuse.
+
+Within our workshop environment, we seamlessly incorporate integration tests using Puppeteer, perform visual regression testing through Chromatic, and implement code linting with Prettier and Stylelint. These tools collaborate harmoniously, ensuring that our work consistently meets and surpasses high-quality standards. This allows us to feel confident in using Porchlight in our products.
+
+## Documentation
+
+Effective component documentation is pivotal for a functional library, enabling swift and uniform decision-making for everyone involved. Our aim was to produce comprehensive documentation covering every facet of our design system, ensuring it is well-organized, consistent, and user-friendly.
+
+Working closely with our design and engineer partners, we created and maintain documentation resources in Storybook, ensuring that we included our design principles, quick start guides, accessibility standards and best practices for designing and testing.
+
+![](/img/work/pds-principles.png "**Design principles** serve as a guiding force in the development of new features or products using Porchlight. This ensures a unified direction, enabling everyone to work towards the same goal, facilitated by the design system.")
+
+![](/img/work/pds-guidelines.png "**Guidelines** serve as essential knowledge for Harvesters, detailing optimal utilization of the design system. They explain our approach to crafting and constructing Harvest products. These encompass topics such as accessibility, voice and tone, icons, printing, and more.")
+
+## Tracking Progress
+
+To efficiently manage and communicate the progress of tasks related to the implementation of Porchlight into our products, we leveraged GitHub Projects, providing universal accessibility within the Harvest team. GitHub Issues were generated to categorize and address specific tasks, and these were then assigned based on their priority. This streamlined approach allowed us to report real-time progress to stakeholders, providing them with access to all pertinent information. This comprehensive system ensured a smooth transition and enhanced visibility into the implementation process.
+
+![](/img/work/pds-coverage.png "During the rollout phase of Porchlight into our products, a [custom script](https://gist.github.com/starzonmyarmz/204fbabbbe586788db2649e7181443d5) was developed to facilitate the comparison of outdated implementations against Porchlight components. This data was integrated into a Mode dashboard, providing us with consumption metrics.")
+
+## The Future
+
+Harvest has successfully implemented a design system that not only tackled the challenges we encountered but also strategically positioned us to deliver a seamless and user-friendly experience across all our products.
+
+Our design system remains an evolving project. We continuously iterate, adapt, and glean valuable insights from the ongoing process. This dynamic approach has established a robust foundation, significantly enhancing our team's efficiency, maintaining consistency, and promoting standardization.
+
+Ongoing maintenance efforts encompass several key aspects:
+
+- Expanding our component library by incorporating more intricate components.
+- Nurturing processes and adhering to best practices for documentation maintenance to ensure our library remains current and synchronized, bridging the design and code aspects seamlessly.
+- Advocating awareness among teams and encouraging widespread adoption and contribution to the documentation.
