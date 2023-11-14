@@ -6,15 +6,6 @@
     <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:site_name" content="Daniel Marino">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Gamedev.js Jam 2021 Retrospective">
-    <meta property="og:image" content="https://iamdanielmarino.com/img/marino.jpg">
-    <meta property="og:url" content="https://iamdanielmarino.com">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Gamedev.js Jam 2021 Retrospective">
-    <meta name="twitter:image" content="https://iamdanielmarino.com/img/marino.jpg">
-
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="mask-icon" href="/favicon.svg" color="black">
@@ -26,7 +17,6 @@
       <ul>
         <li><a href="/" aria-label="Daniel Marino">DM</a></li>
         <li><a href="/posts">Posts</a></li>
-        <li><a href="https://github.com/starzonmyarmz">GitHub</a></li>
       </ul>
     </nav>
 
@@ -43,14 +33,14 @@
 <p>You’d think JavaScript would be necessary to make an HTML5 game, but the <a href="https://codepen.io/collection/AKkZro?cursor=ZD0wJm89MCZwPTEmdj00">Internet has shown us</a> <em>it is</em> possible to make simple games without JavaScript. I wanted to see just how far I could take this limitation—especially in an environment where it is competing against other games.</p>
 <h2>Game Concepts</h2>
 <p><a href="https://starzonmyarmz.itch.io/hiero">Hiero</a> is the third game I’ve made (the first by myself), and by now I should have some sort of process to making a game, right? Well… I don’t really. So far, the process has been different for every game.</p>
-<p><img src="/img/hiero-title.jpg" alt="Hiero Title Screen"></p>
+<figure><img src="/img/hiero-title.jpg" alt="Hiero Title Screen" loading="lazy"></figure>
 <p>In my experience, working on various aspects of a game (artwork, sound, etc…) greatly influences the other aspects of the game, so I find myself ping ponging around. Over the course of 13 days, I ended up implementing three core concepts into Hiero.</p>
 <ol>
 <li><strong>Complete 15 puzzles within a short timeframe.</strong> Not really much to say about this other than the earlier puzzles start out pretty easy. This teaches the player how the game is played. Over time the puzzles ramp up in difficulty. To keep things fast-paced, the game is short.</li>
 <li><strong>To complete a puzzle you have to find the mismatched shape.</strong> Each puzzle contains three to seven shapes. When hovering over a shape, a “mirrored” version of the shape is shown underneath. The catch is, in each puzzle one of the mirrored shapes doesn’t match. In some cases it’s a completely different shape, while in others it’s a very similar shape with a slight modification. This not only satisfied the “mirror” theme requirements, but also seemed to be a different and slightly-more challenging take on the classic which-one-doesn’t-belong concept.</li>
 <li><strong>You can only make three mistakes.</strong> This was a last minute addition to Hiero. Without it, the game can be cheesed by spamming clicks on the shapes until solving a puzzle. This adds an extra challenge of forcing the player to be judicious with their selections.</li>
 </ol>
-<p><img src="/img/hiero-gameplay.jpg" alt="Hiero Game Play"></p>
+<figure><img src="/img/hiero-gameplay.jpg" alt="Hiero Game Play" loading="lazy"></figure>
 <h2>Mechanics</h2>
 <p>As mentioned earlier, I didn’t want to use any JavaScript. My game is primarily built around two CSS mechanics: checkboxes with insane selector magic to update the game’s state, and an in-game timer created with an animation delay. The resulting code is in no-way elegant! It’s quite messy, convoluted, and slightly laggy. The CSS weighs in at roughly 60K!</p>
 <h3>Checkboxes</h3>
@@ -69,7 +59,7 @@
 <p>As I sketched out ideas for the interface, the more I liked the idea of using my personal art style which combines hand-drawn illustrations and digital painting. As I started putting all the pieces together it started feeling a bit like a cartoon. This inspired my use of <a href="https://fonts.google.com/specimen/Kalam#standard-styles">Kalam</a> for the title screen. I wanted to use something a little more legible for the interface text, and landed on <a href="https://fonts.google.com/specimen/Josefin+Sans">Josefin Sans</a> which is inspired by geometric sans serif designs from the 1920s. To really help seal the deal on the old-school cartoon vibe, I added the film-grain overlaying textures, using CSS animation to <a href="https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_base.scss#L128-L135">shift the texture around</a>.</p>
 <p>In my opinion, this game would have worked just as well without the mirror graphic. It certainly would have simplified development not having to incorporate it! However, it really helps to drive the jam’s theme, so why not. It also gave me an excuse to mess around with CSS 3d transforms and perspective which isn’t something I get to do too often.</p>
 <p>The last thing I’d like to talk about in regards to the artwork is the “tunnel vision” gradient that occurs as you near the end of the time limit. This was an idea my daughter had while play testing for me. It really helps simultaneously create tension, panic, and focus. This was implemented at the last minute using a CSS <code>radial-gradient</code> and <a href="https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_base.scss#L139-L172">animating it’s appearance</a>.</p>
-<p><img src="/img/hiero-gradient.jpg" alt="Tunnel Vision Gradient"></p>
+<figure><img src="/img/hiero-gradient.jpg" alt="Tunnel Vision Gradient" loading="lazy"></figure>
 <h2>Sound Design</h2>
 <p>In the past, I've used JavaScript-powered, chiptune-styled sound. But that wouldn't really match the art style or ambiance. Also, I wanted to try something new!</p>
 <p>The limitations for triggering sound created some challenging conditions for creating sound. I couldn’t always control when the player would trigger a scene transition. Syncing chord progressions, rhythm, and melodies together was practically impossible. My approach was to keep the sound atmospheric in a way where sounds could be independently layered.</p>

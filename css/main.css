@@ -63,6 +63,7 @@ body {
   margin: 0;
   padding: 1rem;
   text-rendering: optimizelegibility;
+  text-wrap: pretty;
 }
 
 a {
@@ -72,12 +73,19 @@ a {
   touch-action: manipulation;
 }
 
+blockquote {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 2.25rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--sans);
   font-variation-settings: "wght" 800;
   line-height: 1.15;
   letter-spacing: -0.03rem;
   margin: 0;
+  text-wrap: balance;
 }
 
 img, svg {
@@ -202,6 +210,17 @@ article img {
   width: 100%;
 }
 
+article figure {
+  margin: 1.5em 0;
+}
+
+article figcaption {
+  color: var(--text-medium);
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 0.75em;
+}
+
 @media (min-width: 768px) {
   body {
     padding: 2rem calc(100vw - 2rem - 70ch) 2rem 4rem;
@@ -229,9 +248,14 @@ article img {
     width: calc(50vw - 8rem);
   }
 
-  article img {
-    margin: 1.5rem 0 1.5rem -2rem;
+  article figure {
+    margin: 1.5em 0 1.5em -2rem;
     width: 125%;
+  }
+
+  article figcaption {
+    padding: 0 0 0 2rem;
+    width: 85%;
   }
 }
 

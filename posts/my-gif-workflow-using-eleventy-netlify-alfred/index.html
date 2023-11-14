@@ -6,15 +6,6 @@
     <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:site_name" content="Daniel Marino">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="My GIF Workflow Using Eleventy, Netlify, and Alfred">
-    <meta property="og:image" content="https://iamdanielmarino.com/img/marino.jpg">
-    <meta property="og:url" content="https://iamdanielmarino.com">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="My GIF Workflow Using Eleventy, Netlify, and Alfred">
-    <meta name="twitter:image" content="https://iamdanielmarino.com/img/marino.jpg">
-
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="mask-icon" href="/favicon.svg" color="black">
@@ -26,7 +17,6 @@
       <ul>
         <li><a href="/" aria-label="Daniel Marino">DM</a></li>
         <li><a href="/posts">Posts</a></li>
-        <li><a href="https://github.com/starzonmyarmz">GitHub</a></li>
       </ul>
     </nav>
 
@@ -45,7 +35,7 @@
 <p>I started by turning my <a href="https://github.com/starzonmyarmz/gifs">GIFs repo</a> into a static site using <a href="https://www.11ty.dev/">Eleventy</a>. The static site consists of two primary things: a directory with all of my GIFs, and a <a href="https://github.com/starzonmyarmz/gifs/blob/main/src/gifs.njk">generated JSON file</a> listing all my GIFs (more on this in a bit).</p>
 <p>I created a new site on Netlify that watches my GIFs repo, and runs a build process anytime I push to <code>main</code> branch. This only took a few minutes to set up, and all my GIFs are now easily accessible by URL.</p>
 <p>I was still missing a component though—a quick and easy way to search for GIFs and copy their URLs. I built an <a href="https://github.com/starzonmyarmz/gifz-alfred-workflow/blob/main/index.js">Alfred script</a> using <a href="https://github.com/sindresorhus/alfy">Alfy</a> to handle this part. Alfy is so cool to work with, allowing you to build Alfred workflows using JavaScript and Node. The Alfred Script takes an input, and searches for it against the <a href="https://gifz.netlify.app/gifs.json">JSON file on the Netlify site</a>. When I find the GIF I want, it copies the URL to the clipboard.</p>
-<p><img src="/img/gif_workflow.gif" alt="My gif flow using Alfred App"></p>
+<figure><img src="/img/gif_workflow.gif" alt="My gif flow using Alfred App" loading="lazy"></figure>
 <p>This update was well-needed, and I find myself using my personal GIFs much more often now! I only wish I had done something like this much sooner.</p>
 
   </section>
