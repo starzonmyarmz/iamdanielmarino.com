@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2024-01-13T00:00:00Z</updated>
+  <updated>2024-01-15T00:00:00Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -330,6 +330,32 @@ It was a bit of a balancing act to capture the essence of a physical sequencer w
 &lt;p&gt;Several years ago, I started toying with the idea fo experimenting with generative art. A buddy of mine, &lt;a href=&quot;https://codepen.io/satchmorun&quot;&gt;Arun&lt;/a&gt; shared some of his work, and inspired me to go for it. So now I&#39;ve been creating generative art for the past five years or so, but I&#39;ve only recently started &lt;a href=&quot;https://starzonmyarmz.github.io/generative-art/&quot;&gt;sharing my experiments&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Libraries like &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt; make it very approachable. And I&#39;m a huge fan of P5! I even &lt;a href=&quot;https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/&quot;&gt;made a video game&lt;/a&gt; with it. If you have the slightest interest in creating generative art, you should go for it! If you don&#39;t know where to start, I recommend checking out &lt;a href=&quot;https://thecodingtrain.com/&quot;&gt;The Coding Train&lt;/a&gt; where you&#39;ll find some great tutorials for getting started with programming, and more specific tutorials for using the P5 library.&lt;/p&gt;
 &lt;p&gt;I love to write code. I love art. I love being creative. The idea that I can combine all these into a single hobby is so cool.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Using the p5play JavaScript Game Engine</title>
+    <link href="https://iamdanielmarino.com/posts/using-the-p5play-library-for-making-games/"/>
+    <updated>2024-01-15T00:00:00Z</updated>
+    <id>https://iamdanielmarino.com/posts/using-the-p5play-library-for-making-games/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I was messing around with &lt;a href=&quot;https://p5play.org/&quot;&gt;p5play&lt;/a&gt; last week to experiment with a game idea, and was pleasantly surprised by how easy it is to use. It was designed to be intuitive for beginners, such as students. In under a half hour I had created some common basic mechanics! Check it out:&lt;/p&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;500&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;WNmRzOK&quot; data-user=&quot;starzonmyarmz&quot; style=&quot;height: 500px; display: flex; align-items: center; justify-content: center; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/starzonmyarmz/pen/WNmRzOK&quot;&gt;
+  p5play&lt;/a&gt; by Daniel Marino (&lt;a href=&quot;https://codepen.io/starzonmyarmz&quot;&gt;@starzonmyarmz&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+&lt;h3&gt;What I Like&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;It builds on top of &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt;. This means that I can leverage all the built-in features I&#39;m already familiar with in P5. It even expands upon some built-in features in P5—like creating a new &lt;a href=&quot;https://p5play.org/learn/canvas.html&quot;&gt;Canvas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;It uses the same &lt;a href=&quot;https://piqnt.com/planck.js&quot;&gt;Box2D physics simulator&lt;/a&gt; that some popular games use. Some physics engines are a little floaty, while others are too constrained. This simulator has some really comfortable defaults out of the box.&lt;/li&gt;
+&lt;li&gt;The documentation is easy to follow along, and there&#39;s a &lt;a href=&quot;https://discord.gg/3UTbqUgmPF&quot;&gt;Discord server&lt;/a&gt; where I can (and have) ask questions. I typically have gotten a response from the library maintainer, himself, within a couple of hours.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What I Dislike&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Not everything is documented, and that&#39;s not necessarily a bad thing. However, there are some really handy properties and even methods available that I happened to come across by accident just from purusing the source code and outputting various p5play global methods to &lt;code&gt;console.log()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The licensing is a &lt;a href=&quot;https://github.com/quinton-ashley/p5play-web/blob/main/LICENSING.md&quot;&gt;little weird&lt;/a&gt;. In short: its free to use for open source projects, but for professional use you need to pay for a license. I&#39;m not going to argue whether you should have to pay for a license or not, but its definately something to be aware of.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&#39;ll definitely be keeping &lt;a href=&quot;https://p5play.org/&quot;&gt;p5play&lt;/a&gt; in my toolkit the next time I want to prototype some game mechanics or participate in a game jam!&lt;/p&gt;
 </content>
   </entry>
 </feed>
