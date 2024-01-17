@@ -1,6 +1,6 @@
 ---
 title: Porchlight Design System
-blurb: A case study detailing detailing the creation of a design system to unite individuals at Harvest on a common visual language.
+blurb: Creating a design system to unite individuals at Harvest on a common visual language.
 order: 1
 ---
 
@@ -12,7 +12,7 @@ Over the span of a year, we established processes, introduced new work tools, an
 
 My responsibility was to spearhead the creation of the design system, overseeing a dedicated team to bring it to fruition. I played a key role in UX/UI design, engineering, management, and documentation of the design system, ensuring its accessibility in design, and successfully integrating it across our product portfolio.
 
-## The Problem
+## Problem
 
 The absence of a comprehensive design system has resulted in a disjointed user experience. Ad-hoc approaches to website technology and design have led to fragmented workflows and inconsistent brand encounters. Here are the identified issues:
 
@@ -38,7 +38,7 @@ The absence of a comprehensive design system has resulted in a disjointed user e
 
 By addressing these concerns and implementing a robust design system, we aim to create a more cohesive and user-friendly environment, fostering better collaboration among teams and elevating our overall brand image.
 
-## The Challenges
+## Challenges
 
 While the incorporation of a Design System holds significant potential for enhancing Harvest, our team faces several notable challenges in its adoption:
 
@@ -120,7 +120,7 @@ To efficiently manage and communicate the progress of tasks related to the imple
 
 ![](/img/work/pds-coverage.png "During the rollout phase of Porchlight into our products, a [custom script](https://gist.github.com/starzonmyarmz/204fbabbbe586788db2649e7181443d5) was developed to facilitate the comparison of outdated implementations against Porchlight components. This data was integrated into a Mode dashboard, providing us with consumption metrics.")
 
-## The Future
+## Future
 
 Harvest has successfully implemented a design system that not only tackled the challenges we encountered but also strategically positioned us to deliver a seamless and user-friendly experience across all our products.
 

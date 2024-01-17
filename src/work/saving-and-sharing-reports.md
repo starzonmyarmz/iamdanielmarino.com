@@ -1,91 +1,78 @@
 ---
 title: Saving and Sharing Reports
-blurb: blurb goes here
+blurb: Elevating productivity and teamwork for Harvest users through improved reporting capabilities.
 order: 2
 ---
 
-## Why are We Evaluating a Design System
+Harvest, a leading platform for time tracking and project management, identified a crucial need to improve its reporting module based on customer churn feedback. Customers expressed challenges in efficiently accessing and sharing personalized reports, leading to reduced meaningful interaction with the platform and an increased risk of churn.
 
-As part of Harvest’s Product Vision, we want to be a first-in-class design-focused product—meaning our products should be thoughtfully and intentionally designed. Having a design system would push this objective forward in a variety of ways:
+Over a four-month period in 2023, a dedicated team of customer experience and engineering experts collaborated to address these challenges. The process involved customer research, iterative design, and close collaboration with select customers to ensure their needs were met.
 
-- Following the 6-week project cycle—while great for continually shipping new features—limits the amount of time teams have to explore design. We often find ourselves having to settle on the implemented design. A design system would elevate our design. Having a set of common patterns/components takes some of the mundane busy-work out of the design process—leaving more time to focus on exploring design as it relates to user experience.
-- As Harvest begins making products responsive to devices, a design system would greatly simplify implementation and development. Having predefined responsive patterns in place means we don’t have to spend extra time thinking through these implementations on a project-by-project basis.
-- As Harvest continues to grow its team, a design system will greatly reduce confusion and adoption surrounding UI patterns we use within Harvest, and how they’re implemented. A design system will help reduce onboarding overhead for new teammates, and provide reference in the long term.
-- Having multiple products, there’s a lot of opportunity to have them share common UI patterns. A shared design system would reduce overhead, resulting in less code to maintain. This would lead to faster development, more consistent experiences for our customers, strengthen the Harvest brand, and allow for time to explore design solutions.
-- In an effort to make Harvest more accessible for our customers, we can bake accessibility patterns into our UI components. This will make our products much more accessible across the board which will result in a more inclusive experience without having to invest unnecessary extra resources.
+My role encompassed active participation in customer research, the design and prototyping of interactive user flows, and collaboration with engineers during the implementation phase.
 
-## Problems Solved by a Design System
+## Problem
 
-### Speed
+The primary challenge identified was the repetitive nature of generating non-default reports, creating unnecessary barriers to meaningful utilization of the reporting module. This issue particularly impacted project managers and administrators continually seeking insights from Harvest reports. Two core objectives were identified:
 
-Historically, we’ve been limited to the amount of time we have to explore design considerations, and have often found ourselves having to settle. A design system would provide Harvest a set of modular components, taking some of the time-consuming busy-work out of the design process—leaving more time to focus on exploring design as it relates to user experience. These components would also have code counterparts which would lead to faster development.
+### Time Consuming Repetition
 
-### Consistency
+- **Objective:** Facilitate easy access to the same instance of a report multiple times with minimal friction.
+- **Solution:** Introduce a mechanism for users to save and access personalized reports effortlessly.
 
-We often find ourselves creating and dealing with “snowflake” implementations. This results in an inconsistent UI/UX, which increases cognitive load when customers use our products. Creating consistency is like making small promises throughout the interface. When people can be confident of what will happen, they can rely on the product which helps build trust.
+### Streamline Sharing Reports with Teammates:
 
-### Simplicity
+- **Objective:** Reduce overhead for multiple users accessing personalized data.
+- **Solution:** Introduce a mechanism to easily share reports with other team members.
 
-This is the glue that bonds Speed and Consistency. Having to regularly tackle time-consuming, low-level designing and coding tasks, as well as dealing with snowflake implementations just makes our jobs more difficult in general. Taking some of these complications out of the equation allows us to spend more time and energy into creating the best experiences for our customers.
+## Challenges
 
-### Accessibility
+- **User Permissions Complexity:** Addressing the intricacies of sharing reports with team members who may not have regular access to certain data.
+- **Minimized Disruption:** Concerns about potential disruption for users who might not require or appreciate the new features.
 
-While we’ve made leaps and bounds in the last few years, lack of accessible experiences still remain. Part of the problem is lack of awareness and education internally, but not having pre-baked accessible solutions is also an issue. A design system would address this by containing the knowledge our consumers need to make accessible UIs, as well as modular components with accessibility built-in. By building accessible experiences, we’ll create a more inclusive UI.
+## Approach
 
-### Responsive
+While we were aware that customer churn was linked to the absence of report-saving capabilities, the true impact eluded us. Our commitment to enhancing the product's value led us to reach out to customers who had churned, specifically those who had expressed interest in a report-saving feature. Incentivizing a 30-minute conversation, we aimed to gain deeper insights.
 
-Currently, Harvest’s mobile story is fragmented. Mobile/Desktop apps don’t provide all the same functionality or experience as our web app. Our web app doesn’t respond to mobile/tablet devices. The combination of these issues makes it extremely difficult for individuals to achieve certain tasks. As Harvest begins embarking in making our products responsive, having a design system would greatly simplify implementation and development, by having predefined responsive patterns in place and ready to go. This would result in less time thinking through certain implementations on a project-by-project basis.
+Through these conversations, a distinct user profile emerged — individuals crafting reports with intricate filters and date parameters, intending to revisit them frequently. Recognizing the inefficiency of regenerating reports, we envisioned empowering users to save these reports onto a personal dashboard for convenient access and modification.
 
-### Principles and Guidelines
+![](/img/work/sr-my-reports.png "A new My Reports section was added to access saved and shared reports.")
 
-There are a lot of “guidelines” that we try to follow at Harvest, however a lot of these are undocumented or are assumed. This makes it difficult for us to reach the same goal in how we solve problems for our customers. Having an agreed upon set of principles, guidelines, and best practices will unify our teams in building new, and improving existing features.
+Additionally, we introduced the option to schedule recurring runs for reports, ensuring users always had access to the latest data without manual interventions. A novel sharing mechanism facilitated seamless collaboration, allowing users to effortlessly share personalized reports with teammates within their organization. This not only addressed the pressing need for collaboration but also ensured that everyone had access to the most recent and relevant data.
 
-Did we meet our success state hypotheses?
+![](/img/work/sr-dialog-recurring.png "When a report is recurring, anyone who has access to the report will receive an email with a link to the most current generated report.")
 
-Hypothesis 1 – By introducing modular components, we’ll be able to build designs faster, more consistently/predictably, and have a simpler codebase.
+After refining our concepts through iterative mockups, we sought feedback from additional customers. With their validation of our approach, we proceeded to implement the envisioned features, transforming our prototype into a reality.
 
-Goal: 20% reduction in design time spent in Figma
-Actual: Goal met — 50% reduction in design spent when using the Porchlight Figma library
-Goal: 30% reduction in engineer time spent in HTML, CSS, and JS
-Actual: Goal met — A little over 50% reduction when using Porchlight code patterns. The amount of resulting custom code is also significantly reduced leaving less overhead in code maintenance. In reality, over the lifetime of an interface, the reduction in engineering time is probably much larger than 50%.
-Goal: 90% Porchlight coverage in harvestapp
-Actual: Goal met — 95% Porchlight coverage in harvestapp
+We took great care in making sure that the fingerprint of adding this feature wouldn't be too disruptive for customers that were uninterested in this feature, making minimal changes to the existing UI. We did this by adding a single button to the report with the options available, and opening a dialog window for crreating or editing a report.
 
-With the company rebrand, we were able to update Porchlight Foundations to use rebranded colors, type, and other tokens—which trickle down into Porchlight Utilities and Components. Then when pulling in the updated version of Porchlight into our products (with these rebranded tweaks) these changes propagate to all instances of Porchlight components.
+![](/img/work/sr-save-report.png "When a report is recurring, anyone who has access to the report will receive an email with a link to the most current generated report.")
 
-We spent a couple of weeks updating Porchlight to use rebranded styles, and about six weeks updating our products’ UI. Because the vast majority of Harvestapp and Harvest ID (and others) consume Porchlight at such a large percentage, we were able to spend the vast majority of that time to focus on areas that cannot consume Porchlight—overall site layout, navigation, running timer aura, logos and favicons, etc.
+![](/img/work/sr-dialog.png "Detailing a few steps of progression through the Save Report dialog.")
 
-As a bonus, we also added the Harvest and Forecast/API Help Centers as consumers of Porchlight, bringing the number of Porchlight consumers up to a total of seven!
+### Permissions
 
-Hypothesis 2 – By focusing on accessibility, we’ll meet the needs of customers with certain disabilities.
+As we delved into implementing new features, we encountered complexities related to user permissions. We are dedicated to safeguarding sensitive data, ensuring that teammates only access information pertinent to their roles. Initially, our strategy involved excluding teammates from the share list if they lacked access to any projects within the report. However, testing revealed confusion among users, as some individuals were included while others were not.
 
-Goal: 90/100 aggregate Lighthouse score of all Porchlight components
-Actual: Goal met — 96/100 aggregate score
+Subsequently, we explored an alternative approach. When sharing a report with someone lacking access to specific data, they would only view information accessible to them if they had run the report independently. A notification at the top of the page alerted users without complete access, effectively communicating the restricted information.
 
-A lot of this work happened before rebranding, but overall we’ve put a lot of work into making sure colors meet minimum contrast requirements, and making sure Components use properly accessible markup. Shortly after making Timesheets day view responsive, as well as swapping out old Chosen components, we got this email from our friends at Accessible 360:
+![](/img/work/sr-time-report.png "Detailing a few steps of progression through the Save Report dialog.")
 
-I wanted to say thank you for deploying some improvements to Harvest. Many of our employees use screen readers and these changes improve their experience many times a day. I'm not sure exactly what you changed but heard:
-Improvements to the previously inaccessible project/task drop downs on the "day view". It is now much easier to add rows when using the day view in Harvest.
-An issue was corrected where each row in the "day view" was marked up as a separate table. All of the rows you have added to your day now reads as a nice single table on the day view.
+To proactively guide users on what data their teammates would observe, we incorporated a link to a help center article directly in the user interface, enhancing user understanding.
 
-— Kelly Heikkila, CTO, Accessibile360
+[]
 
-As we continue to use accessible patterns, we’ll also continue to monitor customer feedback in relation to accessibility. We’re also putting effort into educating the Harvest team about accessibility-related topics. Karla has been focused on auditing and improving accessibility within harvestapp, and a group of us has been in communication with A360 about running an Accessibility Workshop for the entire Harvest team!
 
-Hypothesis 3 – By introducing responsive components, we’ll improve and increase usage across our mobile/tablet web experience.
 
-Goal: Make Harvest App and Harvest ID responsive
-Actual: Goal met — both apps among others are responsive
 
-This outcome is primarily a pass/fail grade. Wherever Porchlight components are used, those components will function properly, and look decent on mobile devices. Porchlight also gave us the tools necessary to make more complex sections responsive, such as Timesheets and Expenses.
 
-By meeting this goal, we set Harvest up for success by working where our customers work (mobile/tablet devices) and setting ourselves up for future work in the mobile space.
 
-It should also be noted that this ties back to our first hypothesis about reduction in engineer time. Not only are we saving time from using Porchlight components, but we also save a lot of time from not having to create one-off mobile solutions.
 
-Hypothesis 4 – By creating documented principles and guidelines, we’ll be more unified in how we approach design.
 
-A short survey was sent to Harvesters that are involved in Design Club—a recurring meeting where Designers and PMs come together to discuss design work-in-progress. The questions were focused on gauging how we feel as a team how useful Porchlight is in guiding our work.
+## Impact
 
-- https://3.basecamp.com/3059193/buckets/16105760/messages/3121136981
-- https://3.basecamp.com/3059193/buckets/18397372/messages/4921034373
+Our immediate key performance indicator (KPI) was the successful launch and immediate adoption of these features, resulting in:
+
+- **Increased Productivity:** Users can now effortlessly access personalized reports, reducing time spent on repetitive onfigurations.
+- **Improved Collaboration:** Team members can easily share and discuss reports within the organization, fostering better collaboration and decision-making.
+
+While it is too early to extract post-launch insights from the KPIs, early indicators from churn research suggest a positive trend regarding the newfound ability to save and share reports. More in-depth measurement of success KPIs is scheduled for the Summer of 2024.
