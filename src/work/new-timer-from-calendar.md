@@ -1,10 +1,11 @@
 ---
 title: Harvest Timesheets Calendar Integration
-blurb: Creating a Harvest timer based on Google or Outlook.com calendar events.
+blurb: Creating time entries based on Google or Outlook.com calendar events.
 order: 3
+tags: casestudy
 ---
 
-In an ongoing effort to encourage effective time tracking, Harvest uncovered a compelling insight during our research: nearly 50% of customers in a specific segment were concurrently using their calendar app alongside Harvest for time tracking. Recognizing this pattern, we initiated a six-week project aimed at simplifying the process of seamlessly transferring calendar events into users' Harvest timesheets.
+In an ongoing effort to encourage effective time tracking, [Harvest](https://getharvest.com) uncovered a compelling insight during our research: nearly 50% of customers in a specific segment were concurrently using their calendar app alongside Harvest for time tracking. Recognizing this pattern, we initiated a six-week project aimed at simplifying the process of seamlessly transferring calendar events into users' Harvest timesheets.
 
 For this undertaking, my role extended to project management, encompassing the design and prototyping of user flows, as well as collaborative engagement with engineers during the implementation phase.
 
@@ -32,15 +33,24 @@ As the demands of busy schedules intensify, carving out dedicated time to fill o
 
 The project unfolded with a well-defined vision aimed at tackling the identified challenges head-on.
 
-![](/img/work/ci-sketches.png)
+<figure>
+  <img src="/img/work/ci-sketches.png" alt="Initial sketches for the project pitch" loading="lazy">
+  <figcaption>Initial sketches presented with the project pitch to executive leadership.</figcaption>
+</figure>
 
 In the initial phase, the engineering team dived into the intricacies of technical discovery and seamless integration with Google and Outlook.com calandars, while my focus shifted towards materializing concepts into mockups and clickable prototypes utilizing Sketch.
 
-![](/img/work/ci-variations.png)
+<figure>
+  <img src="/img/work/ci-variations.png" class="shadow" alt="Initial mockups expoloring ideas" loading="lazy">
+  <figcaption>A handful of initial mockups exploring ideas for how we can present calendar events when starting a new timer.</figcaption>
+</figure>
 
 Over the span of two weeks, a continuous cycle of development, presentation, and refinement ensued as I iteratively shaped the mockups and prototypes. These iterations were subjected to rigorous design reviews, incorporating valuable feedback to enhance the user experience. The culmination of this design process involved subjecting the finalized prototype to thorough scrutiny, garnering the approval of the company founder and cementing the chosen approach.
 
-![](/img/work/ci-final.gif)
+<figure>
+  <img src="/img/work/ci-final.gif" class="shadow" alt="Animation of the launched feature" loading="lazy">
+  <figcaption>The final design landed on showing calendar events in a “drawer” fixed to the side of the browser window which could be toggled on or off.</figcaption>
+</figure>
 
 Post-approval, my role expanded to actively contribute to the front-end engineering efforts, in the creation of HTML, CSS, and JavaScript components. As the project neared completion, I coordinated quality assurance efforts, created marketing materials to showcase the new feature, and helped facilite the seamless launch of the new feature.
 

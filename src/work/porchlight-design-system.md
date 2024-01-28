@@ -1,14 +1,15 @@
 ---
 title: Porchlight Design System
-blurb: Creating a design system to unite individuals at Harvest on a common visual language.
+blurb: Creating a design system to unite Harvesters on a common visual language.
 order: 1
+tags: casestudy
 ---
 
 Recognizing the need for a unified design strategy across its product line, [Harvest](https://getharvest.com) tackled challenges such as disparate user interfaces, extended design cycles, and the struggle to maintain a consistent brand identity.
 
 Over the span of a year, we established processes, introduced new work tools, and laid the groundwork for the Porchlight design system. This initiative was implemented with dedicated design and engineering resources specifically allocated to the design system. Our journey involved developing a systematic approach, facilitating ongoing progress amidst a substantial flow of concurrent tasks and evolving priorities.
 
-![](/img/work/pds-logo.png)
+![Porchlight Design System logo](/img/work/pds-logo.png)
 
 My responsibility was to spearhead the creation of the design system, overseeing a dedicated team to bring it to fruition. I played a key role in UX/UI design, engineering, management, and documentation of the design system, ensuring its accessibility in design, and successfully integrating it across our product portfolio.
 
@@ -54,7 +55,9 @@ To gain deeper insights into the current landscape of our design ecosystem, we i
 
 This meticulous examination uncovered a multitude of inconsistencies within our design assets, underscoring the imperative for a more methodical approach to documenting, communicating, and sustaining our design system.
 
-![](/img/work/pds-inventory.png)
+<figure>
+  <img src="/img/work/pds-inventory.png" class="shadow" alt="Design inconsistencies in Harvest" loading="lazy">
+</figure>
 
 The inventory process proved instrumental in highlighting discrepancies and incongruities throughout our site and product, establishing a robust foundation for our subsequent design system endeavors. Armed with the audit findings, we curated a list of core components that would form the cornerstone of our design system.
 
@@ -70,29 +73,34 @@ This approach not only enhances the cohesiveness of our design elements but also
 
 Critical to the success of the system was the alignment of all our teams on the foundations. Porchlight is structured to be scaled, meaning that our foundational system needed to account for every potential UI element. Our foundations include a grid system, breakpoints, spacing, and color systems.
 
-![](/img/work/pds-foundations.png)
+<figure>
+  <img src="/img/work/pds-foundations.png" class="shadow" alt="Porchlight Foundations showing breakpoints and spacings" loading="lazy">
+</figure>
 
 In addition, we introduced a typescale based on display headings, utility headings, paragraph styles, and supporting styles. This comprehensive approach ensures scalability and consistency.
 
-![](/img/work/pds-colors.png "Our color scale enables a branded palette that remains flexible with light and dark color variations while adhering to WCAG AA minimum contrast accessibility standards.")
+<figure>
+  <img src="/img/work/pds-colors.png" class="shadow" alt="Porchlight Foundations showing palette and color scale" loading="lazy">
+  <figcaption>Our color scale enables a branded palette that remains flexible with light and dark color variations while adhering to WCAG AA minimum contrast accessibility standards.</figcaption>
+</figure>
 
 ## Components
 
 We've created a comprehensive set of reusable interface elements for integration throughout Harvest products. These elements are constructed on a solid foundation to ensure consistency and durability. They prioritize accessibility, responsiveness, and adherence to Harvest branding, thereby maintaining a uniform experience across our product range. Notable examples include buttons, form inputs, grids, and tables.
 
-![](/img/work/pds-buttons.png)
+![Porchlight Buttons component](/img/work/pds-buttons.png)
 
 To enhance user understanding, each component comes with detailed interaction examples, clearly illustrating expected interactive states. These are complemented by specific specifications covering tab stops, keyboard control requirements, spacing, and application.
 
 Moreover, each component undergoes meticulous refinement to accommodate additional breakpoints. This meticulous process ensures our components perform seamlessly across a diverse range of devices, allowing for a consistent and reliable user experience without the need for unnecessary adjustments.
 
-![](/img/work/pds-responsive.png)
+![Porchlight form shown on laptop and mobile devices](/img/work/pds-responsive.png)
 
 ## Accessibility
 
 One of Harvest's design principles is _Treat customers like real humans_. We were insistent on making sure we built components to be accessible to customers with disabilities. Each component was designed with accessibility in mind, striving to comply with WCAG AA accessibility standards.
 
-![](/img/work/pds-a11y.png)
+![Porchlight Accessibility guidelines and colors meeting accessibility standards](/img/work/pds-a11y.png)
 
 We aimed to involve all internal teams in the process by offering transparent explanations, comprehensive documentation, and educational materials about the UX team's initiatives to develop an inclusive system.
 
@@ -110,15 +118,24 @@ Effective component documentation is pivotal for a functional library, enabling 
 
 Working closely with our design and engineer partners, we created and maintain documentation resources in Storybook, ensuring that we included our design principles, quick start guides, accessibility standards and best practices for designing and testing.
 
-![](/img/work/pds-principles.png "**Design principles** serve as a guiding force in the development of new features or products using Porchlight. This ensures a unified direction, enabling everyone to work towards the same goal, facilitated by the design system.")
+<figure>
+  <img src="/img/work/pds-principles.png" class="shadow" alt="Porchlight Principles" loading="lazy">
+  <figcaption><strong>Design principles</strong> serve as a guiding force in the development of new features or products using Porchlight. This ensures a unified direction, enabling everyone to work towards the same goal, facilitated by the design system.</figcaption>
+</figure>
 
-![](/img/work/pds-guidelines.png "**Guidelines** serve as essential knowledge for Harvesters, detailing optimal utilization of the design system. They explain our approach to crafting and constructing Harvest products. These encompass topics such as accessibility, voice and tone, icons, printing, and more.")
+<figure>
+  <img src="/img/work/pds-guidelines.png" class="shadow" alt="Porchlight Guidelines" loading="lazy">
+  <figcaption><strong>Guidelines</strong> serve as essential knowledge for Harvesters, detailing optimal utilization of the design system. They explain our approach to crafting and constructing Harvest products. These encompass topics such as accessibility, voice and tone, icons, printing, and more.</figcaption>
+</figure>
 
 ## Tracking Progress
 
 To efficiently manage and communicate the progress of tasks related to the implementation of Porchlight into our products, we leveraged GitHub Projects, providing universal accessibility within the Harvest team. GitHub Issues were generated to categorize and address specific tasks, and these were then assigned based on their priority. This streamlined approach allowed us to report real-time progress to stakeholders, providing them with access to all pertinent information. This comprehensive system ensured a smooth transition and enhanced visibility into the implementation process.
 
-![](/img/work/pds-coverage.png "During the rollout phase of Porchlight into our products, a [custom script](https://gist.github.com/starzonmyarmz/204fbabbbe586788db2649e7181443d5) was developed to facilitate the comparison of outdated implementations against Porchlight components. This data was integrated into a Mode dashboard, providing us with consumption metrics.")
+<figure>
+  <img src="/img/work/pds-coverage.png" class="shadow" alt="Graph showing coverage as we rolled out Porchlight" loading="lazy">
+  <figcaption>During the rollout phase of Porchlight into our products, a <a href="https://gist.github.com/starzonmyarmz/204fbabbbe586788db2649e7181443d5" target="_blank">custom script</a> was developed to facilitate the comparison of outdated implementations against Porchlight components. This data was integrated into a Mode dashboard, providing us with consumption metrics.</figcaption>
+</figure>
 
 ## Future
 

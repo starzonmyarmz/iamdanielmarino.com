@@ -1,8 +1,8 @@
 ---
-title: Pinning Projects and Teammates
-blurb: Making it easier to report on the projects and teamates that matter.
-order: 5
-eleventyExcludeFromCollections: true
+title: Pinning Harvest Projects and Teammates
+blurb: Reporting on the projects and teamates that matter.
+order: 2
+tags: gallery
 ---
 
 Reviewing projects, teammates, and pending timesheets can sometimes be a bummer when it comes to quickly finding the information that matters most to you. You don’t need to see everything all the time. Nobody wants to scroll through a long list of projects or teammates to find the handful that are important now.

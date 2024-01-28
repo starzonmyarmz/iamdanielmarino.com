@@ -1,5 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const categoryFilter = require('./src/filters/category-filter.js')
 const dateFilter = require('./src/filters/date-filter.js')
 const md = require('markdown-it')
 const implicitFigures = require('markdown-it-image-figures');
@@ -20,6 +21,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/js')
   eleventyConfig.addPassthroughCopy('CNAME')
 
+  eleventyConfig.addFilter('categoryFilter', categoryFilter)
   eleventyConfig.addFilter('dateFilter', dateFilter)
 
   eleventyConfig.addCollection('posts', collection => {
