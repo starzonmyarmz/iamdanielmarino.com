@@ -167,6 +167,33 @@ main {
   padding: 0;
 }
 
+
+.case-studies a {
+  border: 1px solid #00000033;
+  color: inherit;
+  display: block;
+  gap: 0 1rem;
+  grid-template: auto / min-content 1fr;
+  padding: 2rem;
+  text-decoration: none;
+  transition: 0.2s all;
+
+  &:hover {
+    box-shadow: 0 4px 8px -2px #00000022;
+    transform: translateY(-1px);
+  }
+}
+
+.case-studies img {
+  align-self: center;
+  grid-area: 1 / 1 / 3 / 2;
+  margin-bottom: 0.5rem;
+}
+
+.case-studies small {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
 /* Content */
 
 header {
@@ -260,6 +287,14 @@ article figcaption {
   article figcaption {
     padding: 0 0 0 2rem;
     width: 85%;
+  }
+
+  .case-studies a {
+    display: grid;
+  }
+
+  .case-studies img {
+    margin-bottom: 0;
   }
 }
 

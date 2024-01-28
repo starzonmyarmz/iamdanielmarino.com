@@ -10,11 +10,14 @@ permalink: /work/
 
 {# <h2>Case Studies</h2> #}
 
-<ul class="posts">
+<ul class="posts case-studies">
   {% for post in collections.work | categoryFilter('casestudy') %}
     <li>
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      <small>{{ post.data.blurb }}</small>
+      <a href="{{ post.url }}">
+        <img src="/img/work/harvest-icon.svg" alt="Harvest logo" height="48" width="48" />
+        <h3>{{ post.data.title }}</h3>
+        <small>{{ post.data.blurb }}</small>
+      </a>
     </li>
   {% endfor %}
 </ul>
@@ -22,7 +25,7 @@ permalink: /work/
 {#
 <h2>Gallery</h2>
 
-<ul class="posts">
+<ul class="posts gallery">
   {% for post in collections.work | categoryFilter('gallery') %}
     <li>
       <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
