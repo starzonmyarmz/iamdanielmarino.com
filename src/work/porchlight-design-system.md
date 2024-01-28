@@ -4,7 +4,7 @@ blurb: Creating a design system to unite individuals at Harvest on a common visu
 order: 1
 ---
 
-Recognizing the need for a unified design strategy across its product line, Harvest tackled challenges such as disparate user interfaces, extended design cycles, and the struggle to maintain a consistent brand identity.
+Recognizing the need for a unified design strategy across its product line, [Harvest](https://getharvest.com) tackled challenges such as disparate user interfaces, extended design cycles, and the struggle to maintain a consistent brand identity.
 
 Over the span of a year, we established processes, introduced new work tools, and laid the groundwork for the Porchlight design system. This initiative was implemented with dedicated design and engineering resources specifically allocated to the design system. Our journey involved developing a systematic approach, facilitating ongoing progress amidst a substantial flow of concurrent tasks and evolving priorities.
 

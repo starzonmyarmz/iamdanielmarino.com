@@ -2,6 +2,7 @@
 title: Bulk Editing Time and Expenses
 blurb: Making it easier to edit Harvest time and expenses.
 order: 3
+eleventyExcludeFromCollections: true
 ---
 
 https://www.getharvest.com/blog/2020/02/easier-bulk-editing-for-time-and-expenses

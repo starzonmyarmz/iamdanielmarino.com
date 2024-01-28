@@ -1,10 +1,10 @@
 ---
-title: Saving and Sharing Reports
+title: Saving and Sharing Harvest Reports
 blurb: Elevating productivity and teamwork for Harvest users through improved reporting capabilities.
 order: 2
 ---
 
-Harvest, a leading platform for time tracking and project management, identified a crucial need to improve its reporting module based on customer churn feedback. Customers expressed challenges in efficiently accessing and sharing personalized reports, leading to reduced meaningful interaction with the platform and an increased risk of churn.
+[Harvest](https://getharvest.com), a leading platform for time tracking and project management, identified a crucial need to improve its reporting module based on customer churn feedback. Customers expressed challenges in efficiently accessing and sharing personalized reports, leading to reduced meaningful interaction with the platform and an increased risk of churn.
 
 Over a four-month period in 2023, a dedicated team of customer experience and engineering experts collaborated to address these challenges. The process involved customer research, iterative design, and close collaboration with select customers to ensure their needs were met.
 
@@ -35,7 +35,7 @@ While we were aware that customer churn was linked to the absence of report-savi
 
 Through these conversations, a distinct user profile emerged — individuals crafting reports with intricate filters and date parameters, intending to revisit them frequently. Recognizing the inefficiency of regenerating reports, we envisioned empowering users to save these reports onto a personal dashboard for convenient access and modification.
 
-![](/img/work/sr-my-reports.png "A new My Reports section was added to access saved and shared reports.")
+![](/img/work/sr-my-reports.png "A new section was added to access saved and shared reports.")
 
 Additionally, we introduced the option to schedule recurring runs for reports, ensuring users always had access to the latest data without manual interventions. A novel sharing mechanism facilitated seamless collaboration, allowing users to effortlessly share personalized reports with teammates within their organization. This not only addressed the pressing need for collaboration but also ensured that everyone had access to the most recent and relevant data.
 

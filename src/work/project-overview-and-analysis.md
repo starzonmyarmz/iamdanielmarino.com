@@ -1,7 +1,8 @@
 ---
 title: Projects Overview and Analysis
 blurb: Making better sense of all the data you put into Harvest.
-order: 2
+order: 4
+eleventyExcludeFromCollections: true
 ---
 
 - https://www.getharvest.com/blog/2014/11/harvest-projects
