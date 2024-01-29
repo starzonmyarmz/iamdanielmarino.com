@@ -5,6 +5,7 @@
     <title>Saving and Sharing Harvest Reports &mdash; Daniel Marino</title>
     <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="robots" content="noindex">
 
     <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml" />
     <link rel="icon" href="/favicon.png" type="image/png">
@@ -33,18 +34,18 @@
 
   <section class="post-content">
     <p><a href="https://getharvest.com">Harvest</a>, a leading platform for time tracking and project management, identified a crucial need to improve its reporting module based on customer churn feedback. Customers expressed challenges in efficiently accessing and sharing personalized reports, leading to reduced meaningful interaction with the platform and an increased risk of churn.</p>
-<p>Over a four-month period in 2023, a dedicated team of customer experience and engineering experts collaborated to address these challenges. The process involved customer research, iterative design, and close collaboration with select customers to ensure their needs were met.</p>
+<p>Over a four-month period in 2023, a dedicated team of customer experience and engineers collaborated to address these challenges. The process involved customer research, iterative design, and close collaboration with select customers to ensure their needs were met.</p>
 <p>My role encompassed active participation in customer research, the design and prototyping of interactive user flows, and collaboration with engineers during the implementation phase.</p>
 <h2>Problem</h2>
-<p>The primary challenge identified was the repetitive nature of generating non-default reports, creating unnecessary barriers to meaningful utilization of the reporting module. This issue particularly impacted project managers and administrators continually seeking insights from Harvest reports. Two core objectives were identified:</p>
+<p>The primary challenge identified was the repetitive nature of generating custom reports, creating unnecessary barriers to meaningful utilization of the reporting section. This issue particularly impacted project managers and administrators continually seeking insights from Harvest reports. Two core objectives were identified:</p>
 <h3>Time Consuming Repetition</h3>
 <ul>
 <li><strong>Objective:</strong> Facilitate easy access to the same instance of a report multiple times with minimal friction.</li>
-<li><strong>Solution:</strong> Introduce a mechanism for users to save and access personalized reports effortlessly.</li>
+<li><strong>Solution:</strong> Introduce a mechanism for people to save and access personalized reports effortlessly.</li>
 </ul>
-<h3>Streamline Sharing Reports with Teammates:</h3>
+<h3>Streamline Sharing Reports with Teammates</h3>
 <ul>
-<li><strong>Objective:</strong> Reduce overhead for multiple users accessing personalized data.</li>
+<li><strong>Objective:</strong> Reduce overhead for multiple people accessing personalized data.</li>
 <li><strong>Solution:</strong> Introduce a mechanism to easily share reports with other team members.</li>
 </ul>
 <h2>Challenges</h2>
@@ -53,23 +54,23 @@
 <li><strong>Minimized Disruption:</strong> Concerns about potential disruption for users who might not require or appreciate the new features.</li>
 </ul>
 <h2>Approach</h2>
-<p>While we were aware that customer churn was linked to the absence of report-saving capabilities, the true impact eluded us. Our commitment to enhancing the product's value led us to reach out to customers who had churned, specifically those who had expressed interest in a report-saving feature. Incentivizing a 30-minute conversation, we aimed to gain deeper insights.</p>
+<p>While we were aware that customer churn was linked to the absence of report-saving capabilities, the true impact eluded us. Our commitment to enhancing the product’s value led us to reach out to customers who had churned, specifically those who had expressed interest in a report-saving feature. Incentivizing 30-minute conversations, we aimed to gain deeper insights.</p>
 <p>Through these conversations, a distinct user profile emerged — individuals crafting reports with intricate filters and date parameters, intending to revisit them frequently. Recognizing the inefficiency of regenerating reports, we envisioned empowering users to save these reports onto a personal dashboard for convenient access and modification.</p>
 <figure>
   <img src="/img/work/sr-my-reports.png" class="shadow" alt="A new section for accessing saved and shared reports" loading="lazy">
-  <figcaption>A new section was added to the Reports section of Harvest to access saved and shared reports.</figcaption>
+  <figcaption>A new section was added to Harvest to access saved and shared reports.</figcaption>
 </figure>
 <p>Additionally, we introduced the option to schedule recurring runs for reports, ensuring users always had access to the latest data without manual interventions. A novel sharing mechanism facilitated seamless collaboration, allowing users to effortlessly share personalized reports with teammates within their organization. This not only addressed the pressing need for collaboration but also ensured that everyone had access to the most recent and relevant data.</p>
 <figure>
   <img src="/img/work/sr-dialog-recurring.png" class="shadow" alt="A close up of setting a recurring report" loading="lazy">
   <figcaption>When a report is recurring, anyone who has access to the report will receive an email with a link to the most current generated report.</figcaption>
 </figure>
-<p>After refining our concepts through iterative mockups, we sought feedback from additional customers. With their validation of our approach, we proceeded to implement the envisioned features, transforming our prototype into a reality.</p>
-<p>We took great care in making sure that the fingerprint of adding this feature wouldn't be too disruptive for customers that were uninterested in this feature, making minimal changes to the existing UI. We did this by adding a single button to the report with the options available, and opening a dialog window for creating or editing a report.</p>
+<p>After refining our concepts through iterative mockups and prototypes, we sought feedback from additional customers. With their validation of our approach, we proceeded to implement the envisioned features, transforming our prototype into a reality.</p>
+<p>We took great care in making sure that the fingerprint of adding this feature wouldn’t be too disruptive for customers that were uninterested in this feature, making minimal changes to the existing UI. We did this by adding a single button to the report with the options available, and opening a dialog window for creating or editing a report.</p>
 <figure>
   <img src="/img/work/sr-save-report.png" class="shadow" alt="A new save report button" loading="lazy">
 </figure>
-<p>The opened dialog lets you name the report, as well as provides options for sharing the report, generating a new report on a recurring basis, as well as exporting the data in a particular format.</p>
+<p>The interactive dialog allows you to customize the report by assigning a name, sharing it with teammates, setting up recurring report generation, and exporting the data in your preferred format.</p>
 <figure>
   <img src="/img/work/sr-dialog.png" class="shadow" alt="The save report dialog" loading="lazy">
   <figcaption>Detailing a few steps of progression through the Save Report dialog.</figcaption>
@@ -80,7 +81,7 @@
 <figure>
   <img src="/img/work/sr-time-report.png" class="shadow" alt="An alert showing someone they do not have full access to the report" loading="lazy">
 </figure>
-<p>Questions often arise regarding user permissions, so proactively guide users on what data their teammates would observe, we incorporated a link to a help center article directly in the user interface, enhancing user understanding.</p>
+<p>To address common inquiries about user permissions, we took a proactive approach by guiding customers on the visibility of their data to teammates. We added a link to a help center article directly within the user interface.</p>
 <figure>
   <img src="/img/work/sr-help.png" class="shadow" alt="Guiding users to the Harvest Help Center" loading="lazy">
 </figure>
