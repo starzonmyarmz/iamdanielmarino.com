@@ -7,11 +7,11 @@ tags: casestudy
 
 Recognizing the need for a unified design strategy across its product line, [Harvest](https://getharvest.com) tackled challenges such as disparate user interfaces, extended design cycles, and the struggle to maintain a consistent brand identity.
 
-Over the span of a year, we established processes, introduced new work tools, and laid the groundwork for the Porchlight design system. This initiative was implemented with dedicated design and engineering resources specifically allocated to the design system. Our journey involved developing a systematic approach, facilitating ongoing progress amidst a substantial flow of concurrent tasks and evolving priorities.
+Over the span of a year, we established processes, introduced new work tools, and laid the groundwork for the Porchlight design system. This initiative was implemented with dedicated design and engineering resources specifically allocated to the design system.
 
 ![Porchlight Design System logo](/img/work/pds-logo.png)
 
-My responsibility was to spearhead the creation of the design system, overseeing a dedicated team to bring it to fruition. I played a key role in UX/UI design, engineering, management, and documentation of the design system, ensuring its accessibility in design, and successfully integrating it across our product portfolio.
+My responsibility was to lead the creation of the design system, overseeing a dedicated team to bring it to fruition. I played a key role in UX/UI design, engineering, management, and documentation of the design system, ensuring its accessibility in design, and successfully integrating it across our products.
 
 ## Problem
 
@@ -25,12 +25,12 @@ The absence of a comprehensive design system has resulted in a disjointed user e
 ### Elimination of Component Duplication
 
 - **Objective:** Expedite the design and development process by reducing redundancy in common components.
-- **Solution:** Implement a ready-made library and standardized patterns to enable teams to create and test layouts more efficiently.
+- **Solution:** Implement a library of standardized patterns to enable teams to create and test layouts more efficiently.
 
 ### Poor Accessibility
 
 - **Objective:** Enhance the accessibility and inclusivity of our products.
-- **Solution:** Integrate accessibility features into our component libraries, addressing both design and code repositories to ensure a more universally accessible user experience.
+- **Solution:** Integrate accessibility features into our component libraries, addressing both design and code repositories to ensure a more accessible user experience.
 
 ### Inconsistencies Across Products
 
@@ -43,9 +43,9 @@ By addressing these concerns and implementing a robust design system, we aim to 
 
 While the incorporation of a Design System holds significant potential for enhancing Harvest, our team faces several notable challenges in its adoption:
 
-- **Complex Migration Process:** Transitioning to a design system poses a formidable challenge due to the extensive number of components distributed across various products and toolchains. The sheer scale of this migration demands careful planning and execution.
-- **Ongoing Commitment to Maintenance:** Recognizing that a design system is a dynamic entity, sustained commitment from leadership is crucial. Regular maintenance, requiring dedicated time within our project cadence, is imperative to ensure the system's continued relevance and effectiveness.
-- **Decision-Making for System Evolution:** The maintenance process includes decisions about incorporating new patterns, modifying existing ones, and potentially phasing out outdated patterns. Apart from the actual implementation, significant time and effort are required to facilitate team discussions and secure buy-in for these decisions. This collaborative aspect is integral to the system's evolution.
+- **Complex Migration Process:** Transitioning to a design system poses a challenge due to the extensive number of components distributed across various products and toolchains. The sheer scale of this migration demands careful planning and execution.
+- **Ongoing Commitment to Maintenance:** Recognizing that a design system is a dynamic entity, sustained commitment from leadership is crucial. Regular maintenance, requiring dedicated time within our project cadence, is imperative to ensure the system’s continued relevance and effectiveness.
+- **Decision-Making for System Evolution:** The maintenance process includes decisions about incorporating new patterns, modifying existing ones, and potentially phasing out outdated patterns. Apart from the actual implementation, significant time and effort are required to facilitate team discussions and secure buy-in for these decisions. This collaborative aspect is integral to the system’s evolution.
 
 Addressing these hurdles strategically will pave the way for a smoother integration of the Design System into our workflow, ultimately optimizing our design and development processes.
 
@@ -86,7 +86,7 @@ In addition, we introduced a typescale based on display headings, utility headin
 
 ## Components
 
-We've created a comprehensive set of reusable interface elements for integration throughout Harvest products. These elements are constructed on a solid foundation to ensure consistency and durability. They prioritize accessibility, responsiveness, and adherence to Harvest branding, thereby maintaining a uniform experience across our product range. Notable examples include buttons, form inputs, grids, and tables.
+We’ve created a comprehensive set of reusable interface elements for integration throughout Harvest products. These elements are constructed on a solid foundation to ensure consistency and durability. They prioritize accessibility, responsiveness, and adherence to Harvest branding, thereby maintaining a uniform experience across our product range. Notable examples include buttons, form inputs, grids, and tables.
 
 ![Porchlight Buttons component](/img/work/pds-buttons.png)
 
@@ -98,11 +98,11 @@ Moreover, each component undergoes meticulous refinement to accommodate addition
 
 ## Accessibility
 
-One of Harvest's design principles is _Treat customers like real humans_. We were insistent on making sure we built components to be accessible to customers with disabilities. Each component was designed with accessibility in mind, striving to comply with WCAG AA accessibility standards.
+One of Harvest’s design principles is _Treat customers like real humans_. We were insistent on making sure we built components to be accessible to customers with disabilities. Each component was designed with accessibility in mind, striving to comply with WCAG AA accessibility standards.
 
 ![Porchlight Accessibility guidelines and colors meeting accessibility standards](/img/work/pds-a11y.png)
 
-We aimed to involve all internal teams in the process by offering transparent explanations, comprehensive documentation, and educational materials about the UX team's initiatives to develop an inclusive system.
+We aimed to involve all internal teams in the process by offering transparent explanations, comprehensive documentation, and educational materials about the UX team’s initiatives to develop an inclusive system.
 
 ## Workshop Environment
 
@@ -141,7 +141,7 @@ To efficiently manage and communicate the progress of tasks related to the imple
 
 Harvest has successfully implemented a design system that not only tackled the challenges we encountered but also strategically positioned us to deliver a seamless and user-friendly experience across all our products.
 
-Our design system remains an evolving project. We continuously iterate, adapt, and glean valuable insights from the ongoing process. This dynamic approach has established a robust foundation, significantly enhancing our team's efficiency, maintaining consistency, and promoting standardization.
+Our design system remains an evolving project. We continuously iterate, adapt, and glean valuable insights from the ongoing process. This dynamic approach has established a robust foundation, significantly enhancing our team’s efficiency, maintaining consistency, and promoting standardization.
 
 Ongoing maintenance efforts encompass several key aspects:
 

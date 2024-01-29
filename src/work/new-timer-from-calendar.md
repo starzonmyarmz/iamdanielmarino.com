@@ -5,9 +5,9 @@ order: 3
 tags: casestudy
 ---
 
-In an ongoing effort to encourage effective time tracking, [Harvest](https://getharvest.com) uncovered a compelling insight during our research: nearly 50% of customers in a specific segment were concurrently using their calendar app alongside Harvest for time tracking. Recognizing this pattern, we initiated a six-week project aimed at simplifying the process of seamlessly transferring calendar events into users' Harvest timesheets.
+In an ongoing effort to encourage effective time tracking, [Harvest](https://getharvest.com) uncovered a compelling insight during our research: nearly 50% of customers in a specific segment were concurrently using their calendar app alongside Harvest for time tracking. Recognizing this pattern, we initiated a six-week project aimed at simplifying the process of seamlessly transferring calendar events into users’ Harvest timesheets.
 
-For this undertaking, my role extended to project management, encompassing the design and prototyping of user flows, as well as collaborative engagement with engineers during the implementation phase.
+My role extended to project management, encompassing the design and prototyping of user flows, as well as collaborative engagement with engineers during the implementation phase.
 
 ## Problem
 
@@ -38,7 +38,7 @@ The project unfolded with a well-defined vision aimed at tackling the identified
   <figcaption>Initial sketches presented with the project pitch to executive leadership.</figcaption>
 </figure>
 
-In the initial phase, the engineering team dived into the intricacies of technical discovery and seamless integration with Google and Outlook.com calandars, while my focus shifted towards materializing concepts into mockups and clickable prototypes utilizing Sketch.
+In the initial phase, the engineering team dove into technical discovery and integration with Google and Outlook.com calandars, while my focus shifted towards materializing concepts into mockups and clickable prototypes.
 
 <figure>
   <img src="/img/work/ci-variations.png" class="shadow" alt="Initial mockups expoloring ideas" loading="lazy">
@@ -56,8 +56,8 @@ Post-approval, my role expanded to actively contribute to the front-end engineer
 
 ## Tracking Progress
 
-The integration allowed batch time-tracking customers to create timers based on Google Calendar integrated suggestions. Setting an ambitious goal of 10% of timers for this audience segment originating from calendar events in three months, we not only met but exceeded expectations, achieving 17% of timers started from calendar events.
+The integration allowed customers to create timers based on Google and Outlook.com calendar events. Setting a goal of 10% of timers for this audience segment originating from calendar events in three months, we not only met but exceeded expectations, achieving 17% of timers started from calendar events.
 
 ## Future
 
-The successful implementation of the Harvest Timesheets Calendar Integration feature positions Harvest to provide users with a faster and more user-friendly approach to time tracking. As an evolving project, we remain committed to continuous iteration, adaptation, and the extraction of valuable insights from the ongoing process.
+The successful implementation of the calendar integration feature provides customers with a faster and more user-friendly approach to time tracking. As an evolving project, we remain committed to continuous iteration, adaptation, and the extraction of valuable insights from the ongoing process.
