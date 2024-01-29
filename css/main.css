@@ -290,13 +290,17 @@ article figcaption {
     width: 85%;
   }
 
-  .case-studies a {
-    display: grid;
-    padding: 1.5rem;
-  }
+  .case-studies {
+    margin-bottom: 3rem;
 
-  .case-studies img {
-    margin-bottom: 0;
+    a {
+      display: grid;
+      padding: 1.5rem;
+    }
+
+    img {
+      margin-bottom: 0;
+    }
   }
 }
 
