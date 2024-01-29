@@ -11,7 +11,7 @@ Over the span of a year, we established processes, introduced new work tools, an
 
 ![Porchlight Design System logo](/img/work/pds-logo.png)
 
-My responsibility was to lead the creation of the design system, overseeing a dedicated team to bring it to fruition. I played a key role in UX/UI design, engineering, management, and documentation of the design system, ensuring its accessibility in design, and successfully integrating it across our products.
+My responsibility was to lead the creation of the design system, overseeing a dedicated team to bring it to fruition. I played a key role in roadmapping, UX/UI design, engineering, and documentation of the design system, ensuring its accessibility in design, and successfully integrating it across our products.
 
 ## Problem
 
@@ -34,8 +34,8 @@ The absence of a comprehensive design system has resulted in a disjointed user e
 
 ### Inconsistencies Across Products
 
-- **Objective:** Improve brand perception and user trust through consistent experiences.
-- **Solution:** Establish uniform experiences that cater to everyone, enabling users to achieve their goals seamlessly.
+- **Objective:** Improve brand perception and trust through consistent experiences.
+- **Solution:** Establish uniform experiences that cater to everyone, enabling people to achieve their goals seamlessly.
 
 By addressing these concerns and implementing a robust design system, we aim to create a more cohesive and user-friendly environment, fostering better collaboration among teams and elevating our overall brand image.
 
@@ -90,7 +90,7 @@ We’ve created a comprehensive set of reusable interface elements for integrati
 
 ![Porchlight Buttons component](/img/work/pds-buttons.png)
 
-To enhance user understanding, each component comes with detailed interaction examples, clearly illustrating expected interactive states. These are complemented by specific specifications covering tab stops, keyboard control requirements, spacing, and application.
+To enhance understanding, each component comes with detailed interaction examples, clearly illustrating expected interactive states. These are complemented by specific specifications covering tab stops, keyboard control requirements, spacing, and application.
 
 Moreover, each component undergoes meticulous refinement to accommodate additional breakpoints. This meticulous process ensures our components perform seamlessly across a diverse range of devices, allowing for a consistent and reliable user experience without the need for unnecessary adjustments.
 

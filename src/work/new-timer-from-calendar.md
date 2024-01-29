@@ -5,13 +5,13 @@ order: 3
 tags: casestudy
 ---
 
-In an ongoing effort to encourage effective time tracking, [Harvest](https://getharvest.com) uncovered a compelling insight during our research: nearly 50% of customers in a specific segment were concurrently using their calendar app alongside Harvest for time tracking. Recognizing this pattern, we initiated a six-week project aimed at simplifying the process of seamlessly transferring calendar events into users’ Harvest timesheets.
+In an ongoing effort to encourage effective time tracking, [Harvest](https://getharvest.com) uncovered a compelling insight during research: nearly 50% of customers in a specific segment were concurrently using their calendar app alongside Harvest for time tracking. Recognizing this pattern, we initiated a six-week project aimed at simplifying the process of seamlessly transferring calendar events into customers’ Harvest timesheets.
 
-My role extended to project management, encompassing the design and prototyping of user flows, as well as collaborative engagement with engineers during the implementation phase.
+For this project, I was tasked with leading the team tasked with creating this new feature. My responsibilities encompassed guiding the squad through the development process, creating detailed mockups, and prototyping user flows. Additionally, I actively collaborated with engineers to ensure a seamless implementation phase.
 
 ## Problem
 
-As the demands of busy schedules intensify, carving out dedicated time to fill out a timesheet becomes increasingly challenging. The typical scenario involves individuals transitioning rapidly between tasks, leaving their timesheets neglected. When users finally sit down to record their time, the arduous task of recollecting specific details and reconstructing days or weeks of work poses a significant hurdle.
+As the demands of busy schedules intensify, carving out dedicated time to fill out a timesheet becomes increasingly challenging. The typical scenario involves individuals transitioning rapidly between tasks, leaving their timesheets neglected. When people finally sit down to record their time, the arduous task of recollecting specific details and reconstructing days or weeks of work poses a significant hurdle.
 
 ### Remembering Time is Difficult
 
@@ -20,7 +20,7 @@ As the demands of busy schedules intensify, carving out dedicated time to fill o
 
 ### Streamline creating time entries from calendar events
 
-- **Objective:** Empower users to seamlessly integrate calendar events into their Harvest timesheet.
+- **Objective:** Empower customers to seamlessly integrate calendar events into their Harvest timesheet.
 - **Solution:** Introduce a feature that connects with Google or Outlook.com calendar accounts, automatically pulling events into the timesheet for easy entry.
 
 ## Challenges
@@ -42,14 +42,14 @@ In the initial phase, the engineering team dove into technical discovery and int
 
 <figure>
   <img src="/img/work/ci-variations.png" class="shadow" alt="Initial mockups expoloring ideas" loading="lazy">
-  <figcaption>A handful of initial mockups exploring ideas for how we can present calendar events when starting a new timer.</figcaption>
+  <figcaption>Several initial mockups were generated to explore creative concepts for presenting calendar events when initiating a new timer.</figcaption>
 </figure>
 
-Over the span of two weeks, a continuous cycle of development, presentation, and refinement ensued as I iteratively shaped the mockups and prototypes. These iterations were subjected to rigorous design reviews, incorporating valuable feedback to enhance the user experience. The culmination of this design process involved subjecting the finalized prototype to thorough scrutiny, garnering the approval of the company founder and cementing the chosen approach.
+Over the span of two weeks, a continuous cycle of development, presentation, and refinement ensued as I iteratively shaped the mockups and prototypes. These iterations were subjected to design reviews, incorporating valuable feedback to enhance the user experience. The culmination of this design process involved subjecting the finalized prototype to thorough scrutiny, garnering the approval of the company founder and cementing the chosen approach.
 
 <figure>
   <img src="/img/work/ci-final.gif" class="shadow" alt="Animation of the launched feature" loading="lazy">
-  <figcaption>The final design landed on showing calendar events in a “drawer” fixed to the side of the browser window which could be toggled on or off.</figcaption>
+  <figcaption>The final design landed on showing calendar events in a “drawer” fixed to the side of the browser window which could be toggled.</figcaption>
 </figure>
 
 Post-approval, my role expanded to actively contribute to the front-end engineering efforts, in the creation of HTML, CSS, and JavaScript components. As the project neared completion, I coordinated quality assurance efforts, created marketing materials to showcase the new feature, and helped facilite the seamless launch of the new feature.

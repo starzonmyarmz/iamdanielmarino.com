@@ -41,7 +41,7 @@ Through these conversations, a distinct user profile emerged — individuals cra
   <figcaption>A new section was added to Harvest to access saved and shared reports.</figcaption>
 </figure>
 
-Additionally, we introduced the option to schedule recurring runs for reports, ensuring users always had access to the latest data without manual interventions. A novel sharing mechanism facilitated seamless collaboration, allowing users to effortlessly share personalized reports with teammates within their organization. This not only addressed the pressing need for collaboration but also ensured that everyone had access to the most recent and relevant data.
+Additionally, we introduced the option to schedule recurring runs for reports, ensuring customers always had access to the latest data without manual interventions. A novel sharing mechanism facilitated seamless collaboration, allowing customers to effortlessly share personalized reports with teammates within their organization. This not only addressed the pressing need for collaboration but also ensured that everyone had access to the most recent and relevant data.
 
 <figure>
   <img src="/img/work/sr-dialog-recurring.png" class="shadow" alt="A close up of setting a recurring report" loading="lazy">
@@ -60,7 +60,7 @@ The interactive dialog allows you to customize the report by assigning a name, s
 
 <figure>
   <img src="/img/work/sr-dialog.png" class="shadow" alt="The save report dialog" loading="lazy">
-  <figcaption>Detailing a few steps of progression through the Save Report dialog.</figcaption>
+  <figcaption>Steps of progression through the Save Report dialog.</figcaption>
 </figure>
 
 ### Permissions
@@ -81,7 +81,7 @@ To address common inquiries about user permissions, we took a proactive approach
 
 ## Impact
 
-Our immediate key performance indicator (KPI) was the successful launch and immediate adoption of these features, resulting in:
+Our immediate key performance indicator was the successful launch and immediate adoption of these features, resulting in:
 
 - **Increased Productivity:** Users can now effortlessly access personalized reports, reducing time spent on repetitive onfigurations.
 - **Improved Collaboration:** Team members can easily share and discuss reports within the organization, fostering better collaboration and decision-making.
