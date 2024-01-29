@@ -123,10 +123,10 @@ nav a {
   display: block;
   text-decoration: none;
   transition: all 0.2s;
-}
 
-nav a:hover {
-  color: var(--primary);
+  &:hover {
+    color: var(--primary);
+  }
 }
 
 nav li:first-child a {
@@ -169,7 +169,7 @@ main {
 
 
 .case-studies a {
-  border: 1px solid #00000033;
+  border: 1px solid var(--text-medium);
   color: inherit;
   display: block;
   gap: 0 1rem;
@@ -180,7 +180,6 @@ main {
 
   &:hover {
     box-shadow: 0 4px 8px -2px #00000022;
-    transform: translateY(-1px);
   }
 }
 
