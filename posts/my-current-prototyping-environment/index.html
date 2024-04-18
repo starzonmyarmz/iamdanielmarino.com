@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My current prototyping environment &mdash; Daniel Marino</title>
+    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml" />
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/favicon.svg" color="black">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/" aria-label="Daniel Marino">DM</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/feed.xml">Feed</a></li>
+        <li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      
+<article>
+  <header>
+    <h1>My current prototyping environment</h1>
+      <div>April 18, 2024</div>
+  </header>
+
+  <section class="post-content">
+    <p>The other day I shared <a href="/posts/why-i-still-prefer-prototyping-using-code/">why I prefer coding prototypes</a> rather than using design apps to create them. My prototyping environment has evolved over the years. I love to hear how others build prototypes, so I thought I’d share where I’m at now. Maybe you’ll find it useful.</p>
+<h2>A single repository</h2>
+<p>I currently have a <a href="https://github.com/starzonmyarmz/prototypes">single GitHub repo</a> housing all of my prototypes. I do this primarily so I don’t have to remember where any given prototype lives. They all live in the same place! Another benefit is if I pull in a library or some CSS component, I can reuse it in other prototypes without having to go out and grab it from the source again.</p>
+<h2>My old setup</h2>
+<p>In the past I used <a href="https://sinatrarb.com/">Sinatra</a> hosted on Heroku. Having Ruby and a basic server (Such as <a href="https://github.com/ruby/webrick">Webrick</a>) in the backend was pretty nice:</p>
+<ul>
+<li>I could code up some fairly complex prototypes out with realistic url schemes.</li>
+<li>Gems! If I needed fake data, I could use the <a href="https://github.com/faker-ruby/faker">Faker gem</a>.</li>
+<li>If I wanted a table with a 100 rows, I could easily generate that with a super simple loop.</li>
+</ul>
+<p>But it got clunky. Spinning up a new prototype wasn’t very efficient. Setting up the urls took time. Deploying to Heroku wasn’t always straight forward. Heroku also got rid of their free plan, and I didn’t want to go looking for a new service. Maybe I’m making excuses.</p>
+<h2>A dumb server</h2>
+<p>Now I just use HTML, CSS (vanilla), and Javascript with no special backend. I don’t have Node.js running, and I don’t use a package manager like NPM or Yarn. To start a server I navigate to the prototype directory in iTerm, and run <a href="https://github.com/paulirish/statikk">Statikk</a>. Easy peasy. This setup requires no upkeep, so I can focus on actually prototyping!</p>
+<p>I have a basic file structure for keeping prototypes separate. I typically use <a href="https://preactjs.com/">Preact</a> for scaffolding. To <code>import</code>  Preact or other NPM packages I use <a href="https://esm.sh/">esm.sh</a>. When I push changes to the GitHub repo it’s deployed to GitHub pages. I can then share a public URL to folks that need to review the prototype.</p>
+<h2>One glaring problem</h2>
+<p>There’s only one issue I’ve run into using this setup, and its not even related to the setup! The <a href="https://porchlight.design/">Porchlight design system</a> (which we use at <a href="https://www.getharvest.com/">Harvest</a>) doesn’t have it’s styles or components available to consume publicly via CDN. Womp womp.</p>
+<p>I can get around the CSS issue. I end up having to copy the compiled CSS from the design system and paste it into a new file in my prototype environment. And I’m kind of out of luck with the JavaScript: I have to code these up from scratch. Although, I suppose I could copy the compiled components, and paste them into my prototype environment.</p>
+<p>The easiest fix is probably to introduce a package manager, but I’d rather not. We have talked about making the design system’s CSS and components available via CDN–it’s just a matter of getting around to it.</p>
+<h2>Prototype!</h2>
+<p>So that’s my current prototyping setup. Maybe it will help inspire you to setup your own prototyping environment. Whether you use code or a design app–you should prototype!</p>
+
+  </section>
+</article>
+
+    </main>
+    
+    <script async data-goatcounter="https://starzonmyarmz.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

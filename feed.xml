@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2024-04-16T00:00:00Z</updated>
+  <updated>2024-04-18T00:00:00Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -378,6 +378,33 @@ It was a bit of a balancing act to capture the essence of a physical sequencer w
 &lt;p&gt;When I use a prototype made in code verses Figma, the coded version feels more real: the way you interact with it, being able to actually type in a text input, being able to use and experiment with more complex interactions. I also typically tend to discover other interactions that go beyond the happy path, and can account for those before engineers discover them while building out the actual feature. States like validation and error, what happens when there’s no data to show, and other uncommon scenarios.&lt;/p&gt;
 &lt;h2&gt;Design Apps Still Have Their Place&lt;/h2&gt;
 &lt;p&gt;I think design apps have come a very long way over time, and it is very convenient to be able to prototype in the same app you’re doing your designing in—especially if you’re not comfortable with coding. And there are times when I will use Figma prototyping. If I have a simple interaction that doesn’t require a lot of user input or too many frames, then prototyping in Figma is relatively quick and painless. But once I go beyond a handful of interactions, it typically pays off in the long run to just use code.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>My current prototyping environment</title>
+    <link href="https://iamdanielmarino.com/posts/my-current-prototyping-environment/"/>
+    <updated>2024-04-18T00:00:00Z</updated>
+    <id>https://iamdanielmarino.com/posts/my-current-prototyping-environment/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;The other day I shared &lt;a href=&quot;https://iamdanielmarino.com/posts/why-i-still-prefer-prototyping-using-code/&quot;&gt;why I prefer coding prototypes&lt;/a&gt; rather than using design apps to create them. My prototyping environment has evolved over the years. I love to hear how others build prototypes, so I thought I’d share where I’m at now. Maybe you’ll find it useful.&lt;/p&gt;
+&lt;h2&gt;A single repository&lt;/h2&gt;
+&lt;p&gt;I currently have a &lt;a href=&quot;https://github.com/starzonmyarmz/prototypes&quot;&gt;single GitHub repo&lt;/a&gt; housing all of my prototypes. I do this primarily so I don’t have to remember where any given prototype lives. They all live in the same place! Another benefit is if I pull in a library or some CSS component, I can reuse it in other prototypes without having to go out and grab it from the source again.&lt;/p&gt;
+&lt;h2&gt;My old setup&lt;/h2&gt;
+&lt;p&gt;In the past I used &lt;a href=&quot;https://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt; hosted on Heroku. Having Ruby and a basic server (Such as &lt;a href=&quot;https://github.com/ruby/webrick&quot;&gt;Webrick&lt;/a&gt;) in the backend was pretty nice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I could code up some fairly complex prototypes out with realistic url schemes.&lt;/li&gt;
+&lt;li&gt;Gems! If I needed fake data, I could use the &lt;a href=&quot;https://github.com/faker-ruby/faker&quot;&gt;Faker gem&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If I wanted a table with a 100 rows, I could easily generate that with a super simple loop.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But it got clunky. Spinning up a new prototype wasn’t very efficient. Setting up the urls took time. Deploying to Heroku wasn’t always straight forward. Heroku also got rid of their free plan, and I didn’t want to go looking for a new service. Maybe I’m making excuses.&lt;/p&gt;
+&lt;h2&gt;A dumb server&lt;/h2&gt;
+&lt;p&gt;Now I just use HTML, CSS (vanilla), and Javascript with no special backend. I don’t have Node.js running, and I don’t use a package manager like NPM or Yarn. To start a server I navigate to the prototype directory in iTerm, and run &lt;a href=&quot;https://github.com/paulirish/statikk&quot;&gt;Statikk&lt;/a&gt;. Easy peasy. This setup requires no upkeep, so I can focus on actually prototyping!&lt;/p&gt;
+&lt;p&gt;I have a basic file structure for keeping prototypes separate. I typically use &lt;a href=&quot;https://preactjs.com/&quot;&gt;Preact&lt;/a&gt; for scaffolding. To &lt;code&gt;import&lt;/code&gt;  Preact or other NPM packages I use &lt;a href=&quot;https://esm.sh/&quot;&gt;esm.sh&lt;/a&gt;. When I push changes to the GitHub repo it’s deployed to GitHub pages. I can then share a public URL to folks that need to review the prototype.&lt;/p&gt;
+&lt;h2&gt;One glaring problem&lt;/h2&gt;
+&lt;p&gt;There’s only one issue I’ve run into using this setup, and its not even related to the setup! The &lt;a href=&quot;https://porchlight.design/&quot;&gt;Porchlight design system&lt;/a&gt; (which we use at &lt;a href=&quot;https://www.getharvest.com/&quot;&gt;Harvest&lt;/a&gt;) doesn’t have it’s styles or components available to consume publicly via CDN. Womp womp.&lt;/p&gt;
+&lt;p&gt;I can get around the CSS issue. I end up having to copy the compiled CSS from the design system and paste it into a new file in my prototype environment. And I’m kind of out of luck with the JavaScript: I have to code these up from scratch. Although, I suppose I could copy the compiled components, and paste them into my prototype environment.&lt;/p&gt;
+&lt;p&gt;The easiest fix is probably to introduce a package manager, but I’d rather not. We have talked about making the design system’s CSS and components available via CDN–it’s just a matter of getting around to it.&lt;/p&gt;
+&lt;h2&gt;Prototype!&lt;/h2&gt;
+&lt;p&gt;So that’s my current prototyping setup. Maybe it will help inspire you to setup your own prototyping environment. Whether you use code or a design app–you should prototype!&lt;/p&gt;
 </content>
   </entry>
 </feed>
