@@ -1,7 +1,7 @@
 :root {
   --background: #fff;
   --text: #001219;
-  --primary: #d61e23;
+  --primary: 56.18% 0.247 26.87;
   --sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  color: var(--primary);
+  color: oklch(var(--primary));
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
