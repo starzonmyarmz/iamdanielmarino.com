@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2024-04-18T00:00:00Z</updated>
+  <updated>2024-05-28T00:00:00Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -405,6 +405,50 @@ It was a bit of a balancing act to capture the essence of a physical sequencer w
 &lt;p&gt;The easiest fix is probably to introduce a package manager, but I’d rather not. We have talked about making the design system’s CSS and components available via CDN–it’s just a matter of getting around to it.&lt;/p&gt;
 &lt;h2&gt;Prototype!&lt;/h2&gt;
 &lt;p&gt;So that’s my current prototyping setup. Maybe it will help inspire you to setup your own prototyping environment. Whether you use code or a design app–you should prototype!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Daily Inspirational Word</title>
+    <link href="https://iamdanielmarino.com/posts/daily-inspirational-word/"/>
+    <updated>2024-05-28T00:00:00Z</updated>
+    <id>https://iamdanielmarino.com/posts/daily-inspirational-word/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Over the past couple of years I’ve gotten into journaling. Recently I’ve been
+using a method where you’re given a single inspirational word as a prompt, and
+go from there. Unfortunately, the process of finding, saving, and accessing
+inspirational words was a bit of a chore:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Google a list of “366 inspirational words”.&lt;/li&gt;
+&lt;li&gt;Get taken to a blog bloated with ads and useless content all in an effort to
+generate SEO cred.&lt;/li&gt;
+&lt;li&gt;Copy/paste the words into Notion.&lt;/li&gt;
+&lt;li&gt;Fix how the words get formatted becasue Notion is weird, and I have OCD about
+formatting text.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;While this gets the job done, I felt like there was room to make this a more
+pleasant experience. All I really wanted was a small website that serves a
+single inspirational word on a daily basis without cruft or ads. This would
+allow me to get the content I want without having to scroll through a long list.
+I also don&#39;t want to manage or store the list of words. Once I&#39;ve curated a list
+of words, I want to be done with it.&lt;/p&gt;
+&lt;h2&gt;Creating a microsite&lt;/h2&gt;
+&lt;p&gt;I love a good microsite, and so I decided to create one that takes all the chore
+out of obtaining a
+&lt;a href=&quot;https://starzonmyarmz.github.io/daily-inspirational-word/&quot;&gt;daily inspirational word&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/daily_inspirational_word.jpeg&quot; alt=&quot;Daily Inspirational Word screenshot&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;The website is built with all vanilla tech, and doesn’t use any frameworks! It’s
+nice and lean, and it’s footprint is only 6.5kb.&lt;/p&gt;
+&lt;h3&gt;Inspirational words&lt;/h3&gt;
+&lt;p&gt;While I’m not a huge fan of AI, I did leverage ChatGPT on obtaining 366
+inspirational words. The benefit to ChatGPT was being able to get it to return
+the words as an array—cutting down on the tedium of having to convert the words
+I already had into an array. The words are stored in it’s own JSON file, and I
+use an async/await function to pull in the words, and then process the data upon
+return.&lt;/p&gt;
+&lt;h2&gt;Worth the effort&lt;/h2&gt;
+&lt;p&gt;I find these little projects fun and exciting because the scope is super tight,
+and makes for a great opportunity to learn new things. It’s definitely an
+overengineered solution to my problem, but it is a much more pleasant
+experience. And perhaps it will serve other people as well.&lt;/p&gt;
 </content>
   </entry>
 </feed>
