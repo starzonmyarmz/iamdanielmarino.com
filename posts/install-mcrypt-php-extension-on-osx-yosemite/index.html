@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Install Mcrypt PHP Extension on OSX Yosemite &mdash; Daniel Marino</title>
+    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml" />
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/favicon.svg" color="black">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/" aria-label="Daniel Marino">DM</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/feed.xml">Feed</a></li>
+        <li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      
+<article>
+  <header>
+    <h1>Install Mcrypt PHP Extension on OSX Yosemite</h1>
+      <div>January 29, 2015</div>
+  </header>
+
+  <section class="post-content">
+    <p>After updating <a href="http://statamic.com/">Statamic</a> to 1.10.2, I started getting <a href="http://en.wikipedia.org/wiki/Mcrypt">Mcrypt</a> errors. After some Googling, I found some complicated fixes. After some noodling around, here’s a simple way to fix it with <a href="http://brew.sh/">Homebrew</a>:</p>
+<p>First, figure out which version of PHP you’re running. You can do this by opening up Terminal, and running the following command:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token operator">></span> php <span class="token parameter variable">-v</span></code></pre>
+<p>I happen to be using PHP 5.5.21 locally, so I’ll use that in my examples. Next, <em>tap</em> the <code>homebrew/php</code> cask:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token operator">></span> brew tap homebrew/php</code></pre>
+<p>This next step is sort of optional. You can search for which versions of mcrypt is available to make sure it matches your version of PHP:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token operator">></span> brew search mcrypt</code></pre>
+<p>Like I said earlier, I’m running PHP 5.5.21. Make sure you install the version that corresponds with your version of PHP.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token operator">></span> brew <span class="token function">install</span> php55-mcrypt</code></pre>
+<p>That last command took several minutes to install it on my machine. After it is installed, restart the server, and you should be good to go!</p>
+
+  </section>
+</article>
+
+    </main>
+    
+    <script async data-goatcounter="https://starzonmyarmz.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

@@ -11,6 +11,42 @@
     <email></email>
   </author>
   <entry>
+    <title>Install Mcrypt PHP Extension on OSX Yosemite</title>
+    <link href="https://iamdanielmarino.com/posts/install-mcrypt-php-extension-on-osx-yosemite/"/>
+    <updated>2015-01-29T00:00:00Z</updated>
+    <id>https://iamdanielmarino.com/posts/install-mcrypt-php-extension-on-osx-yosemite/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;After updating &lt;a href=&quot;http://statamic.com/&quot;&gt;Statamic&lt;/a&gt; to 1.10.2, I started getting &lt;a href=&quot;http://en.wikipedia.org/wiki/Mcrypt&quot;&gt;Mcrypt&lt;/a&gt; errors. After some Googling, I found some complicated fixes. After some noodling around, here’s a simple way to fix it with &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;First, figure out which version of PHP you’re running. You can do this by opening up Terminal, and running the following command:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; php &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I happen to be using PHP 5.5.21 locally, so I’ll use that in my examples. Next, &lt;em&gt;tap&lt;/em&gt; the &lt;code&gt;homebrew/php&lt;/code&gt; cask:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew tap homebrew/php&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This next step is sort of optional. You can search for which versions of mcrypt is available to make sure it matches your version of PHP:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew search mcrypt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Like I said earlier, I’m running PHP 5.5.21. Make sure you install the version that corresponds with your version of PHP.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; php55-mcrypt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That last command took several minutes to install it on my machine. After it is installed, restart the server, and you should be good to go!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>My First Sketch Plugin and What I Learned</title>
+    <link href="https://iamdanielmarino.com/posts/my-first-sketch-plugin-and-what-i-learned/"/>
+    <updated>2016-05-16T00:00:00Z</updated>
+    <id>https://iamdanielmarino.com/posts/my-first-sketch-plugin-and-what-i-learned/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;I’ve been Adobe Illustrator free for almost six months now, and what I miss most about it are some of the nice effects it ships with. I love Sketch, but I don’t think these effects will ever make their way into Sketch. Sketch does have the ability to add plugins, and I’ve always wanted to try my hand at creating one. I really miss is Illustrator’s &lt;em&gt;Roughen&lt;/em&gt; effect as it’s really useful for creating that trendy-old-timey-beat-up look. Since a Sketch plugin that &lt;em&gt;roughens&lt;/em&gt; a path doesn’t already exist (that I could find) I decided to create one!&lt;/p&gt;
+&lt;p&gt;I’m going to be up front, and this is mostly a decompression of all the frustration I felt while working on the plugin.&lt;/p&gt;
+&lt;h2&gt;Delete and reinstall * Infinity&lt;/h2&gt;
+&lt;p&gt;I spent a lot of time just uninstalling, reinstalling the plugin any time I made a change to the plugin script. This was super annoying, but I’m not entirely sure if there was a way around this. Using the &lt;strong&gt;Custom Plugin&lt;/strong&gt; menu option was quick and useful for testing out snippets of code, but it’s not a fully fledged code editor, so I wouldn’t want to use it for sole development. Using &lt;code&gt;print()&lt;/code&gt; was sometimes useful for logging data to the console, but a lot of the times what was being logged was utter nonsense and useless. This brings me to my next topic.&lt;/p&gt;
+&lt;h2&gt;Documentation Wasn’t Too Useful&lt;/h2&gt;
+&lt;p&gt;I admit I’m not a hardcore developer, but I like to think I’m seasoned enough that I can review some documentation and forge ahead. Looking at the docs on Apple’s site was like reading a Unix software manual out of the 80’s. It didn’t help me out so much. Not only that, Googling Appkit or Cocoa (to be honest I don’t even understand which is which) methods didn’t help either. Is there a secret club you have to belong to to get useful examples and tutorials?&lt;/p&gt;
+&lt;p&gt;I’m good with JavaScript, so CocoaScript was nice for bridging the gap. However it’s really weird to me that you can write code in Cocoa notation in CocoaScript. Pick a syntax variation and stick with it!&lt;/p&gt;
+&lt;p&gt;The Sketch API docs are incomplete, and the examples that were there weren’t entirely useful. They must also be restructuring because halfway through development all the docs and links changed. Some content was removed entirely that I found kind of useful. Thank God for Google caching! I learned the most from looking at other plugins that did similar things I was looking to do. I also found &lt;a href=&quot;https://github.com/turbobabr/Sketch-Plugins-Cookbook&quot;&gt;this resource&lt;/a&gt; invaluable - there is so much great stuff in there.&lt;/p&gt;
+&lt;h2&gt;Late to the Party&lt;/h2&gt;
+&lt;p&gt;So while I’m decompressing from this project I’m remembering I belong to the &lt;a href=&quot;http://teamsketch.io/&quot;&gt;Team Sketch&lt;/a&gt; Slack Team. I wish I had remembered this earlier because there’s a channel dedicated to plug in development, and I’m sure I could’ve have received a lot of help from there. Just scrolling through the last 50 or so messages I saw an assortment of links that would have been useful.&lt;/p&gt;
+&lt;h2&gt;Wrap Up&lt;/h2&gt;
+&lt;p&gt;I know I complained a lot in this post. Despite the things that I felt held me back, I feel like I can improve my plugin quite a bit, so I wouldn’t say I’m done. I’d like to utilize the Team Sketch Slack Team and some of the resources I found.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>JS13K 2018 Retrospective</title>
     <link href="https://iamdanielmarino.com/posts/js13k-2018-retrospective/"/>
     <updated>2018-10-15T00:00:00Z</updated>
