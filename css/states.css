@@ -42,7 +42,9 @@ button span {
 }
 
 h1 {
-  font-family: 900;
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
   margin: 10vh 0;
   text-align: center;
 }
