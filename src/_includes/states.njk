@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="/css/states.css">
   </head>
   <body>
-    <h1>Hand-lettered US State Mottos by <a href="/">Daniel Marino</a></h1>
+    <h1>
+      <a href="/">Daniel Marino</a> is hand-lettering US State Mottos
+    </h1>
 
     <main class="content">
       {% block main %}
@@ -21,8 +23,12 @@
 
     <script>
       document.addEventListener('click', ({target}) => {
-        if (!target.closest('button')) return
-        target.closest('button').classList.toggle('big')
+        if (!target.closest('button')) 
+          return
+        target
+          .closest('button')
+          .classList
+          .toggle('big')
       })
     </script>
   </body>
