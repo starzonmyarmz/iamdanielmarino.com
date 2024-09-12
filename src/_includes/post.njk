@@ -7,11 +7,11 @@ layout: base.njk
     <h1>{{ title }}</h1>
 
     {%- if '/posts' in page.url %}
-      <div>{{ page.date | dateFilter }}</div>
+      <small>{{ page.date | dateFilter }}</small>
     {%- endif %}
 
     {%- if '/work' in page.url %}
-      <div>{{ blurb }}</div>
+      <small>{{ blurb }}</small>
     {%- endif %}
   </header>
 

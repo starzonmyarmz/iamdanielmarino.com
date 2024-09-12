@@ -8,15 +8,15 @@ permalink: /work/
   <h1>{{ title }}</h1>
 </header>
 
-<p>Selected case studies from my 11 years of experience at <a href="https://getharvest.com">Harvest</a>, showcasing notable projects I’ve been actively engaged in:</p>
-<ul class="posts case-studies">
+<p style="margin-block-start: 0">Selected case studies from my 11 years of experience at <a href="https://getharvest.com">Harvest</a>, showcasing notable projects I’ve been actively engaged in:</p>
+
+<ul class="posts">
   {% for post in collections.work | categoryFilter('casestudy') %}
     <li>
-      <a href="{{ post.url }}">
-        <img src="/img/work/harvest-icon.svg" alt="Harvest logo" height="48" width="48" />
-        <h3>{{ post.data.title }}</h3>
-        <small>{{ post.data.blurb }}</small>
-      </a>
+      <h3>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h3>
+      <small>{{ post.data.blurb }}</small>
     </li>
   {% endfor %}
 </ul>

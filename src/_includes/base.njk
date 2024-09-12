@@ -10,7 +10,7 @@
       <meta name="robots" content="noindex">
     {%- endif %}
 
-    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"/>
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="mask-icon" href="/favicon.svg" color="black">
@@ -20,22 +20,29 @@
   <body>
     <nav>
       <ul>
-        <li><a href="/" aria-label="Daniel Marino">DM</a></li>
-        <li><a href="/work">Work</a></li>
-        <li><a href="/posts">Posts</a></li>
-        <li><a href="/feed.xml">Feed</a></li>
-        <li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li>
+        <li>
+          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
+        </li>
+        <li>
+          <a href="/work">Work</a>
+        </li>
+        <li>
+          <a href="/posts">Posts</a>
+        </li>
+        <li>
+          <a href="/feed.xml">Feed</a>
+        </li>
+        <li>
+          <a href="https://letterbird.co/iamdanielmarino">Contact</a>
+        </li>
       </ul>
     </nav>
 
-    {%- if page.url == '/' %}
-      <img src="/img/headshot.jpg" alt="Headshot of Daniel Marino" width="128" height="128" id="headshot">
-    {%- endif %}
-
     <main>
+      {%- if page.url == '/' %}
+        <img src="/img/headshot.jpg" alt="Headshot of Daniel Marino" width="128" height="128" id="headshot">
+      {%- endif %}
       {{ content | safe }}
     </main>
-    
-    <script async data-goatcounter="https://starzonmyarmz.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
