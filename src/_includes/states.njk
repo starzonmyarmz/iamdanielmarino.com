@@ -22,14 +22,22 @@
     </main>
 
     <script>
-      document.addEventListener('click', ({target}) => {
-        if (!target.closest('button')) 
-          return
-        target
-          .closest('button')
-          .classList
-          .toggle('big')
-      })
+      document
+        .querySelectorAll('button[aria-label*="Zoom in"]')
+        .forEach((el) => {
+          el.addEventListener('click', ({currentTarget}) => {
+            currentTarget
+              .nextElementSibling
+              .showModal()
+          })
+        })
+      document
+        .querySelectorAll('dialog')
+        .forEach((el) => {
+          el.addEventListener('click', ({currentTarget}) => {
+            currentTarget.close()
+          })
+        })
     </script>
   </body>
 </html>

@@ -5,9 +5,12 @@ permalink: /state-mottos/
 
 <section>
   {% for state in states %}
-    <button type="button" data-enlarge>
-      <img src="/img/smp/{{ state.abbreviation }}.webp" alt="{{ state.name }} &mdash; {{ state.motto }}" width="800" height="800" loading="lazy">
-      <span>{{ state.name }} &mdash; {{ state.motto }}</span>
+    <button aria-label="Zoom in on {{ state.name }}">
+      <img src="/img/smp/{{ state.abbreviation }}.webp" alt="{{ state.name }} — {{ state.motto }}" width="800" height="800" loading="lazy">
     </button>
+    <dialog>
+      <img src="/img/smp/{{ state.abbreviation }}.webp" alt="{{ state.name }} — {{ state.motto }}" width="800" height="800" loading="lazy">
+      <div>{{ state.name }} — {{ state.motto }}</div>
+    </dialog>
   {% endfor %}
 </section>
