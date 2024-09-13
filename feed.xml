@@ -4,205 +4,250 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2024-05-28T00:00:00Z</updated>
+  <updated>2024-09-13T18:20:54Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
     <email></email>
   </author>
-  <entry>
-    <title>Install Mcrypt PHP Extension on OSX Yosemite</title>
-    <link href="https://iamdanielmarino.com/posts/install-mcrypt-php-extension-on-osx-yosemite/"/>
-    <updated>2015-01-29T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/install-mcrypt-php-extension-on-osx-yosemite/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;After updating &lt;a href=&quot;http://statamic.com/&quot;&gt;Statamic&lt;/a&gt; to 1.10.2, I started getting &lt;a href=&quot;http://en.wikipedia.org/wiki/Mcrypt&quot;&gt;Mcrypt&lt;/a&gt; errors. After some Googling, I found some complicated fixes. After some noodling around, here’s a simple way to fix it with &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;First, figure out which version of PHP you’re running. You can do this by opening up Terminal, and running the following command:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; php &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I happen to be using PHP 5.5.21 locally, so I’ll use that in my examples. Next, &lt;em&gt;tap&lt;/em&gt; the &lt;code&gt;homebrew/php&lt;/code&gt; cask:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew tap homebrew/php&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This next step is sort of optional. You can search for which versions of mcrypt is available to make sure it matches your version of PHP:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew search mcrypt&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Like I said earlier, I’m running PHP 5.5.21. Make sure you install the version that corresponds with your version of PHP.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; php55-mcrypt&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That last command took several minutes to install it on my machine. After it is installed, restart the server, and you should be good to go!&lt;/p&gt;
+    <entry>
+      <title>Daily Inspirational Word</title>
+      <link href="https://iamdanielmarino.com/posts/daily-inspirational-word/"/>
+      <updated>2024-05-28T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/daily-inspirational-word/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;Over the past couple of years I’ve gotten into journaling. Recently I’ve been
+using a method where you’re given a single inspirational word as a prompt, and
+go from there. Unfortunately, the process of finding, saving, and accessing
+inspirational words was a bit of a chore:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Google a list of “366 inspirational words”.&lt;/li&gt;
+&lt;li&gt;Get taken to a blog bloated with ads and useless content all in an effort to
+generate SEO cred.&lt;/li&gt;
+&lt;li&gt;Copy/paste the words into Notion.&lt;/li&gt;
+&lt;li&gt;Fix how the words get formatted becasue Notion is weird, and I have OCD about
+formatting text.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;While this gets the job done, I felt like there was room to make this a more
+pleasant experience. All I really wanted was a small website that serves a
+single inspirational word on a daily basis without cruft or ads. This would
+allow me to get the content I want without having to scroll through a long list.
+I also don&#39;t want to manage or store the list of words. Once I&#39;ve curated a list
+of words, I want to be done with it.&lt;/p&gt;
+&lt;h2&gt;Creating a microsite&lt;/h2&gt;
+&lt;p&gt;I love a good microsite, and so I decided to create one that takes all the chore
+out of obtaining a
+&lt;a href=&quot;https://starzonmyarmz.github.io/daily-inspirational-word/&quot;&gt;daily inspirational word&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/daily_inspirational_word.jpeg&quot; alt=&quot;Daily Inspirational Word screenshot&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;The website is built with all vanilla tech, and doesn’t use any frameworks! It’s
+nice and lean, and it’s footprint is only 6.5kb.&lt;/p&gt;
+&lt;h3&gt;Inspirational words&lt;/h3&gt;
+&lt;p&gt;While I’m not a huge fan of AI, I did leverage ChatGPT on obtaining 366
+inspirational words. The benefit to ChatGPT was being able to get it to return
+the words as an array—cutting down on the tedium of having to convert the words
+I already had into an array. The words are stored in it’s own JSON file, and I
+use an async/await function to pull in the words, and then process the data upon
+return.&lt;/p&gt;
+&lt;h2&gt;Worth the effort&lt;/h2&gt;
+&lt;p&gt;I find these little projects fun and exciting because the scope is super tight,
+and makes for a great opportunity to learn new things. It’s definitely an
+overengineered solution to my problem, but it is a much more pleasant
+experience. And perhaps it will serve other people as well.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>My First Sketch Plugin and What I Learned</title>
-    <link href="https://iamdanielmarino.com/posts/my-first-sketch-plugin-and-what-i-learned/"/>
-    <updated>2016-05-16T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/my-first-sketch-plugin-and-what-i-learned/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;I’ve been Adobe Illustrator free for almost six months now, and what I miss most about it are some of the nice effects it ships with. I love Sketch, but I don’t think these effects will ever make their way into Sketch. Sketch does have the ability to add plugins, and I’ve always wanted to try my hand at creating one. I really miss is Illustrator’s &lt;em&gt;Roughen&lt;/em&gt; effect as it’s really useful for creating that trendy-old-timey-beat-up look. Since a Sketch plugin that &lt;em&gt;roughens&lt;/em&gt; a path doesn’t already exist (that I could find) I decided to create one!&lt;/p&gt;
-&lt;p&gt;I’m going to be up front, and this is mostly a decompression of all the frustration I felt while working on the plugin.&lt;/p&gt;
-&lt;h2&gt;Delete and reinstall * Infinity&lt;/h2&gt;
-&lt;p&gt;I spent a lot of time just uninstalling, reinstalling the plugin any time I made a change to the plugin script. This was super annoying, but I’m not entirely sure if there was a way around this. Using the &lt;strong&gt;Custom Plugin&lt;/strong&gt; menu option was quick and useful for testing out snippets of code, but it’s not a fully fledged code editor, so I wouldn’t want to use it for sole development. Using &lt;code&gt;print()&lt;/code&gt; was sometimes useful for logging data to the console, but a lot of the times what was being logged was utter nonsense and useless. This brings me to my next topic.&lt;/p&gt;
-&lt;h2&gt;Documentation Wasn’t Too Useful&lt;/h2&gt;
-&lt;p&gt;I admit I’m not a hardcore developer, but I like to think I’m seasoned enough that I can review some documentation and forge ahead. Looking at the docs on Apple’s site was like reading a Unix software manual out of the 80’s. It didn’t help me out so much. Not only that, Googling Appkit or Cocoa (to be honest I don’t even understand which is which) methods didn’t help either. Is there a secret club you have to belong to to get useful examples and tutorials?&lt;/p&gt;
-&lt;p&gt;I’m good with JavaScript, so CocoaScript was nice for bridging the gap. However it’s really weird to me that you can write code in Cocoa notation in CocoaScript. Pick a syntax variation and stick with it!&lt;/p&gt;
-&lt;p&gt;The Sketch API docs are incomplete, and the examples that were there weren’t entirely useful. They must also be restructuring because halfway through development all the docs and links changed. Some content was removed entirely that I found kind of useful. Thank God for Google caching! I learned the most from looking at other plugins that did similar things I was looking to do. I also found &lt;a href=&quot;https://github.com/turbobabr/Sketch-Plugins-Cookbook&quot;&gt;this resource&lt;/a&gt; invaluable - there is so much great stuff in there.&lt;/p&gt;
-&lt;h2&gt;Late to the Party&lt;/h2&gt;
-&lt;p&gt;So while I’m decompressing from this project I’m remembering I belong to the &lt;a href=&quot;http://teamsketch.io/&quot;&gt;Team Sketch&lt;/a&gt; Slack Team. I wish I had remembered this earlier because there’s a channel dedicated to plug in development, and I’m sure I could’ve have received a lot of help from there. Just scrolling through the last 50 or so messages I saw an assortment of links that would have been useful.&lt;/p&gt;
-&lt;h2&gt;Wrap Up&lt;/h2&gt;
-&lt;p&gt;I know I complained a lot in this post. Despite the things that I felt held me back, I feel like I can improve my plugin quite a bit, so I wouldn’t say I’m done. I’d like to utilize the Team Sketch Slack Team and some of the resources I found.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>JS13K 2018 Retrospective</title>
-    <link href="https://iamdanielmarino.com/posts/js13k-2018-retrospective/"/>
-    <updated>2018-10-15T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/js13k-2018-retrospective/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;In one of my weekly developer emails, I saw a link for &lt;a href=&quot;https://2018.js13kgames.com/&quot;&gt;JS13KGames&lt;/a&gt;. I&#39;ve always wanted to create a video game. I asked my JavaScript-whiz buddy, &lt;a href=&quot;https://github.com/braddunbar&quot;&gt;Brad&lt;/a&gt;, if he was interested in building a game with me. Without hesitation, he said “Yes!”&lt;/p&gt;
-&lt;h3&gt;Concept&lt;/h3&gt;
-&lt;p&gt;A couple of years ago I came up with the basic concept/mechanic of toggling layers on and off to create various platforming challenges. I had even sketched out several level designs, and cobbled together a super basic prototype using &lt;a href=&quot;http://phaser.io/&quot;&gt;Phaser.io&lt;/a&gt;. I was pretty happy with this simple mechanic. On top of that our character movement would consist of basic platforming: moving left/right and jumping.&lt;/p&gt;
-&lt;p&gt;There are &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/projects/1&quot;&gt;other ideas&lt;/a&gt; we had early on such as moving platforms/spikes, enemies, variances in gravity, as well as an in-game timer, but we ended up punting on those due to time and size constraints. Aside from adding complexity to our code, I think having the constraints challenged us to explore more with level design - as well as simplifying game play.&lt;/p&gt;
-&lt;h3&gt;Art Style, Design, and UX&lt;/h3&gt;
-&lt;p&gt;Originally, I envisioned the game having a pixel art style, but with the 13K and 30 day limits, I decided to simplify. Designing a minimum of 20 levels would take up quite a bit of time. Exploring pixel sprite and background designs would have prevented me from being able to create enough levels to make the game worth playing. I decided to stick with two colors.&lt;/p&gt;
-&lt;p&gt;I wanted to avoid using text to educate game mechanics. I took inspiration from countless video games (but specifically Super Mario World, Super Metroid, Megaman X), and started out by creating the first three levels that would introduce game mechanics one at a time. I then kept exploring various level designs until I had about six or seven solid levels.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/js13k2018-education.png&quot; alt=&quot;original idea about education&quot; loading=&quot;lazy&quot; /&gt;&lt;figcaption&gt;Original idea for educating game controls to player&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;While Brad was developing the mechanics, I solicited the help of my son to help me design the character. It went through some variations, but the final character was pretty similar to what we started with. In my mind I could see his legs moving and his head bobbing. He originally had rounded corners, but that ended up making the &lt;code&gt;svg&lt;/code&gt; output more complicated, so in the end we ditched them.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/js13k2018-characters.png&quot; alt=&quot;character ideas&quot; loading=&quot;lazy&quot; /&gt;&lt;figcaption&gt;Other character ideas&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;I liked the idea of the &lt;em&gt;toggle&lt;/em&gt; concept being carried through all the various screens, and not just the levels. So I designed the title, end, and controller screens with this in mind.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/js13k2018-font.png&quot; alt=&quot;typeface&quot; loading=&quot;lazy&quot; /&gt;&lt;figcaption&gt;&lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/refs/onoff.otf&quot;&gt;Custom typeface&lt;/a&gt; designed for ONOFF&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h3&gt;Music and Sound Effects&lt;/h3&gt;
-&lt;p&gt;I procrastinated with sound for two weeks or so. At first I got hung up on the options available for creating music and sound effects, until I came across &lt;a href=&quot;https://github.com/kevincennis/TinyMusic&quot;&gt;TinyMusic&lt;/a&gt;. I really liked the simplicity of it, that I was able to focus on music, not getting hung up on the plethora of styles and effects.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&quot;http://jsfiddle.net/0k6tLnfd/8/&quot;&gt;original track&lt;/a&gt; I wrote was more driving, but lacked personality. I hemmed and hawed for a week, then one morning I just started humming a really silly tune, and it felt just right for the game. The second part of that song (with the walking bass line) came a week later. I was experimenting to see if I could get chords &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/src/sound.js#L327-L351&quot;&gt;fade in and out&lt;/a&gt;. Once I got that working the bass line just worked itself out, and I had the second half to my song.&lt;/p&gt;
-&lt;p&gt;For sound effects, I had found some effects I really liked on &lt;a href=&quot;https://opengameart.org/&quot;&gt;OpenGameArt&lt;/a&gt; - however the file sizes were huge. No amount of resampling got them even close to 13K. So I ended up trying to &lt;em&gt;recreate&lt;/em&gt; those sounds using TinyMusic.&lt;/p&gt;
-&lt;h3&gt;Development&lt;/h3&gt;
-&lt;p&gt;We didn’t think it was necessary to use &lt;code&gt;canvas&lt;/code&gt;, and opted use &lt;code&gt;svg&lt;/code&gt;. This allowed us to easily scale graphics, use CSS to flip the colors when the layers were toggled, as well as easily develop graphics. In a lot of cases, I hard coded graphics such as the &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L135-L159&quot;&gt;death animation&lt;/a&gt; or the death counter, and then Brad would step in and wire it up with JavaScript.&lt;/p&gt;
-&lt;p&gt;I ran every graphic I created through &lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot;&gt;SVGOMG&lt;/a&gt; which helped keep our SVG super lightweight. In some cases, I found it more performant to use plain old &lt;code&gt;rect&lt;/code&gt;s or take advantage of SVG &lt;code&gt;pattern&lt;/code&gt;s for the &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L107-L118&quot;&gt;numbers used&lt;/a&gt; in the death and level counter, as well as the &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L80-L93&quot;&gt;spikes&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I left the decision to Brad whether we should roll our own game mechanics or use an existing library. We both felt it would be more fun to write our own. This also gave us a lot more control over the file sizes and code quality. Using ES6 made the vast majority of the code easier to write, and we didn’t end up having to polyfill anything.&lt;/p&gt;
-&lt;p&gt;For level design, Brad had created the ability to bootstrap levels quickly just by passing in an array of coordinates for the character, goal, and platforms (including the layer they should exist on). After getting a little burnt out on level design, I messed around with creating some dynamically generated levels.&lt;/p&gt;
-&lt;p&gt;We developed right up to the very end. Within the last 12 hours before the deadline we rolled out Gamepad support, the ability to share and play custom levels, and wrote another song to play when the game is completed.&lt;/p&gt;
-&lt;h3&gt;Tooling and 13k&lt;/h3&gt;
-&lt;p&gt;Our tooling was minimal. We would run our JS, CSS, and HTML through minifiers - that’s it. We decided to build everything as minimal as possible from the beginning, so we didn’t really have to go back and rework anything to hit the 13k limit.&lt;/p&gt;
-&lt;p&gt;After building the game we were still far under 13k, so Brad decided to roll out a custom level editor! That actually turned out to be a huge help because it made it a lot faster to test out ideas, and generate level code that we could just paste into our game. We though it was so cool we decided to include it as a bonus with a day left before the deadline!&lt;/p&gt;
-&lt;h3&gt;Playtesting&lt;/h3&gt;
-&lt;p&gt;Aside from having our kids play the game frequently (and they did!) we invited a few friends to play with about a week left in the competition. They felt that the game mechanics felt good, and were fairly easy to figure out. Looking back I wish we had people play it sooner - only because we were scrambling around with a few days left to finish building the game. If we had received more drastic feedback, we would have been in a really tight spot.&lt;/p&gt;
-&lt;h3&gt;Wrap Up&lt;/h3&gt;
-&lt;p&gt;Brad and I had a blast working on the js13k this year! I’m really grateful to Brad and all his help, our friends who took the time to playtest and give us feedback, and especially our families who gave endless support, and endured hours and hours of that music loop!&lt;/p&gt;
-&lt;p&gt;If you haven’t yet, make sure you check out our game &lt;a href=&quot;https://js13kgames.com/entries/onoff&quot;&gt;ONOFF&lt;/a&gt;!&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>How I Manage Projects</title>
-    <link href="https://iamdanielmarino.com/posts/how-i-manage-projects/"/>
-    <updated>2020-02-12T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/how-i-manage-projects/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;As a Product Designer at &lt;a href=&quot;https://getharvest.com/&quot;&gt;Harvest&lt;/a&gt;, part of my role is running projects. While I don’t believe there is a &lt;em&gt;right&lt;/em&gt; or &lt;em&gt;wrong&lt;/em&gt; way to manage projects, I do think there are some methods that can yield better results. I’m hardly an expert in this area, but I’d like to share some of the ways I find success in managing projects.&lt;/p&gt;
-&lt;p&gt;I should mention that these thoughts are my own. I’m extremely blessed to work for a company that gives some freedom as to how individuals run projects. Of course there are some fixed variables. For example, we all use Basecamp for tracking updates, and follow the same guidelines for communicating updates with other teams within Harvest.&lt;/p&gt;
-&lt;h3&gt;Ethos&lt;/h3&gt;
-&lt;p&gt;I don’t really have some profound wisdom to share. Basically, I try to stay out of the way as much as possible, leaving room for my teammates to get their work done. Their time, much like mine, is valuable. Out of respect, I try not to gum up the works with unnecessary meetings or emails. This doesn’t mean I’m out of the loop. We’re all generally aware of what the other person is working on.&lt;/p&gt;
-&lt;h3&gt;The Kickoff&lt;/h3&gt;
-&lt;p&gt;In preparation for the &lt;em&gt;Kickoff&lt;/em&gt;, I prefer creating a Google Doc with the project details rather than a slideshow. It’s much easier to review and edit on the fly. I also don’t have to get hung up on the little things like &lt;em&gt;does this slide look pretty&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Typically, I keep the Kickoff to 30 minutes or less. This isn’t the place to figure out technical or design decisions. We still might kick around some ideas and ask questions, but typically we breakout into smaller groups as needed. My preference is to have the Kickoff the Friday before the project starts. This allows my distributed team to hit the ground running first thing Monday morning.&lt;/p&gt;
-&lt;h3&gt;Weekly Hangout&lt;/h3&gt;
-&lt;p&gt;Once a week, our team will meet over a Google Hangout for about 20–30 minutes to discuss updates. We don’t necessarily try to solve problems in these meetings unless they’re quick and easy to figure out. The goal of these hangouts is to make sure we’re all on the same page throughout the course of the project.&lt;/p&gt;
-&lt;h3&gt;Daily Slack Check-in&lt;/h3&gt;
-&lt;p&gt;Simply put, I hate &lt;em&gt;unnecessary&lt;/em&gt; meetings, and find that most others do too. They disrupt the flow of my work day, and I suspect they do for others too. I prefer daily check-ins on &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; because it’s asynchronous. It allows my to get updates as breaks occur naturally throughout my day. I ask teammates to write a one- or two-sentence update. Basically what are you working on and is anything blocking you from completing it. Short and sweet.&lt;/p&gt;
-&lt;p&gt;Of course, if something is pressing or I’m blocking a todo from progressing, I ask my teammates to @ me, so that I get an immediate notification.&lt;/p&gt;
-&lt;p&gt;I know some people are into multiple email check-ins throughout the week (such as Basecamp’s automated check-ins). Personally, I dislike these—primarily because it feels like extra clutter in my inbox.&lt;/p&gt;
-&lt;h3&gt;Todos on Basecamp&lt;/h3&gt;
-&lt;p&gt;Previously I mentioned we all use &lt;a href=&quot;https://basecamp.com/&quot;&gt;Basecamp&lt;/a&gt; at Harvest. I hold my teammates responsible for making todos, and keeping related discussions up-to-date. That means a developer may create multiple todos for building out a feature or creating a todo for me to apply some design polish.&lt;/p&gt;
-&lt;p&gt;That’s the bulk of it. Of course there are little things here and there that I didn’t go over, but this should give you a glimpse into how I manage projects.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Trying Out Eleventy</title>
-    <link href="https://iamdanielmarino.com/posts/trying-out-eleventy/"/>
-    <updated>2020-02-18T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/trying-out-eleventy/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;As I started to think about blogging again, I began looking at options for hosting, CMS frameworks, static site generators, etc. &lt;a href=&quot;http://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; has been in the mainstream for sometime now, and I&#39;ve heard nothing but good things about it. I figured I should give it a shot.&lt;/p&gt;
-&lt;p&gt;There are no shortage of examples for using Eleventy, but I particularly found &lt;a href=&quot;https://hankchizljaw.com/&quot;&gt;Andy Bell’s&lt;/a&gt; &lt;a href=&quot;https://hebra.dev/&quot;&gt;Hebra&lt;/a&gt; starter kit, as well as the &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;Eleventy Base Blog&lt;/a&gt; to be excellent resources. I&#39;m using &lt;a href=&quot;https://mozilla.github.io/nunjucks/&quot;&gt;Nunjucks&lt;/a&gt; for templating. It more or less feels like &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; which I&#39;m familiar with from having used &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, as well as creating &lt;a href=&quot;https://www.statemottoprints.com/&quot;&gt;State Motto Prints&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In the course of an afternoon, I was able to put together the &lt;a href=&quot;https://github.com/starzonmyarmz/iamdanielmarino.com&quot;&gt;bones of this redesign&lt;/a&gt;. Over the past week, during my spare time, I&#39;ve been adding polish, and getting deployments working with Github Pages. I&#39;ll continue to make tweaks here and there, but overall I feel good about it.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Deploying My Eleventy Site to GitHub Pages</title>
-    <link href="https://iamdanielmarino.com/posts/deploying-my-eleventy-site-to-github-pages/"/>
-    <updated>2020-03-02T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/deploying-my-eleventy-site-to-github-pages/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;I really like &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;, and have used it to host my site for a while. The biggest challenge of switching my site to &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; was getting deployments to GitHub pages set up. I suppose I could have built my site locally, and then push that to the &lt;code&gt;gh-pages&lt;/code&gt; branch, but that felt &lt;em&gt;wrong&lt;/em&gt;. I prefer my &lt;code&gt;master&lt;/code&gt; branch to be the source of my site, while &lt;code&gt;gh-pages&lt;/code&gt; to only be the published content.&lt;/p&gt;
-&lt;p&gt;I’m aware of tools such as &lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt; and &lt;a href=&quot;https://travis-ci.com/&quot;&gt;Travis CI&lt;/a&gt; which aid in hosting or deployment processes. However I wasn’t looking to add another service into my tech stack. With some digging into &lt;a href=&quot;https://github.com/features/actions&quot;&gt;GitHub Actions&lt;/a&gt;, this seemed like a plausible route for getting my site deployed without having to rely on an external service.&lt;/p&gt;
-&lt;h3&gt;Setting Up a GitHub Action&lt;/h3&gt;
-&lt;p&gt;GitHub Actions allow you to automate workflows such as code deployment, running tests, compressing images, and so much more. GitHub has a whole &lt;em&gt;Marketplace&lt;/em&gt; where you can explore community-created actions. I’m using the &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action&quot;&gt;GitHub Pages action&lt;/a&gt; which handles everything I need for deploying. My workflow is fairly simple, and is largely based on the instructions for &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-static-site-generators-with-nodejs&quot;&gt;Static Site Generators with Node.js&lt;/a&gt;. In &lt;code&gt;/.github/workflows/eleventy_build.yml&lt;/code&gt;, I have the following:&lt;/p&gt;
-&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Eleventy Build&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; master&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ubuntu&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;18.04&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/checkout@v2&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Setup Node&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/setup&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;node@v1&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;          &lt;span class=&quot;token key atrule&quot;&gt;node-version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;10.x&#39;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; npm ci&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; npm run build&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deploy&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; peaceiris/actions&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gh&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;pages@v3&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;          &lt;span class=&quot;token key atrule&quot;&gt;deploy_key&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; secrets.ACTIONS_DEPLOY_KEY &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;          &lt;span class=&quot;token key atrule&quot;&gt;publish_dir&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ./dist&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Depending on how your Eleventy project is set up you might need to make some tweaks to the defaults. I recommend checking out the rest of the &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action#table-of-contents&quot;&gt;documentation&lt;/a&gt; to see what you can do.&lt;/p&gt;
-&lt;h3&gt;Hey GitHub, I’m Not Using Jekyll&lt;/h3&gt;
-&lt;p&gt;I found this to be the biggest hurdle, and it kind of buried in &lt;a href=&quot;https://help.github.com/en/github/working-with-github-pages/about-github-pages#static-site-generators&quot;&gt;GitHub’s documentation&lt;/a&gt;. By default, GitHub tries to use Jekyll to build your site. If you’re using any syntax other than what Jekyll recognizes, then you &lt;em&gt;might&lt;/em&gt; get errors and your build could potentially fail. The good news is the fix is really easy. In the root of your project, include an empty file &lt;code&gt;.nojekyll&lt;/code&gt;.&lt;/p&gt;
-&lt;h3&gt;Committing the Package Lock file&lt;/h3&gt;
-&lt;p&gt;This GitHub action is an &lt;em&gt;automated environment&lt;/em&gt;, so rather than use &lt;code&gt;npm install&lt;/code&gt; our action should use &lt;code&gt;npm ci&lt;/code&gt;. This ensures that you get a &lt;em&gt;clean install&lt;/em&gt; of your dependencies. One of the requirements for using &lt;code&gt;npm ci&lt;/code&gt; is that the project &lt;strong&gt;must&lt;/strong&gt; have an existing &lt;code&gt;package-lock.json&lt;/code&gt;. I’m not really sure what the norm is here, but I don’t typically commit this file. So if you fall into that category, make sure you get that file committed!&lt;/p&gt;
-&lt;h3&gt;Creating an NPM Build Script&lt;/h3&gt;
-&lt;p&gt;When it’s time for Eleventy to build your site when the &lt;code&gt;master&lt;/code&gt; branch is pushed upstream, it needs to happen in the context of the Node environment. In my &lt;code&gt;package.json&lt;/code&gt; I have a script mapped to the command &lt;code&gt;eleventy&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token property&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;eleventy&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now when &lt;code&gt;npm run build&lt;/code&gt; runs in the GitHub action, it will know where to find the &lt;code&gt;eleventy&lt;/code&gt; command.&lt;/p&gt;
-&lt;h3&gt;No SSH Deploy Key? No Deployment!&lt;/h3&gt;
-&lt;p&gt;For security purposes, GitHub requires that you have a &lt;em&gt;deploy key&lt;/em&gt; and a corresponding &lt;em&gt;secret&lt;/em&gt; set up in the repository that this GitHub Action is in. There’s handy &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-create-ssh-deploy-key&quot;&gt;step by step guide with screenshots&lt;/a&gt; on how to create the deploy key and secret, as well as adding them to the repository.&lt;/p&gt;
-&lt;p&gt;In my case I’ve labelled my deploy key &lt;em&gt;ACTIONS_DEPLOY_KEY&lt;/em&gt;. This is case-sensitive, so make sure you pay attention to what you call your deploy key!&lt;/p&gt;
-&lt;h3&gt;Wrapping Up&lt;/h3&gt;
-&lt;p&gt;While I’m not sure if this is the best way to get my Eleventy site deployed to GitHub Pages, it meets my needs. As far as I can tell, this general deployment process would be fairly similar to set up with a service like Netlify or Travis CI. However I find it extremely satisfying not being dependent on extra services.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Don’t Overthink Remote Working</title>
-    <link href="https://iamdanielmarino.com/posts/dont-overthink-remote-working/"/>
-    <updated>2020-03-13T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/dont-overthink-remote-working/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;The coronavirus is here, and as a result a lot of employers are asking employees to work remotely if possible. I’ve seen a fair share of &lt;em&gt;tips for remote working&lt;/em&gt; blog posts this past week. I figured I’d cash in on the action and share my thoughts.&lt;/p&gt;
-&lt;h2&gt;Don’t Overthink It&lt;/h2&gt;
-&lt;p&gt;Most of the posts I’ve read, more or less, are saying the same things: have an enjoyable working environment, communicate with your team regularly, stick to a schedule, yada yada yada…&lt;/p&gt;
-&lt;p&gt;All of those are great, but also seem subjective. Maybe its because I’ve been a remote working for over 10 years, but I have a different  point of view here. The best advice I have is: &lt;strong&gt;don’t overthink it&lt;/strong&gt;. I’m not saying all those other things aren’t important, however if you spend too much time focusing on: &lt;em&gt;I have to do this&lt;/em&gt; and &lt;em&gt;I have to do that&lt;/em&gt;, you’ll probably find the transition will be more difficult and take longer.&lt;/p&gt;
-&lt;h2&gt;It is a Transition&lt;/h2&gt;
-&lt;p&gt;Simply be aware that remote working &lt;em&gt;is&lt;/em&gt; a transition, especially if you’ve worked in an office environment for some time. And that’s ok! Recognize this, but try not to dwell on it too much. Do what you can to figure out how to get into &lt;em&gt;your&lt;/em&gt; groove quickly. Maybe that means working in pajamas, or working at the kitchen table instead of a dedicated office, or whatever!&lt;/p&gt;
-&lt;p&gt;The fact is, it will take you a little time to get used to remote working. And you’ll likely have to try different things to find what works for you. Your preferences might also fluctuate over time. Be aware of the transition, and try not to overthink it.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>How to Process Customer Criticism</title>
-    <link href="https://iamdanielmarino.com/posts/how-to-process-customer-criticism/"/>
-    <updated>2020-09-01T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/how-to-process-customer-criticism/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;Why do us product designers opt into a career where we’re regularly challenged to be vulnerable?! Design is super subjective, and everyone is a critic! Regardless of your education or how sharp your &lt;em&gt;design eye&lt;/em&gt; is, you’ll never be able to please everyone. This is especially true when you work on a product that has thousands upon thousands of users!&lt;/p&gt;
-&lt;p&gt;One of my personal challenges of being a product designer is learning how to process customer criticism. Its an ongoing struggle for me because I tend to be very sensitive to criticism in general. I’ve grown thicker skin over time, but there are still some days where I get down in the dumps.&lt;/p&gt;
-&lt;p&gt;My knee jerk response is to cave in, and give everyone what they want (or demand) so we can all be happy. However, good product designers don’t cave. We take a breath and carefully processes the criticism.&lt;/p&gt;
-&lt;h2&gt;Digging into Customer Criticism&lt;/h2&gt;
-&lt;p&gt;It’s hard, but sometimes you need to dig underneath the harsh and sometimes-hurtful comments. Is there actual legitimate feedback? Even if a customer insults you, it doesn’t negate the fact that they’re having a poor experience.&lt;/p&gt;
-&lt;p&gt;Once you’ve pushed past the hurtful comments and processed the feedback, are there common themes or issues raised by these customers? Obviously, bugs should be fixed, but have you overlooked some UX considerations?&lt;/p&gt;
-&lt;p&gt;Be honest with yourself. If there are things you can improve, and time allows for it, you should improve them. Even the tiniest improvement can be enough to change someone’s reception to a design!&lt;/p&gt;
-&lt;h2&gt;Haters Gonna Hate&lt;/h2&gt;
-&lt;p&gt;What about the people that hate something just because they can? Sometimes you just have to accept the fact that some people aren’t going to like something. Some things to consider:&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>My current prototyping environment</title>
+      <link href="https://iamdanielmarino.com/posts/my-current-prototyping-environment/"/>
+      <updated>2024-04-18T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/my-current-prototyping-environment/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;The other day I shared &lt;a href=&quot;https://iamdanielmarino.com/posts/why-i-still-prefer-prototyping-using-code/&quot;&gt;why I prefer coding prototypes&lt;/a&gt; rather than using design apps to create them. My prototyping environment has evolved over the years. I love to hear how others build prototypes, so I thought I’d share where I’m at now. Maybe you’ll find it useful.&lt;/p&gt;
+&lt;h2&gt;A single repository&lt;/h2&gt;
+&lt;p&gt;I currently have a &lt;a href=&quot;https://github.com/starzonmyarmz/prototypes&quot;&gt;single GitHub repo&lt;/a&gt; housing all of my prototypes. I do this primarily so I don’t have to remember where any given prototype lives. They all live in the same place! Another benefit is if I pull in a library or some CSS component, I can reuse it in other prototypes without having to go out and grab it from the source again.&lt;/p&gt;
+&lt;h2&gt;My old setup&lt;/h2&gt;
+&lt;p&gt;In the past I used &lt;a href=&quot;https://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt; hosted on Heroku. Having Ruby and a basic server (Such as &lt;a href=&quot;https://github.com/ruby/webrick&quot;&gt;Webrick&lt;/a&gt;) in the backend was pretty nice:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;You’re more likely to hear negative feedback.&lt;/strong&gt; People are more inclined to write a support ticket when they dislike something. For every person complaining about your design, there’s likely hundreds or thousands that really like it!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Some folks like to complain for the sake of complaining.&lt;/strong&gt; I’m not ashamed to admit that if someone tweets something nasty at us, I’ll often stalk them on Twitter for a bit to help get a read on the person. You’d be surprised (or maybe you wouldn’t) how often these folks are habitual complainers—wasting time tweeting at other companies. You’ll never please these people.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sometimes a thoughtful response will be appreciated.&lt;/strong&gt; I don’t necessarily do this for every support request, but sometimes I’ll respond by explaining the reasoning of why a design was implemented the way it is. This does require a little care because you don’t want to sound like you don’t care about a person’s feedback. You still want to acknowledge the the customer’s complaint even if you’re not planning on changing the design. Sometimes these customers reply with a heartfelt appreciation for the explanation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;If someone really dislikes your product, they’ll pack up and leave.&lt;/strong&gt; It sounds harsh, but it’s reality. Obviously you don’t want an exodus, and if that’s the case you should probably take a step back and reexamine things. However, it’s quite possible your product isn’t the right fit for some particular people. That said, it’s also unlikely that one disliked design is going to drive a customer away.&lt;/li&gt;
+&lt;li&gt;I could code up some fairly complex prototypes out with realistic url schemes.&lt;/li&gt;
+&lt;li&gt;Gems! If I needed fake data, I could use the &lt;a href=&quot;https://github.com/faker-ruby/faker&quot;&gt;Faker gem&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If I wanted a table with a 100 rows, I could easily generate that with a super simple loop.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Abusive Customers&lt;/h2&gt;
-&lt;p&gt;I don’t advocate taking abuse from customers on the chin. While I don’t think it’s okay to sling it back at your customers, I do think it’s fair game to call out hostile tone. I’m blessed to work for a &lt;a href=&quot;https://www.getharvest.com/&quot;&gt;company&lt;/a&gt; that has a policy around handling abusive customers. Your company may also address how to handle these types of customers. If you’re in a position to make these types of policies I highly recommend you do!&lt;/p&gt;
-&lt;h2&gt;You’re Awesome&lt;/h2&gt;
-&lt;p&gt;I mean… maybe you’re not awesome? Regardless, dealing with customer criticism can be really hard! And at the end of a hard day—no matter how awesome you are or aren’t, &lt;a href=&quot;https://media.giphy.com/media/13jJIY0llDdip2/giphy.gif&quot;&gt;treat yoself&lt;/a&gt;! Have a little extra dessert, play video games a little longer, crank some tunes extra loud! Try not to take customer criticism personally. Instead, look past the harsh tones, and try to find legitimate and actionable feedback.&lt;/p&gt;
+&lt;p&gt;But it got clunky. Spinning up a new prototype wasn’t very efficient. Setting up the urls took time. Deploying to Heroku wasn’t always straight forward. Heroku also got rid of their free plan, and I didn’t want to go looking for a new service. Maybe I’m making excuses.&lt;/p&gt;
+&lt;h2&gt;A dumb server&lt;/h2&gt;
+&lt;p&gt;Now I just use HTML, CSS (vanilla), and Javascript with no special backend. I don’t have Node.js running, and I don’t use a package manager like NPM or Yarn. To start a server I navigate to the prototype directory in iTerm, and run &lt;a href=&quot;https://github.com/paulirish/statikk&quot;&gt;Statikk&lt;/a&gt;. Easy peasy. This setup requires no upkeep, so I can focus on actually prototyping!&lt;/p&gt;
+&lt;p&gt;I have a basic file structure for keeping prototypes separate. I typically use &lt;a href=&quot;https://preactjs.com/&quot;&gt;Preact&lt;/a&gt; for scaffolding. To &lt;code&gt;import&lt;/code&gt;  Preact or other NPM packages I use &lt;a href=&quot;https://esm.sh/&quot;&gt;esm.sh&lt;/a&gt;. When I push changes to the GitHub repo it’s deployed to GitHub pages. I can then share a public URL to folks that need to review the prototype.&lt;/p&gt;
+&lt;h2&gt;One glaring problem&lt;/h2&gt;
+&lt;p&gt;There’s only one issue I’ve run into using this setup, and its not even related to the setup! The &lt;a href=&quot;https://porchlight.design/&quot;&gt;Porchlight design system&lt;/a&gt; (which we use at &lt;a href=&quot;https://www.getharvest.com/&quot;&gt;Harvest&lt;/a&gt;) doesn’t have it’s styles or components available to consume publicly via CDN. Womp womp.&lt;/p&gt;
+&lt;p&gt;I can get around the CSS issue. I end up having to copy the compiled CSS from the design system and paste it into a new file in my prototype environment. And I’m kind of out of luck with the JavaScript: I have to code these up from scratch. Although, I suppose I could copy the compiled components, and paste them into my prototype environment.&lt;/p&gt;
+&lt;p&gt;The easiest fix is probably to introduce a package manager, but I’d rather not. We have talked about making the design system’s CSS and components available via CDN–it’s just a matter of getting around to it.&lt;/p&gt;
+&lt;h2&gt;Prototype!&lt;/h2&gt;
+&lt;p&gt;So that’s my current prototyping setup. Maybe it will help inspire you to setup your own prototyping environment. Whether you use code or a design app–you should prototype!&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>My GIF Workflow Using Eleventy, Netlify, and Alfred</title>
-    <link href="https://iamdanielmarino.com/posts/my-gif-workflow-using-eleventy-netlify-alfred/"/>
-    <updated>2021-02-13T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/my-gif-workflow-using-eleventy-netlify-alfred/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;I used to keep my GIFs on Dropbox in the &lt;code&gt;/public&lt;/code&gt; directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an &lt;a href=&quot;https://destroytoday.com/blog/gif-workflow&quot;&gt;Alfred workflow&lt;/a&gt; for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the &lt;code&gt;/public&lt;/code&gt; directory, and thus this workflow stopped working.&lt;/p&gt;
-&lt;p&gt;Since then I’ve been keeping my personal collection of GIFs in a GitHub repo—which has been just okay. I really missed having a quick way to search and copy URLs. To use a GIF I’d have to go to the repo, find the image, view the raw image, and  finally manually copy the url from the browser. Lame.&lt;/p&gt;
-&lt;p&gt;A few weeks ago, I decided to give my GIF workflow an upgrade!&lt;/p&gt;
-&lt;p&gt;I started by turning my &lt;a href=&quot;https://github.com/starzonmyarmz/gifs&quot;&gt;GIFs repo&lt;/a&gt; into a static site using &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt;. The static site consists of two primary things: a directory with all of my GIFs, and a &lt;a href=&quot;https://github.com/starzonmyarmz/gifs/blob/main/src/gifs.njk&quot;&gt;generated JSON file&lt;/a&gt; listing all my GIFs (more on this in a bit).&lt;/p&gt;
-&lt;p&gt;I created a new site on Netlify that watches my GIFs repo, and runs a build process anytime I push to &lt;code&gt;main&lt;/code&gt; branch. This only took a few minutes to set up, and all my GIFs are now easily accessible by URL.&lt;/p&gt;
-&lt;p&gt;I was still missing a component though—a quick and easy way to search for GIFs and copy their URLs. I built an &lt;a href=&quot;https://github.com/starzonmyarmz/gifz-alfred-workflow/blob/main/index.js&quot;&gt;Alfred script&lt;/a&gt; using &lt;a href=&quot;https://github.com/sindresorhus/alfy&quot;&gt;Alfy&lt;/a&gt; to handle this part. Alfy is so cool to work with, allowing you to build Alfred workflows using JavaScript and Node. The Alfred Script takes an input, and searches for it against the &lt;a href=&quot;https://gifz.netlify.app/gifs.json&quot;&gt;JSON file on the Netlify site&lt;/a&gt;. When I find the GIF I want, it copies the URL to the clipboard.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/gif_workflow.gif&quot; alt=&quot;My gif flow using Alfred App&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
-&lt;p&gt;This update was well-needed, and I find myself using my personal GIFs much more often now! I only wish I had done something like this much sooner.&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>Why I Still Prefer to Prototype Using Code</title>
+      <link href="https://iamdanielmarino.com/posts/why-i-still-prefer-prototyping-using-code/"/>
+      <updated>2024-04-16T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/why-i-still-prefer-prototyping-using-code/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;There are several design apps available at a product designers disposal, and I’ve used several of them over the years. I think these days, most everyone is using Figma, but whatever app you’re using—most of them typically have some sort of prototyping feature. Typically they have required very little coding to get a prototype up and running.&lt;/p&gt;
+&lt;p&gt;Despite the advances in the ability to prototype using design tools, I still prefer to use HTML, CSS, and JavaScript.&lt;/p&gt;
+&lt;h2&gt;Greater Flexibility&lt;/h2&gt;
+&lt;p&gt;I find myself needing much more flexibility than what prototyping in Figma offers. I think it’s cool that they’re regularly adding features to make prototyping more flexible, but it’s becoming so complicated and time consuming to figure out. A lot of the new features that Figma has been adding—like variables—is essentially coding! It doesn’t really simplify or speed things up for me. At some point there’s usually a moment where I think this would have been faster if I had just built this prototype in code.&lt;/p&gt;
+&lt;p&gt;When animating designs in a prototyping tool, there’s only so much control over how the transitions work or what they look like. With CSS and JavaScript, I have complete control over how a design animates or transitions.&lt;/p&gt;
+&lt;h2&gt;Safer Portability&lt;/h2&gt;
+&lt;p&gt;When I think of portability, there’s a couple of things that come to mind: being able to easily share a prototype with someone else, and being able to access a prototype regardless of the design tool I’m using.&lt;/p&gt;
+&lt;p&gt;When I’m sharing a prototype with someone I like knowing that I can send them a URL that won’t break—at least theoretically. I get that Figma has URLs to prototypes, but I don’t own or have control over that URL. What if Figma changes the URL scheme someday? Would that happen? Probably not, but I also don’t have to worry about it if I own/control the URL.&lt;/p&gt;
+&lt;p&gt;Right now I use Figma. I used to use Sketch, and never thought I would stop using it. I don’t pretend to believe that some new design tool will come and replace Figma some day. If I decide to up and leave Figma, I’d prefer not to have to leave all my prototypes behind.&lt;/p&gt;
+&lt;h2&gt;Learning and Experimentation&lt;/h2&gt;
+&lt;p&gt;Prototyping with HTML, CSS, and JavaScript is a great way to test out new features or frameworks. Through prototyping I’ve learned how to use Flexbox/Grid, &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt;, &lt;a href=&quot;https://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;, &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt;, &lt;a href=&quot;https://preactjs.com/&quot;&gt;Preact&lt;/a&gt;, and a plethora of various little CSS properties or JavaScript methods and micro libraries. Its also a good way to stay on top of whats new and trendy, and try out not-quite-ready-for-primetime features.&lt;/p&gt;
+&lt;h2&gt;A More Realistic Experience&lt;/h2&gt;
+&lt;p&gt;When I use a prototype made in code verses Figma, the coded version feels more real: the way you interact with it, being able to actually type in a text input, being able to use and experiment with more complex interactions. I also typically tend to discover other interactions that go beyond the happy path, and can account for those before engineers discover them while building out the actual feature. States like validation and error, what happens when there’s no data to show, and other uncommon scenarios.&lt;/p&gt;
+&lt;h2&gt;Design Apps Still Have Their Place&lt;/h2&gt;
+&lt;p&gt;I think design apps have come a very long way over time, and it is very convenient to be able to prototype in the same app you’re doing your designing in—especially if you’re not comfortable with coding. And there are times when I will use Figma prototyping. If I have a simple interaction that doesn’t require a lot of user input or too many frames, then prototyping in Figma is relatively quick and painless. But once I go beyond a handful of interactions, it typically pays off in the long run to just use code.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>Gamedev.js Jam 2021 Retrospective</title>
-    <link href="https://iamdanielmarino.com/posts/gamedevjs-jam-2021-retrospective/"/>
-    <updated>2021-04-30T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/gamedevjs-jam-2021-retrospective/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;Recently, I participated in the &lt;a href=&quot;https://gamedevjs.com/jam/2021/&quot;&gt;Gamedev.js Jam 2021&lt;/a&gt;: a 13-day competition to build a game that can run on the Web in a browser without extra plugins. This year’s theme for the competition was “mirror”, which could interpreted however participants chose. I had an itch I wanted to scratch, and the timing was right, so I decided to join.&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>Using the p5play JavaScript Game Engine</title>
+      <link href="https://iamdanielmarino.com/posts/using-the-p5play-library-for-making-games/"/>
+      <updated>2024-01-15T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/using-the-p5play-library-for-making-games/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;I was messing around with &lt;a href=&quot;https://p5play.org/&quot;&gt;p5play&lt;/a&gt; last week to experiment with a game idea, and was pleasantly surprised by how easy it is to use. It was designed to be intuitive for beginners, such as students. In under a half hour I had created some common basic mechanics! Check it out:&lt;/p&gt;
+&lt;p class=&quot;codepen&quot; data-height=&quot;500&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;WNmRzOK&quot; data-user=&quot;starzonmyarmz&quot; style=&quot;height: 500px; display: flex; align-items: center; justify-content: center; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/starzonmyarmz/pen/WNmRzOK&quot;&gt;
+  p5play&lt;/a&gt; by Daniel Marino (&lt;a href=&quot;https://codepen.io/starzonmyarmz&quot;&gt;@starzonmyarmz&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+&lt;h3&gt;What I Like&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;It builds on top of &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt;. This means that I can leverage all the built-in features I&#39;m already familiar with in P5. It even expands upon some built-in features in P5—like creating a new &lt;a href=&quot;https://p5play.org/learn/canvas.html&quot;&gt;Canvas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;It uses the same &lt;a href=&quot;https://piqnt.com/planck.js&quot;&gt;Box2D physics simulator&lt;/a&gt; that some popular games use. Some physics engines are a little floaty, while others are too constrained. This simulator has some really comfortable defaults out of the box.&lt;/li&gt;
+&lt;li&gt;The documentation is easy to follow along, and there&#39;s a &lt;a href=&quot;https://discord.gg/3UTbqUgmPF&quot;&gt;Discord server&lt;/a&gt; where I can (and have) ask questions. I typically have gotten a response from the library maintainer, himself, within a couple of hours.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What I Dislike&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Not everything is documented, and that&#39;s not necessarily a bad thing. However, there are some really handy properties and even methods available that I happened to come across by accident just from purusing the source code and outputting various p5play global methods to &lt;code&gt;console.log()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The licensing is a &lt;a href=&quot;https://github.com/quinton-ashley/p5play-web/blob/main/LICENSING.md&quot;&gt;little weird&lt;/a&gt;. In short: its free to use for open source projects, but for professional use you need to pay for a license. I&#39;m not going to argue whether you should have to pay for a license or not, but its definately something to be aware of.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&#39;ll definitely be keeping &lt;a href=&quot;https://p5play.org/&quot;&gt;p5play&lt;/a&gt; in my toolkit the next time I want to prototype some game mechanics or participate in a game jam!&lt;/p&gt;
+</content>
+    </entry>
+    <entry>
+      <title>Making Generative Art</title>
+      <link href="https://iamdanielmarino.com/posts/generative-art/"/>
+      <updated>2024-01-13T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/generative-art/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;I saw &lt;a href=&quot;https://joshuadavis.com/&quot;&gt;Joshua Davis&lt;/a&gt; give a talk over 10 years ago, and I was mesmorized. Not just by how engaging he was, but more so with the work he was doing with &lt;em&gt;generative art&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I had never heard of generative art before, but I immediately fell in love with the concept of it. I like to draw, but I wouldn&#39;t consider myself much of an artist. I can work my way around Photoshop pretty comfortably, but again, wouldn&#39;t consider myself much of an artist. I didn&#39;t think much of generative art again for some time later.&lt;/p&gt;
+&lt;p&gt;Several years ago, I started toying with the idea fo experimenting with generative art. A buddy of mine, &lt;a href=&quot;https://codepen.io/satchmorun&quot;&gt;Arun&lt;/a&gt; shared some of his work, and inspired me to go for it. So now I&#39;ve been creating generative art for the past five years or so, but I&#39;ve only recently started &lt;a href=&quot;https://starzonmyarmz.github.io/generative-art/&quot;&gt;sharing my experiments&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Libraries like &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt; make it very approachable. And I&#39;m a huge fan of P5! I even &lt;a href=&quot;https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/&quot;&gt;made a video game&lt;/a&gt; with it. If you have the slightest interest in creating generative art, you should go for it! If you don&#39;t know where to start, I recommend checking out &lt;a href=&quot;https://thecodingtrain.com/&quot;&gt;The Coding Train&lt;/a&gt; where you&#39;ll find some great tutorials for getting started with programming, and more specific tutorials for using the P5 library.&lt;/p&gt;
+&lt;p&gt;I love to write code. I love art. I love being creative. The idea that I can combine all these into a single hobby is so cool.&lt;/p&gt;
+</content>
+    </entry>
+    <entry>
+      <title>Free Radon album released</title>
+      <link href="https://iamdanielmarino.com/posts/free-radon/"/>
+      <updated>2023-10-26T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/free-radon/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;A little over a year ago, I composed a handful of songs. If I had to fit them into a genre, I’d go with &lt;em&gt;Lofi&lt;/em&gt; or &lt;em&gt;Chillvibes&lt;/em&gt;. Or maybe &lt;em&gt;Not-Rock-n-Roll&lt;/em&gt;. I don’t know—I’m so bad at classifying music.&lt;/p&gt;
+&lt;p&gt;I wasn’t sure what to do with the songs. I was experiencing some intense emotions when I was composing them. I’ve been doing a lot of emotional growth over this past year (and still am), and I feel like by releasing them into the wild would be cathartic for me. To acknowledge that that chapter in my life happened, and it’s okay. So with that, here’s &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;Free Radon&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe style=&quot;border: 0; width: 100%; height: 274px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2458624556/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=small/transparent=true/&quot; seamless=&quot;&quot;&gt;&lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;Free Radon by Daniel Marino&lt;/a&gt;&lt;/iframe&gt;
+&lt;p&gt;So why &lt;em&gt;Free Radon&lt;/em&gt;? I’d like to say I put a lot of thought into naming the album, but I didn’t. I needed cover art for the album, and I thought it would be fun to generate random artwork for it. So I used the &lt;a href=&quot;https://p5js.org/&quot;&gt;p5.js JavaScript library&lt;/a&gt; to do so. I used the p5.js web editor, and when you create a new sketch it automatically creates a random name for it—in this case Free Radon. Speaking of using p5.js to create the artwork, you can &lt;a href=&quot;https://editor.p5js.org/iamdanielmarino/sketches/0QgAM4zz3&quot;&gt;view the script&lt;/a&gt;, and mess around with it.&lt;/p&gt;
+&lt;p&gt;Hope you like the music. If you do, &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;share it with others&lt;/a&gt;, or &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;buy it&lt;/a&gt;, or &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;both&lt;/a&gt;! If you don’t like it… oh well.&lt;/p&gt;
+</content>
+    </entry>
+    <entry>
+      <title>Building a Random Music Sequencer with Preact</title>
+      <link href="https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/"/>
+      <updated>2022-05-05T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;As I&#39;ve composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the &lt;a href=&quot;https://starzonmyarmz.github.io/rmg/&quot;&gt;RMG-2021&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Design&lt;/h2&gt;
+&lt;p&gt;I love how sequencers look and feel—and there is so much variety as to how they&#39;re designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
+It was a bit of a balancing act to capture the essence of a physical sequencer while adapting it to a screen.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/rmg2021.png&quot; alt=&quot;RMG-2021 Tiny Music Sequencer&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;h2&gt;Preact&lt;/h2&gt;
+&lt;p&gt;One of my goals was to get better at understanding and using React. I really just wanted to get more familiar with the basics, so I went with &lt;a href=&quot;https://preactjs.com/&quot;&gt;Preact&lt;/a&gt; which more or less offers the same API and low-level functionality. I&#39;m also using &lt;a href=&quot;https://github.com/developit/htm&quot;&gt;HTM&lt;/a&gt; which provides JSX-like syntax in vanilla JavaScript.&lt;/p&gt;
+&lt;p&gt;At first, I found it really difficult to buy in to the React/JSX ecosystem, but the more I work with it, the more I appreciate it. I&#39;m still not super fond of writing HTML in JavaScript, but I&#39;m getting over it.&lt;/p&gt;
+&lt;h2&gt;Sound&lt;/h2&gt;
+&lt;p&gt;When working with audio for &lt;a href=&quot;https://js13kgames.com/entries/onoff&quot;&gt;ONOFF&lt;/a&gt;, I used &lt;a href=&quot;https://github.com/kevincennis/TinyMusic&quot;&gt;TinyMusic&lt;/a&gt;, and I&#39;m using it here too. Is it necessarily? No, but true to it&#39;s name—it&#39;s tiny, and offers a nice API. It simplifies authoring audio sequences in JavaScript. I&#39;m even outputting the TinyMusic sequence syntax so it can be easily reference it.&lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;p&gt;This is one of those projects that I could have easily kept adding features. At some point I had to call it &lt;em&gt;done&lt;/em&gt; and ship it. Every feature I added ended up adding more complexity to using the sequencer. The RMG allows you to specify:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The number of notes to use in the sequence&lt;/li&gt;
+&lt;li&gt;Which key the notes should be pulled from&lt;/li&gt;
+&lt;li&gt;A range of octaves to generate a sequence within&lt;/li&gt;
+&lt;li&gt;Snapping the total number of beats to an integer&lt;/li&gt;
+&lt;li&gt;Toggling the loop of the sequence&lt;/li&gt;
+&lt;li&gt;Toggling a metronome click, and adjusting various metronome settings&lt;/li&gt;
+&lt;li&gt;Adjusting various effects such as wave type, EQ, sweep, and decay&lt;/li&gt;
+&lt;li&gt;Adding a &lt;em&gt;pulse&lt;/em&gt; effect to a sequence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On top of these features you can also easily randomize all the settings, and share a sequence via URL.&lt;/p&gt;
+&lt;h2&gt;Random Sequences are Fun&lt;/h2&gt;
+&lt;p&gt;I&#39;ve used &lt;a href=&quot;https://starzonmyarmz.github.io/rmg/?notes=16&amp;amp;key=E&amp;amp;rangemin=2&amp;amp;rangemax=8&amp;amp;arrangement=B6+0.25%2CE2+2%2CF%234+0.75%2CD%238+1%2CC%234+4%2CF%237+4%2CD%236+0.75%2CD%238+2%2CG%235+0.75%2CC%238+1%2CC%236+0.25%2CD%233+0.25%2CC%233+1%2CF%238+2%2CD%238+0.5%2CD%233+0.5&amp;amp;tempo=314&amp;amp;wave=square&amp;amp;smoothing=0.38&amp;amp;staccato=0.34&amp;amp;bass=-9&amp;amp;mid=-1&amp;amp;treble=-1&amp;amp;loop=true&quot;&gt;random sequences&lt;/a&gt; generated by the RMG for various things: drumming along with sequences, challenging myself to &lt;a href=&quot;https://soundcloud.com/starzonmyarmz/ollie&quot;&gt;compose&lt;/a&gt; &lt;a href=&quot;https://soundcloud.com/starzonmyarmz/grind&quot;&gt;music&lt;/a&gt; around a random sequence, or even sending goofy sounds to my friends. It was a fun project, and I learned a lot.&lt;/p&gt;
+</content>
+    </entry>
+    <entry>
+      <title>GitHub Game Off 2021 Retrospective</title>
+      <link href="https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/"/>
+      <updated>2022-02-19T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;Recently, I completed the &lt;a href=&quot;https://itch.io/jam/game-off-2021&quot;&gt;GitHub Game Off&lt;/a&gt;. With over 500 entries, this is the largest game jam I’ve been a part of. I had some lofty goals for this game, and I just about met them all. I’m extremely happy with how the game came out!&lt;/p&gt;
+&lt;p&gt;Like prior games I’ve made, I don’t tend to join a game jam unless I have some specific idea/mechanic I’d like to explore. I’d been wanting to tackle a mobile game for some time now while exploring motion/accelerometer mechanics.&lt;/p&gt;
+&lt;h2&gt;Mechanics&lt;/h2&gt;
+&lt;p&gt;The theme for this jam was “bug”. I don’t remember how I arrived at the concept and gameplay, but the gist is: a fly mysteriously gets sucked into a phone. By tilting your phone (utilizing the phone’s motion/accelerometer sensors), you move the fly to avoid colliding with objects on the phone’s screen. Tilting your phone at steeper angles increases the fly’s velocity and speed. While relatively basic, I found it challenging to get the mechanics just right, and reprogrammed this mechanic several times.&lt;/p&gt;
+&lt;p&gt;The game consists of seven auto-scrolling levels, progressing in difficulty as you complete them. Each one is scripted to be about a minute long. While the scrolling is scripted, there is quite a bit of randomness sprinkled into each level such as the placement and dimensions of objects.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/trapped_cover.png&quot; alt=&quot;trapped promo screen&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;The game is hard to play. Really hard. My play testers got frustrated quickly—especially with the first round of testing. I did quite a lot of tweaking based on their feedback. I simplified the levels by adding larger gaps between objects and slowing the scrolling down. Even with the adjustments it’s still hard to play, but not so hard that it’s unenjoyable.&lt;/p&gt;
+&lt;p&gt;I decided I was okay with the level of difficulty. I wanted a game that made you feel good about making progress. I’ve played through the entire game probably five or six times now (aside from rigorous testing throughout), and I can get through from beginning to end in about 20—30 minutes.&lt;/p&gt;
+&lt;h2&gt;Graphics&lt;/h2&gt;
+&lt;p&gt;If you’ve seen the game before reading this, you might think I’m joking by calling the visuals “graphics”. Believe it or not, the choice of simplicity was purposeful. I intentionally used a handful of basic shapes and solid colors.&lt;/p&gt;
+&lt;p&gt;Each level resembles a popular mobile app (can you figure out which ones), and all the design is stripped down to each app’s bare essence. By keeping the design so minimal, the graphics doesn’t feel overly &lt;em&gt;iPhone&lt;/em&gt; or &lt;em&gt;Android&lt;/em&gt;, so players can relate regardless of what kind of phone they use. Here are a couple of sample screenshots:&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/trapped_levels.png&quot; alt=&quot;trapped levels&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;I did receive a lower ranking on the game’s graphics, and that’s fair. I can understand why people would want something more high-fidelity. I even questioned my judgement on the decision to go low-fi a few times, but in the end I think it really does enhanced the game’s vibe and playability.&lt;/p&gt;
+&lt;p&gt;While the game play graphics are primarily generated with code, there is a single sprite! It’s the &lt;em&gt;fly&lt;/em&gt; character during the cut scenes. I wanted to try out using &lt;a href=&quot;https://www.aseprite.org/&quot;&gt;Aesprite&lt;/a&gt;, so decided to make the fly in the pixel-art style.&lt;/p&gt;
+&lt;h2&gt;Audio&lt;/h2&gt;
+&lt;p&gt;I got a little carried away with audio, and put way more effort into it than I had to—especially for a game jam. If I’m being honest, I had the most fun when I was composing and producing audio than doing anything else for this game.&lt;/p&gt;
+&lt;p&gt;I didn’t really intend to go all in with the jazz-style of music, but after writing the initial theme I was locked in. I started out composing a simple melody for the title screen. A few days later I had an album’s worth of music! The music is inspired by pianists like Vince Guaraldi and Danillo Perez. I love how they combine simple, playful, and whimsical-sounding melodies—with a little dissonance thrown in for good measure.&lt;/p&gt;
+&lt;iframe style=&quot;border: 0; width: 100%; height: 406px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=1082942060/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=none/transparent=true/&quot; seamless=&quot;&quot;&gt;&lt;a href=&quot;https://danielmarino.bandcamp.com/album/trapped-soundtrack&quot;&gt;trapped soundtrack by Daniel Marino&lt;/a&gt;&lt;/iframe&gt;
+&lt;p&gt;I’m a lot more proficient using &lt;a href=&quot;https://www.ableton.com/en/live/&quot;&gt;Ableton&lt;/a&gt; and my &lt;a href=&quot;https://www.arturia.com/products/hybrid-synths/minilab-mkii/overview&quot;&gt;Arturia MiniLab MKII&lt;/a&gt; since my &lt;a href=&quot;https://iamdanielmarino.com/posts/gamedevjs-jam-2021-retrospective/&quot;&gt;last game jam&lt;/a&gt; and found it much simpler this time to produce music. In keeping with the minimalistic artwork style, I kept the instrumentation minimal as well: piano and drums only.&lt;/p&gt;
+&lt;h2&gt;Environment and Tooling&lt;/h2&gt;
+&lt;p&gt;Like my other games, the game is developed with HTML, CSS, and JS. I’m most comfortable with this tooling environment, and enjoy pushing myself to learn and do new things with it.&lt;/p&gt;
+&lt;p&gt;I’ve been experimenting with creating generative art using JavaScript and the &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js library&lt;/a&gt;. I wasn’t sure how it would work as a game engine, but decided to try it out. In addition to P5, I also used a couple of additional libraries to help with &lt;a href=&quot;https://github.com/mveteanu/p5.SceneManager&quot;&gt;scene management&lt;/a&gt; and &lt;a href=&quot;https://github.com/bmoren/p5.collide2D&quot;&gt;collision detection&lt;/a&gt;. Some highlights working with P5:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The output renders to a &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element at 60fps, which makes the game quality pretty decent, and performant.&lt;/li&gt;
+&lt;li&gt;You can get started very quickly because &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Anatomy#building_a_main_loop_in_javascript&quot;&gt;the loop&lt;/a&gt; is handled automatically. There are also a ton of useful built in methods for creating and manipulating graphics.&lt;/li&gt;
+&lt;li&gt;It has built-in event listening for screen touching and device rotation, which was pretty helpful in my case.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Despite those highlights, I honestly don’t know if I got as much mileage out of P5 to justify using it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I ended up having to create my own Class with various methods for drawing and manipulate shapes. This is mostly because I wanted to be consistent in how shapes were generated, as well as being able to easily set up consistent timings for shape manipulation.&lt;/li&gt;
+&lt;li&gt;I ran into problem using P5’s vector manipulation methods, and used plain ‘ole vanilla JS to calculate and manipulate shapes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Developing a Browser-based, Mobile Game is Hard&lt;/h2&gt;
+&lt;p&gt;I kind of knew going into making a mobile game was going to come with its own set of challenges, but I wasn’t prepared for how difficult some of them would be to work out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;iOS Safari, for better or worse, has a huge market share on mobile devices. Not only that, all browsers—whether it be Chrome or Firefox or whatever—on iOS get stuck using the same Webkit rendering engine as Safari. Unfortunately, iOS Safari seems to be a little behind in some features that are implemented, making it difficult to work around some challenges.&lt;/li&gt;
+&lt;li&gt;iOS requires &lt;a href=&quot;https://github.com/starzonmyarmz/trapped/blob/main/src/game.js#L39-L50&quot;&gt;acquiring the user’s permission to access device rotation events&lt;/a&gt;—which not only hinders the user experience, but also adds some complicated code to handle this. It should be noted that P5 doesn&#39;t handle this on any level, and just assumes permission is granted from the start.&lt;/li&gt;
+&lt;li&gt;Itch.io doesn’t handle hosting browser-based mobile games very well. It also doesn’t help that neither iOS or Android make it easy to run cross-origin code. For various reasons working around this limitation is quite painful. In the end I published a QR code with a link to the game on Itch.io and published the actual game on GitHub Pages.&lt;/li&gt;
+&lt;li&gt;Developing and testing a browser-based mobile game locally is frustrating and kludgy. It’s slower than normal desktop-based development, and debugging was very hard. To access my localhost on my phone I used &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt;  to tunnel my localhost to a public server. I would then use the public URL in Safari on my iPhone. I could inspect the DOM and check the console for errors using Safari on my Mac.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Goals and Results&lt;/h2&gt;
+&lt;p&gt;I mentioned at the beginning of this post that I had some lofty goals. They were (in no particular order):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Complete a mobile game&lt;/strong&gt;. Pretty sure I succeeded here!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Build the game without any assistance&lt;/strong&gt;. I did actually have a little help from my buddy, Brad with some of the finishing touches. That said, I did the vast majority of the development on my own, and I feel really good about that!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rank in the top 10% of games for the game jam&lt;/strong&gt;. Overall, my game ranked 77th out of 526 submissions, which is about the top 15%. I’ll take it—especially for my first attempt at a mobile game. Also, I ranked 10th for &lt;em&gt;Audio&lt;/em&gt; and 18th for &lt;em&gt;Innovation&lt;/em&gt; which I think is awesome! You can check out &lt;a href=&quot;https://itch.io/jam/game-off-2021/rate/1291063&quot;&gt;my submission&lt;/a&gt; for the score breakdown and player feedback.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While I didn’t meet all my goals, I came pretty darn close. More importantly, I had a lot of fun with this game jam. I learned a lot and expanded my knowledge on using P5 as well as other various coding techniques.&lt;/p&gt;
+&lt;p&gt;Besides &lt;a href=&quot;https://github.com/braddunbar&quot;&gt;Brad&lt;/a&gt;, I had help from other folks, and I’d be remiss if I didn’t thank them: &lt;a href=&quot;https://matthewlettini.me/&quot;&gt;Matthew&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/dannywen&quot;&gt;Danny&lt;/a&gt; for play testing, as well as my kids for play testing and suggesting good ideas when I was feeling stuck. Lastly, my wife: not only does she play my games, but is very supportive, lets me vent about crappy API support, and inspires me to put everything I got into my work.&lt;/p&gt;
+&lt;p&gt;Be sure to give &lt;a href=&quot;https://starzonmyarmz.itch.io/trapped&quot;&gt;trapped&lt;/a&gt; a play or check out the &lt;a href=&quot;https://github.com/starzonmyarmz/trapped&quot;&gt;source code&lt;/a&gt;!&lt;/p&gt;
+</content>
+    </entry>
+    <entry>
+      <title>Gamedev.js Jam 2021 Retrospective</title>
+      <link href="https://iamdanielmarino.com/posts/gamedevjs-jam-2021-retrospective/"/>
+      <updated>2021-04-30T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/gamedevjs-jam-2021-retrospective/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;Recently, I participated in the &lt;a href=&quot;https://gamedevjs.com/jam/2021/&quot;&gt;Gamedev.js Jam 2021&lt;/a&gt;: a 13-day competition to build a game that can run on the Web in a browser without extra plugins. This year’s theme for the competition was “mirror”, which could interpreted however participants chose. I had an itch I wanted to scratch, and the timing was right, so I decided to join.&lt;/p&gt;
 &lt;p&gt;You’d think JavaScript would be necessary to make an HTML5 game, but the &lt;a href=&quot;https://codepen.io/collection/AKkZro?cursor=ZD0wJm89MCZwPTEmdj00&quot;&gt;Internet has shown us&lt;/a&gt; &lt;em&gt;it is&lt;/em&gt; possible to make simple games without JavaScript. I wanted to see just how far I could take this limitation—especially in an environment where it is competing against other games.&lt;/p&gt;
 &lt;h2&gt;Game Concepts&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://starzonmyarmz.itch.io/hiero&quot;&gt;Hiero&lt;/a&gt; is the third game I’ve made (the first by myself), and by now I should have some sort of process to making a game, right? Well… I don’t really. So far, the process has been different for every game.&lt;/p&gt;
@@ -254,237 +299,192 @@
 &lt;p&gt;I’d like to thank my daughters for play testing and being brutally honest when I asked for feedback. They gave me great ideas and pushed me to make Hiero as good as it is. My son, for coming along for the ride for me. And my wife, for putting up with the shenanigans of her middle-aged husband, and for challenging me to always do my best.&lt;/p&gt;
 &lt;p&gt;I don’t know when I’ll make my next game, but the ideas are already brewing!&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>GitHub Game Off 2021 Retrospective</title>
-    <link href="https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/"/>
-    <updated>2022-02-19T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;Recently, I completed the &lt;a href=&quot;https://itch.io/jam/game-off-2021&quot;&gt;GitHub Game Off&lt;/a&gt;. With over 500 entries, this is the largest game jam I’ve been a part of. I had some lofty goals for this game, and I just about met them all. I’m extremely happy with how the game came out!&lt;/p&gt;
-&lt;p&gt;Like prior games I’ve made, I don’t tend to join a game jam unless I have some specific idea/mechanic I’d like to explore. I’d been wanting to tackle a mobile game for some time now while exploring motion/accelerometer mechanics.&lt;/p&gt;
-&lt;h2&gt;Mechanics&lt;/h2&gt;
-&lt;p&gt;The theme for this jam was “bug”. I don’t remember how I arrived at the concept and gameplay, but the gist is: a fly mysteriously gets sucked into a phone. By tilting your phone (utilizing the phone’s motion/accelerometer sensors), you move the fly to avoid colliding with objects on the phone’s screen. Tilting your phone at steeper angles increases the fly’s velocity and speed. While relatively basic, I found it challenging to get the mechanics just right, and reprogrammed this mechanic several times.&lt;/p&gt;
-&lt;p&gt;The game consists of seven auto-scrolling levels, progressing in difficulty as you complete them. Each one is scripted to be about a minute long. While the scrolling is scripted, there is quite a bit of randomness sprinkled into each level such as the placement and dimensions of objects.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/trapped_cover.png&quot; alt=&quot;trapped promo screen&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
-&lt;p&gt;The game is hard to play. Really hard. My play testers got frustrated quickly—especially with the first round of testing. I did quite a lot of tweaking based on their feedback. I simplified the levels by adding larger gaps between objects and slowing the scrolling down. Even with the adjustments it’s still hard to play, but not so hard that it’s unenjoyable.&lt;/p&gt;
-&lt;p&gt;I decided I was okay with the level of difficulty. I wanted a game that made you feel good about making progress. I’ve played through the entire game probably five or six times now (aside from rigorous testing throughout), and I can get through from beginning to end in about 20—30 minutes.&lt;/p&gt;
-&lt;h2&gt;Graphics&lt;/h2&gt;
-&lt;p&gt;If you’ve seen the game before reading this, you might think I’m joking by calling the visuals “graphics”. Believe it or not, the choice of simplicity was purposeful. I intentionally used a handful of basic shapes and solid colors.&lt;/p&gt;
-&lt;p&gt;Each level resembles a popular mobile app (can you figure out which ones), and all the design is stripped down to each app’s bare essence. By keeping the design so minimal, the graphics doesn’t feel overly &lt;em&gt;iPhone&lt;/em&gt; or &lt;em&gt;Android&lt;/em&gt;, so players can relate regardless of what kind of phone they use. Here are a couple of sample screenshots:&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/trapped_levels.png&quot; alt=&quot;trapped levels&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
-&lt;p&gt;I did receive a lower ranking on the game’s graphics, and that’s fair. I can understand why people would want something more high-fidelity. I even questioned my judgement on the decision to go low-fi a few times, but in the end I think it really does enhanced the game’s vibe and playability.&lt;/p&gt;
-&lt;p&gt;While the game play graphics are primarily generated with code, there is a single sprite! It’s the &lt;em&gt;fly&lt;/em&gt; character during the cut scenes. I wanted to try out using &lt;a href=&quot;https://www.aseprite.org/&quot;&gt;Aesprite&lt;/a&gt;, so decided to make the fly in the pixel-art style.&lt;/p&gt;
-&lt;h2&gt;Audio&lt;/h2&gt;
-&lt;p&gt;I got a little carried away with audio, and put way more effort into it than I had to—especially for a game jam. If I’m being honest, I had the most fun when I was composing and producing audio than doing anything else for this game.&lt;/p&gt;
-&lt;p&gt;I didn’t really intend to go all in with the jazz-style of music, but after writing the initial theme I was locked in. I started out composing a simple melody for the title screen. A few days later I had an album’s worth of music! The music is inspired by pianists like Vince Guaraldi and Danillo Perez. I love how they combine simple, playful, and whimsical-sounding melodies—with a little dissonance thrown in for good measure.&lt;/p&gt;
-&lt;iframe style=&quot;border: 0; width: 100%; height: 406px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=1082942060/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=none/transparent=true/&quot; seamless=&quot;&quot;&gt;&lt;a href=&quot;https://danielmarino.bandcamp.com/album/trapped-soundtrack&quot;&gt;trapped soundtrack by Daniel Marino&lt;/a&gt;&lt;/iframe&gt;
-&lt;p&gt;I’m a lot more proficient using &lt;a href=&quot;https://www.ableton.com/en/live/&quot;&gt;Ableton&lt;/a&gt; and my &lt;a href=&quot;https://www.arturia.com/products/hybrid-synths/minilab-mkii/overview&quot;&gt;Arturia MiniLab MKII&lt;/a&gt; since my &lt;a href=&quot;https://iamdanielmarino.com/posts/gamedevjs-jam-2021-retrospective/&quot;&gt;last game jam&lt;/a&gt; and found it much simpler this time to produce music. In keeping with the minimalistic artwork style, I kept the instrumentation minimal as well: piano and drums only.&lt;/p&gt;
-&lt;h2&gt;Environment and Tooling&lt;/h2&gt;
-&lt;p&gt;Like my other games, the game is developed with HTML, CSS, and JS. I’m most comfortable with this tooling environment, and enjoy pushing myself to learn and do new things with it.&lt;/p&gt;
-&lt;p&gt;I’ve been experimenting with creating generative art using JavaScript and the &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js library&lt;/a&gt;. I wasn’t sure how it would work as a game engine, but decided to try it out. In addition to P5, I also used a couple of additional libraries to help with &lt;a href=&quot;https://github.com/mveteanu/p5.SceneManager&quot;&gt;scene management&lt;/a&gt; and &lt;a href=&quot;https://github.com/bmoren/p5.collide2D&quot;&gt;collision detection&lt;/a&gt;. Some highlights working with P5:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The output renders to a &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element at 60fps, which makes the game quality pretty decent, and performant.&lt;/li&gt;
-&lt;li&gt;You can get started very quickly because &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Games/Anatomy#building_a_main_loop_in_javascript&quot;&gt;the loop&lt;/a&gt; is handled automatically. There are also a ton of useful built in methods for creating and manipulating graphics.&lt;/li&gt;
-&lt;li&gt;It has built-in event listening for screen touching and device rotation, which was pretty helpful in my case.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Despite those highlights, I honestly don’t know if I got as much mileage out of P5 to justify using it.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I ended up having to create my own Class with various methods for drawing and manipulate shapes. This is mostly because I wanted to be consistent in how shapes were generated, as well as being able to easily set up consistent timings for shape manipulation.&lt;/li&gt;
-&lt;li&gt;I ran into problem using P5’s vector manipulation methods, and used plain ‘ole vanilla JS to calculate and manipulate shapes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Developing a Browser-based, Mobile Game is Hard&lt;/h2&gt;
-&lt;p&gt;I kind of knew going into making a mobile game was going to come with its own set of challenges, but I wasn’t prepared for how difficult some of them would be to work out:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;iOS Safari, for better or worse, has a huge market share on mobile devices. Not only that, all browsers—whether it be Chrome or Firefox or whatever—on iOS get stuck using the same Webkit rendering engine as Safari. Unfortunately, iOS Safari seems to be a little behind in some features that are implemented, making it difficult to work around some challenges.&lt;/li&gt;
-&lt;li&gt;iOS requires &lt;a href=&quot;https://github.com/starzonmyarmz/trapped/blob/main/src/game.js#L39-L50&quot;&gt;acquiring the user’s permission to access device rotation events&lt;/a&gt;—which not only hinders the user experience, but also adds some complicated code to handle this. It should be noted that P5 doesn&#39;t handle this on any level, and just assumes permission is granted from the start.&lt;/li&gt;
-&lt;li&gt;Itch.io doesn’t handle hosting browser-based mobile games very well. It also doesn’t help that neither iOS or Android make it easy to run cross-origin code. For various reasons working around this limitation is quite painful. In the end I published a QR code with a link to the game on Itch.io and published the actual game on GitHub Pages.&lt;/li&gt;
-&lt;li&gt;Developing and testing a browser-based mobile game locally is frustrating and kludgy. It’s slower than normal desktop-based development, and debugging was very hard. To access my localhost on my phone I used &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt;  to tunnel my localhost to a public server. I would then use the public URL in Safari on my iPhone. I could inspect the DOM and check the console for errors using Safari on my Mac.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Goals and Results&lt;/h2&gt;
-&lt;p&gt;I mentioned at the beginning of this post that I had some lofty goals. They were (in no particular order):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Complete a mobile game&lt;/strong&gt;. Pretty sure I succeeded here!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Build the game without any assistance&lt;/strong&gt;. I did actually have a little help from my buddy, Brad with some of the finishing touches. That said, I did the vast majority of the development on my own, and I feel really good about that!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rank in the top 10% of games for the game jam&lt;/strong&gt;. Overall, my game ranked 77th out of 526 submissions, which is about the top 15%. I’ll take it—especially for my first attempt at a mobile game. Also, I ranked 10th for &lt;em&gt;Audio&lt;/em&gt; and 18th for &lt;em&gt;Innovation&lt;/em&gt; which I think is awesome! You can check out &lt;a href=&quot;https://itch.io/jam/game-off-2021/rate/1291063&quot;&gt;my submission&lt;/a&gt; for the score breakdown and player feedback.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;While I didn’t meet all my goals, I came pretty darn close. More importantly, I had a lot of fun with this game jam. I learned a lot and expanded my knowledge on using P5 as well as other various coding techniques.&lt;/p&gt;
-&lt;p&gt;Besides &lt;a href=&quot;https://github.com/braddunbar&quot;&gt;Brad&lt;/a&gt;, I had help from other folks, and I’d be remiss if I didn’t thank them: &lt;a href=&quot;https://matthewlettini.me/&quot;&gt;Matthew&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/dannywen&quot;&gt;Danny&lt;/a&gt; for play testing, as well as my kids for play testing and suggesting good ideas when I was feeling stuck. Lastly, my wife: not only does she play my games, but is very supportive, lets me vent about crappy API support, and inspires me to put everything I got into my work.&lt;/p&gt;
-&lt;p&gt;Be sure to give &lt;a href=&quot;https://starzonmyarmz.itch.io/trapped&quot;&gt;trapped&lt;/a&gt; a play or check out the &lt;a href=&quot;https://github.com/starzonmyarmz/trapped&quot;&gt;source code&lt;/a&gt;!&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>My GIF Workflow Using Eleventy, Netlify, and Alfred</title>
+      <link href="https://iamdanielmarino.com/posts/my-gif-workflow-using-eleventy-netlify-alfred/"/>
+      <updated>2021-02-13T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/my-gif-workflow-using-eleventy-netlify-alfred/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;I used to keep my GIFs on Dropbox in the &lt;code&gt;/public&lt;/code&gt; directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an &lt;a href=&quot;https://destroytoday.com/blog/gif-workflow&quot;&gt;Alfred workflow&lt;/a&gt; for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the &lt;code&gt;/public&lt;/code&gt; directory, and thus this workflow stopped working.&lt;/p&gt;
+&lt;p&gt;Since then I’ve been keeping my personal collection of GIFs in a GitHub repo—which has been just okay. I really missed having a quick way to search and copy URLs. To use a GIF I’d have to go to the repo, find the image, view the raw image, and  finally manually copy the url from the browser. Lame.&lt;/p&gt;
+&lt;p&gt;A few weeks ago, I decided to give my GIF workflow an upgrade!&lt;/p&gt;
+&lt;p&gt;I started by turning my &lt;a href=&quot;https://github.com/starzonmyarmz/gifs&quot;&gt;GIFs repo&lt;/a&gt; into a static site using &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt;. The static site consists of two primary things: a directory with all of my GIFs, and a &lt;a href=&quot;https://github.com/starzonmyarmz/gifs/blob/main/src/gifs.njk&quot;&gt;generated JSON file&lt;/a&gt; listing all my GIFs (more on this in a bit).&lt;/p&gt;
+&lt;p&gt;I created a new site on Netlify that watches my GIFs repo, and runs a build process anytime I push to &lt;code&gt;main&lt;/code&gt; branch. This only took a few minutes to set up, and all my GIFs are now easily accessible by URL.&lt;/p&gt;
+&lt;p&gt;I was still missing a component though—a quick and easy way to search for GIFs and copy their URLs. I built an &lt;a href=&quot;https://github.com/starzonmyarmz/gifz-alfred-workflow/blob/main/index.js&quot;&gt;Alfred script&lt;/a&gt; using &lt;a href=&quot;https://github.com/sindresorhus/alfy&quot;&gt;Alfy&lt;/a&gt; to handle this part. Alfy is so cool to work with, allowing you to build Alfred workflows using JavaScript and Node. The Alfred Script takes an input, and searches for it against the &lt;a href=&quot;https://gifz.netlify.app/gifs.json&quot;&gt;JSON file on the Netlify site&lt;/a&gt;. When I find the GIF I want, it copies the URL to the clipboard.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/gif_workflow.gif&quot; alt=&quot;My gif flow using Alfred App&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;This update was well-needed, and I find myself using my personal GIFs much more often now! I only wish I had done something like this much sooner.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>Building a Random Music Sequencer with Preact</title>
-    <link href="https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/"/>
-    <updated>2022-05-05T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;As I&#39;ve composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the &lt;a href=&quot;https://starzonmyarmz.github.io/rmg/&quot;&gt;RMG-2021&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Design&lt;/h2&gt;
-&lt;p&gt;I love how sequencers look and feel—and there is so much variety as to how they&#39;re designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
-It was a bit of a balancing act to capture the essence of a physical sequencer while adapting it to a screen.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/rmg2021.png&quot; alt=&quot;RMG-2021 Tiny Music Sequencer&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
-&lt;h2&gt;Preact&lt;/h2&gt;
-&lt;p&gt;One of my goals was to get better at understanding and using React. I really just wanted to get more familiar with the basics, so I went with &lt;a href=&quot;https://preactjs.com/&quot;&gt;Preact&lt;/a&gt; which more or less offers the same API and low-level functionality. I&#39;m also using &lt;a href=&quot;https://github.com/developit/htm&quot;&gt;HTM&lt;/a&gt; which provides JSX-like syntax in vanilla JavaScript.&lt;/p&gt;
-&lt;p&gt;At first, I found it really difficult to buy in to the React/JSX ecosystem, but the more I work with it, the more I appreciate it. I&#39;m still not super fond of writing HTML in JavaScript, but I&#39;m getting over it.&lt;/p&gt;
-&lt;h2&gt;Sound&lt;/h2&gt;
-&lt;p&gt;When working with audio for &lt;a href=&quot;https://js13kgames.com/entries/onoff&quot;&gt;ONOFF&lt;/a&gt;, I used &lt;a href=&quot;https://github.com/kevincennis/TinyMusic&quot;&gt;TinyMusic&lt;/a&gt;, and I&#39;m using it here too. Is it necessarily? No, but true to it&#39;s name—it&#39;s tiny, and offers a nice API. It simplifies authoring audio sequences in JavaScript. I&#39;m even outputting the TinyMusic sequence syntax so it can be easily reference it.&lt;/p&gt;
-&lt;h2&gt;Features&lt;/h2&gt;
-&lt;p&gt;This is one of those projects that I could have easily kept adding features. At some point I had to call it &lt;em&gt;done&lt;/em&gt; and ship it. Every feature I added ended up adding more complexity to using the sequencer. The RMG allows you to specify:&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>How to Process Customer Criticism</title>
+      <link href="https://iamdanielmarino.com/posts/how-to-process-customer-criticism/"/>
+      <updated>2020-09-01T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/how-to-process-customer-criticism/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;Why do us product designers opt into a career where we’re regularly challenged to be vulnerable?! Design is super subjective, and everyone is a critic! Regardless of your education or how sharp your &lt;em&gt;design eye&lt;/em&gt; is, you’ll never be able to please everyone. This is especially true when you work on a product that has thousands upon thousands of users!&lt;/p&gt;
+&lt;p&gt;One of my personal challenges of being a product designer is learning how to process customer criticism. Its an ongoing struggle for me because I tend to be very sensitive to criticism in general. I’ve grown thicker skin over time, but there are still some days where I get down in the dumps.&lt;/p&gt;
+&lt;p&gt;My knee jerk response is to cave in, and give everyone what they want (or demand) so we can all be happy. However, good product designers don’t cave. We take a breath and carefully processes the criticism.&lt;/p&gt;
+&lt;h2&gt;Digging into Customer Criticism&lt;/h2&gt;
+&lt;p&gt;It’s hard, but sometimes you need to dig underneath the harsh and sometimes-hurtful comments. Is there actual legitimate feedback? Even if a customer insults you, it doesn’t negate the fact that they’re having a poor experience.&lt;/p&gt;
+&lt;p&gt;Once you’ve pushed past the hurtful comments and processed the feedback, are there common themes or issues raised by these customers? Obviously, bugs should be fixed, but have you overlooked some UX considerations?&lt;/p&gt;
+&lt;p&gt;Be honest with yourself. If there are things you can improve, and time allows for it, you should improve them. Even the tiniest improvement can be enough to change someone’s reception to a design!&lt;/p&gt;
+&lt;h2&gt;Haters Gonna Hate&lt;/h2&gt;
+&lt;p&gt;What about the people that hate something just because they can? Sometimes you just have to accept the fact that some people aren’t going to like something. Some things to consider:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The number of notes to use in the sequence&lt;/li&gt;
-&lt;li&gt;Which key the notes should be pulled from&lt;/li&gt;
-&lt;li&gt;A range of octaves to generate a sequence within&lt;/li&gt;
-&lt;li&gt;Snapping the total number of beats to an integer&lt;/li&gt;
-&lt;li&gt;Toggling the loop of the sequence&lt;/li&gt;
-&lt;li&gt;Toggling a metronome click, and adjusting various metronome settings&lt;/li&gt;
-&lt;li&gt;Adjusting various effects such as wave type, EQ, sweep, and decay&lt;/li&gt;
-&lt;li&gt;Adding a &lt;em&gt;pulse&lt;/em&gt; effect to a sequence&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;You’re more likely to hear negative feedback.&lt;/strong&gt; People are more inclined to write a support ticket when they dislike something. For every person complaining about your design, there’s likely hundreds or thousands that really like it!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Some folks like to complain for the sake of complaining.&lt;/strong&gt; I’m not ashamed to admit that if someone tweets something nasty at us, I’ll often stalk them on Twitter for a bit to help get a read on the person. You’d be surprised (or maybe you wouldn’t) how often these folks are habitual complainers—wasting time tweeting at other companies. You’ll never please these people.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sometimes a thoughtful response will be appreciated.&lt;/strong&gt; I don’t necessarily do this for every support request, but sometimes I’ll respond by explaining the reasoning of why a design was implemented the way it is. This does require a little care because you don’t want to sound like you don’t care about a person’s feedback. You still want to acknowledge the the customer’s complaint even if you’re not planning on changing the design. Sometimes these customers reply with a heartfelt appreciation for the explanation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;If someone really dislikes your product, they’ll pack up and leave.&lt;/strong&gt; It sounds harsh, but it’s reality. Obviously you don’t want an exodus, and if that’s the case you should probably take a step back and reexamine things. However, it’s quite possible your product isn’t the right fit for some particular people. That said, it’s also unlikely that one disliked design is going to drive a customer away.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;On top of these features you can also easily randomize all the settings, and share a sequence via URL.&lt;/p&gt;
-&lt;h2&gt;Random Sequences are Fun&lt;/h2&gt;
-&lt;p&gt;I&#39;ve used &lt;a href=&quot;https://starzonmyarmz.github.io/rmg/?notes=16&amp;amp;key=E&amp;amp;rangemin=2&amp;amp;rangemax=8&amp;amp;arrangement=B6+0.25%2CE2+2%2CF%234+0.75%2CD%238+1%2CC%234+4%2CF%237+4%2CD%236+0.75%2CD%238+2%2CG%235+0.75%2CC%238+1%2CC%236+0.25%2CD%233+0.25%2CC%233+1%2CF%238+2%2CD%238+0.5%2CD%233+0.5&amp;amp;tempo=314&amp;amp;wave=square&amp;amp;smoothing=0.38&amp;amp;staccato=0.34&amp;amp;bass=-9&amp;amp;mid=-1&amp;amp;treble=-1&amp;amp;loop=true&quot;&gt;random sequences&lt;/a&gt; generated by the RMG for various things: drumming along with sequences, challenging myself to &lt;a href=&quot;https://soundcloud.com/starzonmyarmz/ollie&quot;&gt;compose&lt;/a&gt; &lt;a href=&quot;https://soundcloud.com/starzonmyarmz/grind&quot;&gt;music&lt;/a&gt; around a random sequence, or even sending goofy sounds to my friends. It was a fun project, and I learned a lot.&lt;/p&gt;
+&lt;h2&gt;Abusive Customers&lt;/h2&gt;
+&lt;p&gt;I don’t advocate taking abuse from customers on the chin. While I don’t think it’s okay to sling it back at your customers, I do think it’s fair game to call out hostile tone. I’m blessed to work for a &lt;a href=&quot;https://www.getharvest.com/&quot;&gt;company&lt;/a&gt; that has a policy around handling abusive customers. Your company may also address how to handle these types of customers. If you’re in a position to make these types of policies I highly recommend you do!&lt;/p&gt;
+&lt;h2&gt;You’re Awesome&lt;/h2&gt;
+&lt;p&gt;I mean… maybe you’re not awesome? Regardless, dealing with customer criticism can be really hard! And at the end of a hard day—no matter how awesome you are or aren’t, &lt;a href=&quot;https://media.giphy.com/media/13jJIY0llDdip2/giphy.gif&quot;&gt;treat yoself&lt;/a&gt;! Have a little extra dessert, play video games a little longer, crank some tunes extra loud! Try not to take customer criticism personally. Instead, look past the harsh tones, and try to find legitimate and actionable feedback.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>Free Radon album released</title>
-    <link href="https://iamdanielmarino.com/posts/free-radon/"/>
-    <updated>2023-10-26T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/free-radon/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;A little over a year ago, I composed a handful of songs. If I had to fit them into a genre, I’d go with &lt;em&gt;Lofi&lt;/em&gt; or &lt;em&gt;Chillvibes&lt;/em&gt;. Or maybe &lt;em&gt;Not-Rock-n-Roll&lt;/em&gt;. I don’t know—I’m so bad at classifying music.&lt;/p&gt;
-&lt;p&gt;I wasn’t sure what to do with the songs. I was experiencing some intense emotions when I was composing them. I’ve been doing a lot of emotional growth over this past year (and still am), and I feel like by releasing them into the wild would be cathartic for me. To acknowledge that that chapter in my life happened, and it’s okay. So with that, here’s &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;Free Radon&lt;/a&gt;.&lt;/p&gt;
-&lt;iframe style=&quot;border: 0; width: 100%; height: 274px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2458624556/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=small/transparent=true/&quot; seamless=&quot;&quot;&gt;&lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;Free Radon by Daniel Marino&lt;/a&gt;&lt;/iframe&gt;
-&lt;p&gt;So why &lt;em&gt;Free Radon&lt;/em&gt;? I’d like to say I put a lot of thought into naming the album, but I didn’t. I needed cover art for the album, and I thought it would be fun to generate random artwork for it. So I used the &lt;a href=&quot;https://p5js.org/&quot;&gt;p5.js JavaScript library&lt;/a&gt; to do so. I used the p5.js web editor, and when you create a new sketch it automatically creates a random name for it—in this case Free Radon. Speaking of using p5.js to create the artwork, you can &lt;a href=&quot;https://editor.p5js.org/iamdanielmarino/sketches/0QgAM4zz3&quot;&gt;view the script&lt;/a&gt;, and mess around with it.&lt;/p&gt;
-&lt;p&gt;Hope you like the music. If you do, &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;share it with others&lt;/a&gt;, or &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;buy it&lt;/a&gt;, or &lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;both&lt;/a&gt;! If you don’t like it… oh well.&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>Don’t Overthink Remote Working</title>
+      <link href="https://iamdanielmarino.com/posts/dont-overthink-remote-working/"/>
+      <updated>2020-03-13T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/dont-overthink-remote-working/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;The coronavirus is here, and as a result a lot of employers are asking employees to work remotely if possible. I’ve seen a fair share of &lt;em&gt;tips for remote working&lt;/em&gt; blog posts this past week. I figured I’d cash in on the action and share my thoughts.&lt;/p&gt;
+&lt;h2&gt;Don’t Overthink It&lt;/h2&gt;
+&lt;p&gt;Most of the posts I’ve read, more or less, are saying the same things: have an enjoyable working environment, communicate with your team regularly, stick to a schedule, yada yada yada…&lt;/p&gt;
+&lt;p&gt;All of those are great, but also seem subjective. Maybe its because I’ve been a remote working for over 10 years, but I have a different  point of view here. The best advice I have is: &lt;strong&gt;don’t overthink it&lt;/strong&gt;. I’m not saying all those other things aren’t important, however if you spend too much time focusing on: &lt;em&gt;I have to do this&lt;/em&gt; and &lt;em&gt;I have to do that&lt;/em&gt;, you’ll probably find the transition will be more difficult and take longer.&lt;/p&gt;
+&lt;h2&gt;It is a Transition&lt;/h2&gt;
+&lt;p&gt;Simply be aware that remote working &lt;em&gt;is&lt;/em&gt; a transition, especially if you’ve worked in an office environment for some time. And that’s ok! Recognize this, but try not to dwell on it too much. Do what you can to figure out how to get into &lt;em&gt;your&lt;/em&gt; groove quickly. Maybe that means working in pajamas, or working at the kitchen table instead of a dedicated office, or whatever!&lt;/p&gt;
+&lt;p&gt;The fact is, it will take you a little time to get used to remote working. And you’ll likely have to try different things to find what works for you. Your preferences might also fluctuate over time. Be aware of the transition, and try not to overthink it.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>Making Generative Art</title>
-    <link href="https://iamdanielmarino.com/posts/generative-art/"/>
-    <updated>2024-01-13T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/generative-art/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;I saw &lt;a href=&quot;https://joshuadavis.com/&quot;&gt;Joshua Davis&lt;/a&gt; give a talk over 10 years ago, and I was mesmorized. Not just by how engaging he was, but more so with the work he was doing with &lt;em&gt;generative art&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;I had never heard of generative art before, but I immediately fell in love with the concept of it. I like to draw, but I wouldn&#39;t consider myself much of an artist. I can work my way around Photoshop pretty comfortably, but again, wouldn&#39;t consider myself much of an artist. I didn&#39;t think much of generative art again for some time later.&lt;/p&gt;
-&lt;p&gt;Several years ago, I started toying with the idea fo experimenting with generative art. A buddy of mine, &lt;a href=&quot;https://codepen.io/satchmorun&quot;&gt;Arun&lt;/a&gt; shared some of his work, and inspired me to go for it. So now I&#39;ve been creating generative art for the past five years or so, but I&#39;ve only recently started &lt;a href=&quot;https://starzonmyarmz.github.io/generative-art/&quot;&gt;sharing my experiments&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Libraries like &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt; make it very approachable. And I&#39;m a huge fan of P5! I even &lt;a href=&quot;https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/&quot;&gt;made a video game&lt;/a&gt; with it. If you have the slightest interest in creating generative art, you should go for it! If you don&#39;t know where to start, I recommend checking out &lt;a href=&quot;https://thecodingtrain.com/&quot;&gt;The Coding Train&lt;/a&gt; where you&#39;ll find some great tutorials for getting started with programming, and more specific tutorials for using the P5 library.&lt;/p&gt;
-&lt;p&gt;I love to write code. I love art. I love being creative. The idea that I can combine all these into a single hobby is so cool.&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>Deploying My Eleventy Site to GitHub Pages</title>
+      <link href="https://iamdanielmarino.com/posts/deploying-my-eleventy-site-to-github-pages/"/>
+      <updated>2020-03-02T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/deploying-my-eleventy-site-to-github-pages/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;I really like &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;, and have used it to host my site for a while. The biggest challenge of switching my site to &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; was getting deployments to GitHub pages set up. I suppose I could have built my site locally, and then push that to the &lt;code&gt;gh-pages&lt;/code&gt; branch, but that felt &lt;em&gt;wrong&lt;/em&gt;. I prefer my &lt;code&gt;master&lt;/code&gt; branch to be the source of my site, while &lt;code&gt;gh-pages&lt;/code&gt; to only be the published content.&lt;/p&gt;
+&lt;p&gt;I’m aware of tools such as &lt;a href=&quot;https://www.netlify.com/&quot;&gt;Netlify&lt;/a&gt; and &lt;a href=&quot;https://travis-ci.com/&quot;&gt;Travis CI&lt;/a&gt; which aid in hosting or deployment processes. However I wasn’t looking to add another service into my tech stack. With some digging into &lt;a href=&quot;https://github.com/features/actions&quot;&gt;GitHub Actions&lt;/a&gt;, this seemed like a plausible route for getting my site deployed without having to rely on an external service.&lt;/p&gt;
+&lt;h3&gt;Setting Up a GitHub Action&lt;/h3&gt;
+&lt;p&gt;GitHub Actions allow you to automate workflows such as code deployment, running tests, compressing images, and so much more. GitHub has a whole &lt;em&gt;Marketplace&lt;/em&gt; where you can explore community-created actions. I’m using the &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action&quot;&gt;GitHub Pages action&lt;/a&gt; which handles everything I need for deploying. My workflow is fairly simple, and is largely based on the instructions for &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-static-site-generators-with-nodejs&quot;&gt;Static Site Generators with Node.js&lt;/a&gt;. In &lt;code&gt;/.github/workflows/eleventy_build.yml&lt;/code&gt;, I have the following:&lt;/p&gt;
+&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Eleventy Build&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; master&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token key atrule&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token key atrule&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ubuntu&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;18.04&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/checkout@v2&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Setup Node&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/setup&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;node@v1&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;          &lt;span class=&quot;token key atrule&quot;&gt;node-version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;10.x&#39;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; npm ci&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; npm run build&lt;br /&gt;&lt;br /&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deploy&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; peaceiris/actions&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gh&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;pages@v3&lt;br /&gt;        &lt;span class=&quot;token key atrule&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br /&gt;          &lt;span class=&quot;token key atrule&quot;&gt;deploy_key&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; secrets.ACTIONS_DEPLOY_KEY &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;          &lt;span class=&quot;token key atrule&quot;&gt;publish_dir&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ./dist&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Depending on how your Eleventy project is set up you might need to make some tweaks to the defaults. I recommend checking out the rest of the &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action#table-of-contents&quot;&gt;documentation&lt;/a&gt; to see what you can do.&lt;/p&gt;
+&lt;h3&gt;Hey GitHub, I’m Not Using Jekyll&lt;/h3&gt;
+&lt;p&gt;I found this to be the biggest hurdle, and it kind of buried in &lt;a href=&quot;https://help.github.com/en/github/working-with-github-pages/about-github-pages#static-site-generators&quot;&gt;GitHub’s documentation&lt;/a&gt;. By default, GitHub tries to use Jekyll to build your site. If you’re using any syntax other than what Jekyll recognizes, then you &lt;em&gt;might&lt;/em&gt; get errors and your build could potentially fail. The good news is the fix is really easy. In the root of your project, include an empty file &lt;code&gt;.nojekyll&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Committing the Package Lock file&lt;/h3&gt;
+&lt;p&gt;This GitHub action is an &lt;em&gt;automated environment&lt;/em&gt;, so rather than use &lt;code&gt;npm install&lt;/code&gt; our action should use &lt;code&gt;npm ci&lt;/code&gt;. This ensures that you get a &lt;em&gt;clean install&lt;/em&gt; of your dependencies. One of the requirements for using &lt;code&gt;npm ci&lt;/code&gt; is that the project &lt;strong&gt;must&lt;/strong&gt; have an existing &lt;code&gt;package-lock.json&lt;/code&gt;. I’m not really sure what the norm is here, but I don’t typically commit this file. So if you fall into that category, make sure you get that file committed!&lt;/p&gt;
+&lt;h3&gt;Creating an NPM Build Script&lt;/h3&gt;
+&lt;p&gt;When it’s time for Eleventy to build your site when the &lt;code&gt;master&lt;/code&gt; branch is pushed upstream, it needs to happen in the context of the Node environment. In my &lt;code&gt;package.json&lt;/code&gt; I have a script mapped to the command &lt;code&gt;eleventy&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;  &lt;span class=&quot;token property&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;eleventy&quot;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now when &lt;code&gt;npm run build&lt;/code&gt; runs in the GitHub action, it will know where to find the &lt;code&gt;eleventy&lt;/code&gt; command.&lt;/p&gt;
+&lt;h3&gt;No SSH Deploy Key? No Deployment!&lt;/h3&gt;
+&lt;p&gt;For security purposes, GitHub requires that you have a &lt;em&gt;deploy key&lt;/em&gt; and a corresponding &lt;em&gt;secret&lt;/em&gt; set up in the repository that this GitHub Action is in. There’s handy &lt;a href=&quot;https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-create-ssh-deploy-key&quot;&gt;step by step guide with screenshots&lt;/a&gt; on how to create the deploy key and secret, as well as adding them to the repository.&lt;/p&gt;
+&lt;p&gt;In my case I’ve labelled my deploy key &lt;em&gt;ACTIONS_DEPLOY_KEY&lt;/em&gt;. This is case-sensitive, so make sure you pay attention to what you call your deploy key!&lt;/p&gt;
+&lt;h3&gt;Wrapping Up&lt;/h3&gt;
+&lt;p&gt;While I’m not sure if this is the best way to get my Eleventy site deployed to GitHub Pages, it meets my needs. As far as I can tell, this general deployment process would be fairly similar to set up with a service like Netlify or Travis CI. However I find it extremely satisfying not being dependent on extra services.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>Using the p5play JavaScript Game Engine</title>
-    <link href="https://iamdanielmarino.com/posts/using-the-p5play-library-for-making-games/"/>
-    <updated>2024-01-15T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/using-the-p5play-library-for-making-games/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;I was messing around with &lt;a href=&quot;https://p5play.org/&quot;&gt;p5play&lt;/a&gt; last week to experiment with a game idea, and was pleasantly surprised by how easy it is to use. It was designed to be intuitive for beginners, such as students. In under a half hour I had created some common basic mechanics! Check it out:&lt;/p&gt;
-&lt;p class=&quot;codepen&quot; data-height=&quot;500&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;WNmRzOK&quot; data-user=&quot;starzonmyarmz&quot; style=&quot;height: 500px; display: flex; align-items: center; justify-content: center; margin: 1em 0; padding: 1em;&quot;&gt;
-  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/starzonmyarmz/pen/WNmRzOK&quot;&gt;
-  p5play&lt;/a&gt; by Daniel Marino (&lt;a href=&quot;https://codepen.io/starzonmyarmz&quot;&gt;@starzonmyarmz&lt;/a&gt;)
-  on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
-&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-&lt;h3&gt;What I Like&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;It builds on top of &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt;. This means that I can leverage all the built-in features I&#39;m already familiar with in P5. It even expands upon some built-in features in P5—like creating a new &lt;a href=&quot;https://p5play.org/learn/canvas.html&quot;&gt;Canvas&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;It uses the same &lt;a href=&quot;https://piqnt.com/planck.js&quot;&gt;Box2D physics simulator&lt;/a&gt; that some popular games use. Some physics engines are a little floaty, while others are too constrained. This simulator has some really comfortable defaults out of the box.&lt;/li&gt;
-&lt;li&gt;The documentation is easy to follow along, and there&#39;s a &lt;a href=&quot;https://discord.gg/3UTbqUgmPF&quot;&gt;Discord server&lt;/a&gt; where I can (and have) ask questions. I typically have gotten a response from the library maintainer, himself, within a couple of hours.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;What I Dislike&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Not everything is documented, and that&#39;s not necessarily a bad thing. However, there are some really handy properties and even methods available that I happened to come across by accident just from purusing the source code and outputting various p5play global methods to &lt;code&gt;console.log()&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;The licensing is a &lt;a href=&quot;https://github.com/quinton-ashley/p5play-web/blob/main/LICENSING.md&quot;&gt;little weird&lt;/a&gt;. In short: its free to use for open source projects, but for professional use you need to pay for a license. I&#39;m not going to argue whether you should have to pay for a license or not, but its definately something to be aware of.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I&#39;ll definitely be keeping &lt;a href=&quot;https://p5play.org/&quot;&gt;p5play&lt;/a&gt; in my toolkit the next time I want to prototype some game mechanics or participate in a game jam!&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>Trying Out Eleventy</title>
+      <link href="https://iamdanielmarino.com/posts/trying-out-eleventy/"/>
+      <updated>2020-02-18T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/trying-out-eleventy/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;As I started to think about blogging again, I began looking at options for hosting, CMS frameworks, static site generators, etc. &lt;a href=&quot;http://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt; has been in the mainstream for sometime now, and I&#39;ve heard nothing but good things about it. I figured I should give it a shot.&lt;/p&gt;
+&lt;p&gt;There are no shortage of examples for using Eleventy, but I particularly found &lt;a href=&quot;https://hankchizljaw.com/&quot;&gt;Andy Bell’s&lt;/a&gt; &lt;a href=&quot;https://hebra.dev/&quot;&gt;Hebra&lt;/a&gt; starter kit, as well as the &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;Eleventy Base Blog&lt;/a&gt; to be excellent resources. I&#39;m using &lt;a href=&quot;https://mozilla.github.io/nunjucks/&quot;&gt;Nunjucks&lt;/a&gt; for templating. It more or less feels like &lt;a href=&quot;https://shopify.github.io/liquid/&quot;&gt;Liquid&lt;/a&gt; which I&#39;m familiar with from having used &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, as well as creating &lt;a href=&quot;https://www.statemottoprints.com/&quot;&gt;State Motto Prints&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the course of an afternoon, I was able to put together the &lt;a href=&quot;https://github.com/starzonmyarmz/iamdanielmarino.com&quot;&gt;bones of this redesign&lt;/a&gt;. Over the past week, during my spare time, I&#39;ve been adding polish, and getting deployments working with Github Pages. I&#39;ll continue to make tweaks here and there, but overall I feel good about it.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>Why I Still Prefer to Prototype Using Code</title>
-    <link href="https://iamdanielmarino.com/posts/why-i-still-prefer-prototyping-using-code/"/>
-    <updated>2024-04-16T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/why-i-still-prefer-prototyping-using-code/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;There are several design apps available at a product designers disposal, and I’ve used several of them over the years. I think these days, most everyone is using Figma, but whatever app you’re using—most of them typically have some sort of prototyping feature. Typically they have required very little coding to get a prototype up and running.&lt;/p&gt;
-&lt;p&gt;Despite the advances in the ability to prototype using design tools, I still prefer to use HTML, CSS, and JavaScript.&lt;/p&gt;
-&lt;h2&gt;Greater Flexibility&lt;/h2&gt;
-&lt;p&gt;I find myself needing much more flexibility than what prototyping in Figma offers. I think it’s cool that they’re regularly adding features to make prototyping more flexible, but it’s becoming so complicated and time consuming to figure out. A lot of the new features that Figma has been adding—like variables—is essentially coding! It doesn’t really simplify or speed things up for me. At some point there’s usually a moment where I think this would have been faster if I had just built this prototype in code.&lt;/p&gt;
-&lt;p&gt;When animating designs in a prototyping tool, there’s only so much control over how the transitions work or what they look like. With CSS and JavaScript, I have complete control over how a design animates or transitions.&lt;/p&gt;
-&lt;h2&gt;Safer Portability&lt;/h2&gt;
-&lt;p&gt;When I think of portability, there’s a couple of things that come to mind: being able to easily share a prototype with someone else, and being able to access a prototype regardless of the design tool I’m using.&lt;/p&gt;
-&lt;p&gt;When I’m sharing a prototype with someone I like knowing that I can send them a URL that won’t break—at least theoretically. I get that Figma has URLs to prototypes, but I don’t own or have control over that URL. What if Figma changes the URL scheme someday? Would that happen? Probably not, but I also don’t have to worry about it if I own/control the URL.&lt;/p&gt;
-&lt;p&gt;Right now I use Figma. I used to use Sketch, and never thought I would stop using it. I don’t pretend to believe that some new design tool will come and replace Figma some day. If I decide to up and leave Figma, I’d prefer not to have to leave all my prototypes behind.&lt;/p&gt;
-&lt;h2&gt;Learning and Experimentation&lt;/h2&gt;
-&lt;p&gt;Prototyping with HTML, CSS, and JavaScript is a great way to test out new features or frameworks. Through prototyping I’ve learned how to use Flexbox/Grid, &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;Eleventy&lt;/a&gt;, &lt;a href=&quot;https://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;, &lt;a href=&quot;https://p5js.org/&quot;&gt;P5.js&lt;/a&gt;, &lt;a href=&quot;https://preactjs.com/&quot;&gt;Preact&lt;/a&gt;, and a plethora of various little CSS properties or JavaScript methods and micro libraries. Its also a good way to stay on top of whats new and trendy, and try out not-quite-ready-for-primetime features.&lt;/p&gt;
-&lt;h2&gt;A More Realistic Experience&lt;/h2&gt;
-&lt;p&gt;When I use a prototype made in code verses Figma, the coded version feels more real: the way you interact with it, being able to actually type in a text input, being able to use and experiment with more complex interactions. I also typically tend to discover other interactions that go beyond the happy path, and can account for those before engineers discover them while building out the actual feature. States like validation and error, what happens when there’s no data to show, and other uncommon scenarios.&lt;/p&gt;
-&lt;h2&gt;Design Apps Still Have Their Place&lt;/h2&gt;
-&lt;p&gt;I think design apps have come a very long way over time, and it is very convenient to be able to prototype in the same app you’re doing your designing in—especially if you’re not comfortable with coding. And there are times when I will use Figma prototyping. If I have a simple interaction that doesn’t require a lot of user input or too many frames, then prototyping in Figma is relatively quick and painless. But once I go beyond a handful of interactions, it typically pays off in the long run to just use code.&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>How I Manage Projects</title>
+      <link href="https://iamdanielmarino.com/posts/how-i-manage-projects/"/>
+      <updated>2020-02-12T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/how-i-manage-projects/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;As a Product Designer at &lt;a href=&quot;https://getharvest.com/&quot;&gt;Harvest&lt;/a&gt;, part of my role is running projects. While I don’t believe there is a &lt;em&gt;right&lt;/em&gt; or &lt;em&gt;wrong&lt;/em&gt; way to manage projects, I do think there are some methods that can yield better results. I’m hardly an expert in this area, but I’d like to share some of the ways I find success in managing projects.&lt;/p&gt;
+&lt;p&gt;I should mention that these thoughts are my own. I’m extremely blessed to work for a company that gives some freedom as to how individuals run projects. Of course there are some fixed variables. For example, we all use Basecamp for tracking updates, and follow the same guidelines for communicating updates with other teams within Harvest.&lt;/p&gt;
+&lt;h3&gt;Ethos&lt;/h3&gt;
+&lt;p&gt;I don’t really have some profound wisdom to share. Basically, I try to stay out of the way as much as possible, leaving room for my teammates to get their work done. Their time, much like mine, is valuable. Out of respect, I try not to gum up the works with unnecessary meetings or emails. This doesn’t mean I’m out of the loop. We’re all generally aware of what the other person is working on.&lt;/p&gt;
+&lt;h3&gt;The Kickoff&lt;/h3&gt;
+&lt;p&gt;In preparation for the &lt;em&gt;Kickoff&lt;/em&gt;, I prefer creating a Google Doc with the project details rather than a slideshow. It’s much easier to review and edit on the fly. I also don’t have to get hung up on the little things like &lt;em&gt;does this slide look pretty&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Typically, I keep the Kickoff to 30 minutes or less. This isn’t the place to figure out technical or design decisions. We still might kick around some ideas and ask questions, but typically we breakout into smaller groups as needed. My preference is to have the Kickoff the Friday before the project starts. This allows my distributed team to hit the ground running first thing Monday morning.&lt;/p&gt;
+&lt;h3&gt;Weekly Hangout&lt;/h3&gt;
+&lt;p&gt;Once a week, our team will meet over a Google Hangout for about 20–30 minutes to discuss updates. We don’t necessarily try to solve problems in these meetings unless they’re quick and easy to figure out. The goal of these hangouts is to make sure we’re all on the same page throughout the course of the project.&lt;/p&gt;
+&lt;h3&gt;Daily Slack Check-in&lt;/h3&gt;
+&lt;p&gt;Simply put, I hate &lt;em&gt;unnecessary&lt;/em&gt; meetings, and find that most others do too. They disrupt the flow of my work day, and I suspect they do for others too. I prefer daily check-ins on &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; because it’s asynchronous. It allows my to get updates as breaks occur naturally throughout my day. I ask teammates to write a one- or two-sentence update. Basically what are you working on and is anything blocking you from completing it. Short and sweet.&lt;/p&gt;
+&lt;p&gt;Of course, if something is pressing or I’m blocking a todo from progressing, I ask my teammates to @ me, so that I get an immediate notification.&lt;/p&gt;
+&lt;p&gt;I know some people are into multiple email check-ins throughout the week (such as Basecamp’s automated check-ins). Personally, I dislike these—primarily because it feels like extra clutter in my inbox.&lt;/p&gt;
+&lt;h3&gt;Todos on Basecamp&lt;/h3&gt;
+&lt;p&gt;Previously I mentioned we all use &lt;a href=&quot;https://basecamp.com/&quot;&gt;Basecamp&lt;/a&gt; at Harvest. I hold my teammates responsible for making todos, and keeping related discussions up-to-date. That means a developer may create multiple todos for building out a feature or creating a todo for me to apply some design polish.&lt;/p&gt;
+&lt;p&gt;That’s the bulk of it. Of course there are little things here and there that I didn’t go over, but this should give you a glimpse into how I manage projects.&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>My current prototyping environment</title>
-    <link href="https://iamdanielmarino.com/posts/my-current-prototyping-environment/"/>
-    <updated>2024-04-18T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/my-current-prototyping-environment/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;The other day I shared &lt;a href=&quot;https://iamdanielmarino.com/posts/why-i-still-prefer-prototyping-using-code/&quot;&gt;why I prefer coding prototypes&lt;/a&gt; rather than using design apps to create them. My prototyping environment has evolved over the years. I love to hear how others build prototypes, so I thought I’d share where I’m at now. Maybe you’ll find it useful.&lt;/p&gt;
-&lt;h2&gt;A single repository&lt;/h2&gt;
-&lt;p&gt;I currently have a &lt;a href=&quot;https://github.com/starzonmyarmz/prototypes&quot;&gt;single GitHub repo&lt;/a&gt; housing all of my prototypes. I do this primarily so I don’t have to remember where any given prototype lives. They all live in the same place! Another benefit is if I pull in a library or some CSS component, I can reuse it in other prototypes without having to go out and grab it from the source again.&lt;/p&gt;
-&lt;h2&gt;My old setup&lt;/h2&gt;
-&lt;p&gt;In the past I used &lt;a href=&quot;https://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt; hosted on Heroku. Having Ruby and a basic server (Such as &lt;a href=&quot;https://github.com/ruby/webrick&quot;&gt;Webrick&lt;/a&gt;) in the backend was pretty nice:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I could code up some fairly complex prototypes out with realistic url schemes.&lt;/li&gt;
-&lt;li&gt;Gems! If I needed fake data, I could use the &lt;a href=&quot;https://github.com/faker-ruby/faker&quot;&gt;Faker gem&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;If I wanted a table with a 100 rows, I could easily generate that with a super simple loop.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;But it got clunky. Spinning up a new prototype wasn’t very efficient. Setting up the urls took time. Deploying to Heroku wasn’t always straight forward. Heroku also got rid of their free plan, and I didn’t want to go looking for a new service. Maybe I’m making excuses.&lt;/p&gt;
-&lt;h2&gt;A dumb server&lt;/h2&gt;
-&lt;p&gt;Now I just use HTML, CSS (vanilla), and Javascript with no special backend. I don’t have Node.js running, and I don’t use a package manager like NPM or Yarn. To start a server I navigate to the prototype directory in iTerm, and run &lt;a href=&quot;https://github.com/paulirish/statikk&quot;&gt;Statikk&lt;/a&gt;. Easy peasy. This setup requires no upkeep, so I can focus on actually prototyping!&lt;/p&gt;
-&lt;p&gt;I have a basic file structure for keeping prototypes separate. I typically use &lt;a href=&quot;https://preactjs.com/&quot;&gt;Preact&lt;/a&gt; for scaffolding. To &lt;code&gt;import&lt;/code&gt;  Preact or other NPM packages I use &lt;a href=&quot;https://esm.sh/&quot;&gt;esm.sh&lt;/a&gt;. When I push changes to the GitHub repo it’s deployed to GitHub pages. I can then share a public URL to folks that need to review the prototype.&lt;/p&gt;
-&lt;h2&gt;One glaring problem&lt;/h2&gt;
-&lt;p&gt;There’s only one issue I’ve run into using this setup, and its not even related to the setup! The &lt;a href=&quot;https://porchlight.design/&quot;&gt;Porchlight design system&lt;/a&gt; (which we use at &lt;a href=&quot;https://www.getharvest.com/&quot;&gt;Harvest&lt;/a&gt;) doesn’t have it’s styles or components available to consume publicly via CDN. Womp womp.&lt;/p&gt;
-&lt;p&gt;I can get around the CSS issue. I end up having to copy the compiled CSS from the design system and paste it into a new file in my prototype environment. And I’m kind of out of luck with the JavaScript: I have to code these up from scratch. Although, I suppose I could copy the compiled components, and paste them into my prototype environment.&lt;/p&gt;
-&lt;p&gt;The easiest fix is probably to introduce a package manager, but I’d rather not. We have talked about making the design system’s CSS and components available via CDN–it’s just a matter of getting around to it.&lt;/p&gt;
-&lt;h2&gt;Prototype!&lt;/h2&gt;
-&lt;p&gt;So that’s my current prototyping setup. Maybe it will help inspire you to setup your own prototyping environment. Whether you use code or a design app–you should prototype!&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>JS13K 2018 Retrospective</title>
+      <link href="https://iamdanielmarino.com/posts/js13k-2018-retrospective/"/>
+      <updated>2018-10-15T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/js13k-2018-retrospective/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;In one of my weekly developer emails, I saw a link for &lt;a href=&quot;https://2018.js13kgames.com/&quot;&gt;JS13KGames&lt;/a&gt;. I&#39;ve always wanted to create a video game. I asked my JavaScript-whiz buddy, &lt;a href=&quot;https://github.com/braddunbar&quot;&gt;Brad&lt;/a&gt;, if he was interested in building a game with me. Without hesitation, he said “Yes!”&lt;/p&gt;
+&lt;h3&gt;Concept&lt;/h3&gt;
+&lt;p&gt;A couple of years ago I came up with the basic concept/mechanic of toggling layers on and off to create various platforming challenges. I had even sketched out several level designs, and cobbled together a super basic prototype using &lt;a href=&quot;http://phaser.io/&quot;&gt;Phaser.io&lt;/a&gt;. I was pretty happy with this simple mechanic. On top of that our character movement would consist of basic platforming: moving left/right and jumping.&lt;/p&gt;
+&lt;p&gt;There are &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/projects/1&quot;&gt;other ideas&lt;/a&gt; we had early on such as moving platforms/spikes, enemies, variances in gravity, as well as an in-game timer, but we ended up punting on those due to time and size constraints. Aside from adding complexity to our code, I think having the constraints challenged us to explore more with level design - as well as simplifying game play.&lt;/p&gt;
+&lt;h3&gt;Art Style, Design, and UX&lt;/h3&gt;
+&lt;p&gt;Originally, I envisioned the game having a pixel art style, but with the 13K and 30 day limits, I decided to simplify. Designing a minimum of 20 levels would take up quite a bit of time. Exploring pixel sprite and background designs would have prevented me from being able to create enough levels to make the game worth playing. I decided to stick with two colors.&lt;/p&gt;
+&lt;p&gt;I wanted to avoid using text to educate game mechanics. I took inspiration from countless video games (but specifically Super Mario World, Super Metroid, Megaman X), and started out by creating the first three levels that would introduce game mechanics one at a time. I then kept exploring various level designs until I had about six or seven solid levels.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/js13k2018-education.png&quot; alt=&quot;original idea about education&quot; loading=&quot;lazy&quot; /&gt;&lt;figcaption&gt;Original idea for educating game controls to player&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;While Brad was developing the mechanics, I solicited the help of my son to help me design the character. It went through some variations, but the final character was pretty similar to what we started with. In my mind I could see his legs moving and his head bobbing. He originally had rounded corners, but that ended up making the &lt;code&gt;svg&lt;/code&gt; output more complicated, so in the end we ditched them.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/js13k2018-characters.png&quot; alt=&quot;character ideas&quot; loading=&quot;lazy&quot; /&gt;&lt;figcaption&gt;Other character ideas&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;I liked the idea of the &lt;em&gt;toggle&lt;/em&gt; concept being carried through all the various screens, and not just the levels. So I designed the title, end, and controller screens with this in mind.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/js13k2018-font.png&quot; alt=&quot;typeface&quot; loading=&quot;lazy&quot; /&gt;&lt;figcaption&gt;&lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/refs/onoff.otf&quot;&gt;Custom typeface&lt;/a&gt; designed for ONOFF&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h3&gt;Music and Sound Effects&lt;/h3&gt;
+&lt;p&gt;I procrastinated with sound for two weeks or so. At first I got hung up on the options available for creating music and sound effects, until I came across &lt;a href=&quot;https://github.com/kevincennis/TinyMusic&quot;&gt;TinyMusic&lt;/a&gt;. I really liked the simplicity of it, that I was able to focus on music, not getting hung up on the plethora of styles and effects.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;http://jsfiddle.net/0k6tLnfd/8/&quot;&gt;original track&lt;/a&gt; I wrote was more driving, but lacked personality. I hemmed and hawed for a week, then one morning I just started humming a really silly tune, and it felt just right for the game. The second part of that song (with the walking bass line) came a week later. I was experimenting to see if I could get chords &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/src/sound.js#L327-L351&quot;&gt;fade in and out&lt;/a&gt;. Once I got that working the bass line just worked itself out, and I had the second half to my song.&lt;/p&gt;
+&lt;p&gt;For sound effects, I had found some effects I really liked on &lt;a href=&quot;https://opengameart.org/&quot;&gt;OpenGameArt&lt;/a&gt; - however the file sizes were huge. No amount of resampling got them even close to 13K. So I ended up trying to &lt;em&gt;recreate&lt;/em&gt; those sounds using TinyMusic.&lt;/p&gt;
+&lt;h3&gt;Development&lt;/h3&gt;
+&lt;p&gt;We didn’t think it was necessary to use &lt;code&gt;canvas&lt;/code&gt;, and opted use &lt;code&gt;svg&lt;/code&gt;. This allowed us to easily scale graphics, use CSS to flip the colors when the layers were toggled, as well as easily develop graphics. In a lot of cases, I hard coded graphics such as the &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L135-L159&quot;&gt;death animation&lt;/a&gt; or the death counter, and then Brad would step in and wire it up with JavaScript.&lt;/p&gt;
+&lt;p&gt;I ran every graphic I created through &lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot;&gt;SVGOMG&lt;/a&gt; which helped keep our SVG super lightweight. In some cases, I found it more performant to use plain old &lt;code&gt;rect&lt;/code&gt;s or take advantage of SVG &lt;code&gt;pattern&lt;/code&gt;s for the &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L107-L118&quot;&gt;numbers used&lt;/a&gt; in the death and level counter, as well as the &lt;a href=&quot;https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L80-L93&quot;&gt;spikes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I left the decision to Brad whether we should roll our own game mechanics or use an existing library. We both felt it would be more fun to write our own. This also gave us a lot more control over the file sizes and code quality. Using ES6 made the vast majority of the code easier to write, and we didn’t end up having to polyfill anything.&lt;/p&gt;
+&lt;p&gt;For level design, Brad had created the ability to bootstrap levels quickly just by passing in an array of coordinates for the character, goal, and platforms (including the layer they should exist on). After getting a little burnt out on level design, I messed around with creating some dynamically generated levels.&lt;/p&gt;
+&lt;p&gt;We developed right up to the very end. Within the last 12 hours before the deadline we rolled out Gamepad support, the ability to share and play custom levels, and wrote another song to play when the game is completed.&lt;/p&gt;
+&lt;h3&gt;Tooling and 13k&lt;/h3&gt;
+&lt;p&gt;Our tooling was minimal. We would run our JS, CSS, and HTML through minifiers - that’s it. We decided to build everything as minimal as possible from the beginning, so we didn’t really have to go back and rework anything to hit the 13k limit.&lt;/p&gt;
+&lt;p&gt;After building the game we were still far under 13k, so Brad decided to roll out a custom level editor! That actually turned out to be a huge help because it made it a lot faster to test out ideas, and generate level code that we could just paste into our game. We though it was so cool we decided to include it as a bonus with a day left before the deadline!&lt;/p&gt;
+&lt;h3&gt;Playtesting&lt;/h3&gt;
+&lt;p&gt;Aside from having our kids play the game frequently (and they did!) we invited a few friends to play with about a week left in the competition. They felt that the game mechanics felt good, and were fairly easy to figure out. Looking back I wish we had people play it sooner - only because we were scrambling around with a few days left to finish building the game. If we had received more drastic feedback, we would have been in a really tight spot.&lt;/p&gt;
+&lt;h3&gt;Wrap Up&lt;/h3&gt;
+&lt;p&gt;Brad and I had a blast working on the js13k this year! I’m really grateful to Brad and all his help, our friends who took the time to playtest and give us feedback, and especially our families who gave endless support, and endured hours and hours of that music loop!&lt;/p&gt;
+&lt;p&gt;If you haven’t yet, make sure you check out our game &lt;a href=&quot;https://js13kgames.com/entries/onoff&quot;&gt;ONOFF&lt;/a&gt;!&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>Daily Inspirational Word</title>
-    <link href="https://iamdanielmarino.com/posts/daily-inspirational-word/"/>
-    <updated>2024-05-28T00:00:00Z</updated>
-    <id>https://iamdanielmarino.com/posts/daily-inspirational-word/</id>
-    <content xml:lang="en" type="html">&lt;p&gt;Over the past couple of years I’ve gotten into journaling. Recently I’ve been
-using a method where you’re given a single inspirational word as a prompt, and
-go from there. Unfortunately, the process of finding, saving, and accessing
-inspirational words was a bit of a chore:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Google a list of “366 inspirational words”.&lt;/li&gt;
-&lt;li&gt;Get taken to a blog bloated with ads and useless content all in an effort to
-generate SEO cred.&lt;/li&gt;
-&lt;li&gt;Copy/paste the words into Notion.&lt;/li&gt;
-&lt;li&gt;Fix how the words get formatted becasue Notion is weird, and I have OCD about
-formatting text.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;While this gets the job done, I felt like there was room to make this a more
-pleasant experience. All I really wanted was a small website that serves a
-single inspirational word on a daily basis without cruft or ads. This would
-allow me to get the content I want without having to scroll through a long list.
-I also don&#39;t want to manage or store the list of words. Once I&#39;ve curated a list
-of words, I want to be done with it.&lt;/p&gt;
-&lt;h2&gt;Creating a microsite&lt;/h2&gt;
-&lt;p&gt;I love a good microsite, and so I decided to create one that takes all the chore
-out of obtaining a
-&lt;a href=&quot;https://starzonmyarmz.github.io/daily-inspirational-word/&quot;&gt;daily inspirational word&lt;/a&gt;.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/img/daily_inspirational_word.jpeg&quot; alt=&quot;Daily Inspirational Word screenshot&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
-&lt;p&gt;The website is built with all vanilla tech, and doesn’t use any frameworks! It’s
-nice and lean, and it’s footprint is only 6.5kb.&lt;/p&gt;
-&lt;h3&gt;Inspirational words&lt;/h3&gt;
-&lt;p&gt;While I’m not a huge fan of AI, I did leverage ChatGPT on obtaining 366
-inspirational words. The benefit to ChatGPT was being able to get it to return
-the words as an array—cutting down on the tedium of having to convert the words
-I already had into an array. The words are stored in it’s own JSON file, and I
-use an async/await function to pull in the words, and then process the data upon
-return.&lt;/p&gt;
-&lt;h2&gt;Worth the effort&lt;/h2&gt;
-&lt;p&gt;I find these little projects fun and exciting because the scope is super tight,
-and makes for a great opportunity to learn new things. It’s definitely an
-overengineered solution to my problem, but it is a much more pleasant
-experience. And perhaps it will serve other people as well.&lt;/p&gt;
+    </entry>
+    <entry>
+      <title>My First Sketch Plugin and What I Learned</title>
+      <link href="https://iamdanielmarino.com/posts/my-first-sketch-plugin-and-what-i-learned/"/>
+      <updated>2016-05-16T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/my-first-sketch-plugin-and-what-i-learned/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;I’ve been Adobe Illustrator free for almost six months now, and what I miss most about it are some of the nice effects it ships with. I love Sketch, but I don’t think these effects will ever make their way into Sketch. Sketch does have the ability to add plugins, and I’ve always wanted to try my hand at creating one. I really miss is Illustrator’s &lt;em&gt;Roughen&lt;/em&gt; effect as it’s really useful for creating that trendy-old-timey-beat-up look. Since a Sketch plugin that &lt;em&gt;roughens&lt;/em&gt; a path doesn’t already exist (that I could find) I decided to create one!&lt;/p&gt;
+&lt;p&gt;I’m going to be up front, and this is mostly a decompression of all the frustration I felt while working on the plugin.&lt;/p&gt;
+&lt;h2&gt;Delete and reinstall * Infinity&lt;/h2&gt;
+&lt;p&gt;I spent a lot of time just uninstalling, reinstalling the plugin any time I made a change to the plugin script. This was super annoying, but I’m not entirely sure if there was a way around this. Using the &lt;strong&gt;Custom Plugin&lt;/strong&gt; menu option was quick and useful for testing out snippets of code, but it’s not a fully fledged code editor, so I wouldn’t want to use it for sole development. Using &lt;code&gt;print()&lt;/code&gt; was sometimes useful for logging data to the console, but a lot of the times what was being logged was utter nonsense and useless. This brings me to my next topic.&lt;/p&gt;
+&lt;h2&gt;Documentation Wasn’t Too Useful&lt;/h2&gt;
+&lt;p&gt;I admit I’m not a hardcore developer, but I like to think I’m seasoned enough that I can review some documentation and forge ahead. Looking at the docs on Apple’s site was like reading a Unix software manual out of the 80’s. It didn’t help me out so much. Not only that, Googling Appkit or Cocoa (to be honest I don’t even understand which is which) methods didn’t help either. Is there a secret club you have to belong to to get useful examples and tutorials?&lt;/p&gt;
+&lt;p&gt;I’m good with JavaScript, so CocoaScript was nice for bridging the gap. However it’s really weird to me that you can write code in Cocoa notation in CocoaScript. Pick a syntax variation and stick with it!&lt;/p&gt;
+&lt;p&gt;The Sketch API docs are incomplete, and the examples that were there weren’t entirely useful. They must also be restructuring because halfway through development all the docs and links changed. Some content was removed entirely that I found kind of useful. Thank God for Google caching! I learned the most from looking at other plugins that did similar things I was looking to do. I also found &lt;a href=&quot;https://github.com/turbobabr/Sketch-Plugins-Cookbook&quot;&gt;this resource&lt;/a&gt; invaluable - there is so much great stuff in there.&lt;/p&gt;
+&lt;h2&gt;Late to the Party&lt;/h2&gt;
+&lt;p&gt;So while I’m decompressing from this project I’m remembering I belong to the &lt;a href=&quot;http://teamsketch.io/&quot;&gt;Team Sketch&lt;/a&gt; Slack Team. I wish I had remembered this earlier because there’s a channel dedicated to plug in development, and I’m sure I could’ve have received a lot of help from there. Just scrolling through the last 50 or so messages I saw an assortment of links that would have been useful.&lt;/p&gt;
+&lt;h2&gt;Wrap Up&lt;/h2&gt;
+&lt;p&gt;I know I complained a lot in this post. Despite the things that I felt held me back, I feel like I can improve my plugin quite a bit, so I wouldn’t say I’m done. I’d like to utilize the Team Sketch Slack Team and some of the resources I found.&lt;/p&gt;
 </content>
-  </entry>
+    </entry>
+    <entry>
+      <title>Install Mcrypt PHP Extension on OSX Yosemite</title>
+      <link href="https://iamdanielmarino.com/posts/install-mcrypt-php-extension-on-osx-yosemite/"/>
+      <updated>2015-01-29T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/install-mcrypt-php-extension-on-osx-yosemite/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;After updating &lt;a href=&quot;http://statamic.com/&quot;&gt;Statamic&lt;/a&gt; to 1.10.2, I started getting &lt;a href=&quot;http://en.wikipedia.org/wiki/Mcrypt&quot;&gt;Mcrypt&lt;/a&gt; errors. After some Googling, I found some complicated fixes. After some noodling around, here’s a simple way to fix it with &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;First, figure out which version of PHP you’re running. You can do this by opening up Terminal, and running the following command:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; php &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I happen to be using PHP 5.5.21 locally, so I’ll use that in my examples. Next, &lt;em&gt;tap&lt;/em&gt; the &lt;code&gt;homebrew/php&lt;/code&gt; cask:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew tap homebrew/php&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This next step is sort of optional. You can search for which versions of mcrypt is available to make sure it matches your version of PHP:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew search mcrypt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Like I said earlier, I’m running PHP 5.5.21. Make sure you install the version that corresponds with your version of PHP.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; brew &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; php55-mcrypt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That last command took several minutes to install it on my machine. After it is installed, restart the server, and you should be good to go!&lt;/p&gt;
+</content>
+    </entry>
 </feed>
