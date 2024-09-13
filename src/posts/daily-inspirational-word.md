@@ -29,7 +29,7 @@ I love a good microsite, and so I decided to create one that takes all the chore
 out of obtaining a
 [daily inspirational word](https://starzonmyarmz.github.io/daily-inspirational-word/).
 
-![Daily Inspirational Word screenshot](/img/daily_inspirational_word.jpeg)
+![Daily Inspirational Word screenshot](/images/posts/daily_inspirational_word.jpeg)
 
 The website is built with all vanilla tech, and doesn’t use any frameworks! It’s
 nice and lean, and it’s footprint is only 6.5kb.

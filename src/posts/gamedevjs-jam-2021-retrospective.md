@@ -11,7 +11,7 @@ You’d think JavaScript would be necessary to make an HTML5 game, but the [Inte
 ## Game Concepts
 [Hiero](https://starzonmyarmz.itch.io/hiero) is the third game I’ve made (the first by myself), and by now I should have some sort of process to making a game, right? Well… I don’t really. So far, the process has been different for every game.
 
-![Hiero Title Screen](/img/hiero-title.jpg)
+![Hiero Title Screen](/images/posts/hiero-title.jpg)
 
 In my experience, working on various aspects of a game (artwork, sound, etc…) greatly influences the other aspects of the game, so I find myself ping ponging around. Over the course of 13 days, I ended up implementing three core concepts into Hiero.
 
@@ -19,7 +19,7 @@ In my experience, working on various aspects of a game (artwork, sound, etc…) 
 2. **To complete a puzzle you have to find the mismatched shape.** Each puzzle contains three to seven shapes. When hovering over a shape, a “mirrored” version of the shape is shown underneath. The catch is, in each puzzle one of the mirrored shapes doesn’t match. In some cases it’s a completely different shape, while in others it’s a very similar shape with a slight modification. This not only satisfied the “mirror” theme requirements, but also seemed to be a different and slightly-more challenging take on the classic which-one-doesn’t-belong concept.
 3. **You can only make three mistakes.** This was a last minute addition to Hiero. Without it, the game can be cheesed by spamming clicks on the shapes until solving a puzzle. This adds an extra challenge of forcing the player to be judicious with their selections.
 
-![Hiero Game Play](/img/hiero-gameplay.jpg)
+![Hiero Game Play](/images/posts/hiero-gameplay.jpg)
 
 ## Mechanics
 As mentioned earlier, I didn’t want to use any JavaScript. My game is primarily built around two CSS mechanics: checkboxes with insane selector magic to update the game’s state, and an in-game timer created with an animation delay. The resulting code is in no-way elegant! It’s quite messy, convoluted, and slightly laggy. The CSS weighs in at roughly 60K!
@@ -69,7 +69,7 @@ In my opinion, this game would have worked just as well without the mirror graph
 
 The last thing I’d like to talk about in regards to the artwork is the “tunnel vision” gradient that occurs as you near the end of the time limit. This was an idea my daughter had while play testing for me. It really helps simultaneously create tension, panic, and focus. This was implemented at the last minute using a CSS `radial-gradient` and [animating it’s appearance](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_base.scss#L139-L172).
 
-![Tunnel Vision Gradient](/img/hiero-gradient.jpg)
+![Tunnel Vision Gradient](/images/posts/hiero-gradient.jpg)
 
 ## Sound Design
 

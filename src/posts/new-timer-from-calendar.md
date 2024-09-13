@@ -34,21 +34,21 @@ As the demands of busy schedules intensify, carving out dedicated time to fill o
 The project unfolded with a well-defined vision aimed at tackling the identified challenges head-on.
 
 <figure>
-  <img src="/img/work/ci-sketches.png" alt="Initial sketches for the project pitch" loading="lazy">
+  <img src="/images/work/ci-sketches.png" alt="Initial sketches for the project pitch" loading="lazy">
   <figcaption>Initial sketches presented with the project pitch to executive leadership.</figcaption>
 </figure>
 
 In the initial phase, the engineering team dove into technical discovery and integration with Google and Outlook.com calandars, while my focus shifted towards materializing concepts into mockups and clickable prototypes.
 
 <figure>
-  <img src="/img/work/ci-variations.png" class="shadow" alt="Initial mockups expoloring ideas" loading="lazy">
+  <img src="/images/work/ci-variations.png" class="shadow" alt="Initial mockups expoloring ideas" loading="lazy">
   <figcaption>Several initial mockups were generated to explore creative concepts for presenting calendar events when initiating a new timer.</figcaption>
 </figure>
 
 Over the span of two weeks, a continuous cycle of development, presentation, and refinement ensued as I iteratively shaped the mockups and prototypes. These iterations were subjected to design reviews, incorporating valuable feedback to enhance the user experience. The culmination of this design process involved subjecting the finalized prototype to thorough scrutiny, garnering the approval of the company founder and cementing the chosen approach.
 
 <figure>
-  <img src="/img/work/ci-final.gif" class="shadow" alt="Animation of the launched feature" loading="lazy">
+  <img src="/images/work/ci-final.gif" class="shadow" alt="Animation of the launched feature" loading="lazy">
   <figcaption>The final design landed on showing calendar events in a “drawer” fixed to the side of the browser window which could be toggled.</figcaption>
 </figure>
 

@@ -14,7 +14,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./public/": "/",
     "./node_modules/prismjs/themes/prism-okaidia.css": "/prism-okaidia.css",
-    "./src/img": "/img"
   })
 
   eleventyConfig.addFilter('dateFilter', dateFilter)

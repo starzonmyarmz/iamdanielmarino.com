@@ -15,7 +15,7 @@ The theme for this jam was “bug”. I don’t remember how I arrived at the co
 
 The game consists of seven auto-scrolling levels, progressing in difficulty as you complete them. Each one is scripted to be about a minute long. While the scrolling is scripted, there is quite a bit of randomness sprinkled into each level such as the placement and dimensions of objects.
 
-![trapped promo screen](/img/trapped_cover.png)
+![trapped promo screen](/images/posts/trapped_cover.png)
 
 The game is hard to play. Really hard. My play testers got frustrated quickly—especially with the first round of testing. I did quite a lot of tweaking based on their feedback. I simplified the levels by adding larger gaps between objects and slowing the scrolling down. Even with the adjustments it’s still hard to play, but not so hard that it’s unenjoyable.
 
@@ -28,7 +28,7 @@ If you’ve seen the game before reading this, you might think I’m joking by c
 
 Each level resembles a popular mobile app (can you figure out which ones), and all the design is stripped down to each app’s bare essence. By keeping the design so minimal, the graphics doesn’t feel overly _iPhone_ or _Android_, so players can relate regardless of what kind of phone they use. Here are a couple of sample screenshots:
 
-![trapped levels](/img/trapped_levels.png)
+![trapped levels](/images/posts/trapped_levels.png)
 
 I did receive a lower ranking on the game’s graphics, and that’s fair. I can understand why people would want something more high-fidelity. I even questioned my judgement on the decision to go low-fi a few times, but in the end I think it really does enhanced the game’s vibe and playability.
 

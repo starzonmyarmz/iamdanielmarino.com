@@ -11,7 +11,7 @@ As I've composed music for video games, something that has piqued my interest is
 I love how sequencers look and feel—and there is so much variety as to how they're designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
 It was a bit of a balancing act to capture the essence of a physical sequencer while adapting it to a screen.
 
-![RMG-2021 Tiny Music Sequencer](/img/rmg2021.png)
+![RMG-2021 Tiny Music Sequencer](/images/posts/rmg2021.png)
 
 ## Preact
 
