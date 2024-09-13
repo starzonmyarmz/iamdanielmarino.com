@@ -1,6 +1,7 @@
 ---
 title: Why I Still Prefer to Prototype Using Code
 date: 2024-04-16
+tags: post
 ---
 
 There are several design apps available at a product designers disposal, and I’ve used several of them over the years. I think these days, most everyone is using Figma, but whatever app you’re using—most of them typically have some sort of prototyping feature. Typically they have required very little coding to get a prototype up and running.

@@ -1,8 +1,7 @@
 ---
 title: JS13K 2018 Retrospective
 date: 2018-10-15
-tags:
-  - development
+tags: post
 ---
 
 

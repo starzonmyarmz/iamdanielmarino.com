@@ -1,8 +1,7 @@
 ---
 title: Deploying My Eleventy Site to GitHub Pages
 date: 2020-03-02
-tags:
-  - development
+tags: post
 ---
 
 I really like [GitHub Pages](https://pages.github.com/), and have used it to host my site for a while. The biggest challenge of switching my site to [Eleventy](https://www.11ty.dev/) was getting deployments to GitHub pages set up. I suppose I could have built my site locally, and then push that to the `gh-pages` branch, but that felt _wrong_. I prefer my `master` branch to be the source of my site, while `gh-pages` to only be the published content.

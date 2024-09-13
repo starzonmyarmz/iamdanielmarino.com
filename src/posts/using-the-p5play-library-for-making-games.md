@@ -1,8 +1,7 @@
 ---
 title: Using the p5play JavaScript Game Engine
 date: 2024-01-15
-tags:
-  - development
+tags: post
 ---
 
 I was messing around with [p5play](https://p5play.org/) last week to experiment with a game idea, and was pleasantly surprised by how easy it is to use. It was designed to be intuitive for beginners, such as students. In under a half hour I had created some common basic mechanics! Check it out:

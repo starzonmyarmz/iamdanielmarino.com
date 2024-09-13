@@ -1,6 +1,7 @@
 ---
 title: My First Sketch Plugin and What I Learned
 date: 2016-05-16
+tags: post
 ---
 
 I’ve been Adobe Illustrator free for almost six months now, and what I miss most about it are some of the nice effects it ships with. I love Sketch, but I don’t think these effects will ever make their way into Sketch. Sketch does have the ability to add plugins, and I’ve always wanted to try my hand at creating one. I really miss is Illustrator’s _Roughen_ effect as it’s really useful for creating that trendy-old-timey-beat-up look. Since a Sketch plugin that _roughens_ a path doesn’t already exist (that I could find) I decided to create one!

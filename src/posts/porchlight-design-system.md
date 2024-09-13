@@ -2,7 +2,7 @@
 title: Porchlight Design System
 blurb: Creating a design system to unite Harvesters on a common visual language.
 order: 1
-tags: casestudy
+tags: work
 ---
 
 Recognizing the need for a unified design strategy across its product line, [Harvest](https://getharvest.com) tackled challenges such as disparate user interfaces, extended design cycles, and the struggle to maintain a consistent brand identity.

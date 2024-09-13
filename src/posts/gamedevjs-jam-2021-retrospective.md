@@ -1,8 +1,7 @@
 ---
 title: Gamedev.js Jam 2021 Retrospective
 date: 2021-04-30
-tags:
-  - development
+tags: post
 ---
 
 Recently, I participated in the [Gamedev.js Jam 2021](https://gamedevjs.com/jam/2021/): a 13-day competition to build a game that can run on the Web in a browser without extra plugins. This year’s theme for the competition was “mirror”, which could interpreted however participants chose. I had an itch I wanted to scratch, and the timing was right, so I decided to join.

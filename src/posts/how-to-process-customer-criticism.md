@@ -1,8 +1,7 @@
 ---
 title: How to Process Customer Criticism
 date: 2020-09-01
-tags:
-  - project management
+tags: post
 ---
 
 Why do us product designers opt into a career where we’re regularly challenged to be vulnerable?! Design is super subjective, and everyone is a critic! Regardless of your education or how sharp your _design eye_ is, you’ll never be able to please everyone. This is especially true when you work on a product that has thousands upon thousands of users!

@@ -1,8 +1,7 @@
 ---
 title: Don’t Overthink Remote Working
 date: 2020-03-13
-tags:
-
+tags: post
 ---
 
 The coronavirus is here, and as a result a lot of employers are asking employees to work remotely if possible. I’ve seen a fair share of _tips for remote working_ blog posts this past week. I figured I’d cash in on the action and share my thoughts.

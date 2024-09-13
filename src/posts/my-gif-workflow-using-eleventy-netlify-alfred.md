@@ -1,8 +1,7 @@
 ---
 title: My GIF Workflow Using Eleventy, Netlify, and Alfred
 date: 2021-02-13
-tags:
-  - development
+tags: post
 ---
 
 I used to keep my GIFs on Dropbox in the `/public` directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an [Alfred workflow](https://destroytoday.com/blog/gif-workflow) for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the `/public` directory, and thus this workflow stopped working.

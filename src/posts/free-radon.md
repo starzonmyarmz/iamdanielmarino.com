@@ -1,11 +1,10 @@
 ---
 title: Free Radon album released
 date: 2023-10-26
-tags:
-  - music
+tags: post
 ---
 
-A little over a year ago, I composed a handful of songs. If I had to fit them into a genre, I’d go with _Lofi_ or _Chillvibes_. Or maybe _Not-Rock-n-Roll_. I don’t know—I’m so bad at classifying music. 
+A little over a year ago, I composed a handful of songs. If I had to fit them into a genre, I’d go with _Lofi_ or _Chillvibes_. Or maybe _Not-Rock-n-Roll_. I don’t know—I’m so bad at classifying music.
 
 I wasn’t sure what to do with the songs. I was experiencing some intense emotions when I was composing them. I’ve been doing a lot of emotional growth over this past year (and still am), and I feel like by releasing them into the wild would be cathartic for me. To acknowledge that that chapter in my life happened, and it’s okay. So with that, here’s [Free Radon](https://danielmarino.bandcamp.com/album/free-radon).
 

@@ -1,8 +1,7 @@
 ---
 title: Building a Random Music Sequencer with Preact
 date: 2022-05-05
-tags:
-  - development
+tags: post
 ---
 
 As I've composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the [RMG-2021](https://starzonmyarmz.github.io/rmg/).

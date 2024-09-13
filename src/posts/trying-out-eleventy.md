@@ -1,8 +1,7 @@
 ---
 title: Trying Out Eleventy
 date: 2020-02-18
-tags:
-  - development
+tags: post
 ---
 
 As I started to think about blogging again, I began looking at options for hosting, CMS frameworks, static site generators, etc. [Eleventy](http://www.11ty.dev) has been in the mainstream for sometime now, and I've heard nothing but good things about it. I figured I should give it a shot.

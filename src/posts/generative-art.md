@@ -1,8 +1,7 @@
 ---
 title: Making Generative Art
 date: 2024-01-13
-tags:
-  - art
+tags: post
 ---
 
 I saw [Joshua Davis](https://joshuadavis.com/) give a talk over 10 years ago, and I was mesmorized. Not just by how engaging he was, but more so with the work he was doing with *generative art*.

@@ -1,8 +1,7 @@
 ---
 title: GitHub Game Off 2021 Retrospective
 date: 2022-02-19
-tags:
-  - development
+tags: post
 ---
 
 Recently, I completed the [GitHub Game Off](https://itch.io/jam/game-off-2021). With over 500 entries, this is the largest game jam I’ve been a part of. I had some lofty goals for this game, and I just about met them all. I’m extremely happy with how the game came out!

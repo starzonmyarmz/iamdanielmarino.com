@@ -1,6 +1,7 @@
 ---
 title: Daily Inspirational Word
 date: 2024-05-28
+tags: post
 ---
 
 Over the past couple of years I’ve gotten into journaling. Recently I’ve been

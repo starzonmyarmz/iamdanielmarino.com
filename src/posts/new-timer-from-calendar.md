@@ -2,7 +2,7 @@
 title: Harvest Timesheets Calendar Integration
 blurb: Creating time entries based on Google or Outlook.com calendar events.
 order: 3
-tags: casestudy
+tags: work
 ---
 
 In an ongoing effort to encourage effective time tracking, [Harvest](https://getharvest.com) uncovered a compelling insight during research: nearly 50% of customers in a specific segment were concurrently using their calendar app alongside Harvest for time tracking. Recognizing this pattern, we initiated a six-week project aimed at simplifying the process of seamlessly transferring calendar events into customers’ Harvest timesheets.

@@ -1,8 +1,7 @@
 ---
 title: How I Manage Projects
 date: 2020-02-12
-tags:
-  - project management
+tags: post
 ---
 
 As a Product Designer at [Harvest](https://getharvest.com), part of my role is running projects. While I don’t believe there is a _right_ or _wrong_ way to manage projects, I do think there are some methods that can yield better results. I’m hardly an expert in this area, but I’d like to share some of the ways I find success in managing projects.

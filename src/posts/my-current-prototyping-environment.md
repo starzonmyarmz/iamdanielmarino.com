@@ -1,6 +1,7 @@
 ---
 title: My current prototyping environment
 date: 2024-04-18
+tags: post
 ---
 
 The other day I shared [why I prefer coding prototypes](/posts/why-i-still-prefer-prototyping-using-code/) rather than using design apps to create them. My prototyping environment has evolved over the years. I love to hear how others build prototypes, so I thought I’d share where I’m at now. Maybe you’ll find it useful.

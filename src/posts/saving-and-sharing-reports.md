@@ -2,7 +2,7 @@
 title: Saving and Sharing Harvest Reports
 blurb: Elevating productivity through improved reporting capabilities.
 order: 2
-tags: casestudy
+tags: work
 ---
 
 [Harvest](https://getharvest.com) identified a crucial need to improve its reporting module based on customer churn feedback. Customers expressed challenges in efficiently accessing and sharing personalized reports, leading to reduced meaningful interaction with the platform and an increased risk of churn.

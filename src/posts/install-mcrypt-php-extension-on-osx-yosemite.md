@@ -1,6 +1,7 @@
 ---
 title: Install Mcrypt PHP Extension on OSX Yosemite
 date: 2015-01-29
+tags: post
 ---
 
 After updating [Statamic](http://statamic.com/) to 1.10.2, I started getting [Mcrypt](http://en.wikipedia.org/wiki/Mcrypt) errors. After some Googling, I found some complicated fixes. After some noodling around, here’s a simple way to fix it with [Homebrew](http://brew.sh/):
