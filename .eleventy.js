@@ -1,6 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const dateFilter = require('./src/filters/date-filter.js')
+const dateFilter = require('./src/_filters/date-filter.js')
 const implicitFigures = require('markdown-it-image-figures');
 
 module.exports = function (eleventyConfig) {
@@ -11,13 +11,11 @@ module.exports = function (eleventyConfig) {
     lazy: true
   }))
 
-  eleventyConfig.addPassthroughCopy('src/favicon.png')
-  eleventyConfig.addPassthroughCopy('src/favicon.svg')
-  eleventyConfig.addPassthroughCopy('src/css')
-  eleventyConfig.addPassthroughCopy('src/font')
-  eleventyConfig.addPassthroughCopy('src/img')
-  eleventyConfig.addPassthroughCopy('src/js')
-  eleventyConfig.addPassthroughCopy('CNAME')
+  eleventyConfig.addPassthroughCopy({
+    "./public/": "/",
+    "./node_modules/prismjs/themes/prism-okaidia.css": "/prism-okaidia.css",
+    "./src/img": "/img"
+  })
 
   eleventyConfig.addFilter('dateFilter', dateFilter)
 
