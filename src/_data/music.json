@@ -61,5 +61,35 @@
       "Rock",
       "VGM"
     ]
+  },
+  {
+    "title": "Planet",
+    "date": "2023-10-1319",
+    "tags": []
+  },
+  {
+    "title": "Bends",
+    "date": "2023-20-04",
+    "tags": []
+  },
+  {
+    "title": "Tails",
+    "date": "2023-18-04",
+    "tags": []
+  },
+  {
+    "title": "Fog",
+    "date": "2023-17-04",
+    "tags": []
+  },
+  {
+    "title": "Gallery",
+    "date": "2022-24-08",
+    "tags": []
+  },
+  {
+    "title": "Bots",
+    "date": "2022-14-08",
+    "tags": []
   }
 ]
