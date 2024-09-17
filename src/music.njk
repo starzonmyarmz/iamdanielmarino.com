@@ -19,7 +19,7 @@ permalink: /music/
         </g>
       </svg>
       <img src="/images/music/{{song.title | slugify}}.jpg" alt="{{song.title}}" width="256" height="256" loading="lazy" aria-hidden="true">
-      <audio autoplay="false" src="/music/{{song.title | slugify}}.mp3"></audio>
+      <audio src="/music/{{song.title | slugify}}.mp3" preload="none"></audio>
     </button>
   {% endfor %}
 </section>
