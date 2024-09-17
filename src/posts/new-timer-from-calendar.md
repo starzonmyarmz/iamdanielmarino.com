@@ -2,6 +2,7 @@
 title: Harvest Timesheets Calendar Integration
 blurb: Creating time entries based on Google or Outlook.com calendar events.
 order: 3
+permalink: /work/{{title | slugify}}
 tags: work
 ---
 
