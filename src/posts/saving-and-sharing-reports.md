@@ -2,7 +2,7 @@
 title: Saving and Sharing Harvest Reports
 blurb: Elevating productivity through improved reporting capabilities.
 order: 2
-permalink: /work/{{title | slugify}}
+permalink: /work/saving-and-sharing-harvest-reports/
 tags: work
 ---
 

@@ -2,7 +2,7 @@
 title: Porchlight Design System
 blurb: Creating a design system to unite Harvesters on a common visual language.
 order: 1
-permalink: /work/{{title | slugify}}
+permalink: /work/porchlight-design-system/
 tags: work
 ---
 
