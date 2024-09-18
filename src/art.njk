@@ -1,0 +1,12 @@
+---
+layout: art.njk
+permalink: /generative-art/
+---
+
+<ul id="gallery">
+  {% for art in art %}
+    <li>
+      <a href="/generative-art/{{ loop.index }}"><img src="/images/art/{{ loop.index }}.webp" loading="lazy" width="400" height="400" alt="{{ art.description }}"></a>
+    </li>
+  {% endfor %}
+</ul>

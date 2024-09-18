@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>State Mottos &mdash; Daniel Marino</title>
+    <meta name="description" content="Generated art by Daniel Marino">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/favicon.svg" color="black">
+    <link rel="stylesheet" href="/art.css">
+  </head>
+  <body>
+    <h1>
+      <a href="/">Daniel Marino</a> is generating art
+    </h1>
+
+    <main class="content">
+      {% block main %}
+        {{ content | safe }}
+      {% endblock %}
+    </main>
+
+    <script src="/art.js"></script>
+  </body>
+</html>
