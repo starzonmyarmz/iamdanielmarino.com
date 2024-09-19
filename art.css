@@ -78,3 +78,28 @@ canvas {
   opacity: 1;
   transform: scale(1.1);
 }
+
+#back {
+  align-items: center;
+  color: currentcolor;
+  display: flex;
+  left: 1rem;
+  position: fixed;
+  text-decoration: none;
+  user-select: none;
+  top: 1rem;
+}
+
+#back::before {
+  content: "👈🏻";
+  display: inline-block;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  width: 0;
+}
+
+#back:hover::before {
+  opacity: 1;
+  width: 2ch;
+}
