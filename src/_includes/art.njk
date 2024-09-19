@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="/art.css">
   </head>
   <body>
-    <h1>
-      <a href="/">Daniel Marino</a> is generating art
-    </h1>
+    {% if page.url == '/generative-art/' %}
+      <h1>
+        <a href="/">Daniel Marino</a> is generating art
+      </h1>
+    {% else %}
+      <a href="../" id="back">Back</a>
+    {% endif %}
 
     <main class="content">
       {% block main %}
