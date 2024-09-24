@@ -39,8 +39,8 @@ nice and lean, and it’s footprint is only 6.5kb.
 While I’m not a huge fan of AI, I did leverage ChatGPT on obtaining 366
 inspirational words. The benefit to ChatGPT was being able to get it to return
 the words as an array—cutting down on the tedium of having to convert the words
-I already had into an array. The words are stored in it’s own JSON file, and I
-use an async/await function to pull in the words, and then process the data upon
+I already had into an array. The [words are stored in it’s own JSON file](https://github.com/starzonmyarmz/daily-inspirational-word/blob/main/words.json), and I
+use an [async/await function to pull in the words](https://github.com/starzonmyarmz/daily-inspirational-word/blob/main/script.js), and then process the data upon
 return.
 
 ## Worth the effort
