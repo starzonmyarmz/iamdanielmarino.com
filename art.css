@@ -1,3 +1,35 @@
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes move-out {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: 0 -100%;
+  }
+}
+
+@keyframes move-in {
+  from {
+    translate: 0 100%;
+  }
+
+  to {
+    translate: 0;
+  }
+}
+
+::view-transition-old(root) {
+  animation: 0.4s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.4s ease-in both move-in;
+}
+
 *,
 *::before,
 *::after {
