@@ -93,10 +93,16 @@ svg {
   display: block
 }
 
-.playing circle {
-  stroke-dasharray: 3.5;
-  animation: dash 4s infinite linear;
-  transform-origin: 50%;
+.playing {
+  svg {
+    opacity: 1;
+  }
+
+  circle {
+    stroke-dasharray: 3.5;
+    animation: dash 4s infinite linear;
+    transform-origin: 50%;
+  }
 }
 
 @keyframes dash {
