@@ -27,7 +27,7 @@ of words, I want to be done with it.
 
 I love a good microsite, and so I decided to create one that takes all the chore
 out of obtaining a
-[daily inspirational word](https://starzonmyarmz.github.io/daily-inspirational-word/).
+[daily inspirational word](https://daily-inspirational-word.iamdanielmarino.com).
 
 ![Daily Inspirational Word screenshot](/images/posts/daily_inspirational_word.jpeg)
 
