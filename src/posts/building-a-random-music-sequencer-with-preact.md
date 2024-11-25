@@ -4,7 +4,7 @@ date: 2022-05-05
 tags: post
 ---
 
-As I've composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the [RMG-2021](http://rmg.iamdanielmarino.com/).
+As I've composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the [RMG-2021](https://rmg.iamdanielmarino.com/).
 
 ## Design
 
