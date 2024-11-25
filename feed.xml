@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2024-11-25T15:31:33Z</updated>
+  <updated>2024-11-25T15:32:38Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -158,7 +158,7 @@ experience. And perhaps it will serve other people as well.&lt;/p&gt;
       <link href="https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/"/>
       <updated>2022-05-05T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/building-a-random-music-sequencer-with-preact/</id>
-      <content xml:lang="en" type="html">&lt;p&gt;As I&#39;ve composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the &lt;a href=&quot;http://rmg.iamdanielmarino.com/&quot;&gt;RMG-2021&lt;/a&gt;.&lt;/p&gt;
+      <content xml:lang="en" type="html">&lt;p&gt;As I&#39;ve composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the &lt;a href=&quot;https://rmg.iamdanielmarino.com/&quot;&gt;RMG-2021&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Design&lt;/h2&gt;
 &lt;p&gt;I love how sequencers look and feel—and there is so much variety as to how they&#39;re designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
 It was a bit of a balancing act to capture the essence of a physical sequencer while adapting it to a screen.&lt;/p&gt;
