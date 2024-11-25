@@ -84,4 +84,4 @@ While I didn’t meet all my goals, I came pretty darn close. More importantly, 
 
 Besides [Brad](https://github.com/braddunbar), I had help from other folks, and I’d be remiss if I didn’t thank them: [Matthew](https://matthewlettini.me/) and [Danny](https://twitter.com/dannywen) for play testing, as well as my kids for play testing and suggesting good ideas when I was feeling stuck. Lastly, my wife: not only does she play my games, but is very supportive, lets me vent about crappy API support, and inspires me to put everything I got into my work.
 
-Be sure to give [trapped](https://starzonmyarmz.itch.io/trapped) a play or check out the [source code](https://github.com/starzonmyarmz/trapped)!
+Be sure to give [trapped](https://trapped.iamdanielmarino.com) a play or check out the [source code](https://github.com/starzonmyarmz/trapped)!
