@@ -6,7 +6,7 @@ permalink: /generative-art/
 <ul id="gallery">
   {% for art in art %}
     <li>
-      <a href="/generative-art/{{ loop.revindex }}"><img src="/images/art/{{ loop.revindex }}.webp" loading="lazy" width="400" height="400" alt="{{ art.description }}"></a>
+      <a href="/generative-art/{{ loop.index }}"><img src="/images/art/{{ loop.index }}.webp" loading="lazy" width="400" height="400" alt="{{ art.description }}"></a>
     </li>
   {% endfor %}
 </ul>
