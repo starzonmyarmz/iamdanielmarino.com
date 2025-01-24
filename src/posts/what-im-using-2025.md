@@ -57,7 +57,7 @@ This is quite specific for composing music, so if that does’t interest you, fe
 - 🎹 [Arturia Analog Lab V (Intro)](https://www.arturia.com/products/software-instruments/analoglab/overview) — My Arturia controller came with this software. It has over 500 presets and I love exploring the variety of sounds.
 - 🎸 [Bass Grinder (Free)](https://plugins4free.com/plugin/2082/) — I recently came across this VST, and it has a great crunchy overdrive sound for bass guitar.
 - 🥁 [Manda Audio Power Drum Kit](https://www.powerdrumkit.com/) — Even though you can use this for free, I paid the $9 because it is fantastic. The drums sound real and are great for all styles of music.
-- 🎸 [ML Amped Roots (Free)](https://ml-sound-lab.com/products/amped-roots) — What I like about this is that I get great metal guitar out of the bost without having to add pedals or chaining other effects.
+- 🎸 [ML Amped Roots (Free)](https://ml-sound-lab.com/products/amped-roots) — What I like about this is that I get great metal guitar out of the box without having to add pedals or chaining other effects.
 - 🥁 [ML Drums (Free)](https://ml-sound-lab.com/pages/ml-drums) — I just started experimenting with this, and the drum tones are amazing. The free set up is pretty limited, but I like how I can add on to the base drum kit to meet my needs rather than having having to buy one big extensive drum VST.
 - 🎹 [Spitfire LABS](https://labs.spitfireaudio.com/) — More variety of eclectic sounds.
 
