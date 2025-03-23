@@ -1,6 +1,6 @@
 ---
 title: Self-avoiding Walk
-date: 2025-02-03
+date: 2025-03-23
 tags: post
 ---
 
