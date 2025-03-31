@@ -48,11 +48,11 @@ Triggering interactions by toggling checkboxes and radio buttons isn’t new, bu
 
 ```css
 #element {
-	display: none;
+  display: none;
 }
 
 :has(#checkbox:checked) #element {
-	display: block;
+  display: block;
 }
 ```
 
@@ -72,9 +72,9 @@ The CSS looks something like this:
 
 ```css
 :has(#east-from-west:checked) :is(
-	[for="south-from-west"],
+  [for="south-from-west"],
   [for="north-from-east"]) {
-		display: block;
+    display: block;
 }
 ```
 
