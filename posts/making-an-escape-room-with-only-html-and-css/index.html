@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Making an Escape Room with only HTML and CSS &mdash; Daniel Marino</title>
+    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/favicon.svg" color="black">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/prism-okaidia.css">
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
+        </li>
+        <li>
+          <a href="/work">Work</a>
+        </li>
+        <li>
+          <a href="/posts">Posts</a>
+        </li>
+        <li>
+          <a href="/feed.xml">Feed</a>
+        </li>
+        <li>
+          <a href="https://letterbird.co/iamdanielmarino">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      
+      
+<article>
+  <header>
+    <h1>Making an Escape Room with only HTML and CSS</h1>
+      <small>March 31, 2025</small>
+  </header>
+
+  <section class="post-content">
+    <p><strong>Beware! This post includes spoilers!</strong></p>
+<p>I recently built an escape room game called <a href="https://csscape-room.iamdanielmarino.com/">CSScape Room</a>. This isn’t my first JavaScript-free web game, but HTML and CSS have evolved significantly since my previous attempts, with newer additions allowing for more complex selectors and native interactions. Rather than saving this idea for a game jam, I built it purely for fun, which freed me from theme constraints and time pressure.</p>
+<figure><img src="/images/posts/escape-room-north.png" alt="Screenshot of CSScape Room" loading="lazy"></figure>
+<p>I’ve enjoyed escape room games since childhood, and it was nostalgic to recreate that experience myself. This project pushed my artistic limits while challenging me to design puzzles and translate them into complex HTML and CSS. The learning process was fun, challenging, and sometimes tedious—mostly through trial and error.</p>
+<h2>Process</h2>
+<p>My creative process isn’t linear—it’s a blend of designing, puzzle creation, and coding that constantly influences each other. I frequently had to redesign or recode elements as the project evolved. There was also that time I accidentally deleted half my CSS because I wasn’t backing up to GitHub... lesson learned! 😬</p>
+<p>This might sound chaotic, and honestly, it was. If you’re wondering where to start with a project like this, I began by prototyping the room navigation system. I figured that was the minimum viable feature—if I couldn’t make that work, I’d abandon the project. The solution I eventually found seems simple in retrospect, but I went through several iterations to discover it.</p>
+<p>This flexible approach makes sense for my creative projects. As I build something, both the in-progress work and my growing skills inevitably influences the entire project. I’m comfortable with this non-linear process—it also suits my ADHD brain, where I tend to lose interest if I work on the same thing for too long.</p>
+<h2>Artwork</h2>
+<p>I’d wanted to design a pixel art-styled game for some time but never felt confident enough to attempt it during a game jam because of the learning curve. I watched tutorials from <a href="https://www.youtube.com/adamcyounis">Adam Yunis</a> and <a href="https://www.youtube.com/channel/UCsn9MzwyPKeCE6MEGtMU4gg">Mort</a> to get a crash course in pixel art best practices.</p>
+<p>Initially, progress was slow. I had to figure out 2D perspective with vanishing points, determine a color palette, practice shading techniques, and decide how much detail to include. While I tried to adhere to pixel art “rules,” I definitely broke some along the way.</p>
+<p>One challenge I set for myself was using only 32 colors to capture the feeling of an older gaming console. Once I got comfortable with shading and dithering, working within this constraint became easier. An added benefit to using 32 colors was it resulted in smaller image sizes—the game’s 79 images account for only about 25% of the total payload.</p>
+<figure><img src="/images/posts/escape-game-colors.png" alt="Color palette" loading="lazy"></figure>
+<p>I attempted to design sprites using dimensions in multiples of eight, but I’ll admit I became less strict about this as the project progressed. At a certain point, I was struggling enough with the color and styling limitations that this guideline became more of a starting point than a rule.</p>
+<p>I considered creating my own font, but after exhausting myself with all the artwork, I opted for Google’s PixelifySans instead.</p>
+<p>Almost all animation frames were individually drawn (except for the “one” TV animation). This was tedious, but I was determined to stay true to old-school techniques! I did use CSS to streamline some animations—for instance, I used <code>animation-direction: alternate</code> on the poster page curl to create a palindrome effect, halving the number of required sprites.</p>
+<figure><img src="/images/posts/escape-room-poster.png" alt="Poster frames" loading="lazy"></figure>
+<h2>Mechanics</h2>
+<p>Like my previous game <a href="https://starzonmyarmz.itch.io/hiero">Heiro</a>, this project primarily uses checkbox and radio button mechanics. However, the addition of the <code>:has()</code> pseudo-selector opened up many more possibilities. I also utilized the <code>popover</code> API to create more detailed interactions.</p>
+<h3>Checkbox and Radio Selection</h3>
+<p>Triggering interactions by toggling checkboxes and radio buttons isn’t new, but the <code>:has()</code> selector is a game-changer! Before this existed, you had to structure your markup so interactive elements were siblings. The <code>:has()</code> selector makes this far more flexible because you no longer need to rely on a specific HTML structure.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">#element</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">:has(#checkbox:checked) #element</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Using this pattern, <code>:has()</code> looks for <code>#checkbox</code> anywhere on the page, meaning you don’t have to rely on <code>#checkbox</code>, its corresponding <code>&lt;label&gt;</code>, or <code>#element</code> being siblings. The markup structure is no longer a constraint. Most of this game functions on toggling checkboxes and radios to unlock, collect, and use items.</p>
+<h3>Navigation</h3>
+<p>I almost gave up on the current implementation, and used basic compass notation to avoid visual transitions between directions. After several failed attempts, I found a solution. The tricky part was determining how to transition into a direction from either left or right, depending on which arrow was clicked.</p>
+<p>My solution is conceptually simple but difficult to explain! First, I used radio buttons to determine which direction you’re facing (since you can only face one direction at a time). Second, I needed a way to determine if you’re entering a direction from west or east. This required eight radio buttons—two for each direction.</p>
+<p>For example, if you’re facing east (having come from facing north), you have two possible directions to go: west (returning to face north) or east (to face south). I needed to make the radio buttons visible that would take you north from east, and south from west.</p>
+<figure><img src="/images/posts/escape-room-navigation.png" alt="Visual explaining how navigation works" loading="lazy"></figure>
+<p>The CSS looks something like this:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">:has(#east-from-west:checked) :is(
+	[for="south-from-west"],
+  [for="north-from-east"])</span> <span class="token punctuation">{</span>
+		<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This pattern was implemented for each direction, along with animations to ensure each room view slid in and out correctly.</p>
+<h3>Zooming In</h3>
+<p>I initially focused so much on checkbox mechanics that I assumed I’d need the same approach for zooming in on specific areas. Then I had a &quot;Duh!&quot; moment and realized the <code>popover</code> API would be perfect. Here’s the basic markup for looking at an individual book:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">popovertarget</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>book<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Zoom in<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>book<span class="token punctuation">"</span></span> <span class="token attr-name">popover</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!-- Book content goes here --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">popovertarget</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>book<span class="token punctuation">"</span></span> <span class="token attr-name">popovertargetaction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hide<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Close<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h3>Turning the Lights Off</h3>
+<p>I procrastinated on implementing this feature because I thought I’d need to create darkened variations of all artwork. I don’t recall what inspired me to try blend modes, but I’m glad I did—the solution was surprisingly simple.</p>
+<p>When the light switch checkbox is toggled, a <code>&lt;div&gt;</code> becomes visible with a dark background color and <code>mix-blend-mode: multiply</code>. This multiplies the colors of the blending and base layers, resulting in a darker appearance.</p>
+<h3>Playing the Crossword</h3>
+<p>This required <a href="https://github.com/starzonmyarmz/csscape-room/blob/main/styles/east.css#L204-L234">surprisingly complex CSS</a>. Each square has three letters plus a blank tile, meaning four radio buttons. The <code>:checked</code> letter has a <code>z-index</code> of 3 to display above other letters, but also has <code>pointer-events: none</code> so clicks pass through to the next letter underneath (with <code>z-index: 2</code>). The remaining tiles have a <code>z-index</code> of 1.</p>
+<figure><img src="/images/posts/escape-room-crossword.png" alt="Visual explaining how crossword puzzle works" loading="lazy"></figure>
+<p>The CSS becomes even trickier when the last tile is <code>:checked</code>, requiring some <a href="https://github.com/starzonmyarmz/csscape-room/blob/main/styles/east.css#L227">creative selector gymnastics</a> to target the first radio button in the stack again.</p>
+<h2>Tools</h2>
+<p>I created all artwork using <a href="https://www.aseprite.org/">Aseprite</a>, which is specifically designed for pixel art. I probably only used a fraction of its features, and I’m not sure it actually made my life easier—it might have made things more difficult at times. I’m not giving up on it yet, though. I suspect I’ll occasionally discover features that make me think, “Oh, that’s way easier than what I was doing!”</p>
+<p>I started coding with basic HTML and CSS but eventually found navigation difficult with such a long HTML file. It also became tedious writing the same attributes for every <code>&lt;img /&gt;</code> element. I migrated the project to <a href="https://www.11ty.dev/">Eleventy</a> to improve organization and create custom shortcodes for simplifying component creation. I used the <code>html-minifier-terser</code> npm package, which integrates well with Eleventy.</p>
+<p>I chose native CSS over <a href="https://sass-lang.com/">Sass</a> for several reasons:</p>
+<ol>
+<li>CSS now has native nesting for better organization and leaner code</li>
+<li>CSS has built-in variables</li>
+<li>HTTP/2 handles asset loading efficiently, eliminating the major benefit of bundling CSS files</li>
+</ol>
+<p>The game uses 12 CSS files with 12 <code>&lt;link rel=&quot;stylesheet&quot; /&gt;</code> tags. The only Sass feature I missed was the ability to loop through style patterns for easier maintenance, but this wasn’t a significant issue.</p>
+<p>The game is hosted on GitHub Pages. During deployment, it runs an npm command to minify CSS using <a href="https://lightningcss.dev/">Lightning CSS</a>. I mentioned accidentally deleting half my CSS earlier—this happened because I initially used Eleventy’s recommended approach with the <code>clean-css</code> npm package. I strongly advise against using this! This package doesn’t work with native CSS nesting. While losing code was frustrating, I rewrote much of it more efficiently, so there was a silver lining.</p>
+<h2>Nice to Haves</h2>
+<p>I initially wanted to make this game fully accessible, but the navigation system doesn’t translate well for screen reader users. I tried implementing a more compass-like navigation approach for keyboard users, but it proved unreliable and conflicted with the side-to-side approach.</p>
+<p>Adding text labels for interactive elements was challenging because you can’t track the <code>:focus</code> state of a <code>&lt;label&gt;</code> element. While you can track the <code>:focus</code> of the corresponding <code>&lt;input /&gt;</code>, it wasn’t consistently reliable.</p>
+<p>The main keyboard accessibility issue is that the game exists as one long HTML page. When you navigate to face a different direction, keyboard focus remains elsewhere on the page, requiring extensive tabbing to reach navigation elements or item selection.</p>
+<p>I ultimately decided to make the game deliberately inaccessible by adding <code>tabindex=&quot;-1&quot;</code> to all keyboard-accessible elements. I’d rather users recognize immediately that they can’t play with assistive technology than become frustrated with a partially broken experience.</p>
+<p>Sound would have been a nice addition, but I encountered the same issues as with my previous game Heiro. You can toggle the visibility of an <code>&lt;embed&gt;</code> element, but once it’s visible, you can’t hide it again—meaning there’s no way to toggle sound on and off.</p>
+<h2>Conclusion</h2>
+<p>This was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!</p>
+
+  </section>
+</article>
+
+    </main>
+  </body>
+</html>
