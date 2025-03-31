@@ -137,4 +137,4 @@ Sound would have been a nice addition, but I encountered the same issues as with
 
 ## Conclusion
 
-This was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!
+[CSScape Room](https://csscape-room.iamdanielmarino.com/) was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!
