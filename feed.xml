@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2025-03-31T17:57:36Z</updated>
+  <updated>2025-03-31T18:00:33Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -37,11 +37,11 @@
 &lt;h3&gt;Checkbox and Radio Selection&lt;/h3&gt;
 &lt;p&gt;Triggering interactions by toggling checkboxes and radio buttons isn’t new, but the &lt;code&gt;:has()&lt;/code&gt; selector is a game-changer! Before this existed, you had to structure your markup so interactive elements were siblings. The &lt;code&gt;:has()&lt;/code&gt; selector makes this far more flexible because you no longer need to rely on a specific HTML structure.&lt;/p&gt;
 &lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;#element&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;token selector&quot;&gt;:has(#checkbox:checked) #element&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Using this pattern, &lt;code&gt;:has()&lt;/code&gt; looks for &lt;code&gt;#checkbox&lt;/code&gt; anywhere on the page, meaning you don’t have to rely on &lt;code&gt;#checkbox&lt;/code&gt;, its corresponding &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt;, or &lt;code&gt;#element&lt;/code&gt; being siblings. The markup structure is no longer a constraint. Most of this game functions on toggling checkboxes and radios to unlock, collect, and use items.&lt;/p&gt;
 &lt;h3&gt;Navigation&lt;/h3&gt;
@@ -51,9 +51,9 @@
 &lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/images/posts/escape-room-navigation.png&quot; alt=&quot;Visual explaining how navigation works&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;The CSS looks something like this:&lt;/p&gt;
 &lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:has(#east-from-west:checked) :is(
-	[for=&quot;south-from-west&quot;],
+  [for=&quot;south-from-west&quot;],
   [for=&quot;north-from-east&quot;])&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; block&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This pattern was implemented for each direction, along with animations to ensure each room view slid in and out correctly.&lt;/p&gt;
 &lt;h3&gt;Zooming In&lt;/h3&gt;
