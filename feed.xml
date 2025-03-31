@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2025-03-31T18:00:33Z</updated>
+  <updated>2025-03-31T18:02:03Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -89,7 +89,7 @@
 &lt;p&gt;I ultimately decided to make the game deliberately inaccessible by adding &lt;code&gt;tabindex=&amp;quot;-1&amp;quot;&lt;/code&gt; to all keyboard-accessible elements. I’d rather users recognize immediately that they can’t play with assistive technology than become frustrated with a partially broken experience.&lt;/p&gt;
 &lt;p&gt;Sound would have been a nice addition, but I encountered the same issues as with my previous game Heiro. You can toggle the visibility of an &lt;code&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; element, but once it’s visible, you can’t hide it again—meaning there’s no way to toggle sound on and off.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;This was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://csscape-room.iamdanielmarino.com/&quot;&gt;CSScape Room&lt;/a&gt; was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!&lt;/p&gt;
 </content>
     </entry>
     <entry>
