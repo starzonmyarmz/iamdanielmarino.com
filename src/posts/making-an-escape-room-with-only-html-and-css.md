@@ -28,7 +28,7 @@ Initially, progress was slow. I had to figure out 2D perspective with vanishing 
 
 One challenge I set for myself was using only 32 colors to capture the feeling of an older gaming console. Once I got comfortable with shading and dithering, working within this constraint became easier. An added benefit to using 32 colors was it resulted in smaller image sizes—the game’s 79 images account for only about 25% of the total payload.
 
-![Color palette](/images/posts/escape-game-colors.png)
+![Color palette](/images/posts/escape-room-colors.png)
 
 I attempted to design sprites using dimensions in multiples of eight, but I’ll admit I became less strict about this as the project progressed. At a certain point, I was struggling enough with the color and styling limitations that this guideline became more of a starting point than a rule.
 
