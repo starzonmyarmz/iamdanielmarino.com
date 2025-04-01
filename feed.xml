@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2025-03-31T18:02:38Z</updated>
+  <updated>2025-04-01T16:24:17Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -27,7 +27,7 @@
 &lt;p&gt;I’d wanted to design a pixel art-styled game for some time but never felt confident enough to attempt it during a game jam because of the learning curve. I watched tutorials from &lt;a href=&quot;https://www.youtube.com/adamcyounis&quot;&gt;Adam Yunis&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/channel/UCsn9MzwyPKeCE6MEGtMU4gg&quot;&gt;Mort&lt;/a&gt; to get a crash course in pixel art best practices.&lt;/p&gt;
 &lt;p&gt;Initially, progress was slow. I had to figure out 2D perspective with vanishing points, determine a color palette, practice shading techniques, and decide how much detail to include. While I tried to adhere to pixel art “rules,” I definitely broke some along the way.&lt;/p&gt;
 &lt;p&gt;One challenge I set for myself was using only 32 colors to capture the feeling of an older gaming console. Once I got comfortable with shading and dithering, working within this constraint became easier. An added benefit to using 32 colors was it resulted in smaller image sizes—the game’s 79 images account for only about 25% of the total payload.&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/images/posts/escape-game-colors.png&quot; alt=&quot;Color palette&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/images/posts/escape-room-colors.png&quot; alt=&quot;Color palette&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
 &lt;p&gt;I attempted to design sprites using dimensions in multiples of eight, but I’ll admit I became less strict about this as the project progressed. At a certain point, I was struggling enough with the color and styling limitations that this guideline became more of a starting point than a rule.&lt;/p&gt;
 &lt;p&gt;I considered creating my own font, but after exhausting myself with all the artwork, I opted for Google’s PixelifySans instead.&lt;/p&gt;
 &lt;p&gt;Almost all animation frames were individually drawn (except for the “one” TV animation). This was tedious, but I was determined to stay true to old-school techniques! I did use CSS to streamline some animations—for instance, I used &lt;code&gt;animation-direction: alternate&lt;/code&gt; on the poster page curl to create a palindrome effect, halving the number of required sprites.&lt;/p&gt;
