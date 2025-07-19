@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vibe Coding and the Existential Dread of Progress &mdash; Daniel Marino</title>
+    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/favicon.svg" color="black">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/prism-okaidia.css">
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
+        </li>
+        <li>
+          <a href="/work">Work</a>
+        </li>
+        <li>
+          <a href="/posts">Posts</a>
+        </li>
+        <li>
+          <a href="/feed.xml">Feed</a>
+        </li>
+        <li>
+          <a href="https://letterbird.co/iamdanielmarino">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      
+      
+<article>
+  <header>
+    <h1>Vibe Coding and the Existential Dread of Progress</h1>
+      <small>July 19, 2025</small>
+  </header>
+
+  <section class="post-content">
+    <p>Does anyone else hate the term <em>vibe coding</em>?</p>
+<p>I’ve been pretty resistant to incorporating AI directly into my development workflow. I use it all the time to clean up emails, Slack messages, and blog posts (including this one). It’s helped me plan vacations, write my cover letter for <a href="https://www.planningcenter.com/">Planning Center</a>, and even gain insights from journaling. But coding? That felt like crossing a line.</p>
+<p>At first, I confined AI to repetitive tasks—<a href="https://iamdanielmarino.com/posts/daily-inspirational-word/">formatting long word lists into arrays</a>, deciphering cryptic console errors, or exploring how to integrate Vite into a Rails codebase still using Sprockets. All helpful, but I steered clear of anything that touched “real” engineering.</p>
+<p>Still, AI isn’t going anywhere. And as much as I hate admitting how much I rely on it, it genuinely makes my life easier. So I gave <em>vibe coding</em> a shot. Spoiler: I’m sold—with a few caveats.</p>
+<h2>Vibe Coding an Alfred Workflow</h2>
+<p>I’d played with basic <a href="https://www.alfredapp.com/">Alfred workflows</a> before, using the built-in UI or tools like <a href="https://www.npmjs.com/package/alfy">Alfy</a>. But I had an idea for something more complex—and neither the time nor the motivation to learn how to build it from scratch.</p>
+<h3>The Problem</h3>
+<p>At Planning Center, our design system has 300+ tokens (and counting). To grab one, I’d open our Storybook instance, scroll to the search bar, type in a few characters, click to copy, then return to my editor to paste it. Repeat that a few dozen times a day, and the friction starts to add up.</p>
+<h3>The Solution</h3>
+<p>An <a href="https://github.com/starzonmyarmz/pco-tapestry-tokens-alfred">Alfred workflow</a> that lets me search tokens via fuzzy matching, press Enter to copy, and paste directly—eliminating multiple steps and speeding up my flow.</p>
+<h2>Using Claude Code</h2>
+<p>I’ve tried ChatGPT and GitHub Copilot. They both work well (though I find Copilot’s integration with VS Code a bit invasive). I’m not ready to pay out of pocket, so I started using Claude Code through Planning Center’s access.</p>
+<p>Setup took less than 10 minutes. <a href="https://docs.anthropic.com/en/docs/claude-code/overview">Anthropic’s documentation</a> is clear, and their tips on effective usage are actually helpful.</p>
+<h2>Building the Workflow with Claude Code</h2>
+<p>I kicked things off with a prompt:</p>
+<blockquote>
+<p>I want an Alfred extension where I can enter “tt” followed by characters, and tokens from <s>URL redacted</s> will be shown using fuzzy search.</p>
+</blockquote>
+<p>Claude generated a Python script… that didn’t work. It produced a workflow Alfred couldn’t import. So I responded with:</p>
+<blockquote>
+<p>The Alfred extension fails to import.</p>
+</blockquote>
+<p>Claude replied something like, <em>“You’re right, let me fix that,”</em> and, impressively, it did.</p>
+<p>After about three hours of iterative prompts and debugging, I had a <a href="https://github.com/starzonmyarmz/pco-tapestry-tokens-alfred">fully functional Alfred workflow</a> that:</p>
+<ul>
+<li>Stores design tokens as a JSON database</li>
+<li>Caches data locally</li>
+<li>Refreshes if unused for over an hour</li>
+<li>Fuzzy-finds tokens on input</li>
+<li>Displays color swatches for color-based tokens</li>
+</ul>
+<p>I also used Claude to:</p>
+<ul>
+<li>Generate 100+ color swatches (since Alfred can’t use data URIs)</li>
+<li>Write a Bash script that builds the workflow with semantic versioning</li>
+</ul>
+<p>I don’t know much Python, but I know enough to skim the output and feel confident in the structure. And because this was a small, siloed project, I wasn’t concerned about maintainability or codebase conventions.</p>
+<h2>The Cost</h2>
+<p>Aside from the monthly AI access fee, the entire three-hour build process cost around $10 in usage tokens. That’s ~$3.33/hour—far below the value of my time. And now, every use of the workflow saves me 10+ seconds. That adds up quickly.</p>
+<p>If I’d tried to build this from scratch, it easily could’ve taken 10+ hours and been half as effective. That’s not even accounting for generating the color swatch images.</p>
+<p>I did spend about an hour trying to get Claude to scrape the tokens directly from the design system site, but that turned out to be unreliable. Still, the final solution works and required zero extra effort from the rest of my team.</p>
+<h2>The Pros and Cons of AI in the Workflow</h2>
+<h3>Pros</h3>
+<ul>
+<li><strong>Efficiency Boost</strong>: Great at handling menial but necessary tasks—JSON formatting, token lookups, error decoding, etc.</li>
+<li><strong>Rapid Prototyping</strong>: I built a working Alfred workflow in a single evening. Even if it were only a prototype, it would’ve been valuable.</li>
+<li><strong>Creative Leverage</strong>: Designers and PMs can use AI to sketch out ideas and flows, helping engineers jump into development faster.</li>
+</ul>
+<h3>Cons</h3>
+<ul>
+<li><strong>Skill Stagnation</strong>: Over-reliance on AI could erode problem-solving ability or deeper understanding of frameworks and languages.</li>
+<li><strong>Job Displacement</strong>: AI is replacing some roles. At Planning Center, leadership has been clear AI won’t replace people—only support them. But the broader industry picture is less certain.</li>
+<li><strong>Environmental Cost</strong>: Running large AI models consumes a lot of energy.</li>
+<li><strong>Price Tag</strong>: Even if it saves time, AI access and usage can get expensive—especially if you’re footing the bill.</li>
+</ul>
+<h2>So Why Do I Still Feel Icky?</h2>
+<p>It took me a while to name the feeling, but I got there: <strong>I’m grieving the loss of what it means to be an engineer.</strong></p>
+<p>I’ve spent over 20 years solving problems, building UIs, and turning ideas into code. I’ve always taken pride in being able to take a design and bring it to life. But now, what it means to be an engineer is changing—and that’s uncomfortable.</p>
+<p>I don’t want to become just a prompt wrangler. But I also don’t want to be the person who gets left behind because they refused to adapt. The logic is clear: why pay one engineer for 10 hours of work when another can produce the same result in two with AI?</p>
+<h2>Finding the Sweet Spot</h2>
+<p>I think the answer lies somewhere in the middle.</p>
+<p>Engineers should still understand their craft—be able to reason through problems, write maintainable code, and build features from scratch when needed. But AI should be a tool we use intentionally to reduce toil and accelerate progress.</p>
+<p>We don’t call it cheating when someone uses code completion. Why should this be any different?</p>
+
+  </section>
+</article>
+
+    </main>
+  </body>
+</html>

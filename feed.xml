@@ -4,12 +4,82 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2025-05-08T22:13:40Z</updated>
+  <updated>2025-07-19T15:53:28Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
     <email></email>
   </author>
+    <entry>
+      <title>Vibe Coding and the Existential Dread of Progress</title>
+      <link href="https://iamdanielmarino.com/posts/vibe-coding-and-the-existential-dread-of-progress/"/>
+      <updated>2025-07-19T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/vibe-coding-and-the-existential-dread-of-progress/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;Does anyone else hate the term &lt;em&gt;vibe coding&lt;/em&gt;?&lt;/p&gt;
+&lt;p&gt;I’ve been pretty resistant to incorporating AI directly into my development workflow. I use it all the time to clean up emails, Slack messages, and blog posts (including this one). It’s helped me plan vacations, write my cover letter for &lt;a href=&quot;https://www.planningcenter.com/&quot;&gt;Planning Center&lt;/a&gt;, and even gain insights from journaling. But coding? That felt like crossing a line.&lt;/p&gt;
+&lt;p&gt;At first, I confined AI to repetitive tasks—&lt;a href=&quot;https://iamdanielmarino.com/posts/daily-inspirational-word/&quot;&gt;formatting long word lists into arrays&lt;/a&gt;, deciphering cryptic console errors, or exploring how to integrate Vite into a Rails codebase still using Sprockets. All helpful, but I steered clear of anything that touched “real” engineering.&lt;/p&gt;
+&lt;p&gt;Still, AI isn’t going anywhere. And as much as I hate admitting how much I rely on it, it genuinely makes my life easier. So I gave &lt;em&gt;vibe coding&lt;/em&gt; a shot. Spoiler: I’m sold—with a few caveats.&lt;/p&gt;
+&lt;h2&gt;Vibe Coding an Alfred Workflow&lt;/h2&gt;
+&lt;p&gt;I’d played with basic &lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;Alfred workflows&lt;/a&gt; before, using the built-in UI or tools like &lt;a href=&quot;https://www.npmjs.com/package/alfy&quot;&gt;Alfy&lt;/a&gt;. But I had an idea for something more complex—and neither the time nor the motivation to learn how to build it from scratch.&lt;/p&gt;
+&lt;h3&gt;The Problem&lt;/h3&gt;
+&lt;p&gt;At Planning Center, our design system has 300+ tokens (and counting). To grab one, I’d open our Storybook instance, scroll to the search bar, type in a few characters, click to copy, then return to my editor to paste it. Repeat that a few dozen times a day, and the friction starts to add up.&lt;/p&gt;
+&lt;h3&gt;The Solution&lt;/h3&gt;
+&lt;p&gt;An &lt;a href=&quot;https://github.com/starzonmyarmz/pco-tapestry-tokens-alfred&quot;&gt;Alfred workflow&lt;/a&gt; that lets me search tokens via fuzzy matching, press Enter to copy, and paste directly—eliminating multiple steps and speeding up my flow.&lt;/p&gt;
+&lt;h2&gt;Using Claude Code&lt;/h2&gt;
+&lt;p&gt;I’ve tried ChatGPT and GitHub Copilot. They both work well (though I find Copilot’s integration with VS Code a bit invasive). I’m not ready to pay out of pocket, so I started using Claude Code through Planning Center’s access.&lt;/p&gt;
+&lt;p&gt;Setup took less than 10 minutes. &lt;a href=&quot;https://docs.anthropic.com/en/docs/claude-code/overview&quot;&gt;Anthropic’s documentation&lt;/a&gt; is clear, and their tips on effective usage are actually helpful.&lt;/p&gt;
+&lt;h2&gt;Building the Workflow with Claude Code&lt;/h2&gt;
+&lt;p&gt;I kicked things off with a prompt:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I want an Alfred extension where I can enter “tt” followed by characters, and tokens from &lt;s&gt;URL redacted&lt;/s&gt; will be shown using fuzzy search.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Claude generated a Python script… that didn’t work. It produced a workflow Alfred couldn’t import. So I responded with:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Alfred extension fails to import.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Claude replied something like, &lt;em&gt;“You’re right, let me fix that,”&lt;/em&gt; and, impressively, it did.&lt;/p&gt;
+&lt;p&gt;After about three hours of iterative prompts and debugging, I had a &lt;a href=&quot;https://github.com/starzonmyarmz/pco-tapestry-tokens-alfred&quot;&gt;fully functional Alfred workflow&lt;/a&gt; that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stores design tokens as a JSON database&lt;/li&gt;
+&lt;li&gt;Caches data locally&lt;/li&gt;
+&lt;li&gt;Refreshes if unused for over an hour&lt;/li&gt;
+&lt;li&gt;Fuzzy-finds tokens on input&lt;/li&gt;
+&lt;li&gt;Displays color swatches for color-based tokens&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also used Claude to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generate 100+ color swatches (since Alfred can’t use data URIs)&lt;/li&gt;
+&lt;li&gt;Write a Bash script that builds the workflow with semantic versioning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I don’t know much Python, but I know enough to skim the output and feel confident in the structure. And because this was a small, siloed project, I wasn’t concerned about maintainability or codebase conventions.&lt;/p&gt;
+&lt;h2&gt;The Cost&lt;/h2&gt;
+&lt;p&gt;Aside from the monthly AI access fee, the entire three-hour build process cost around $10 in usage tokens. That’s ~$3.33/hour—far below the value of my time. And now, every use of the workflow saves me 10+ seconds. That adds up quickly.&lt;/p&gt;
+&lt;p&gt;If I’d tried to build this from scratch, it easily could’ve taken 10+ hours and been half as effective. That’s not even accounting for generating the color swatch images.&lt;/p&gt;
+&lt;p&gt;I did spend about an hour trying to get Claude to scrape the tokens directly from the design system site, but that turned out to be unreliable. Still, the final solution works and required zero extra effort from the rest of my team.&lt;/p&gt;
+&lt;h2&gt;The Pros and Cons of AI in the Workflow&lt;/h2&gt;
+&lt;h3&gt;Pros&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Efficiency Boost&lt;/strong&gt;: Great at handling menial but necessary tasks—JSON formatting, token lookups, error decoding, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rapid Prototyping&lt;/strong&gt;: I built a working Alfred workflow in a single evening. Even if it were only a prototype, it would’ve been valuable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Creative Leverage&lt;/strong&gt;: Designers and PMs can use AI to sketch out ideas and flows, helping engineers jump into development faster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Skill Stagnation&lt;/strong&gt;: Over-reliance on AI could erode problem-solving ability or deeper understanding of frameworks and languages.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Job Displacement&lt;/strong&gt;: AI is replacing some roles. At Planning Center, leadership has been clear AI won’t replace people—only support them. But the broader industry picture is less certain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environmental Cost&lt;/strong&gt;: Running large AI models consumes a lot of energy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Price Tag&lt;/strong&gt;: Even if it saves time, AI access and usage can get expensive—especially if you’re footing the bill.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;So Why Do I Still Feel Icky?&lt;/h2&gt;
+&lt;p&gt;It took me a while to name the feeling, but I got there: &lt;strong&gt;I’m grieving the loss of what it means to be an engineer.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I’ve spent over 20 years solving problems, building UIs, and turning ideas into code. I’ve always taken pride in being able to take a design and bring it to life. But now, what it means to be an engineer is changing—and that’s uncomfortable.&lt;/p&gt;
+&lt;p&gt;I don’t want to become just a prompt wrangler. But I also don’t want to be the person who gets left behind because they refused to adapt. The logic is clear: why pay one engineer for 10 hours of work when another can produce the same result in two with AI?&lt;/p&gt;
+&lt;h2&gt;Finding the Sweet Spot&lt;/h2&gt;
+&lt;p&gt;I think the answer lies somewhere in the middle.&lt;/p&gt;
+&lt;p&gt;Engineers should still understand their craft—be able to reason through problems, write maintainable code, and build features from scratch when needed. But AI should be a tool we use intentionally to reduce toil and accelerate progress.&lt;/p&gt;
+&lt;p&gt;We don’t call it cheating when someone uses code completion. Why should this be any different?&lt;/p&gt;
+</content>
+    </entry>
     <entry>
       <title>Making an Escape Room with only HTML and CSS</title>
       <link href="https://iamdanielmarino.com/posts/making-an-escape-room-with-only-html-and-css/"/>
