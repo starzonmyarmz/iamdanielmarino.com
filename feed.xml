@@ -4,12 +4,33 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2025-11-30T20:53:59Z</updated>
+  <updated>2026-01-04T23:29:12Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
     <email></email>
   </author>
+    <entry>
+      <title>What I’m Using in 2026</title>
+      <link href="https://iamdanielmarino.com/posts/what-im-using-2026/"/>
+      <updated>2026-01-04T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/what-im-using-2026/</id>
+      <content xml:lang="en" type="html">&lt;p&gt;This is an updated list of what I’m using in 2026. I’m only sharing what’s changed since &lt;a href=&quot;https://iamdanielmarino.com/posts/what-im-using-2025&quot;&gt;last year’s list&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;Chrome&lt;/a&gt; — Chrome was on my list last year, but I’m mentioning it again because I actually used Brave for most of 2025. I like Brave, and honestly I can’t even remember why I switched back to Chrome 🤷🏻.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chatgpt.com/&quot;&gt;ChatGPT&lt;/a&gt; — I hate that I’m listing AI tools, but if I’m going to be transparent, it has to be here. I use it a bit for code, but mostly for rewording messages or rubber-ducking ideas.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.claude.com/product/claude-code&quot;&gt;Claude Code&lt;/a&gt; — I &lt;a href=&quot;https://iamdanielmarino.com/posts/vibe-coding-and-the-existential-dread-of-progress/&quot;&gt;wrote about my thoughts and reluctance to embrace&lt;/a&gt; AI for coding. My company pays for it, so I use it.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://endel.io/&quot;&gt;Endel&lt;/a&gt; — I’m &lt;a href=&quot;https://en.wikipedia.org/wiki/Neurodiversity&quot;&gt;neurodiverse&lt;/a&gt; and have been trying to be more intentional about using tools that help me stay focused. Endel is super cool and has a lot of genuinely helpful features.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hyper.is/&quot;&gt;Hyper&lt;/a&gt; — I was previously using &lt;a href=&quot;https://iterm2.com/&quot;&gt;iTerm2&lt;/a&gt;, but switched to Hyper mostly because it feels prettier. That’s probably a dumb reason since I could have customized iTerm2, but I installed Hyper on my new machine and never felt the need to switch back.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://retcon.app/&quot;&gt;Retcon&lt;/a&gt; — My team is pretty opinionated about Git history, and rewriting history via the command line or VS Code started to feel tedious. Several coworkers use &lt;a href=&quot;https://github.com/jesseduffield/lazygit&quot;&gt;LazyGit&lt;/a&gt;, but I didn’t want another terminal-based tool. Retcon does exactly what it promises and lets me handle more advanced Git workflows without having to be a Git super-nerd.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.notion.com/&quot;&gt;Notion&lt;/a&gt; — I was using &lt;a href=&quot;https://bear.app/&quot;&gt;Bear&lt;/a&gt; for notes, but didn’t feel like I was getting enough value out of paying for it. That’s not a knock against Bear—it’s a great product. Notion’s free plan works just fine for me. I also tried &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt; this year and liked it, but parts of it felt quirky. It also seemed like a bigger time investment to make it feel as polished as Notion or Bear.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code&lt;/a&gt; — I tried &lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt; for a bit, and there are things I really like about it. That said, I ran into a few weird and buggy behaviors that I just couldn’t get past.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Equipment&lt;/h2&gt;
+&lt;p&gt;I got a 2025 M4 MacBook Pro when I started my new job this year. It’s more than powerful enough for anything I need to do.&lt;/p&gt;
+</content>
+    </entry>
     <entry>
       <title>The Money Filter</title>
       <link href="https://iamdanielmarino.com/posts/the-money-filter/"/>
