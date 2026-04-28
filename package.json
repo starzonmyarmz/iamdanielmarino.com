@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "My personal site",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && node scripts/compress-images.js",
     "serve": "ELEVENTY_ENV=localhost eleventy --serve"
   },
   "repository": {
@@ -19,6 +19,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "markdown-it-image-figures": "^2.1.1"
+    "markdown-it-image-figures": "^2.1.1",
+    "sharp": "^0.34.5"
   }
 }
