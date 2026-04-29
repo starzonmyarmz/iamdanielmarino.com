@@ -32,6 +32,6 @@ When I first got into hand-lettering, I had a hard time finding people who share
 
 ## Where I’ve Used This
 
-This is basically the same process I followed for my [State Motto](/state-mottos/) series, and most of my other lettering projects.
+This is basically the same process I followed for my [State Motto](https://states.iamdanielmarino.com) series, and most of my other lettering projects.
 
 Don’t be afraid to lean into your natural tendencies (like a scrappier style if your hand isn’t steady) and use the digital phase to enhance or correct. Trial and error is a huge part of it.
