@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Letting Claude Teach Me &mdash; Daniel Marino</title>
+    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/favicon.svg" color="black">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/prism-okaidia.css">
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
+        </li>
+        <li>
+          <a href="/work">Work</a>
+        </li>
+        <li>
+          <a href="/posts">Posts</a>
+        </li>
+        <li>
+          <a href="/feed.xml">Feed</a>
+        </li>
+        <li>
+          <a href="https://letterbird.co/iamdanielmarino">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      
+      
+<article>
+  <header>
+    <h1>Letting Claude Teach Me</h1>
+      <small>May 4, 2026</small>
+  </header>
+
+  <section class="post-content">
+    <p>Now that I use AI regularly to help write code and complete tasks, I find myself in a position where I’m not learning as much as I used to. That feels a bit crummy.</p>
+<p>Fairly often, Claude writes code I don’t fully understand. For example: I know enough TypeScript to <em>be dangerous</em>, but I’m definitely not an expert. Recently I had Claude take some typing I thought was overcomplicated and drastically simplify it. The new version was clearly better — I just couldn’t tell you <em>why</em>. So I asked Claude to explain it in simple terms. Sure enough, it did.</p>
+<p>I guess that’s a silver lining to using AI: it can at least explain why it did what it did. A coworker mentioned he has Claude write one-off explanations with examples whenever this happens, and I liked that idea. So I built a <a href="https://github.com/starzonmyarmz/dotfiles/tree/main/claude/.claude/skills/til">skill</a> around it. The skill looks at my uncommitted code, breaks it down, and writes a short blog article for me to read. I’m a fan of <a href="https://www.joshwcomeau.com/">Josh Comeau’s blog</a> and the way he uses interactive examples to teach a concept, so I made that part of the skill too — Claude generates interactive examples alongside the explanation, then packages everything up in a small Vite environment.</p>
+<p>The first iteration was expensive to run. At least 3 minutes, and roughly 10K tokens. I’m fine burning tokens, but I’m also thrifty 😬. The second iteration kept the Vite environment and styles already wired up, so Claude only had to write the article and the examples. That brought it down to about a minute and 7K tokens. Better — though I’d still like to get the token usage lower.</p>
+<p>The blog format is great, but it’s a lot of work (for Claude) to generate all of this just to delete it when I’m done reading. It’d be nice to have these articles persist somewhere I could revisit later, or share with other people. That brought me to my current iteration.</p>
+<p>It’s an <a href="https://github.com/starzonmyarmz/til">Astro project</a> that lives on GitHub. The skill works roughly the same way — review uncommitted code, generate a post complete with interactive examples — but now it publishes to a <a href="https://til.iamdanielmarino.com/">TIL subdomain</a> where I can read the articles at my leisure or pass them along.</p>
+<p>It’s all vibe coded, and that feels appropriate. I’m up front about it on the site itself: <em>Things Claude changed that I didn’t understand — explained… by Claude.</em> I’ll probably keep tinkering to bring the token usage down further, but it was a fun project to put together, and I’m happy to let Claude teach me what it’s doing.</p>
+
+  </section>
+</article>
+
+    </main>
+
+    <script data-goatcounter="https://starzonmyarmz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>
