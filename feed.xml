@@ -4,12 +4,38 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2026-05-04T12:38:24Z</updated>
+  <updated>2026-05-14T18:21:56Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
     <email></email>
   </author>
+    <entry>
+      <title>Voxel editors kind of suck, so I’m vibe coding one</title>
+      <link href="https://iamdanielmarino.com/posts/voxel-editors-kind-of%E2%80%93suck-so-im-vibe%E2%80%93coding%E2%80%93one/"/>
+      <updated>2026-05-14T00:00:00Z</updated>
+      <id>https://iamdanielmarino.com/posts/voxel-editors-kind-of%E2%80%93suck-so-im-vibe%E2%80%93coding%E2%80%93one/</id>
+      <content xml:lang="en" type="html">&lt;h2&gt;How I got here&lt;/h2&gt;
+&lt;p&gt;I’ve been working on a new CSS-only game idea, and finally settled on voxel-like artwork. But building voxels in HTML/CSS isn’t that fun. I was vibe coding a web-based editor to go along with it, but it started getting sluggish and complicated to use. I more or less abandoned it in favor of using a real voxel editor to create the artwork — I figured I’d export the work and use AI to convert it to HTML/CSS.&lt;/p&gt;
+&lt;h2&gt;The voxel editor landscape is rough&lt;/h2&gt;
+&lt;p&gt;I tried a handful of voxel editors: MagicaVoxel, Goxel, and Voxelator.&lt;/p&gt;
+&lt;p&gt;The first thing I learned is that it’s apparently required for a voxel editor to have “oxel” the name.&lt;/p&gt;
+&lt;p&gt;The second thing I learned is that voxel editors kind of suck. The UI is either too complex or too unintuitive to learn. &lt;a href=&quot;https://goxel.xyz/&quot;&gt;Goxel&lt;/a&gt; was the closest to &lt;em&gt;easy-to-use&lt;/em&gt;, but it died while exporting my file. Not great.&lt;/p&gt;
+&lt;p&gt;Also, I’m on a Mac. None of those titles feel native — they all feel like Windows apps in a wrapper. That’s a deal-breaker for me. I’m used to polished software like &lt;a href=&quot;https://figma.com/&quot;&gt;Figma&lt;/a&gt;, &lt;a href=&quot;https://www.affinity.studio/&quot;&gt;Affinity&lt;/a&gt;, &lt;a href=&quot;https://www.sketch.com/&quot;&gt;Sketch&lt;/a&gt;, &lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt;, and &lt;a href=&quot;https://retcon.app/&quot;&gt;Retcon&lt;/a&gt;. I want software that feels native, looks good, and is smooth. I really struggle to use anything that’s less.&lt;/p&gt;
+&lt;h2&gt;Enter Roxel&lt;/h2&gt;
+&lt;p&gt;So I’m taking a detour from the game. I’m now vibe coding a voxel editor called &lt;strong&gt;Roxel&lt;/strong&gt;, and &lt;a href=&quot;https://github.com/starzonmyarmz/roxel&quot;&gt;I’m doing it in the open&lt;/a&gt;.&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&quot;https://iamdanielmarino.com/images/posts/roxel.jpg&quot; alt=&quot;Roxel&quot; loading=&quot;lazy&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;Rust is fast, and you can build good-looking native apps with it for Mac and Windows (&lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt; is a great example). The stack ended up being Rust + &lt;a href=&quot;https://bevy.org/&quot;&gt;Bevy&lt;/a&gt; + &lt;a href=&quot;https://www.egui.rs/&quot;&gt;egui&lt;/a&gt; — or so Claude tells me.&lt;/p&gt;
+&lt;h2&gt;On vibe coding something you can’t write&lt;/h2&gt;
+&lt;p&gt;Here’s the honest part: I can’t write Rust. But I can &lt;em&gt;review&lt;/em&gt; Rust — and it turns out that’s enough.&lt;/p&gt;
+&lt;p&gt;I’ve got Claude Code running in a terminal in the background most of the day. I’ve been in the game long enough to know what quality software looks and feels like. I know what makes a good codebase: lean, simple, tested, CI, the usual. I’ve used enough design software to know what an efficient workflow feels like — the tools, the layout, the UI, the UX.&lt;/p&gt;
+&lt;p&gt;That taste is the thing I’m actually bringing to the project. The Rust is just the medium.&lt;/p&gt;
+&lt;h2&gt;Where it’s headed&lt;/h2&gt;
+&lt;p&gt;It’s been a few days of vibing, but I’m impressed enough with how it’s coming along that I really feel like this app has wheels. Claude and I worked on building out a logo, identity, and branding together. I think it could be a solid contender for the indie or hobby designer.&lt;/p&gt;
+&lt;p&gt;But I’m not putting pressure on myself. I’m building it for me, so I can make a single game. Maybe it’ll turn into a viable app. Maybe I’ll find a niche. Maybe I’ll find the one or two things other voxel editors don’t have.&lt;/p&gt;
+&lt;p&gt;Either way — I’ve got a working voxel editor on my Mac that I didn’t have a week ago. That’s already a win.&lt;/p&gt;
+</content>
+    </entry>
     <entry>
       <title>Letting Claude Teach Me</title>
       <link href="https://iamdanielmarino.com/posts/letting-claude-teach-me/"/>
