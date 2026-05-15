@@ -4,8 +4,6 @@ date: 2026-05-14
 tags: post
 ---
 
-## How I got here
-
 I’ve been working on a new CSS-only game idea, and finally settled on voxel-like artwork. But building voxels in HTML/CSS isn’t that fun. I was vibe coding a web-based editor to go along with it, but it started getting sluggish and complicated to use. I more or less abandoned it in favor of using a real voxel editor to create the artwork — I figured I’d export the work and use AI to convert it to HTML/CSS.
 
 ## The voxel editor landscape is rough
