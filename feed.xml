@@ -4,7 +4,7 @@
   <subtitle>Product designer living in New Hampshire</subtitle>
   <link href="https://iamdanielmarino.com/feed.xml" rel="self"/>
   <link href="https://iamdanielmarino.com/"/>
-  <updated>2026-05-14T18:21:56Z</updated>
+  <updated>2026-05-15T23:04:33Z</updated>
   <id>https://iamdanielmarino.com/</id>
   <author>
     <name>Daniel Marino</name>
@@ -15,8 +15,7 @@
       <link href="https://iamdanielmarino.com/posts/voxel-editors-kind-of%E2%80%93suck-so-im-vibe%E2%80%93coding%E2%80%93one/"/>
       <updated>2026-05-14T00:00:00Z</updated>
       <id>https://iamdanielmarino.com/posts/voxel-editors-kind-of%E2%80%93suck-so-im-vibe%E2%80%93coding%E2%80%93one/</id>
-      <content xml:lang="en" type="html">&lt;h2&gt;How I got here&lt;/h2&gt;
-&lt;p&gt;I’ve been working on a new CSS-only game idea, and finally settled on voxel-like artwork. But building voxels in HTML/CSS isn’t that fun. I was vibe coding a web-based editor to go along with it, but it started getting sluggish and complicated to use. I more or less abandoned it in favor of using a real voxel editor to create the artwork — I figured I’d export the work and use AI to convert it to HTML/CSS.&lt;/p&gt;
+      <content xml:lang="en" type="html">&lt;p&gt;I’ve been working on a new CSS-only game idea, and finally settled on voxel-like artwork. But building voxels in HTML/CSS isn’t that fun. I was vibe coding a web-based editor to go along with it, but it started getting sluggish and complicated to use. I more or less abandoned it in favor of using a real voxel editor to create the artwork — I figured I’d export the work and use AI to convert it to HTML/CSS.&lt;/p&gt;
 &lt;h2&gt;The voxel editor landscape is rough&lt;/h2&gt;
 &lt;p&gt;I tried a handful of voxel editors: MagicaVoxel, Goxel, and Voxelator.&lt;/p&gt;
 &lt;p&gt;The first thing I learned is that it’s apparently required for a voxel editor to have “oxel” the name.&lt;/p&gt;
