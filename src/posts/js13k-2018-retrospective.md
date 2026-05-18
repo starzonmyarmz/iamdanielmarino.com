@@ -11,7 +11,7 @@ In one of my weekly developer emails, I saw a link for [JS13KGames](https://2018
 
 A couple of years ago I came up with the basic concept/mechanic of toggling layers on and off to create various platforming challenges. I had even sketched out several level designs, and cobbled together a super basic prototype using [Phaser.io](http://phaser.io/). I was pretty happy with this simple mechanic. On top of that our character movement would consist of basic platforming: moving left/right and jumping.
 
-There are [other ideas](https://github.com/starzonmyarmz/js13k-2018/projects/1) we had early on such as moving platforms/spikes, enemies, variances in gravity, as well as an in-game timer, but we ended up punting on those due to time and size constraints. Aside from adding complexity to our code, I think having the constraints challenged us to explore more with level design - as well as simplifying game play.
+There are [other ideas](https://github.com/starzonmyarmz/js13k-2018) we had early on such as moving platforms/spikes, enemies, variances in gravity, as well as an in-game timer, but we ended up punting on those due to time and size constraints. Aside from adding complexity to our code, I think having the constraints challenged us to explore more with level design - as well as simplifying game play.
 
 ### Art Style, Design, and UX
 

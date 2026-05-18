@@ -10,11 +10,11 @@ Since then I’ve been keeping my personal collection of GIFs in a GitHub repo�
 
 A few weeks ago, I decided to give my GIF workflow an upgrade!
 
-I started by turning my [GIFs repo](https://github.com/starzonmyarmz/gifs) into a static site using [Eleventy](https://www.11ty.dev/). The static site consists of two primary things: a directory with all of my GIFs, and a [generated JSON file](https://github.com/starzonmyarmz/gifs/blob/main/src/gifs.njk) listing all my GIFs (more on this in a bit).
+I started by turning my [GIFs repo](https://github.com/starzonmyarmz/gifs) into a static site using [Eleventy](https://www.11ty.dev/). The static site consists of two primary things: a directory with all of my GIFs, and a [generated JSON file](https://github.com/starzonmyarmz/gifs) listing all my GIFs (more on this in a bit).
 
 I created a new site on Netlify that watches my GIFs repo, and runs a build process anytime I push to `main` branch. This only took a few minutes to set up, and all my GIFs are now easily accessible by URL.
 
-I was still missing a component though—a quick and easy way to search for GIFs and copy their URLs. I built an [Alfred script](https://github.com/starzonmyarmz/gifz-alfred-workflow/blob/main/index.js) using [Alfy](https://github.com/sindresorhus/alfy) to handle this part. Alfy is so cool to work with, allowing you to build Alfred workflows using JavaScript and Node. The Alfred Script takes an input, and searches for it against the [JSON file on the Netlify site](https://gifz.netlify.app/gifs.json). When I find the GIF I want, it copies the URL to the clipboard.
+I was still missing a component though—a quick and easy way to search for GIFs and copy their URLs. I built an [Alfred script](https://github.com/starzonmyarmz/gifz-alfred-workflow) using [Alfy](https://github.com/sindresorhus/alfy) to handle this part. Alfy is so cool to work with, allowing you to build Alfred workflows using JavaScript and Node. The Alfred Script takes an input, and searches for it against the [JSON file on the Netlify site](https://gifz.netlify.app/gifs.json). When I find the GIF I want, it copies the URL to the clipboard.
 
 ![My gif flow using Alfred App](/images/posts/gif_workflow.gif)
 

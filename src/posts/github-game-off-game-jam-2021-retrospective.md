@@ -82,6 +82,6 @@ I mentioned at the beginning of this post that I had some lofty goals. They were
 
 While I didn’t meet all my goals, I came pretty darn close. More importantly, I had a lot of fun with this game jam. I learned a lot and expanded my knowledge on using P5 as well as other various coding techniques.
 
-Besides [Brad](https://github.com/braddunbar), I had help from other folks, and I’d be remiss if I didn’t thank them: [Matthew](https://matthewlettini.me/) and [Danny](https://twitter.com/dannywen) for play testing, as well as my kids for play testing and suggesting good ideas when I was feeling stuck. Lastly, my wife: not only does she play my games, but is very supportive, lets me vent about crappy API support, and inspires me to put everything I got into my work.
+Besides [Brad](https://github.com/braddunbar), I had help from other folks, and I’d be remiss if I didn’t thank them: [Matthew](https://matthewlettini.com) and [Danny](https://twitter.com/dannywen) for play testing, as well as my kids for play testing and suggesting good ideas when I was feeling stuck. Lastly, my wife: not only does she play my games, but is very supportive, lets me vent about crappy API support, and inspires me to put everything I got into my work.
 
 Be sure to give [trapped](https://trapped.iamdanielmarino.com) a play or check out the [source code](https://github.com/starzonmyarmz/trapped)!

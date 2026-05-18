@@ -22,6 +22,6 @@ I was messing around with [p5play](https://p5play.org/) last week to experiment 
 ### What I Dislike
 
 - Not everything is documented, and that's not necessarily a bad thing. However, there are some really handy properties and even methods available that I happened to come across by accident just from purusing the source code and outputting various p5play global methods to `console.log()`.
-- The licensing is a [little weird](https://github.com/quinton-ashley/p5play-web/blob/main/LICENSING.md). In short: its free to use for open source projects, but for professional use you need to pay for a license. I'm not going to argue whether you should have to pay for a license or not, but its definately something to be aware of.
+- The licensing is a [little weird](https://github.com/quinton-ashley/p5play/blob/main/LICENSE.md). In short: its free to use for open source projects, but for professional use you need to pay for a license. I'm not going to argue whether you should have to pay for a license or not, but its definately something to be aware of.
 
 I'll definitely be keeping [p5play](https://p5play.org/) in my toolkit the next time I want to prototype some game mechanics or participate in a game jam!
