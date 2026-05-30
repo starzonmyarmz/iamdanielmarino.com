@@ -1,5 +1,5 @@
 ---
-title: Voxel editors kind of suck, so I’m vibe coding one
+title: Voxel Editors Kind of Suck, so I’m Vibe Coding One
 date: 2026-05-14
 tags: post
 ---
