@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content"
+import Base from "../../layouts/Base.astro"
+
+const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order)
+---
+
+<Base title="Work">
+  <header>
+    <h1>Work</h1>
+  </header>
+
+  <p>
+    Selected case studies from my 12 years of experience at <a href="https://getharvest.com"
+      >Harvest</a
+    >, showcasing notable projects I’ve been actively engaged in:
+  </p>
+
+  <ul class="posts">
+    {
+      work.map((item) => (
+        <li>
+          <h3>
+            <a href={`/work/${item.data.slug}/`}>{item.data.title}</a>
+          </h3>
+          <small>{item.data.blurb}</small>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p>
+    Check out <a href="https://dribbble.com/starzonmyarmz" target="_blank" rel="noopener"
+      >Dribbble</a
+    > and <a href="https://github.com/starzonmyarmz">GitHub</a> for more examples of my work.
+  </p>
+</Base>

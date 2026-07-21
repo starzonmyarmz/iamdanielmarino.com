@@ -1,10 +1,14 @@
 {
   "name": "iamdanielmarino.com",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "My personal site",
+  "type": "module",
   "scripts": {
-    "build": "eleventy && node scripts/compress-images.js",
-    "serve": "ELEVENTY_ENV=localhost eleventy --serve"
+    "dev": "astro dev",
+    "build": "astro build && node scripts/compress-images.cjs",
+    "preview": "astro preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -15,11 +19,17 @@
     "url": "https://iamdanielmarino.com"
   },
   "license": "ISC",
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.2.1",
+    "@astrojs/preact": "^6.0.1",
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^7.0.6",
+    "preact": "^10.29.5",
+    "unified": "^11.0.5"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "markdown-it-image-figures": "^2.1.1",
+    "prettier": "^4.0.0-alpha.13",
+    "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.5"
   }
 }

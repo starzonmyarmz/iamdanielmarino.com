@@ -1,0 +1,6 @@
+dist/
+node_modules/
+public/
+src/content/
+package-lock.json
+.claude/
