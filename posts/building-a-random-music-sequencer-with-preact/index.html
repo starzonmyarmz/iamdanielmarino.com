@@ -1,62 +1,14 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Building a Random Music Sequencer with Preact &mdash; Daniel Marino</title>
-    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-
-    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"/>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="mask-icon" href="/favicon.svg" color="black">
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="/prism-okaidia.css">
-  </head>
-
-  <body>
-    <nav>
-      <ul>
-        <li>
-          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
-        </li>
-        <li>
-          <a href="/work">Work</a>
-        </li>
-        <li>
-          <a href="/posts">Posts</a>
-        </li>
-        <li>
-          <a href="/feed.xml">Feed</a>
-        </li>
-        <li>
-          <a href="https://letterbird.co/iamdanielmarino">Contact</a>
-        </li>
-      </ul>
-    </nav>
-
-    <main>
-      
-      
-<article>
-  <header>
-    <h1>Building a Random Music Sequencer with Preact</h1>
-      <small>May 5, 2022</small>
-  </header>
-
-  <section class="post-content">
-    <p>As I've composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the <a href="https://rmg.iamdanielmarino.com/">RMG-2021</a>.</p>
-<h2>Design</h2>
-<p>I love how sequencers look and feel—and there is so much variety as to how they're designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Building a Random Music Sequencer with Preact &mdash; Daniel Marino</title><meta description="Daniel Marino is passionate about crafting simple, high-quality experiences."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="mask-icon" href="/favicon.svg" color="black"><link rel="stylesheet" href="/main.css"></head><body><nav><ul><li><a href="/" id="logo" aria-label="Daniel Marino">DM</a></li><li><a href="/work">Work</a></li><li><a href="/posts">Posts</a></li><li><a href="/feed.xml">Feed</a></li><li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li></ul></nav><main><article><header><h1>Building a Random Music Sequencer with Preact</h1><small>May 5, 2022</small></header><section class="post-content"><p>As I’ve composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the <a href="https://rmg.iamdanielmarino.com/">RMG-2021</a>.</p>
+<h2 id="design">Design</h2>
+<p>I love how sequencers look and feel—and there is so much variety as to how they’re designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
 It was a bit of a balancing act to capture the essence of a physical sequencer while adapting it to a screen.</p>
-<figure><img src="/images/posts/rmg2021.png" alt="RMG-2021 Tiny Music Sequencer" loading="lazy"></figure>
-<h2>Preact</h2>
-<p>One of my goals was to get better at understanding and using React. I really just wanted to get more familiar with the basics, so I went with <a href="https://preactjs.com/">Preact</a> which more or less offers the same API and low-level functionality. I'm also using <a href="https://github.com/developit/htm">HTM</a> which provides JSX-like syntax in vanilla JavaScript.</p>
-<p>At first, I found it really difficult to buy in to the React/JSX ecosystem, but the more I work with it, the more I appreciate it. I'm still not super fond of writing HTML in JavaScript, but I'm getting over it.</p>
-<h2>Sound</h2>
-<p>When working with audio for <a href="https://js13kgames.com/entries/onoff">ONOFF</a>, I used <a href="https://github.com/kevincennis/TinyMusic">TinyMusic</a>, and I'm using it here too. Is it necessarily? No, but true to it's name—it's tiny, and offers a nice API. It simplifies authoring audio sequences in JavaScript. I'm even outputting the TinyMusic sequence syntax so it can be easily reference it.</p>
-<h2>Features</h2>
+<figure><img src="/images/posts/rmg2021.png" alt="RMG-2021 Tiny Music Sequencer" loading="lazy"><figcaption>RMG-2021 Tiny Music Sequencer</figcaption></figure>
+<h2 id="preact">Preact</h2>
+<p>One of my goals was to get better at understanding and using React. I really just wanted to get more familiar with the basics, so I went with <a href="https://preactjs.com/">Preact</a> which more or less offers the same API and low-level functionality. I’m also using <a href="https://github.com/developit/htm">HTM</a> which provides JSX-like syntax in vanilla JavaScript.</p>
+<p>At first, I found it really difficult to buy in to the React/JSX ecosystem, but the more I work with it, the more I appreciate it. I’m still not super fond of writing HTML in JavaScript, but I’m getting over it.</p>
+<h2 id="sound">Sound</h2>
+<p>When working with audio for <a href="https://js13kgames.com/entries/onoff">ONOFF</a>, I used <a href="https://github.com/kevincennis/TinyMusic">TinyMusic</a>, and I’m using it here too. Is it necessarily? No, but true to it’s name—it’s tiny, and offers a nice API. It simplifies authoring audio sequences in JavaScript. I’m even outputting the TinyMusic sequence syntax so it can be easily reference it.</p>
+<h2 id="features">Features</h2>
 <p>This is one of those projects that I could have easily kept adding features. At some point I had to call it <em>done</em> and ship it. Every feature I added ended up adding more complexity to using the sequencer. The RMG allows you to specify:</p>
 <ul>
 <li>The number of notes to use in the sequence</li>
@@ -69,14 +21,5 @@ It was a bit of a balancing act to capture the essence of a physical sequencer w
 <li>Adding a <em>pulse</em> effect to a sequence</li>
 </ul>
 <p>On top of these features you can also easily randomize all the settings, and share a sequence via URL.</p>
-<h2>Random Sequences are Fun</h2>
-<p>I've used <a href="https://rmg.iamdanielmarino.com/?notes=16&amp;key=E&amp;rangemin=2&amp;rangemax=8&amp;arrangement=B6+0.25%2CE2+2%2CF%234+0.75%2CD%238+1%2CC%234+4%2CF%237+4%2CD%236+0.75%2CD%238+2%2CG%235+0.75%2CC%238+1%2CC%236+0.25%2CD%233+0.25%2CC%233+1%2CF%238+2%2CD%238+0.5%2CD%233+0.5&amp;tempo=314&amp;wave=square&amp;smoothing=0.38&amp;staccato=0.34&amp;bass=-9&amp;mid=-1&amp;treble=-1&amp;loop=true">random sequences</a> generated by the RMG for various things: drumming along with sequences, challenging myself to compose music around a random sequence, or even sending goofy sounds to my friends. It was a fun project, and I learned a lot.</p>
-
-  </section>
-</article>
-
-    </main>
-
-    <script data-goatcounter="https://starzonmyarmz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  </body>
-</html>
+<h2 id="random-sequences-are-fun">Random Sequences are Fun</h2>
+<p>I’ve used <a href="https://rmg.iamdanielmarino.com/?notes=16&#x26;key=E&#x26;rangemin=2&#x26;rangemax=8&#x26;arrangement=B6+0.25%2CE2+2%2CF%234+0.75%2CD%238+1%2CC%234+4%2CF%237+4%2CD%236+0.75%2CD%238+2%2CG%235+0.75%2CC%238+1%2CC%236+0.25%2CD%233+0.25%2CC%233+1%2CF%238+2%2CD%238+0.5%2CD%233+0.5&#x26;tempo=314&#x26;wave=square&#x26;smoothing=0.38&#x26;staccato=0.34&#x26;bass=-9&#x26;mid=-1&#x26;treble=-1&#x26;loop=true">random sequences</a> generated by the RMG for various things: drumming along with sequences, challenging myself to compose music around a random sequence, or even sending goofy sounds to my friends. It was a fun project, and I learned a lot.</p></section></article></main><script data-goatcounter="https://starzonmyarmz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>

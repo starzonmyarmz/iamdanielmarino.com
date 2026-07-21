@@ -1,74 +1,24 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Saving and Sharing Harvest Reports &mdash; Daniel Marino</title>
-    <meta description="Daniel Marino is passionate about crafting simple, high-quality experiences.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-      <meta name="robots" content="noindex">
-    
-
-    <link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"/>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="mask-icon" href="/favicon.svg" color="black">
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="/prism-okaidia.css">
-  </head>
-
-  <body>
-    <nav>
-      <ul>
-        <li>
-          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
-        </li>
-        <li>
-          <a href="/work">Work</a>
-        </li>
-        <li>
-          <a href="/posts">Posts</a>
-        </li>
-        <li>
-          <a href="/feed.xml">Feed</a>
-        </li>
-        <li>
-          <a href="https://letterbird.co/iamdanielmarino">Contact</a>
-        </li>
-      </ul>
-    </nav>
-
-    <main>
-      
-      
-<article>
-  <header>
-    <h1>Saving and Sharing Harvest Reports</h1>
-      <small>Elevating productivity through improved reporting capabilities.</small>
-  </header>
-
-  <section class="post-content">
-    <p><a href="https://getharvest.com">Harvest</a> identified a crucial need to improve its reporting module based on customer churn feedback. Customers expressed challenges in efficiently accessing and sharing personalized reports, leading to reduced meaningful interaction with the platform and an increased risk of churn.</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Saving and Sharing Harvest Reports &mdash; Daniel Marino</title><meta description="Daniel Marino is passionate about crafting simple, high-quality experiences."><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="mask-icon" href="/favicon.svg" color="black"><link rel="stylesheet" href="/main.css"></head><body><nav><ul><li><a href="/" id="logo" aria-label="Daniel Marino">DM</a></li><li><a href="/work">Work</a></li><li><a href="/posts">Posts</a></li><li><a href="/feed.xml">Feed</a></li><li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li></ul></nav><main><article><header><h1>Saving and Sharing Harvest Reports</h1><small>Elevating productivity through improved reporting capabilities.</small></header><section class="post-content"><p><a href="https://getharvest.com">Harvest</a> identified a crucial need to improve its reporting module based on customer churn feedback. Customers expressed challenges in efficiently accessing and sharing personalized reports, leading to reduced meaningful interaction with the platform and an increased risk of churn.</p>
 <p>Over a four-month period in 2023, a dedicated team of customer experience professionals and engineers worked together on solving customer churn by introducing report-saving and sharing features, enhancing user productivity and collaboration. The process involved customer research, iterative design, and close collaboration with select customers to ensure their needs were met.</p>
 <p>My role encompassed active participation in customer research, the design and prototyping of interactive user flows, and collaboration with engineers during the implementation phase.</p>
-<h2>Problem</h2>
+<h2 id="problem">Problem</h2>
 <p>The primary challenge identified was the repetitive nature of generating custom reports, creating unnecessary barriers to meaningful utilization of the reporting section. This issue particularly impacted project managers and administrators continually seeking insights from Harvest reports. Two core objectives were identified:</p>
-<h3>Time-Consuming Repetition</h3>
+<h3 id="time-consuming-repetition">Time-Consuming Repetition</h3>
 <ul>
 <li><strong>Objective</strong>: Facilitate easy access to the same instance of a report multiple times with minimal friction.</li>
 <li><strong>Solution</strong>: Introduce a mechanism for people to save and access personalized reports effortlessly.</li>
 </ul>
-<h3>Streamline Sharing Reports with Teammates</h3>
+<h3 id="streamline-sharing-reports-with-teammates">Streamline Sharing Reports with Teammates</h3>
 <ul>
 <li><strong>Objective</strong>: Reduce overhead for multiple people accessing personalized data.</li>
 <li><strong>Solution</strong>: Introduce a mechanism to easily share reports with other team members.</li>
 </ul>
-<h2>Challenges</h2>
+<h2 id="challenges">Challenges</h2>
 <ul>
 <li><strong>User Permissions Complexity:</strong> Addressing the intricacies of sharing reports with team members who may not have regular access to certain data.</li>
 <li><strong>Minimized Disruption:</strong> Concerns about potential disruption for users who might not require or appreciate the new features.</li>
 </ul>
-<h2>Solutions and Approach</h2>
+<h2 id="solutions-and-approach">Solutions and Approach</h2>
 <p>While we knew customer churn was linked to the absence of report-saving capabilities, we needed to understand the true impact. Our commitment to enhancing the product’s value led us to reach out to customers who had churned, specifically those who had expressed interest in a report-saving feature. Incentivizing 30-minute conversations, we aimed to gain deeper insights.</p>
 <p>Customers highlighted that the complexity of applying filters frequently reduced their willingness to engage with the platform, which directly led to the decision to enable saved reports. Recognizing the inefficiency of regenerating reports, we envisioned empowering users to save these reports onto a personal dashboard for convenient access and modification.</p>
 <figure>
@@ -91,7 +41,7 @@
   <figcaption>Steps of progression through the Save Report dialog.</figcaption>
 </figure>
 <p>To ensure the feature was implemented smoothly and aligned with design intentions, I worked closely with the engineering team throughout the development phase. Beyond my role in designing and prototyping, I assisted engineers by writing the necessary HTML and CSS for the new user interface components. This hands-on approach not only ensured the fidelity of the design but also streamlined communication between design and engineering, allowing for a more efficient build process.</p>
-<h3>Permissions Handling</h3>
+<h3 id="permissions-handling">Permissions Handling</h3>
 <p>As we delved into implementing new features, we encountered complexities related to user permissions. We are dedicated to safeguarding sensitive data, ensuring that teammates only access information pertinent to their roles. Initially, our strategy involved excluding teammates from the share list if they lacked access to any projects within the report. However, testing revealed confusion among users, as some individuals were included while others were not.</p>
 <p>Subsequently, we explored an alternative approach. When sharing a report with someone lacking access to specific data, they would only view information accessible to them if they had run the report independently. A notification at the top of the page alerted users without complete access, effectively communicating the restricted information.</p>
 <figure>
@@ -101,7 +51,7 @@
 <figure>
   <img src="/images/work/sr-help.png" alt="Guiding users to the Harvest Help Center" loading="lazy">
 </figure>
-<h2>Impact and Outcomes</h2>
+<h2 id="impact-and-outcomes">Impact and Outcomes</h2>
 <p>The immediate key performance indicator for success was adoption of the new features:</p>
 <ul>
 <li><strong>Increased Productivity:</strong> Users reported a <strong>50% reduction in time spent</strong> regenerating reports, improving overall efficiency.</li>
@@ -113,13 +63,4 @@
 <blockquote>
 <p>“The ability to save and share reports has been a game-changer for our team. We’re able to stay up to date without having to recreate the same reports over and over. It’s made our workflow so much smoother!”</p>
 </blockquote>
-<p>These results strongly suggest that the ability to save and share reports is positively impacting user retention, productivity, and collaboration.</p>
-
-  </section>
-</article>
-
-    </main>
-
-    <script data-goatcounter="https://starzonmyarmz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  </body>
-</html>
+<p>These results strongly suggest that the ability to save and share reports is positively impacting user retention, productivity, and collaboration.</p></section></article></main><script data-goatcounter="https://starzonmyarmz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
