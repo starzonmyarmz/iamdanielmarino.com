@@ -26,7 +26,7 @@ While Brad was developing the mechanics, I solicited the help of my son to help 
 
 I liked the idea of the _toggle_ concept being carried through all the various screens, and not just the levels. So I designed the title, end, and controller screens with this in mind.
 
-![typeface](/images/posts/js13k2018-font.png "[Custom typeface](https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/refs/onoff.otf) designed for ONOFF")
+![typeface](/images/posts/js13k2018-font.png "Custom typeface designed for ONOFF")
 
 ### Music and Sound Effects
 

@@ -1,7 +1,5 @@
 import { defineConfig } from "astro/config"
 import preact from "@astrojs/preact"
-import { unified } from "@astrojs/markdown-remark"
-import rehypeFigure from "./src/plugins/rehype-figure.js"
 
 export default defineConfig({
   site: "https://iamdanielmarino.com",
@@ -11,8 +9,5 @@ export default defineConfig({
     shikiConfig: {
       theme: "monokai",
     },
-    processor: unified({
-      rehypePlugins: [rehypeFigure],
-    }),
   },
 })
