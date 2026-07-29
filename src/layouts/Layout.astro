@@ -1,12 +1,11 @@
 ---
+import "../styles/style.css"
+
 interface Props {
   title: string
 }
 
 const { title } = Astro.props
-const { pathname } = Astro.url
-const noindex = pathname.startsWith("/resume") || pathname.startsWith("/work")
-const showHeadshot = pathname === "/"
 ---
 
 <!doctype html>
@@ -20,8 +19,6 @@ const showHeadshot = pathname === "/"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {noindex && <meta name="robots" content="noindex" />}
-
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -33,6 +30,8 @@ const showHeadshot = pathname === "/"
   </head>
 
   <body>
+    <div id="redesign">👋🏻 Hey! This site is undergoing a live redesign. How fun!</div>
+
     <nav>
       <ul>
         <li>
@@ -54,17 +53,6 @@ const showHeadshot = pathname === "/"
     </nav>
 
     <main>
-      {
-        showHeadshot && (
-          <img
-            src="/images/headshot.webp"
-            alt="Headshot of Daniel Marino"
-            width="128"
-            height="128"
-            id="headshot"
-          />
-        )
-      }
       <slot />
     </main>
 

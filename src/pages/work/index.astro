@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content"
-import Base from "../../layouts/Base.astro"
+import Layout from "../../layouts/Layout.astro"
 
 const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order)
 ---
 
-<Base title="Work">
+<Layout title="Work">
   <header>
     <h1>Work</h1>
   </header>
@@ -34,4 +34,4 @@ const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.
       >Dribbble</a
     > and <a href="https://github.com/starzonmyarmz">GitHub</a> for more examples of my work.
   </p>
-</Base>
+</Layout>
