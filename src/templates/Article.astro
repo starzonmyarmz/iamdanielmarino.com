@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { render } from "astro:content"
+import { formatDate } from "../utils/date"
+
+interface Props {
+  entry: any
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+---
+
+<Layout title={entry.data.title}>
+  <article>
+    <header>
+      <h1>{entry.data.title}</h1>
+      <small>{formatDate(entry.data.date)}</small>
+    </header>
+
+    <section class="post-content">
+      <Content />
+    </section>
+  </article>
+</Layout>
