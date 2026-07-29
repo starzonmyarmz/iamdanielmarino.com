@@ -1,1 +1,1126 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Home &mdash; Daniel Marino</title><meta name="description" content="Daniel Marino is passionate about crafting simple, high-quality experiences."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="mask-icon" href="/favicon.svg" color="black"></head><body><nav><ul><li><a href="/" id="logo" aria-label="Daniel Marino">DM</a></li><li><a href="/work">Work</a></li><li><a href="/posts">Posts</a></li><li><a href="/feed.xml">Feed</a></li><li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li></ul></nav><main><img src="/images/headshot.webp" alt="Headshot of Daniel Marino" width="128" height="128" id="headshot"><div id="hero"><div><h1>Daniel Marino is dedicated to creating simple, high-quality experiences.</h1><p>He currently works as a UX Engineer at <a href="https://planningcenter.com" target="_blank">Planning Center</a>. Outside of work, he enjoys spending time with family, woodworking, making <a href="https://brandunino.com" target="_blank">video games</a>, hand-lettering <a href="https://states.iamdanielmarino.com" target="_blank">US state mottos</a>, <a href="https://soundcloud.com/starzonmyarmz" target="_blank">composing music</a>, and experimenting with <a href="https://codepen.io/collection/PoJoxa" target="_blank">generative art</a>.</p></div></div></main><script data-goatcounter="https://starzonmyarmz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Home &mdash; Daniel Marino</title><meta name="description" content="Daniel Marino is passionate about crafting simple, high-quality experiences."><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternate" type="application/rss+xml" title="Daniel Marino" href="https://iamdanielmarino.com/feed.xml"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="mask-icon" href="/favicon.svg" color="black"><style>@view-transition{navigation:auto}*,:before,:after{box-sizing:border-box;margin:0;padding:0}html{font-size:18px}body{background-color:#add8e6;font-size:1rem}main{display:grid;display:grid-lanes;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-inline:10vw}h1,h2,h3,h4,h5,h6{text-wrap:balance}p,ul{text-wrap:pretty}a{text-underline-offset:2px;touch-action:manipulation;text-decoration-thickness:1px}.box{corner-shape:squircle;background-color:#fff;border-radius:2rem;padding:1rem;box-shadow:0 3px 6px -3px #0000004d;& p{margin-top:.5rem}&:first-child{grid-area:span 2/span 2}&:not(:first-child) p{-webkit-line-clamp:3;text-overflow:ellipsis;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}}#redesign{color:#fff;text-align:center;background:#222;padding:1rem}
+</style></head><body><div id="redesign">👋🏻 Hey! This site is undergoing a live redesign. How fun!</div><nav><ul><li><a href="/" id="logo" aria-label="Daniel Marino">DM</a></li><li><a href="/work">Work</a></li><li><a href="/posts">Posts</a></li><li><a href="/feed.xml">Feed</a></li><li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li></ul></nav><main><div id="callout" class="box"><h1>Daniel Marino is dedicated to creating simple, high-quality experiences.</h1><p>He currently works as a UX Engineer at <a href="https://planningcenter.com" target="_blank">Planning Center</a>. Outside of work, he enjoys spending time with family, woodworking, making <a href="https://brandunino.com" target="_blank">video games</a>, hand-lettering <a href="https://states.iamdanielmarino.com" target="_blank">US state mottos</a>, <a href="https://soundcloud.com/starzonmyarmz" target="_blank">composing music</a>, and experimenting with <a href="https://codepen.io/collection/PoJoxa" target="_blank">generative art</a>.</p></div><div class="box"><h3><a href="/posts/redesign-and-astro/">Moving from Eleventy to Astro</a></h3><time datetime="Tue Jul 28 2026 00:00:00 GMT+0000 (Coordinated Universal Time)">2026-07-28</time><p>I&#39;d been running on Eleventy for a while now, but I&#39;ve decided to move on. After weighing the pros and cons with Claude, I&#39;ve landed on [Astro](https://astro.build/).
+
+## Why I&#39;m leaving Eleventy
+
+Eleventy is a great tool, and I still highly recommend it. But for better or worse, I&#39;ve been bitten by the [React](https://react.dev/) bug, and I want to start writing more React and incorporating it into my personal site. It can be done with Eleventy, but it requires jumping through some hoops—and even then, it&#39;s not really what Eleventy is built for. Finding a tool where React (or another framework) is part of the ecosystem makes more sense to me.
+
+The other thing that leaves a bit of a sour taste in my mouth is that Eleventy has been acquired by Font Awesome. I don&#39;t have anything against the company, or against [Zach](https://www.zachleat.com/) for selling it. Eleventy (now renamed [Build Awesome](https://build.awesome.me/)) looks like it&#39;s still open source, but they&#39;ve introduced a paid version too. It scares me that at any moment the tool my website is built on could stop being free.
+
+## Why Astro
+
+As I mentioned, Astro is designed to work with React and other frameworks out of the box, and I like the idea of sprinkling React components throughout my site. The switch from Eleventy to Astro was mostly a one-to-one conversion, so the learning curve was fairly small.
+
+Astro also seems pretty popular, and I like staying aware of the more widely used tools to keep current with emerging tech—though admittedly that&#39;s becoming less of a concern now that I&#39;m folding AI into my workflow. Fittingly, I had Claude handle the conversion from Eleventy to Astro.
+
+## Where&#39;s the Design?
+
+I&#39;m jumping on a bandwagon here too. I hadn&#39;t redesigned in a while and was getting the itch, so this felt like an opportune time. But rather than unveiling a new design in one big push, I&#39;ve decided to do a live redesign. That means things will look ugly for a bit, and I&#39;m okay with that. I&#39;m not sure anyone reads this blog anyway 🤣! A live redesign will be less stressful and let me poke at things slowly.</p></div><div class="box"><h3><a href="/posts/i-still-havent-made-the-game/">I Still Haven’t Made the Game</a></h3><time datetime="Sat May 30 2026 00:00:00 GMT+0000 (Coordinated Universal Time)">2026-05-30</time><p>Two weeks ago I wrote about [vibe coding a voxel editor](/posts/voxel-editors-kind-of-suck-so-im-vibe-coding-one/) because the existing ones kind of sucked. Roxel is now at v0.6.3.
+
+## What’s in it now
+
+The core editing experience is solid. Full color palette system, command palette, view-angle presets, a custom color picker with color-space support, flyby camera mode. The UI went through a canvas-first redesign with floating chrome, and a first-launch tour. It even auto-checks for updates.
+
+It’s starting to feel like something I’d actually pay for.
+
+## What’s ahead
+
+The one thing blocking me from actively sharing it is macOS code signing. I’m waiting on an Apple Developer account to get that sorted.
+
+Longer term, I want to build a plugin architecture. One of the primary goals for Roxel is to keep it simple — and a plugin system would let people bring their own features without bloating the core app for everyone who doesn’t need them. That’s probably not a 1.0 feature, but it’s where I want to take it.
+
+## The detour became the thing
+
+I started Roxel so I could make a CSS game. I still want to make that game. But somewhere along the way Roxel stopped being the detour.
+
+That’s fine. Maybe it turns into something. Maybe it stays a hobby app I use myself. Either way — it’s [open source on GitHub](https://github.com/starzonmyarmz/roxel) and free on [itch.io](https://starzonmyarmz.itch.io/roxel) for Mac and Windows, and I’ve shipped more working software in the last two weeks than I expected — in a language I can’t write. Still a win.</p></div><div class="box"><h3><a href="/posts/voxel-editors-kind-of-suck-so-im-vibe-coding-one/">Voxel Editors Kind of Suck, so I’m Vibe Coding One</a></h3><time datetime="Thu May 14 2026 00:00:00 GMT+0000 (Coordinated Universal Time)">2026-05-14</time><p>I’ve been working on a new CSS-only game idea, and finally settled on voxel-like artwork. But building voxels in HTML/CSS isn’t that fun. I was vibe coding a web-based editor to go along with it, but it started getting sluggish and complicated to use. I more or less abandoned it in favor of using a real voxel editor to create the artwork — I figured I’d export the work and use AI to convert it to HTML/CSS.
+
+## The voxel editor landscape is rough
+
+I tried a handful of voxel editors: MagicaVoxel, Goxel, and Voxelator.
+
+The first thing I learned is that it’s apparently required for a voxel editor to have “oxel” the name.
+
+The second thing I learned is that voxel editors kind of suck. The UI is either too complex or too unintuitive to learn. [Goxel](https://goxel.xyz/) was the closest to _easy-to-use_, but it died while exporting my file. Not great.
+
+Also, I’m on a Mac. None of those titles feel native — they all feel like Windows apps in a wrapper. That’s a deal-breaker for me. I’m used to polished software like [Figma](https://figma.com), [Affinity](https://www.affinity.studio/), [Sketch](https://www.sketch.com/), [Zed](https://zed.dev/), and [Retcon](https://retcon.app/). I want software that feels native, looks good, and is smooth. I really struggle to use anything that’s less.
+
+## Enter Roxel
+
+So I’m taking a detour from the game. I’m now vibe coding a voxel editor called **Roxel**, and [I’m doing it in the open](https://github.com/starzonmyarmz/roxel).
+
+![Roxel](/images/posts/roxel.jpg)
+
+Rust is fast, and you can build good-looking native apps with it for Mac and Windows ([Zed](https://zed.dev/) is a great example). The stack ended up being Rust + [Bevy](https://bevy.org/) + [egui](https://www.egui.rs/) — or so Claude tells me.
+
+## On vibe coding something you can’t write
+
+Here’s the honest part: I can’t write Rust. But I can _review_ Rust — and it turns out that’s enough.
+
+I’ve got Claude Code running in a terminal in the background most of the day. I’ve been in the game long enough to know what quality software looks and feels like. I know what makes a good codebase: lean, simple, tested, CI, the usual. I’ve used enough design software to know what an efficient workflow feels like — the tools, the layout, the UI, the UX.
+
+That taste is the thing I’m actually bringing to the project. The Rust is just the medium.
+
+## Where it’s headed
+
+It’s been a few days of vibing, but I’m impressed enough with how it’s coming along that I really feel like this app has wheels. Claude and I worked on building out a logo, identity, and branding together. I think it could be a solid contender for the indie or hobby designer.
+
+But I’m not putting pressure on myself. I’m building it for me, so I can make a single game. Maybe it’ll turn into a viable app. Maybe I’ll find a niche. Maybe I’ll find the one or two things other voxel editors don’t have.
+
+Either way — I’ve got a working voxel editor on my Mac that I didn’t have a week ago. That’s already a win.</p></div><div class="box"><h3><a href="/posts/letting-claude-teach-me/">Letting Claude Teach Me</a></h3><time datetime="Mon May 04 2026 00:00:00 GMT+0000 (Coordinated Universal Time)">2026-05-04</time><p>Now that I use AI regularly to help write code and complete tasks, I find myself in a position where I’m not learning as much as I used to. That feels a bit crummy.
+
+Fairly often, Claude writes code I don’t fully understand. For example: I know enough TypeScript to _be dangerous_, but I’m definitely not an expert. Recently I had Claude take some typing I thought was overcomplicated and drastically simplify it. The new version was clearly better — I just couldn’t tell you _why_. So I asked Claude to explain it in simple terms. Sure enough, it did.
+
+I guess that’s a silver lining to using AI: it can at least explain why it did what it did. A coworker mentioned he has Claude write one-off explanations with examples whenever this happens, and I liked that idea. So I built a [skill](https://gist.github.com/starzonmyarmz/32dbc5e468919dc1b1b9e1fd0b6664ad) around it. The skill looks at my uncommitted code, breaks it down, and writes a short blog article for me to read. I’m a fan of [Josh Comeau’s blog](https://www.joshwcomeau.com/) and the way he uses interactive examples to teach a concept, so I made that part of the skill too — Claude generates interactive examples alongside the explanation, then packages everything up in a small Vite environment.
+
+The first iteration was expensive to run. At least 3 minutes, and roughly 10K tokens. I’m fine burning tokens, but I’m also thrifty 😬. The second iteration kept the Vite environment and styles already wired up, so Claude only had to write the article and the examples. That brought it down to about a minute and 7K tokens. Better — though I’d still like to get the token usage lower.
+
+The blog format is great, but it’s a lot of work (for Claude) to generate all of this just to delete it when I’m done reading. It’d be nice to have these articles persist somewhere I could revisit later, or share with other people. That brought me to my current iteration.
+
+It’s an [Astro project](https://github.com/starzonmyarmz/til) that lives on GitHub. The skill works roughly the same way — review uncommitted code, generate a post complete with interactive examples — but now it publishes to a [TIL subdomain](https://til.iamdanielmarino.com/) where I can read the articles at my leisure or pass them along.
+
+It’s all vibe coded, and that feels appropriate. I’m up front about it on the site itself: _Things Claude changed that I didn’t understand — explained… by Claude._ I’ll probably keep tinkering to bring the token usage down further, but it was a fun project to put together, and I’m happy to let Claude teach me what it’s doing.</p></div><div class="box"><h3><a href="/posts/what-im-using-2026/">What I’m Using in 2026</a></h3><time datetime="Sun Jan 04 2026 00:00:00 GMT+0000 (Coordinated Universal Time)">2026-01-04</time><p>This is an updated list of what I’m using in 2026. I’m only sharing what’s changed since [last year’s list](/posts/what-im-using-2025).
+
+## Applications
+
+- [Chrome](https://www.google.com/chrome/) — Chrome was on my list last year, but I’m mentioning it again because I actually used Brave for most of 2025. I like Brave, and honestly I can’t even remember why I switched back to Chrome 🤷🏻.
+- [ChatGPT](https://chatgpt.com/) — I hate that I’m listing AI tools, but if I’m going to be transparent, it has to be here. I use it a bit for code, but mostly for rewording messages or rubber-ducking ideas.
+- [Claude Code](https://www.claude.com/product/claude-code) — I [wrote about my thoughts and reluctance to embrace](/posts/vibe-coding-and-the-existential-dread-of-progress/) AI for coding. My company pays for it, so I use it.
+- [Endel](https://endel.io/) — I’m [neurodiverse](https://en.wikipedia.org/wiki/Neurodiversity) and have been trying to be more intentional about using tools that help me stay focused. Endel is super cool and has a lot of genuinely helpful features.
+- [Hyper](https://hyper.is/) — I was previously using [iTerm2](https://iterm2.com/), but switched to Hyper mostly because it feels prettier. That’s probably a dumb reason since I could have customized iTerm2, but I installed Hyper on my new machine and never felt the need to switch back.
+- [Retcon](https://retcon.app/) — My team is pretty opinionated about Git history, and rewriting history via the command line or VS Code started to feel tedious. Several coworkers use [LazyGit](https://github.com/jesseduffield/lazygit), but I didn’t want another terminal-based tool. Retcon does exactly what it promises and lets me handle more advanced Git workflows without having to be a Git super-nerd.
+- [Notion](https://www.notion.com/) — I was using [Bear](https://bear.app/) for notes, but didn’t feel like I was getting enough value out of paying for it. That’s not a knock against Bear—it’s a great product. Notion’s free plan works just fine for me. I also tried [Obsidian](https://obsidian.md/) this year and liked it, but parts of it felt quirky. It also seemed like a bigger time investment to make it feel as polished as Notion or Bear.
+- [VS Code](https://code.visualstudio.com/) — I tried [Zed](https://zed.dev/) for a bit, and there are things I really like about it. That said, I ran into a few weird and buggy behaviors that I just couldn’t get past.
+
+## Equipment
+
+I got a 2025 M4 MacBook Pro when I started my new job this year. It’s more than powerful enough for anything I need to do.</p></div><div class="box"><h3><a href="/posts/the-money-filter/">The Money Filter</a></h3><time datetime="Sun Nov 30 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">2025-11-30</time><p>One of the biggest challenges I’ve faced as a web designer is how often people expect a website for next to nothing. Somewhere along the way, the perception formed that a website is a commodity—quick, cheap, and interchangeable. So when someone asks what I charge (for a very basic marketing site), I usually reply, *“That’ll cost around $5,000.”*
+
+That number isn’t a gimmick—it’s a filter. It immediately reveals who understands the craft behind the screen, who values quality, and who’s serious about investing in their own business. It separates those looking for something fast and inexpensive from those seeking something *purposeful* and *crafted*.
+
+It used to frustrate me when people balked at the cost. Now? I see it as a helpful sorting mechanism. It shows me who I actually want to work with.
+
+## The Cost of “Cheap”
+
+There’s no shortage of DIY website builders promising professional results at a low price. And honestly—sometimes that’s *fine*. If you just need something quick and functional, a template might be all you need.
+
+But a boutique website is something entirely different.
+
+When you hire me, you’re not buying convenience—you’re investing in craft. A boutique site is designed *and* engineered specifically for you. It’s not a template dressed up with new colors. It’s built intentionally, shaped around your goals, your audience, your brand’s personality, and the experience you want people to have.
+
+And cheap solutions often come with hidden costs:
+
+- lost conversions
+- poor usability and performance
+- accessibility issues
+- a generic, forgettable brand presence
+
+The value of a bespoke website isn’t just in what it *does*. It’s in *how* it’s made—and what it communicates about you.
+
+## Why Bespoke Work Matters
+
+When I build a custom website, it’s not just about aesthetics. It’s about alignment—making sure every part of the experience supports your story, your content, and your clients’ needs. Every choice—typography, layout, semantics, performance—is intentional.
+
+Anyone can make a website that *looks* good.
+*I handcraft websites that feel right and function beautifully.*
+
+As a **design engineer**, I don’t hand off a static mockup and hope the final result captures the original intent. I design with the intent to build, carrying the project from concept to code so the final experience is cohesive, thoughtful, and true to the vision. That’s what boutique design is: every pixel and every line of code has purpose.
+
+## The Bottom Line
+
+If you only need a website, you don’t need me.
+
+But if you want a *boutique digital experience*—something that reflects your values, your vision, and your commitment to quality—then I’m the right fit.
+
+You’re not paying for a website. You’re paying for craftsmanship, collaboration, and care. And while not everyone values that, the right clients do. My pricing isn’t just a number—it’s a filter that helps me focus on the people who appreciate the work, the craft, and the impact it can create.</p></div><div class="box"><h3><a href="/posts/how-i-handletter/">How I Handletter</a></h3><time datetime="Fri Sep 19 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">2025-09-19</time><p>When I first got into hand-lettering, I had a hard time finding people who shared their *full* process—especially the digitizing phase. So here’s a look at how I typically work. Everyone’s process is different, and a lot depends on your style and how you plan to present the piece. For me, since I don’t have the steadiest hand, I tend to embrace rough, scrappy, distressed looks. Most of my work ends up digital anyway, so mistakes can be fixed later. Here’s a short process video I made a while back.
+
+&lt;iframe width=&quot;100%&quot; src=&quot;https://www.youtube-nocookie.com/embed/5FnhKEcAM4E?si=65vKvS4Y2KdvPrhf&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+## Thumbnails &amp; Sketching
+
+- Start with quick thumbnail ideas on scrap paper.
+- Refine the chosen direction with a pencil on Bristol Paper.
+- If possible, I use a drawing pencil (softer, lighter lead makes cleanup easier).
+- After inking, I clean up with an art gum eraser.
+
+
+## Inking
+
+- My go-tos are **Microns** in different thicknesses. In the video I sharedI used a `.08` for outlines and `Graphic 1` for filling letters.
+- I used a **Gelly Roll 10** to add *cut-outs*, create depth, and fix small mistakes 😬.
+
+
+## Digitizing
+
+- I scan the inked artwork using [Scanner Pro](https://apps.apple.com/us/app/scanner-pro-scan-documents/id333710667) on iOS.
+- Clean up in [Pixelmator Pro](https://www.pixelmator.com/pro/).
+- Add textures for distress and wear (I’ve collected a bunch of texture packs over the years).
+
+
+## Where I’ve Used This
+
+This is basically the same process I followed for my [State Motto](https://states.iamdanielmarino.com) series, and most of my other lettering projects.
+
+Don’t be afraid to lean into your natural tendencies (like a scrappier style if your hand isn’t steady) and use the digital phase to enhance or correct. Trial and error is a huge part of it.</p></div><div class="box"><h3><a href="/posts/vibe-coding-and-the-existential-dread-of-progress/">Vibe Coding and the Existential Dread of Progress</a></h3><time datetime="Sat Jul 19 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">2025-07-19</time><p>Does anyone else hate the term _vibe coding_?
+
+I’ve been pretty resistant to incorporating AI directly into my development workflow. I use it all the time to clean up emails, Slack messages, and blog posts (including this one). It’s helped me plan vacations, write my cover letter for [Planning Center](https://www.planningcenter.com/), and even gain insights from journaling. But coding? That felt like crossing a line.
+
+At first, I confined AI to repetitive tasks—[formatting long word lists into arrays](https://iamdanielmarino.com/posts/daily-inspirational-word/), deciphering cryptic console errors, or exploring how to integrate Vite into a Rails codebase still using Sprockets. All helpful, but I steered clear of anything that touched “real” engineering.
+
+Still, AI isn’t going anywhere. And as much as I hate admitting how much I rely on it, it genuinely makes my life easier. So I gave _vibe coding_ a shot. Spoiler: I’m sold—with a few caveats.
+
+
+## Vibe Coding an Alfred Workflow
+
+I’d played with basic [Alfred workflows](https://www.alfredapp.com/) before, using the built-in UI or tools like [Alfy](https://www.npmjs.com/package/alfy). But I had an idea for something more complex—and neither the time nor the motivation to learn how to build it from scratch.
+
+
+### The Problem
+
+At Planning Center, our design system has 300+ tokens (and counting). To grab one, I’d open our Storybook instance, scroll to the search bar, type in a few characters, click to copy, then return to my editor to paste it. Repeat that a few dozen times a day, and the friction starts to add up.
+
+
+### The Solution
+
+An [Alfred workflow](https://github.com/starzonmyarmz/pco-tapestry-tokens-alfred) that lets me search tokens via fuzzy matching, press Enter to copy, and paste directly—eliminating multiple steps and speeding up my flow.
+
+
+## Using Claude Code
+
+I’ve tried ChatGPT and GitHub Copilot. They both work well (though I find Copilot’s integration with VS Code a bit invasive). I’m not ready to pay out of pocket, so I started using Claude Code through Planning Center’s access.
+
+Setup took less than 10 minutes. [Anthropic’s documentation](https://docs.anthropic.com/en/docs/claude-code/overview) is clear, and their tips on effective usage are actually helpful.
+
+
+## Building the Workflow with Claude Code
+
+I kicked things off with a prompt:
+
+&gt; I want an Alfred extension where I can enter “tt” followed by characters, and tokens from ~~URL redacted~~ will be shown using fuzzy search.
+
+Claude generated a Python script… that didn’t work. It produced a workflow Alfred couldn’t import. So I responded with:
+
+&gt; The Alfred extension fails to import.
+
+Claude replied something like, _“You’re right, let me fix that,”_ and, impressively, it did.
+
+After about three hours of iterative prompts and debugging, I had a [fully functional Alfred workflow](https://github.com/starzonmyarmz/pco-tapestry-tokens-alfred) that:
+
+- Stores design tokens as a JSON database
+- Caches data locally
+- Refreshes if unused for over an hour
+- Fuzzy-finds tokens on input
+- Displays color swatches for color-based tokens
+
+I also used Claude to:
+
+- Generate 100+ color swatches (since Alfred can’t use data URIs)
+- Write a Bash script that builds the workflow with semantic versioning
+
+I don’t know much Python, but I know enough to skim the output and feel confident in the structure. And because this was a small, siloed project, I wasn’t concerned about maintainability or codebase conventions.
+
+
+## The Cost
+
+Aside from the monthly AI access fee, the entire three-hour build process cost around $10 in usage tokens. That’s ~$3.33/hour—far below the value of my time. And now, every use of the workflow saves me 10+ seconds. That adds up quickly.
+
+If I’d tried to build this from scratch, it easily could’ve taken 10+ hours and been half as effective. That’s not even accounting for generating the color swatch images.
+
+I did spend about an hour trying to get Claude to scrape the tokens directly from the design system site, but that turned out to be unreliable. Still, the final solution works and required zero extra effort from the rest of my team.
+
+
+## The Pros and Cons of AI in the Workflow
+
+### Pros
+
+- **Efficiency Boost**: Great at handling menial but necessary tasks—JSON formatting, token lookups, error decoding, etc.
+- **Rapid Prototyping**: I built a working Alfred workflow in a single evening. Even if it were only a prototype, it would’ve been valuable.
+- **Creative Leverage**: Designers and PMs can use AI to sketch out ideas and flows, helping engineers jump into development faster.
+
+### Cons
+
+- **Skill Stagnation**: Over-reliance on AI could erode problem-solving ability or deeper understanding of frameworks and languages.
+- **Job Displacement**: AI is replacing some roles. At Planning Center, leadership has been clear AI won’t replace people—only support them. But the broader industry picture is less certain.
+- **Environmental Cost**: Running large AI models consumes a lot of energy.
+- **Price Tag**: Even if it saves time, AI access and usage can get expensive—especially if you’re footing the bill.
+
+
+## So Why Do I Still Feel Icky?
+
+It took me a while to name the feeling, but I got there: **I’m grieving the loss of what it means to be an engineer.**
+
+I’ve spent over 20 years solving problems, building UIs, and turning ideas into code. I’ve always taken pride in being able to take a design and bring it to life. But now, what it means to be an engineer is changing—and that’s uncomfortable.
+
+I don’t want to become just a prompt wrangler. But I also don’t want to be the person who gets left behind because they refused to adapt. The logic is clear: why pay one engineer for 10 hours of work when another can produce the same result in two with AI?
+
+
+## Finding the Sweet Spot
+
+I think the answer lies somewhere in the middle.
+
+Engineers should still understand their craft—be able to reason through problems, write maintainable code, and build features from scratch when needed. But AI should be a tool we use intentionally to reduce toil and accelerate progress.
+
+We don’t call it cheating when someone uses code completion. Why should this be any different?</p></div><div class="box"><h3><a href="/posts/making-an-escape-room-with-only-html-and-css/">Making an Escape Room with only HTML and CSS</a></h3><time datetime="Mon Mar 31 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">2025-03-31</time><p>**Beware! This post includes spoilers!**
+
+I recently built an escape room game called [CSScape Room](https://csscape-room.iamdanielmarino.com/). This isn’t my first JavaScript-free web game, but HTML and CSS have evolved significantly since my previous attempts, with newer additions allowing for more complex selectors and native interactions. Rather than saving this idea for a game jam, I built it purely for fun, which freed me from theme constraints and time pressure.
+
+![Screenshot of CSScape Room](/images/posts/escape-room-north.png)
+
+I’ve enjoyed escape room games since childhood, and it was nostalgic to recreate that experience myself. This project pushed my artistic limits while challenging me to design puzzles and translate them into complex HTML and CSS. The learning process was fun, challenging, and sometimes tedious—mostly through trial and error.
+
+## Process
+
+My creative process isn’t linear—it’s a blend of designing, puzzle creation, and coding that constantly influences each other. I frequently had to redesign or recode elements as the project evolved. There was also that time I accidentally deleted half my CSS because I wasn’t backing up to GitHub... lesson learned! 😬
+
+This might sound chaotic, and honestly, it was. If you’re wondering where to start with a project like this, I began by prototyping the room navigation system. I figured that was the minimum viable feature—if I couldn’t make that work, I’d abandon the project. The solution I eventually found seems simple in retrospect, but I went through several iterations to discover it.
+
+This flexible approach makes sense for my creative projects. As I build something, both the in-progress work and my growing skills inevitably influences the entire project. I’m comfortable with this non-linear process—it also suits my ADHD brain, where I tend to lose interest if I work on the same thing for too long.
+
+## Artwork
+
+I’d wanted to design a pixel art-styled game for some time but never felt confident enough to attempt it during a game jam because of the learning curve. I watched tutorials from [Adam Yunis](https://www.youtube.com/adamcyounis) and [Mort](https://www.youtube.com/channel/UCsn9MzwyPKeCE6MEGtMU4gg) to get a crash course in pixel art best practices.
+
+Initially, progress was slow. I had to figure out 2D perspective with vanishing points, determine a color palette, practice shading techniques, and decide how much detail to include. While I tried to adhere to pixel art “rules,” I definitely broke some along the way.
+
+One challenge I set for myself was using only 32 colors to capture the feeling of an older gaming console. Once I got comfortable with shading and dithering, working within this constraint became easier. An added benefit to using 32 colors was it resulted in smaller image sizes—the game’s 79 images account for only about 25% of the total payload.
+
+![Color palette](/images/posts/escape-room-colors.png)
+
+I attempted to design sprites using dimensions in multiples of eight, but I’ll admit I became less strict about this as the project progressed. At a certain point, I was struggling enough with the color and styling limitations that this guideline became more of a starting point than a rule.
+
+I considered creating my own font, but after exhausting myself with all the artwork, I opted for Google’s PixelifySans instead.
+
+Almost all animation frames were individually drawn (except for the “one” TV animation). This was tedious, but I was determined to stay true to old-school techniques! I did use CSS to streamline some animations—for instance, I used `animation-direction: alternate` on the poster page curl to create a palindrome effect, halving the number of required sprites.
+
+![Poster frames](/images/posts/escape-room-poster.png)
+
+## Mechanics
+
+Like my previous game [Heiro](https://starzonmyarmz.itch.io/hiero), this project primarily uses checkbox and radio button mechanics. However, the addition of the `:has()` pseudo-selector opened up many more possibilities. I also utilized the `popover` API to create more detailed interactions.
+
+### Checkbox and Radio Selection
+
+Triggering interactions by toggling checkboxes and radio buttons isn’t new, but the `:has()` selector is a game-changer! Before this existed, you had to structure your markup so interactive elements were siblings. The `:has()` selector makes this far more flexible because you no longer need to rely on a specific HTML structure.
+
+```css
+#element {
+  display: none;
+}
+
+:has(#checkbox:checked) #element {
+  display: block;
+}
+```
+
+Using this pattern, `:has()` looks for `#checkbox` anywhere on the page, meaning you don’t have to rely on `#checkbox`, its corresponding `&lt;label&gt;`, or `#element` being siblings. The markup structure is no longer a constraint. Most of this game functions on toggling checkboxes and radios to unlock, collect, and use items.
+
+### Navigation
+
+I almost gave up on the current implementation, and used basic compass notation to avoid visual transitions between directions. After several failed attempts, I found a solution. The tricky part was determining how to transition into a direction from either left or right, depending on which arrow was clicked.
+
+My solution is conceptually simple but difficult to explain! First, I used radio buttons to determine which direction you’re facing (since you can only face one direction at a time). Second, I needed a way to determine if you’re entering a direction from west or east. This required eight radio buttons—two for each direction.
+
+For example, if you’re facing east (having come from facing north), you have two possible directions to go: west (returning to face north) or east (to face south). I needed to make the radio buttons visible that would take you north from east, and south from west.
+
+![Visual explaining how navigation works](/images/posts/escape-room-navigation.png)
+
+The CSS looks something like this:
+
+```css
+:has(#east-from-west:checked) :is(
+  [for=&quot;south-from-west&quot;],
+  [for=&quot;north-from-east&quot;]) {
+    display: block;
+}
+```
+
+This pattern was implemented for each direction, along with animations to ensure each room view slid in and out correctly.
+
+### Zooming In
+
+I initially focused so much on checkbox mechanics that I assumed I’d need the same approach for zooming in on specific areas. Then I had a &quot;Duh!&quot; moment and realized the `popover` API would be perfect. Here’s the basic markup for looking at an individual book:
+
+```html
+&lt;button popovertarget=&quot;book&quot;&gt;Zoom in&lt;/button&gt;
+
+&lt;div id=&quot;book&quot; popover&gt;
+  &lt;!-- Book content goes here --&gt;
+  &lt;button popovertarget=&quot;book&quot; popovertargetaction=&quot;hide&quot;&gt;Close&lt;/button&gt;
+&lt;/div&gt;
+```
+
+### Turning the Lights Off
+
+I procrastinated on implementing this feature because I thought I’d need to create darkened variations of all artwork. I don’t recall what inspired me to try blend modes, but I’m glad I did—the solution was surprisingly simple.
+
+When the light switch checkbox is toggled, a `&lt;div&gt;` becomes visible with a dark background color and `mix-blend-mode: multiply`. This multiplies the colors of the blending and base layers, resulting in a darker appearance.
+
+### Playing the Crossword
+
+This required [surprisingly complex CSS](https://github.com/starzonmyarmz/csscape-room/blob/main/styles/east.css#L204-L234). Each square has three letters plus a blank tile, meaning four radio buttons. The `:checked` letter has a `z-index` of 3 to display above other letters, but also has `pointer-events: none` so clicks pass through to the next letter underneath (with `z-index: 2`). The remaining tiles have a `z-index` of 1.
+
+![Visual explaining how crossword puzzle works](/images/posts/escape-room-crossword.png)
+
+The CSS becomes even trickier when the last tile is `:checked`, requiring some [creative selector gymnastics](https://github.com/starzonmyarmz/csscape-room/blob/main/styles/east.css#L227) to target the first radio button in the stack again.
+
+## Tools
+
+I created all artwork using [Aseprite](https://www.aseprite.org/), which is specifically designed for pixel art. I probably only used a fraction of its features, and I’m not sure it actually made my life easier—it might have made things more difficult at times. I’m not giving up on it yet, though. I suspect I’ll occasionally discover features that make me think, “Oh, that’s way easier than what I was doing!”
+
+I started coding with basic HTML and CSS but eventually found navigation difficult with such a long HTML file. It also became tedious writing the same attributes for every `&lt;img /&gt;` element. I migrated the project to [Eleventy](https://www.11ty.dev/) to improve organization and create custom shortcodes for simplifying component creation. I used the `html-minifier-terser` npm package, which integrates well with Eleventy.
+
+I chose native CSS over [Sass](https://sass-lang.com/) for several reasons:
+
+1. CSS now has native nesting for better organization and leaner code
+2. CSS has built-in variables
+3. HTTP/2 handles asset loading efficiently, eliminating the major benefit of bundling CSS files
+
+The game uses 12 CSS files with 12 `&lt;link rel=&quot;stylesheet&quot; /&gt;` tags. The only Sass feature I missed was the ability to loop through style patterns for easier maintenance, but this wasn’t a significant issue.
+
+The game is hosted on GitHub Pages. During deployment, it runs an npm command to minify CSS using [Lightning CSS](https://lightningcss.dev/). I mentioned accidentally deleting half my CSS earlier—this happened because I initially used Eleventy’s recommended approach with the `clean-css` npm package. I strongly advise against using this! This package doesn’t work with native CSS nesting. While losing code was frustrating, I rewrote much of it more efficiently, so there was a silver lining.
+
+## Nice to Haves
+
+I initially wanted to make this game fully accessible, but the navigation system doesn’t translate well for screen reader users. I tried implementing a more compass-like navigation approach for keyboard users, but it proved unreliable and conflicted with the side-to-side approach.
+
+Adding text labels for interactive elements was challenging because you can’t track the `:focus` state of a `&lt;label&gt;` element. While you can track the `:focus` of the corresponding `&lt;input /&gt;`, it wasn’t consistently reliable.
+
+The main keyboard accessibility issue is that the game exists as one long HTML page. When you navigate to face a different direction, keyboard focus remains elsewhere on the page, requiring extensive tabbing to reach navigation elements or item selection.
+
+I ultimately decided to make the game deliberately inaccessible by adding `tabindex=&quot;-1&quot;` to all keyboard-accessible elements. I’d rather users recognize immediately that they can’t play with assistive technology than become frustrated with a partially broken experience.
+
+Sound would have been a nice addition, but I encountered the same issues as with my previous game Heiro. You can toggle the visibility of an `&lt;embed&gt;` element, but once it’s visible, you can’t hide it again—meaning there’s no way to toggle sound on and off.
+
+## Conclusion
+
+[CSScape Room](https://csscape-room.iamdanielmarino.com/) was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!</p></div><div class="box"><h3><a href="/posts/self-avoiding-walk/">Self-avoiding Walk</a></h3><time datetime="Sun Mar 23 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">2025-03-23</time><p>I’m a bit late to this, but back in summer 2024 I participated in the [OST Composing Jam](https://itch.io/jam/ost-composing-jam-7). The goal of this jam is to compose an original soundtrack (minimum of 3 minutes) of any style for an imaginary game. While I’ve composed a lot of video game music, I’ve never created an entire soundtrack around a single concept.
+
+&lt;iframe style=&quot;border: 0; width: 100%; height: 310px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=3143278153/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=small/transparent=true/&quot; seamless&gt;&lt;a href=&quot;https://danielmarino.bandcamp.com/album/self-avoiding-walk&quot;&gt;Self Avoiding Walk by Daniel Marino&lt;/a&gt;&lt;/iframe&gt;
+
+To be honest, I wasn’t entirely sure where to start. I was torn between trying to come up with a story for a game to inspire the music, and just messing around with some synths and noodling on the keyboard. I did a little bit of both, but nothing really materialized.
+
+## Synth + Metal ≈ Synthmetal
+
+Feeling a bit paralyzed, I fired up the ’ole [RMG sequencer](https://rmg.iamdanielmarino.com/) for inspiration. I saved a handful of randomized melodies and experimented with them in Reaper. After a day or two I landed on something I liked which was about the first 30 seconds or so of the second track: &quot;Defrag.&quot;
+
+I love metal bands like Tesseract, Periphery, The Algorithm, Car Bomb, and Meshuggah. I tried experimenting with incorporating syncopated guttural guitar sounds with the synths. After several more days I finished &quot;Defrag&quot;—which also included &quot;Kernel Panic&quot; before splitting that into its own track. I didn’t have a clue what to do next, nor did I have a concept. Composing the rest of the music was a bit of a blur because I bounced around from song to song—iterating on the leitmotif over and over with different synths, envelopes, time signatures, rhythmic displacement, pitch shifting, and tweaking underlying chord structures.
+
+## Production
+
+The guitars were recorded using DI with my Fender Squire and [Behringer Interface](https://www.sweetwater.com/store/detail/UMC202HD--behringer-u-phoria-umc202hd-usb-audio-interface). I’m primarily using the ML Sound Labs [Amped Roots Free](https://ml-sound-lab.com/products/amped-roots) amp sim because the metal presets are fantastic and rarely need much fuss to get it sounding good. I also used [Blue Cat Audio free amp](https://www.bluecataudio.com/Products/Product_FreeAmp/) sim for clean guitars.
+
+![Screenshot Defrag in Reaper](/images/posts/self-avoiding-walk-reaper.webp)
+
+All the other instruments were MIDI tracks either programmed via piano roll or recorded with my [Arturia MiniLab MKII](https://www.arturia.com/minilab-mkii/resources). I used a variety of synth effects from [my library of VSTs](https://iamdanielmarino.com/posts/what-im-using-2025/). I recorded this music before acquiring my Fender Squire Bass guitar, so bass was also programmed.
+
+## Theme and Story
+
+At some point I had five songs that all sounded like they could be from the same game. The theme for this particular jam was &quot;Inside my world.&quot; I had to figure out how I could write a story that corresponded with the theme and could align with the songs. I somehow landed on the idea of the main actor realizing his addiction to AI, embarking on a journey to &quot;unplug.&quot; The music reflects his path to recovery, capturing the emotional and psychological evolution as he seeks to overcome his dependency. After figuring this out, I thought it would be cool to name all the songs using computer terms that could be metaphors for the different stages of recovery.
+
+## Track listing
+
+- **Worm** – In this dark and haunting opening track, the actor grapples with his addiction to AI, realizing he can no longer think independently.
+- **Defrag** – This energetic track captures the physical and emotional struggles of the early stages of recovery.
+- **Kernel Panic** – Menacing and eerie, this track portrays the actor’s anxiety and panic attacks as he teeters on the brink during the initial phases of recovery.
+- **Dæmons** – With initial healing achieved, the real challenge begins. The ominous and chaotic melodies reflect the emotional turbulence the character endures.
+- **Time to Live** – The actor, having come to terms with himself, experiences emotional growth. The heroic climax symbolizes the realization that recovery is a lifelong journey.
+
+## Album art
+
+At the time I was messing around with [Self-avoiding walks](https://en.wikipedia.org/wiki/Self-avoiding_walk) in generative artwork explorations. I felt like the whole concept of avoiding the self within the context of addiction and recovery metaphorically worked. So I tweaked some algorithms and generated the self-avoiding walk using JavaScript and the [P5.js](https://p5js.org/) library. I then layered the self-avoiding walk over a [photo I found visually interesting](https://unsplash.com/photos/a-close-up-of-a-brown-and-yellow-substance-Smpy9LZmksY) on Unsplash using a [CSS blend mode](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode).
+
+![Self-avoiding Walk album art](/images/posts/self-avoiding-walk-artwork.jpg)
+
+## Jam results
+
+I placed around the top 50% out of over 600 entries. I would have liked to have placed higher, but despite my ranking, I thoroughly enjoyed composing the music! I’m very happy with the music, its production quality, and I also learned a lot. I would certainly participate in this style of composition jam again!</p></div><div class="box"><h3><a href="/posts/what-im-using-2025/">What I’m Using in 2025</a></h3><time datetime="Fri Jan 24 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">2025-01-24</time><p>I’ve always been fascinated to see what other apps or workflows others are using in their day-to-day lives. Every now and then I learn about a new app or some cool trick I didn’t previously know. I doubt anyone seriously cares about what I’m using, but figured I’d list them out anyway—if for no other reason than to keep a historical record at this point in time.
+
+## Applications
+
+- [Alfred](https://www.alfredapp.com/) — I have a lifelong license, and I like it. No point in fixing something that isn’t broken. I primarily use it for app switching, but also use it for math, and to [search for gifs](/posts/my-gif-workflow-using-eleventy-netlify-alfred/).
+- [Aseprite](https://www.aseprite.org/) — Sometimes I do pixel art! Even if the UI is clunky, and some keyboard shortcuts aren’t always convenient, there are some unique features that help facilitate creating pixel art.
+- [Audacity](https://www.audacityteam.org/) — I rarely use it, but sometimes it’s easier to make some quick audio edits with Audacity than to use a full blown [DAW](https://en.wikipedia.org/wiki/Digital_audio_workstation).
+- [Bear](https://bear.app/) — This is the note-taking, task-tacking app I’ve landed on. The UI is beautiful and it feels snappy. It syncs, so I can use it on my iPhone too.
+- [Chrome](https://www.google.com/chrome/) — I used [Arc](https://arc.net/) for the better part of 2024, but after they announced they were done working on it to focus on a new AI-powered browser, I peaced out. There are a couple of features I really missed, but was able to find some extensions to fill those gaps: [Copy Current Tab URL](https://chromewebstore.google.com/detail/copy-current-tab-url/kjfaieigmkklodbpcnadhkmbfjapgljd), [Meetings Page Auto Closer for Zoom](https://chromewebstore.google.com/detail/meetings-page-auto-closer/pbgidoglkjhfgjhalbbiiahdlokjcplb), [Open Figma app](https://chromewebstore.google.com/detail/open-figma-app/hgeipfdfhbmmgbkdjbeplocahpgkpkal), and [JSON Formatter](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
+- [Figma](https://www.figma.com/) — I use it because it’s what we use at work. I’m happy enough with Figma.
+- [iTerm2](https://iterm2.com/) — Has a few features that I like that makes me chose this over Mac’s native Terminal app.
+- [Pixelmator Pro](https://www.pixelmator.com/pro/) — I haven’t paid the Adobe tax for a long time, and it feels good. I started using Pixelmator because at the time it was the best alternative available. I’m comfortable with Pixelmator at this point. I don’t really use image editors often these days, so I probably won’t switch anytime soon.
+- [Reaper](https://www.reaper.fm/) — My DAW of choice when composing music. It’s very customizable, easyish enough to learn, and the price is right. It also has a die hard community, so I’m always able to find help when I need it.
+- [VS Code](https://code.visualstudio.com/) — I’ve tried a lot of code editors. I prefer [Sublime’s](https://www.sublimetext.com/) UI over VS Code, but VS Code does a lot of things more easily than Sublime does, so I put up with the UI.
+- [YouTube Music](https://music.youtube.com/) — I still miss [Rdio](https://en.wikipedia.org/wiki/Rdio). YouTube Music works well enough I guess. Paying for YouTube Music has the benefit of not seeing ads on YouTube.
+
+
+## Command-line Tools
+
+These aren’t apps per se, but these are some tools that I use to help manage packages or that I use regularly when developing.
+
+- [Deno](https://deno.com/)
+- [Eleventy](https://www.11ty.dev/)
+- [Homebrew](https://brew.sh/)
+- [pure](https://github.com/sindresorhus/pure)
+- [statikk](https://github.com/paulirish/statikk)
+- [Vite](https://vite.dev/)
+- [Volta](https://volta.sh/)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+
+
+## Equipment
+
+I have one computer and I use it for everything, and I’m okay with that. It’s more than powerful enough for work, composing music, making games, and occasionaly playing games.
+
+Although I have a dedicated home office, lately I tend to work more on the go, often with just my laptop—whether that’s at a cafe, a [coworking space](https://thecoworkinghouse.com/), or even just moving around the house.
+
+- 2021 M1 MacBook Pro
+- [AKG K240 Studio Headphones](https://www.sweetwater.com/store/detail/K240S--akg-k240-studio-semi-open-pro-studio-headphones)
+- [Arturia MiniLab MKII Controller](https://www.arturia.com/minilab-mkii/resources)
+- [Behringer UMC202HD USB Audio Interface](https://www.sweetwater.com/store/detail/UMC202HD--behringer-u-phoria-umc202hd-usb-audio-interface)
+- [Fender Squire Strat Guitar](https://www.sweetwater.com/store/detail/StratMinIBK2--squier-mini-strat-black-with-laurel-fingerboard)
+- [Fender Squire Bass Guitar](https://www.amazon.com/gp/product/B0CSLMDCLY)
+- [Shure SM57](https://www.shure.com/en-US/products/microphones/sm57?variant=SM57-LC)
+
+
+## Virtual Instruments
+
+This is quite specific for composing music, so if that does’t interest you, feel free to stop reading here. This list is not exhaustive as I’m regularly trying out new VSTs. These are some staples that I use:
+
+- 🎹 [Arturia Analog Lab V (Intro)](https://www.arturia.com/products/software-instruments/analoglab/overview) — My Arturia controller came with this software. It has over 500 presets and I love exploring the variety of sounds.
+- 🎸 [Bass Grinder (Free)](https://plugins4free.com/plugin/2082/) — I recently came across this VST, and it has a great crunchy overdrive sound for bass guitar.
+- 🥁 [Manda Audio Power Drum Kit](https://www.powerdrumkit.com/) — Even though you can use this for free, I paid the $9 because it is fantastic. The drums sound real and are great for all styles of music.
+- 🎸 [ML Amped Roots (Free)](https://ml-sound-lab.com/products/amped-roots) — What I like about this is that I get great metal guitar out of the box without having to add pedals or chaining other effects.
+- 🥁 [ML Drums (Free)](https://ml-sound-lab.com/pages/ml-drums) — I just started experimenting with this, and the drum tones are amazing. The free set up is pretty limited, but I like how I can add on to the base drum kit to meet my needs rather than having having to buy one big extensive drum VST.
+- 🎹 [Spitfire LABS](https://labs.spitfireaudio.com/) — More variety of eclectic sounds.
+
+I also use several built-in VSTs made by Reaper for delay, EQ, reverb, pitch-shifting, and other effects. Reaper’s VSTs are insanely powerful enough for my needs and are much less CPU intensive.</p></div><div class="box"><h3><a href="/posts/daily-inspirational-word/">Daily Inspirational Word</a></h3><time datetime="Tue May 28 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">2024-05-28</time><p>Over the past couple of years I’ve gotten into journaling. Recently I’ve been
+using a method where you’re given a single inspirational word as a prompt, and
+go from there. Unfortunately, the process of finding, saving, and accessing
+inspirational words was a bit of a chore:
+
+1. Google a list of “366 inspirational words”.
+2. Get taken to a blog bloated with ads and useless content all in an effort to
+   generate SEO cred.
+3. Copy/paste the words into Notion.
+4. Fix how the words get formatted becasue Notion is weird, and I have OCD about
+   formatting text.
+
+While this gets the job done, I felt like there was room to make this a more
+pleasant experience. All I really wanted was a small website that serves a
+single inspirational word on a daily basis without cruft or ads. This would
+allow me to get the content I want without having to scroll through a long list.
+I also don&#39;t want to manage or store the list of words. Once I&#39;ve curated a list
+of words, I want to be done with it.
+
+## Creating a microsite
+
+I love a good microsite, and so I decided to create one that takes all the chore
+out of obtaining a
+[daily inspirational word](https://daily-inspirational-word.iamdanielmarino.com).
+
+![Daily Inspirational Word screenshot](/images/posts/daily_inspirational_word.jpeg)
+
+The website is built with all vanilla tech, and doesn’t use any frameworks! It’s
+nice and lean, and it’s footprint is only 6.5kb.
+
+### Inspirational words
+
+While I’m not a huge fan of AI, I did leverage ChatGPT on obtaining 366
+inspirational words. The benefit to ChatGPT was being able to get it to return
+the words as an array—cutting down on the tedium of having to convert the words
+I already had into an array. The [words are stored in it’s own JSON file](https://github.com/starzonmyarmz/daily-inspirational-word/blob/main/words.json), and I
+use an [async/await function to pull in the words](https://github.com/starzonmyarmz/daily-inspirational-word/blob/main/script.js), and then process the data upon
+return.
+
+## Worth the effort
+
+I find these little projects fun and exciting because the scope is super tight,
+and makes for a great opportunity to learn new things. It’s definitely an
+overengineered solution to my problem, but it is a much more pleasant
+experience. And perhaps it will serve other people as well.</p></div><div class="box"><h3><a href="/posts/my-current-prototyping-environment/">My current prototyping environment</a></h3><time datetime="Thu Apr 18 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">2024-04-18</time><p>The other day I shared [why I prefer coding prototypes](/posts/why-i-still-prefer-prototyping-using-code/) rather than using design apps to create them. My prototyping environment has evolved over the years. I love to hear how others build prototypes, so I thought I’d share where I’m at now. Maybe you’ll find it useful.
+
+## A single repository
+
+I currently have a [single GitHub repo](https://github.com/starzonmyarmz/prototypes) housing all of my prototypes. I do this primarily so I don’t have to remember where any given prototype lives. They all live in the same place! Another benefit is if I pull in a library or some CSS component, I can reuse it in other prototypes without having to go out and grab it from the source again.
+
+## My old setup
+
+In the past I used [Sinatra](https://sinatrarb.com/) hosted on Heroku. Having Ruby and a basic server (Such as [Webrick](https://github.com/ruby/webrick)) in the backend was pretty nice:
+
+- I could code up some fairly complex prototypes out with realistic url schemes.
+- Gems! If I needed fake data, I could use the [Faker gem](https://github.com/faker-ruby/faker).
+- If I wanted a table with a 100 rows, I could easily generate that with a super simple loop.
+
+But it got clunky. Spinning up a new prototype wasn’t very efficient. Setting up the urls took time. Deploying to Heroku wasn’t always straight forward. Heroku also got rid of their free plan, and I didn’t want to go looking for a new service. Maybe I’m making excuses.
+
+## A dumb server
+
+Now I just use HTML, CSS (vanilla), and Javascript with no special backend. I don’t have Node.js running, and I don’t use a package manager like NPM or Yarn. To start a server I navigate to the prototype directory in iTerm, and run [Statikk](https://github.com/paulirish/statikk). Easy peasy. This setup requires no upkeep, so I can focus on actually prototyping!
+
+I have a basic file structure for keeping prototypes separate. I typically use [Preact](https://preactjs.com/) for scaffolding. To `import`  Preact or other NPM packages I use [esm.sh](https://esm.sh/). When I push changes to the GitHub repo it’s deployed to GitHub pages. I can then share a public URL to folks that need to review the prototype.
+
+## One glaring problem
+
+There’s only one issue I’ve run into using this setup, and its not even related to the setup! The [Porchlight design system](https://porchlight.design/) (which we use at [Harvest](https://www.getharvest.com/)) doesn’t have it’s styles or components available to consume publicly via CDN. Womp womp.
+
+I can get around the CSS issue. I end up having to copy the compiled CSS from the design system and paste it into a new file in my prototype environment. And I’m kind of out of luck with the JavaScript: I have to code these up from scratch. Although, I suppose I could copy the compiled components, and paste them into my prototype environment.
+
+The easiest fix is probably to introduce a package manager, but I’d rather not. We have talked about making the design system’s CSS and components available via CDN–it’s just a matter of getting around to it.
+
+## Prototype!
+
+So that’s my current prototyping setup. Maybe it will help inspire you to setup your own prototyping environment. Whether you use code or a design app–you should prototype!</p></div><div class="box"><h3><a href="/posts/why-i-still-prefer-prototyping-using-code/">Why I Still Prefer to Prototype Using Code</a></h3><time datetime="Tue Apr 16 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">2024-04-16</time><p>There are several design apps available at a product designers disposal, and I’ve used several of them over the years. I think these days, most everyone is using Figma, but whatever app you’re using—most of them typically have some sort of prototyping feature. Typically they have required very little coding to get a prototype up and running.
+
+Despite the advances in the ability to prototype using design tools, I still prefer to use HTML, CSS, and JavaScript.
+
+## Greater Flexibility
+
+I find myself needing much more flexibility than what prototyping in Figma offers. I think it’s cool that they’re regularly adding features to make prototyping more flexible, but it’s becoming so complicated and time consuming to figure out. A lot of the new features that Figma has been adding—like variables—is essentially coding! It doesn’t really simplify or speed things up for me. At some point there’s usually a moment where I think this would have been faster if I had just built this prototype in code.
+
+When animating designs in a prototyping tool, there’s only so much control over how the transitions work or what they look like. With CSS and JavaScript, I have complete control over how a design animates or transitions.
+
+## Safer Portability
+
+When I think of portability, there’s a couple of things that come to mind: being able to easily share a prototype with someone else, and being able to access a prototype regardless of the design tool I’m using.
+
+When I’m sharing a prototype with someone I like knowing that I can send them a URL that won’t break—at least theoretically. I get that Figma has URLs to prototypes, but I don’t own or have control over that URL. What if Figma changes the URL scheme someday? Would that happen? Probably not, but I also don’t have to worry about it if I own/control the URL.
+
+Right now I use Figma. I used to use Sketch, and never thought I would stop using it. I don’t pretend to believe that some new design tool will come and replace Figma some day. If I decide to up and leave Figma, I’d prefer not to have to leave all my prototypes behind.
+
+## Learning and Experimentation
+
+Prototyping with HTML, CSS, and JavaScript is a great way to test out new features or frameworks. Through prototyping I’ve learned how to use Flexbox/Grid, [Eleventy](https://www.11ty.dev/), [Sinatra](https://sinatrarb.com/), [P5.js](https://p5js.org/), [Preact](https://preactjs.com/), and a plethora of various little CSS properties or JavaScript methods and micro libraries. Its also a good way to stay on top of whats new and trendy, and try out not-quite-ready-for-primetime features.
+
+## A More Realistic Experience
+
+When I use a prototype made in code verses Figma, the coded version feels more real: the way you interact with it, being able to actually type in a text input, being able to use and experiment with more complex interactions. I also typically tend to discover other interactions that go beyond the happy path, and can account for those before engineers discover them while building out the actual feature. States like validation and error, what happens when there’s no data to show, and other uncommon scenarios.
+
+## Design Apps Still Have Their Place
+
+I think design apps have come a very long way over time, and it is very convenient to be able to prototype in the same app you’re doing your designing in—especially if you’re not comfortable with coding. And there are times when I will use Figma prototyping. If I have a simple interaction that doesn’t require a lot of user input or too many frames, then prototyping in Figma is relatively quick and painless. But once I go beyond a handful of interactions, it typically pays off in the long run to just use code.</p></div><div class="box"><h3><a href="/posts/using-the-p5play-library-for-making-games/">Using the p5play JavaScript Game Engine</a></h3><time datetime="Mon Jan 15 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">2024-01-15</time><p>I was messing around with [p5play](https://p5play.org/) last week to experiment with a game idea, and was pleasantly surprised by how easy it is to use. It was designed to be intuitive for beginners, such as students. In under a half hour I had created some common basic mechanics! Check it out:
+
+&lt;p class=&quot;codepen&quot; data-height=&quot;500&quot; data-default-tab=&quot;js,result&quot; data-slug-hash=&quot;WNmRzOK&quot; data-user=&quot;starzonmyarmz&quot; style=&quot;height: 500px; display: flex; align-items: center; justify-content: center; margin: 1em 0; padding: 1em;&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/starzonmyarmz/pen/WNmRzOK&quot;&gt;
+  p5play&lt;/a&gt; by Daniel Marino (&lt;a href=&quot;https://codepen.io/starzonmyarmz&quot;&gt;@starzonmyarmz&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+&lt;/p&gt;
+&lt;script async src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+### What I Like
+
+- It builds on top of [P5.js](https://p5js.org/). This means that I can leverage all the built-in features I&#39;m already familiar with in P5. It even expands upon some built-in features in P5—like creating a new [Canvas](https://p5play.org/learn/canvas.html).
+- It uses the same [Box2D physics simulator](https://piqnt.com/planck.js) that some popular games use. Some physics engines are a little floaty, while others are too constrained. This simulator has some really comfortable defaults out of the box.
+- The documentation is easy to follow along, and there&#39;s a [Discord server](https://discord.gg/3UTbqUgmPF) where I can (and have) ask questions. I typically have gotten a response from the library maintainer, himself, within a couple of hours.
+
+### What I Dislike
+
+- Not everything is documented, and that&#39;s not necessarily a bad thing. However, there are some really handy properties and even methods available that I happened to come across by accident just from purusing the source code and outputting various p5play global methods to `console.log()`.
+- The licensing is a [little weird](https://github.com/quinton-ashley/p5play/blob/main/LICENSE.md). In short: its free to use for open source projects, but for professional use you need to pay for a license. I&#39;m not going to argue whether you should have to pay for a license or not, but its definately something to be aware of.
+
+I&#39;ll definitely be keeping [p5play](https://p5play.org/) in my toolkit the next time I want to prototype some game mechanics or participate in a game jam!</p></div><div class="box"><h3><a href="/posts/generative-art/">Making Generative Art</a></h3><time datetime="Sat Jan 13 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">2024-01-13</time><p>I saw [Joshua Davis](https://joshuadavis.com/) give a talk over 10 years ago, and I was mesmorized. Not just by how engaging he was, but more so with the work he was doing with *generative art*.
+
+I had never heard of generative art before, but I immediately fell in love with the concept of it. I like to draw, but I wouldn’t consider myself much of an artist. I can work my way around Photoshop pretty comfortably, but again, wouldn’t consider myself much of an artist. I didn’t think much of generative art again for some time later.
+
+Several years ago, I started toying with the idea fo experimenting with generative art. A buddy of mine, [Arun](https://codepen.io/satchmorun) shared some of his work, and inspired me to go for it. So now I’ve been creating generative art for the past five years or so, but I’ve only recently started [sharing my experiments](/generative-art/)).
+
+Libraries like [P5.js](https://p5js.org/) make it very approachable. And I’m a huge fan of P5! I even [made a video game](https://iamdanielmarino.com/posts/github-game-off-game-jam-2021-retrospective/) with it. If you have the slightest interest in creating generative art, you should go for it! If you don’t know where to start, I recommend checking out [The Coding Train](https://thecodingtrain.com/) where you’ll find some great tutorials for getting started with programming, and more specific tutorials for using the P5 library.
+
+I love to write code. I love art. I love being creative. The idea that I can combine all these into a single hobby is so cool.</p></div><div class="box"><h3><a href="/posts/free-radon/">Free Radon album released</a></h3><time datetime="Thu Oct 26 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">2023-10-26</time><p>A little over a year ago, I composed a handful of songs. If I had to fit them into a genre, I’d go with _Lofi_ or _Chillvibes_. Or maybe _Not-Rock-n-Roll_. I don’t know—I’m so bad at classifying music.
+
+I wasn’t sure what to do with the songs. I was experiencing some intense emotions when I was composing them. I’ve been doing a lot of emotional growth over this past year (and still am), and I feel like by releasing them into the wild would be cathartic for me. To acknowledge that that chapter in my life happened, and it’s okay. So with that, here’s [Free Radon](https://danielmarino.bandcamp.com/album/free-radon).
+
+&lt;iframe style=&quot;border: 0; width: 100%; height: 274px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2458624556/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=small/transparent=true/&quot; seamless&gt;&lt;a href=&quot;https://danielmarino.bandcamp.com/album/free-radon&quot;&gt;Free Radon by Daniel Marino&lt;/a&gt;&lt;/iframe&gt;
+
+So why *Free Radon*? I’d like to say I put a lot of thought into naming the album, but I didn’t. I needed cover art for the album, and I thought it would be fun to generate random artwork for it. So I used the [p5.js JavaScript library](https://p5js.org/) to do so. I used the p5.js web editor, and when you create a new sketch it automatically creates a random name for it—in this case Free Radon. Speaking of using p5.js to create the artwork, you can [view the script](https://editor.p5js.org/iamdanielmarino/sketches/0QgAM4zz3), and mess around with it.
+
+Hope you like the music. If you do, [share it with others](https://danielmarino.bandcamp.com/album/free-radon), or [buy it](https://danielmarino.bandcamp.com/album/free-radon), or [both](https://danielmarino.bandcamp.com/album/free-radon)! If you don’t like it… oh well.</p></div><div class="box"><h3><a href="/posts/building-a-random-music-sequencer-with-preact/">Building a Random Music Sequencer with Preact</a></h3><time datetime="Thu May 05 2022 00:00:00 GMT+0000 (Coordinated Universal Time)">2022-05-05</time><p>As I&#39;ve composed music for video games, something that has piqued my interest is the concept of randomly generating music. Not that this is a new concept, but I was curious to see what I could come up with. Go ahead and check out the [RMG-2021](https://rmg.iamdanielmarino.com/).
+
+## Design
+
+I love how sequencers look and feel—and there is so much variety as to how they&#39;re designed! I really wanted to recreate the vibe of using a physical sequencer, and referenced a lot of gear when designing the UI.
+It was a bit of a balancing act to capture the essence of a physical sequencer while adapting it to a screen.
+
+![RMG-2021 Tiny Music Sequencer](/images/posts/rmg2021.png)
+
+## Preact
+
+One of my goals was to get better at understanding and using React. I really just wanted to get more familiar with the basics, so I went with [Preact](https://preactjs.com/) which more or less offers the same API and low-level functionality. I&#39;m also using [HTM](https://github.com/developit/htm) which provides JSX-like syntax in vanilla JavaScript.
+
+At first, I found it really difficult to buy in to the React/JSX ecosystem, but the more I work with it, the more I appreciate it. I&#39;m still not super fond of writing HTML in JavaScript, but I&#39;m getting over it.
+
+
+## Sound
+
+When working with audio for [ONOFF](https://js13kgames.com/entries/onoff), I used [TinyMusic](https://github.com/kevincennis/TinyMusic), and I&#39;m using it here too. Is it necessarily? No, but true to it&#39;s name—it&#39;s tiny, and offers a nice API. It simplifies authoring audio sequences in JavaScript. I&#39;m even outputting the TinyMusic sequence syntax so it can be easily reference it.
+
+
+## Features
+
+This is one of those projects that I could have easily kept adding features. At some point I had to call it _done_ and ship it. Every feature I added ended up adding more complexity to using the sequencer. The RMG allows you to specify:
+
+- The number of notes to use in the sequence
+- Which key the notes should be pulled from
+- A range of octaves to generate a sequence within
+- Snapping the total number of beats to an integer
+- Toggling the loop of the sequence
+- Toggling a metronome click, and adjusting various metronome settings
+- Adjusting various effects such as wave type, EQ, sweep, and decay
+- Adding a _pulse_ effect to a sequence
+
+On top of these features you can also easily randomize all the settings, and share a sequence via URL.
+
+
+## Random Sequences are Fun
+
+I&#39;ve used [random sequences](https://rmg.iamdanielmarino.com/?notes=16&amp;key=E&amp;rangemin=2&amp;rangemax=8&amp;arrangement=B6+0.25%2CE2+2%2CF%234+0.75%2CD%238+1%2CC%234+4%2CF%237+4%2CD%236+0.75%2CD%238+2%2CG%235+0.75%2CC%238+1%2CC%236+0.25%2CD%233+0.25%2CC%233+1%2CF%238+2%2CD%238+0.5%2CD%233+0.5&amp;tempo=314&amp;wave=square&amp;smoothing=0.38&amp;staccato=0.34&amp;bass=-9&amp;mid=-1&amp;treble=-1&amp;loop=true) generated by the RMG for various things: drumming along with sequences, challenging myself to compose music around a random sequence, or even sending goofy sounds to my friends. It was a fun project, and I learned a lot.</p></div><div class="box"><h3><a href="/posts/github-game-off-game-jam-2021-retrospective/">GitHub Game Off 2021 Retrospective</a></h3><time datetime="Sat Feb 19 2022 00:00:00 GMT+0000 (Coordinated Universal Time)">2022-02-19</time><p>Recently, I completed the [GitHub Game Off](https://itch.io/jam/game-off-2021). With over 500 entries, this is the largest game jam I’ve been a part of. I had some lofty goals for this game, and I just about met them all. I’m extremely happy with how the game came out!
+
+Like prior games I’ve made, I don’t tend to join a game jam unless I have some specific idea/mechanic I’d like to explore. I’d been wanting to tackle a mobile game for some time now while exploring motion/accelerometer mechanics.
+
+
+## Mechanics
+
+The theme for this jam was “bug”. I don’t remember how I arrived at the concept and gameplay, but the gist is: a fly mysteriously gets sucked into a phone. By tilting your phone (utilizing the phone’s motion/accelerometer sensors), you move the fly to avoid colliding with objects on the phone’s screen. Tilting your phone at steeper angles increases the fly’s velocity and speed. While relatively basic, I found it challenging to get the mechanics just right, and reprogrammed this mechanic several times.
+
+The game consists of seven auto-scrolling levels, progressing in difficulty as you complete them. Each one is scripted to be about a minute long. While the scrolling is scripted, there is quite a bit of randomness sprinkled into each level such as the placement and dimensions of objects.
+
+![trapped promo screen](/images/posts/trapped_cover.png)
+
+The game is hard to play. Really hard. My play testers got frustrated quickly—especially with the first round of testing. I did quite a lot of tweaking based on their feedback. I simplified the levels by adding larger gaps between objects and slowing the scrolling down. Even with the adjustments it’s still hard to play, but not so hard that it’s unenjoyable.
+
+I decided I was okay with the level of difficulty. I wanted a game that made you feel good about making progress. I’ve played through the entire game probably five or six times now (aside from rigorous testing throughout), and I can get through from beginning to end in about 20—30 minutes.
+
+
+## Graphics
+
+If you’ve seen the game before reading this, you might think I’m joking by calling the visuals “graphics”. Believe it or not, the choice of simplicity was purposeful. I intentionally used a handful of basic shapes and solid colors.
+
+Each level resembles a popular mobile app (can you figure out which ones), and all the design is stripped down to each app’s bare essence. By keeping the design so minimal, the graphics doesn’t feel overly _iPhone_ or _Android_, so players can relate regardless of what kind of phone they use. Here are a couple of sample screenshots:
+
+![trapped levels](/images/posts/trapped_levels.png)
+
+I did receive a lower ranking on the game’s graphics, and that’s fair. I can understand why people would want something more high-fidelity. I even questioned my judgement on the decision to go low-fi a few times, but in the end I think it really does enhanced the game’s vibe and playability.
+
+While the game play graphics are primarily generated with code, there is a single sprite! It’s the _fly_ character during the cut scenes. I wanted to try out using [Aesprite](https://www.aseprite.org/), so decided to make the fly in the pixel-art style.
+
+
+## Audio
+
+I got a little carried away with audio, and put way more effort into it than I had to—especially for a game jam. If I’m being honest, I had the most fun when I was composing and producing audio than doing anything else for this game.
+
+I didn’t really intend to go all in with the jazz-style of music, but after writing the initial theme I was locked in. I started out composing a simple melody for the title screen. A few days later I had an album’s worth of music! The music is inspired by pianists like Vince Guaraldi and Danillo Perez. I love how they combine simple, playful, and whimsical-sounding melodies—with a little dissonance thrown in for good measure.
+
+&lt;iframe style=&quot;border: 0; width: 100%; height: 406px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=1082942060/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=none/transparent=true/&quot; seamless&gt;&lt;a href=&quot;https://danielmarino.bandcamp.com/album/trapped-soundtrack&quot;&gt;trapped soundtrack by Daniel Marino&lt;/a&gt;&lt;/iframe&gt;
+
+I’m a lot more proficient using [Ableton](https://www.ableton.com/en/live/) and my [Arturia MiniLab MKII](https://www.arturia.com/products/hybrid-synths/minilab-mkii/overview) since my [last game jam](/posts/gamedevjs-jam-2021-retrospective/) and found it much simpler this time to produce music. In keeping with the minimalistic artwork style, I kept the instrumentation minimal as well: piano and drums only.
+
+
+## Environment and Tooling
+
+Like my other games, the game is developed with HTML, CSS, and JS. I’m most comfortable with this tooling environment, and enjoy pushing myself to learn and do new things with it.
+
+I’ve been experimenting with creating generative art using JavaScript and the [P5.js library](https://p5js.org/). I wasn’t sure how it would work as a game engine, but decided to try it out. In addition to P5, I also used a couple of additional libraries to help with [scene management](https://github.com/mveteanu/p5.SceneManager) and [collision detection](https://github.com/bmoren/p5.collide2D). Some highlights working with P5:
+
+- The output renders to a `&lt;canvas&gt;` element at 60fps, which makes the game quality pretty decent, and performant.
+- You can get started very quickly because [the loop](https://developer.mozilla.org/en-US/docs/Games/Anatomy#building_a_main_loop_in_javascript) is handled automatically. There are also a ton of useful built in methods for creating and manipulating graphics.
+- It has built-in event listening for screen touching and device rotation, which was pretty helpful in my case.
+
+Despite those highlights, I honestly don’t know if I got as much mileage out of P5 to justify using it.
+
+- I ended up having to create my own Class with various methods for drawing and manipulate shapes. This is mostly because I wanted to be consistent in how shapes were generated, as well as being able to easily set up consistent timings for shape manipulation.
+- I ran into problem using P5’s vector manipulation methods, and used plain ‘ole vanilla JS to calculate and manipulate shapes.
+
+
+## Developing a Browser-based, Mobile Game is Hard
+
+I kind of knew going into making a mobile game was going to come with its own set of challenges, but I wasn’t prepared for how difficult some of them would be to work out:
+
+- iOS Safari, for better or worse, has a huge market share on mobile devices. Not only that, all browsers—whether it be Chrome or Firefox or whatever—on iOS get stuck using the same Webkit rendering engine as Safari. Unfortunately, iOS Safari seems to be a little behind in some features that are implemented, making it difficult to work around some challenges.
+- iOS requires [acquiring the user’s permission to access device rotation events](https://github.com/starzonmyarmz/trapped/blob/main/src/game.js#L39-L50)—which not only hinders the user experience, but also adds some complicated code to handle this. It should be noted that P5 doesn&#39;t handle this on any level, and just assumes permission is granted from the start.
+- Itch.io doesn’t handle hosting browser-based mobile games very well. It also doesn’t help that neither iOS or Android make it easy to run cross-origin code. For various reasons working around this limitation is quite painful. In the end I published a QR code with a link to the game on Itch.io and published the actual game on GitHub Pages.
+- Developing and testing a browser-based mobile game locally is frustrating and kludgy. It’s slower than normal desktop-based development, and debugging was very hard. To access my localhost on my phone I used [ngrok](https://ngrok.com/)  to tunnel my localhost to a public server. I would then use the public URL in Safari on my iPhone. I could inspect the DOM and check the console for errors using Safari on my Mac.
+
+
+## Goals and Results
+
+I mentioned at the beginning of this post that I had some lofty goals. They were (in no particular order):
+
+- **Complete a mobile game**. Pretty sure I succeeded here!
+- **Build the game without any assistance**. I did actually have a little help from my buddy, Brad with some of the finishing touches. That said, I did the vast majority of the development on my own, and I feel really good about that!
+- **Rank in the top 10% of games for the game jam**. Overall, my game ranked 77th out of 526 submissions, which is about the top 15%. I’ll take it—especially for my first attempt at a mobile game. Also, I ranked 10th for *Audio* and 18th for *Innovation* which I think is awesome! You can check out [my submission](https://itch.io/jam/game-off-2021/rate/1291063) for the score breakdown and player feedback.
+
+While I didn’t meet all my goals, I came pretty darn close. More importantly, I had a lot of fun with this game jam. I learned a lot and expanded my knowledge on using P5 as well as other various coding techniques.
+
+Besides [Brad](https://github.com/braddunbar), I had help from other folks, and I’d be remiss if I didn’t thank them: [Matthew](https://matthewlettini.com) and [Danny](https://twitter.com/dannywen) for play testing, as well as my kids for play testing and suggesting good ideas when I was feeling stuck. Lastly, my wife: not only does she play my games, but is very supportive, lets me vent about crappy API support, and inspires me to put everything I got into my work.
+
+Be sure to give [trapped](https://trapped.iamdanielmarino.com) a play or check out the [source code](https://github.com/starzonmyarmz/trapped)!</p></div><div class="box"><h3><a href="/posts/gamedevjs-jam-2021-retrospective/">Gamedev.js Jam 2021 Retrospective</a></h3><time datetime="Fri Apr 30 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">2021-04-30</time><p>Recently, I participated in the [Gamedev.js Jam 2021](https://gamedevjs.com/jam/2021/): a 13-day competition to build a game that can run on the Web in a browser without extra plugins. This year’s theme for the competition was “mirror”, which could interpreted however participants chose. I had an itch I wanted to scratch, and the timing was right, so I decided to join.
+
+You’d think JavaScript would be necessary to make an HTML5 game, but the [Internet has shown us](https://codepen.io/collection/AKkZro?cursor=ZD0wJm89MCZwPTEmdj00) _it is_ possible to make simple games without JavaScript. I wanted to see just how far I could take this limitation—especially in an environment where it is competing against other games.
+
+## Game Concepts
+[Hiero](https://starzonmyarmz.itch.io/hiero) is the third game I’ve made (the first by myself), and by now I should have some sort of process to making a game, right? Well… I don’t really. So far, the process has been different for every game.
+
+![Hiero Title Screen](/images/posts/hiero-title.jpg)
+
+In my experience, working on various aspects of a game (artwork, sound, etc…) greatly influences the other aspects of the game, so I find myself ping ponging around. Over the course of 13 days, I ended up implementing three core concepts into Hiero.
+
+1. **Complete 15 puzzles within a short timeframe.** Not really much to say about this other than the earlier puzzles start out pretty easy. This teaches the player how the game is played. Over time the puzzles ramp up in difficulty. To keep things fast-paced, the game is short.
+2. **To complete a puzzle you have to find the mismatched shape.** Each puzzle contains three to seven shapes. When hovering over a shape, a “mirrored” version of the shape is shown underneath. The catch is, in each puzzle one of the mirrored shapes doesn’t match. In some cases it’s a completely different shape, while in others it’s a very similar shape with a slight modification. This not only satisfied the “mirror” theme requirements, but also seemed to be a different and slightly-more challenging take on the classic which-one-doesn’t-belong concept.
+3. **You can only make three mistakes.** This was a last minute addition to Hiero. Without it, the game can be cheesed by spamming clicks on the shapes until solving a puzzle. This adds an extra challenge of forcing the player to be judicious with their selections.
+
+![Hiero Game Play](/images/posts/hiero-gameplay.jpg)
+
+## Mechanics
+As mentioned earlier, I didn’t want to use any JavaScript. My game is primarily built around two CSS mechanics: checkboxes with insane selector magic to update the game’s state, and an in-game timer created with an animation delay. The resulting code is in no-way elegant! It’s quite messy, convoluted, and slightly laggy. The CSS weighs in at roughly 60K!
+
+
+### Checkboxes
+
+Most interactions are triggered with an HTML checkbox. Take this example:
+
+```html
+&lt;input type=“checkbox” id=“foo”&gt;
+&lt;label for=“foo”&gt;Interactive element&lt;/label&gt;
+&lt;div&gt;Hidden element triggered by checkbox state&lt;/div&gt;
+```
+
+We [visually hide](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_base.scss#L30-L35) the `&lt;input&gt;` element using CSS, but we can still interact with it by clicking on a corresponding `&lt;label&gt;`. This works so long as the `for` attribute matches the `&lt;input&gt;`s `id` attribute. The input returns a checked/unchecked state, and if we keep these elements as siblings (as opposed to parents/children) we can use this state to trigger other elements using CSS:
+
+```css
+div {
+	display: none;
+}
+
+#foo:checked ~ div {
+	display: block;
+}
+```
+
+Now this is a highly simplified example. I’m combining this checkbox functionality with CSS animations to time certain events such as scenes being loaded or triggering sound effects. Very little HTML is nested, and most elements are siblings to one another. One of the challenges was implementing the layout/design while keeping the HTML mostly flat. If I had nested elements a certain way, they wouldn&#39;t have been selectable with CSS.
+
+### Time Limit
+
+When the player starts the game, it kicks off the [losing scene animation](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_lose.scss#L36-L37) with a 78-second delay. The only way to pause/stop the animation is to [match the CSS selector](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_transitions.scss#L40-L55) that determines if you beat the 15th puzzle, which simultaneously triggers the winning animation. Controlling animations this way is achieved using the `animation-play-state` CSS property.
+
+### Triggering Sound
+
+Setting an `&lt;embed&gt;` element to `display: none` will prevent it’s content from loading until it’s  `display` property is reverted. So by setting an `&lt;embed&gt;` source to a sound file, I was able to use this to load sound on demand. However, once the content is loaded, it’s here to stay. You can’t hide/unhide it to make it play again, stop it from playing, or even loop it. This trick also does not work with `&lt;audio&gt;`, `&lt;video&gt;`, or `&lt;iframe&gt;` elements.
+
+I was able to use the same checkbox mechanics above, and in some cases, an element’s  `:hover` state to change an `&lt;embed&gt;`s `display` property. These constraints made it challenging to work with sound, but I am very happy with how it came out.
+
+## Artwork
+
+I knew I was going to need a decent amount of artwork for matching shapes—on top of the other game-supporting graphics. By chance, I discovered that there are a ton of Hieroglyphs available as unicode characters. This spearheaded the visual direction, and adds to the game’s ominous atmosphere.
+
+As I sketched out ideas for the interface, the more I liked the idea of using my personal art style which combines hand-drawn illustrations and digital painting. As I started putting all the pieces together it started feeling a bit like a cartoon. This inspired my use of [Kalam](https://fonts.google.com/specimen/Kalam#standard-styles) for the title screen. I wanted to use something a little more legible for the interface text, and landed on [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans) which is inspired by geometric sans serif designs from the 1920s. To really help seal the deal on the old-school cartoon vibe, I added the film-grain overlaying textures, using CSS animation to [shift the texture around](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_base.scss#L128-L135).
+
+In my opinion, this game would have worked just as well without the mirror graphic. It certainly would have simplified development not having to incorporate it! However, it really helps to drive the jam’s theme, so why not. It also gave me an excuse to mess around with CSS 3d transforms and perspective which isn’t something I get to do too often.
+
+The last thing I’d like to talk about in regards to the artwork is the “tunnel vision” gradient that occurs as you near the end of the time limit. This was an idea my daughter had while play testing for me. It really helps simultaneously create tension, panic, and focus. This was implemented at the last minute using a CSS `radial-gradient` and [animating it’s appearance](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/sass/_base.scss#L139-L172).
+
+![Tunnel Vision Gradient](/images/posts/hiero-gradient.jpg)
+
+## Sound Design
+
+In the past, I&#39;ve used JavaScript-powered, chiptune-styled sound. But that wouldn&#39;t really match the art style or ambiance. Also, I wanted to try something new!
+
+The limitations for triggering sound created some challenging conditions for creating sound. I couldn’t always control when the player would trigger a scene transition. Syncing chord progressions, rhythm, and melodies together was practically impossible. My approach was to keep the sound atmospheric in a way where sounds could be independently layered.
+
+The result was a bass layer of a single chord being held while randomly fluctuating effects on it. Next, a percussive track is layered on top when the player instantiates the game play. 30 seconds in the percussive track starts having echo effects slowly applied to help build intensity and uneasiness. Finally, a game over sound is layered in.
+
+## Tools
+
+I’ve become a big fan of [Eleventy](https://www.11ty.dev/) since using it for my blog, and ended up using it to generate the game. It makes life so much easier than having to hand code every puzzle. With Eleventy, I have a [JSON file](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/src/_data/puzzles.json) with all the puzzles, an [Nunjucks](https://mozilla.github.io/nunjucks/) [puzzle template](https://github.com/starzonmyarmz/gamedevjs-jam-2021/blob/main/src/index.njk#L25-L40), and Eleventy just spits out the final HTML. One could argue that I’m using JavaScript by creating my game using Eleventy and Nunjucks, but I’m really just using those tools to optimize my workflow. The final output is HTML and CSS.
+
+I used [Sass](https://sass-lang.com/) for authoring CSS. I don’t always use Sass because I find the overhead isn’t always worth the benefits. However, in this case I really took advantage of Sass loops and logic statements which made it a lot faster/easier to generate a lot of the selector magic I shared earlier.
+
+I use any paper and pencil I can find to illustrate, and then ink those with [Microns](https://www.dickblick.com/products/sakura-pigma-micron-pen/). Scan them in with my phone, and send them to my computer where I use [Pixelmator](https://www.pixelmator.com/pro/) to paint and optimize images.
+
+To create all the sounds, I used a [MiniLab MKII](https://www.arturia.com/products/hybrid-synths/minilab-mkii/overview) midi controller by Arturia with [Ableton Live](https://www.ableton.com/en/live/), as well as [Audacity](https://www.audacityteam.org/) to refine the sounds a bit. Creating sound for this game was a completely different experience for me compared to [ONOFF](https://js13kgames.com/entries/onoff), and I absolutely loved it! First of all, using a midi controller and Ableton are brand new tools for me. I spent two or three days doing nothing but messing around with sound and learning how to use Ableton. I really do see myself taking advantage of these tools in  future projects!
+
+The source is [hosted on Github](https://github.com/starzonmyarmz/gamedevjs-jam-2021), and I’m using a GH workflow that was shared with me by one of the other developers in the jam which generates a ZIP file of the game and assets, and uploads it to [Itch.io](https://itch.io/jam/gamedevjs-2021/entries) where the game jam and games are hosted.
+
+
+## Nice to Haves
+There are two primary things I really wish I could have put in the game, and would have had I not restricted myself from using JavaScript: a restart button on the end scenes, and the ability to randomize puzzles. The later would have added a lot more replay value. At the same time, it doesn’t bug me too much because I like the fact that everyone can beat the game after playing it a handful of times from memorizing the puzzle.
+
+I suppose another minor _nice to have_ would have been a counter letting you know how many strikes you have. That would have been easy enough to implement, but didn’t because I didn’t think it was too hard to keep track of strikes, nor did it add a lot of value by showing you those strikes.
+
+
+## Also…
+What I haven’t mentioned yet is my son also joined the game jam! He’s been learning [Unity](https://unity.com/) and [Blender](https://www.blender.org/), but has struggled to complete a full game. I suggested he work with me to get some experience.
+
+After I shared my game idea, he decided to [go it alone](https://twitter.com/starzonmyarmz/status/1381928874272030722?s=20)! We had a lot of fun pinging ideas of of each other, sharing each others pain and frustrations, and play testing! I’m very happy with how his game, [Mirror Madness](https://glassedgmr.itch.io/mirror-madness) came out, and am very proud of him.
+
+
+## Wrap Up
+
+Heiro was ranked 11th out of 88 submitted games. I was hoping for top 10, but I&#39;m not going to complain—especially since the game only uses HTML and CSS mechanics! You can also check out the [full score breakdown](https://itch.io/jam/gamedevjs-2021/rate/1007795), if you feel so inclined. I’m extremely happy with how [Hiero](https://starzonmyarmz.itch.io/hiero) came out—especially given the personal challenge of not using JavaScript! Thanks for everyone who played, and scored my game.
+
+I’d like to thank my daughters for play testing and being brutally honest when I asked for feedback. They gave me great ideas and pushed me to make Hiero as good as it is. My son, for coming along for the ride for me. And my wife, for putting up with the shenanigans of her middle-aged husband, and for challenging me to always do my best.
+
+I don’t know when I’ll make my next game, but the ideas are already brewing!</p></div><div class="box"><h3><a href="/posts/my-gif-workflow-using-eleventy-netlify-alfred/">My GIF Workflow Using Eleventy, Netlify, and Alfred</a></h3><time datetime="Sat Feb 13 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">2021-02-13</time><p>I used to keep my GIFs on Dropbox in the `/public` directory. There was a time when Dropbox would serve content as HTML from this directory. This was a simple way to share my GIFs with the world. I even adopted an [Alfred workflow](https://destroytoday.com/blog/gif-workflow) for quickly searching and copying my GIFs URL to the clipboard. Back in 2017, Dropbox disabled the ability to render HTML from the `/public` directory, and thus this workflow stopped working.
+
+Since then I’ve been keeping my personal collection of GIFs in a GitHub repo—which has been just okay. I really missed having a quick way to search and copy URLs. To use a GIF I’d have to go to the repo, find the image, view the raw image, and  finally manually copy the url from the browser. Lame.
+
+A few weeks ago, I decided to give my GIF workflow an upgrade!
+
+I started by turning my [GIFs repo](https://github.com/starzonmyarmz/gifs) into a static site using [Eleventy](https://www.11ty.dev/). The static site consists of two primary things: a directory with all of my GIFs, and a [generated JSON file](https://github.com/starzonmyarmz/gifs) listing all my GIFs (more on this in a bit).
+
+I created a new site on Netlify that watches my GIFs repo, and runs a build process anytime I push to `main` branch. This only took a few minutes to set up, and all my GIFs are now easily accessible by URL.
+
+I was still missing a component though—a quick and easy way to search for GIFs and copy their URLs. I built an [Alfred script](https://github.com/starzonmyarmz/gifz-alfred-workflow) using [Alfy](https://github.com/sindresorhus/alfy) to handle this part. Alfy is so cool to work with, allowing you to build Alfred workflows using JavaScript and Node. The Alfred Script takes an input, and searches for it against the [JSON file on the Netlify site](https://gifz.netlify.app/gifs.json). When I find the GIF I want, it copies the URL to the clipboard.
+
+![My gif flow using Alfred App](/images/posts/gif_workflow.gif)
+
+This update was well-needed, and I find myself using my personal GIFs much more often now! I only wish I had done something like this much sooner.</p></div><div class="box"><h3><a href="/posts/how-to-process-customer-criticism/">How to Process Customer Criticism</a></h3><time datetime="Tue Sep 01 2020 00:00:00 GMT+0000 (Coordinated Universal Time)">2020-09-01</time><p>Why do us product designers opt into a career where we’re regularly challenged to be vulnerable?! Design is super subjective, and everyone is a critic! Regardless of your education or how sharp your _design eye_ is, you’ll never be able to please everyone. This is especially true when you work on a product that has thousands upon thousands of users!
+
+One of my personal challenges of being a product designer is learning how to process customer criticism. Its an ongoing struggle for me because I tend to be very sensitive to criticism in general. I’ve grown thicker skin over time, but there are still some days where I get down in the dumps.
+
+My knee jerk response is to cave in, and give everyone what they want (or demand) so we can all be happy. However, good product designers don’t cave. We take a breath and carefully processes the criticism.
+
+## Digging into Customer Criticism
+
+It’s hard, but sometimes you need to dig underneath the harsh and sometimes-hurtful comments. Is there actual legitimate feedback? Even if a customer insults you, it doesn’t negate the fact that they’re having a poor experience.
+
+Once you’ve pushed past the hurtful comments and processed the feedback, are there common themes or issues raised by these customers? Obviously, bugs should be fixed, but have you overlooked some UX considerations?
+
+Be honest with yourself. If there are things you can improve, and time allows for it, you should improve them. Even the tiniest improvement can be enough to change someone’s reception to a design!
+
+## Haters Gonna Hate
+
+What about the people that hate something just because they can? Sometimes you just have to accept the fact that some people aren’t going to like something. Some things to consider:
+
+* **You’re more likely to hear negative feedback.** People are more inclined to write a support ticket when they dislike something. For every person complaining about your design, there’s likely hundreds or thousands that really like it!
+* **Some folks like to complain for the sake of complaining.** I’m not ashamed to admit that if someone tweets something nasty at us, I’ll often stalk them on Twitter for a bit to help get a read on the person. You’d be surprised (or maybe you wouldn’t) how often these folks are habitual complainers—wasting time tweeting at other companies. You’ll never please these people.
+* **Sometimes a thoughtful response will be appreciated.** I don’t necessarily do this for every support request, but sometimes I’ll respond by explaining the reasoning of why a design was implemented the way it is. This does require a little care because you don’t want to sound like you don’t care about a person’s feedback. You still want to acknowledge the the customer’s complaint even if you’re not planning on changing the design. Sometimes these customers reply with a heartfelt appreciation for the explanation.
+* **If someone really dislikes your product, they’ll pack up and leave.** It sounds harsh, but it’s reality. Obviously you don’t want an exodus, and if that’s the case you should probably take a step back and reexamine things. However, it’s quite possible your product isn’t the right fit for some particular people. That said, it’s also unlikely that one disliked design is going to drive a customer away.
+
+## Abusive Customers
+
+I don’t advocate taking abuse from customers on the chin. While I don’t think it’s okay to sling it back at your customers, I do think it’s fair game to call out hostile tone. I’m blessed to work for a [company](https://www.getharvest.com) that has a policy around handling abusive customers. Your company may also address how to handle these types of customers. If you’re in a position to make these types of policies I highly recommend you do!
+
+## You’re Awesome
+
+I mean… maybe you’re not awesome? Regardless, dealing with customer criticism can be really hard! And at the end of a hard day—no matter how awesome you are or aren’t, [treat yoself](https://media.giphy.com/media/13jJIY0llDdip2/giphy.gif)! Have a little extra dessert, play video games a little longer, crank some tunes extra loud! Try not to take customer criticism personally. Instead, look past the harsh tones, and try to find legitimate and actionable feedback.</p></div><div class="box"><h3><a href="/posts/dont-overthink-remote-working/">Don’t Overthink Remote Working</a></h3><time datetime="Fri Mar 13 2020 00:00:00 GMT+0000 (Coordinated Universal Time)">2020-03-13</time><p>The coronavirus is here, and as a result a lot of employers are asking employees to work remotely if possible. I’ve seen a fair share of _tips for remote working_ blog posts this past week. I figured I’d cash in on the action and share my thoughts.
+
+## Don’t Overthink It
+Most of the posts I’ve read, more or less, are saying the same things: have an enjoyable working environment, communicate with your team regularly, stick to a schedule, yada yada yada…
+
+All of those are great, but also seem subjective. Maybe its because I’ve been a remote working for over 10 years, but I have a different  point of view here. The best advice I have is: **don’t overthink it**. I’m not saying all those other things aren’t important, however if you spend too much time focusing on: _I have to do this_ and _I have to do that_, you’ll probably find the transition will be more difficult and take longer.
+
+## It is a Transition
+Simply be aware that remote working _is_ a transition, especially if you’ve worked in an office environment for some time. And that’s ok! Recognize this, but try not to dwell on it too much. Do what you can to figure out how to get into _your_ groove quickly. Maybe that means working in pajamas, or working at the kitchen table instead of a dedicated office, or whatever!
+
+The fact is, it will take you a little time to get used to remote working. And you’ll likely have to try different things to find what works for you. Your preferences might also fluctuate over time. Be aware of the transition, and try not to overthink it.</p></div><div class="box"><h3><a href="/posts/deploying-my-eleventy-site-to-github-pages/">Deploying My Eleventy Site to GitHub Pages</a></h3><time datetime="Mon Mar 02 2020 00:00:00 GMT+0000 (Coordinated Universal Time)">2020-03-02</time><p>I really like [GitHub Pages](https://pages.github.com/), and have used it to host my site for a while. The biggest challenge of switching my site to [Eleventy](https://www.11ty.dev/) was getting deployments to GitHub pages set up. I suppose I could have built my site locally, and then push that to the `gh-pages` branch, but that felt _wrong_. I prefer my `master` branch to be the source of my site, while `gh-pages` to only be the published content.
+
+I’m aware of tools such as [Netlify](https://www.netlify.com/) and [Travis CI](https://travis-ci.com/) which aid in hosting or deployment processes. However I wasn’t looking to add another service into my tech stack. With some digging into [GitHub Actions](https://github.com/features/actions), this seemed like a plausible route for getting my site deployed without having to rely on an external service.
+
+### Setting Up a GitHub Action
+
+GitHub Actions allow you to automate workflows such as code deployment, running tests, compressing images, and so much more. GitHub has a whole _Marketplace_ where you can explore community-created actions. I’m using the [GitHub Pages action](https://github.com/marketplace/actions/github-pages-action) which handles everything I need for deploying. My workflow is fairly simple, and is largely based on the instructions for [Static Site Generators with Node.js](https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-static-site-generators-with-nodejs). In `/.github/workflows/eleventy_build.yml`, I have the following:
+
+```yaml
+name: Eleventy Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: &#39;10.x&#39;
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: {% raw %}${{ secrets.ACTIONS_DEPLOY_KEY }}{% endraw %}
+          publish_dir: ./dist
+```
+
+Depending on how your Eleventy project is set up you might need to make some tweaks to the defaults. I recommend checking out the rest of the [documentation](https://github.com/marketplace/actions/github-pages-action#table-of-contents) to see what you can do.
+
+### Hey GitHub, I’m Not Using Jekyll
+
+I found this to be the biggest hurdle, and it kind of buried in [GitHub’s documentation](https://help.github.com/en/github/working-with-github-pages/about-github-pages#static-site-generators). By default, GitHub tries to use Jekyll to build your site. If you’re using any syntax other than what Jekyll recognizes, then you _might_ get errors and your build could potentially fail. The good news is the fix is really easy. In the root of your project, include an empty file `.nojekyll`.
+
+### Committing the Package Lock file
+
+This GitHub action is an _automated environment_, so rather than use `npm install` our action should use `npm ci`. This ensures that you get a _clean install_ of your dependencies. One of the requirements for using `npm ci` is that the project **must** have an existing `package-lock.json`. I’m not really sure what the norm is here, but I don’t typically commit this file. So if you fall into that category, make sure you get that file committed!
+
+### Creating an NPM Build Script
+
+When it’s time for Eleventy to build your site when the `master` branch is pushed upstream, it needs to happen in the context of the Node environment. In my `package.json` I have a script mapped to the command `eleventy`:
+
+```json
+&quot;scripts&quot;: {
+  &quot;build&quot;: &quot;eleventy&quot;
+}
+```
+
+Now when `npm run build` runs in the GitHub action, it will know where to find the `eleventy` command.
+
+### No SSH Deploy Key? No Deployment!
+
+For security purposes, GitHub requires that you have a _deploy key_ and a corresponding _secret_ set up in the repository that this GitHub Action is in. There’s handy [step by step guide with screenshots](https://github.com/marketplace/actions/github-pages-action#%EF%B8%8F-create-ssh-deploy-key) on how to create the deploy key and secret, as well as adding them to the repository.
+
+In my case I’ve labelled my deploy key _ACTIONS_DEPLOY_KEY_. This is case-sensitive, so make sure you pay attention to what you call your deploy key!
+
+### Wrapping Up
+
+While I’m not sure if this is the best way to get my Eleventy site deployed to GitHub Pages, it meets my needs. As far as I can tell, this general deployment process would be fairly similar to set up with a service like Netlify or Travis CI. However I find it extremely satisfying not being dependent on extra services.</p></div><div class="box"><h3><a href="/posts/trying-out-eleventy/">Trying Out Eleventy</a></h3><time datetime="Tue Feb 18 2020 00:00:00 GMT+0000 (Coordinated Universal Time)">2020-02-18</time><p>As I started to think about blogging again, I began looking at options for hosting, CMS frameworks, static site generators, etc. [Eleventy](https://www.11ty.dev/) has been in the mainstream for sometime now, and I&#39;ve heard nothing but good things about it. I figured I should give it a shot.
+
+There are no shortage of examples for using Eleventy, but I particularly found [Andy Bell’s](https://hankchizljaw.com/) [Hebra](https://github.com/Andy-set-studio/hebra) starter kit, as well as the [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog) to be excellent resources. I&#39;m using [Nunjucks](https://mozilla.github.io/nunjucks/) for templating. It more or less feels like [Liquid](https://shopify.github.io/liquid/) which I&#39;m familiar with from having used [Jekyll](https://jekyllrb.com/), as well as creating [State Motto Prints](https://states.iamdanielmarino.com).
+
+In the course of an afternoon, I was able to put together the [bones of this redesign](https://github.com/starzonmyarmz/iamdanielmarino.com). Over the past week, during my spare time, I&#39;ve been adding polish, and getting deployments working with Github Pages. I&#39;ll continue to make tweaks here and there, but overall I feel good about it.</p></div><div class="box"><h3><a href="/posts/how-i-manage-projects/">How I Manage Projects</a></h3><time datetime="Wed Feb 12 2020 00:00:00 GMT+0000 (Coordinated Universal Time)">2020-02-12</time><p>As a Product Designer at [Harvest](https://getharvest.com), part of my role is running projects. While I don’t believe there is a _right_ or _wrong_ way to manage projects, I do think there are some methods that can yield better results. I’m hardly an expert in this area, but I’d like to share some of the ways I find success in managing projects.
+
+I should mention that these thoughts are my own. I’m extremely blessed to work for a company that gives some freedom as to how individuals run projects. Of course there are some fixed variables. For example, we all use Basecamp for tracking updates, and follow the same guidelines for communicating updates with other teams within Harvest.
+
+
+### Ethos
+
+I don’t really have some profound wisdom to share. Basically, I try to stay out of the way as much as possible, leaving room for my teammates to get their work done. Their time, much like mine, is valuable. Out of respect, I try not to gum up the works with unnecessary meetings or emails. This doesn’t mean I’m out of the loop. We’re all generally aware of what the other person is working on.
+
+
+### The Kickoff
+
+In preparation for the _Kickoff_, I prefer creating a Google Doc with the project details rather than a slideshow. It’s much easier to review and edit on the fly. I also don’t have to get hung up on the little things like _does this slide look pretty_.
+
+Typically, I keep the Kickoff to 30 minutes or less. This isn’t the place to figure out technical or design decisions. We still might kick around some ideas and ask questions, but typically we breakout into smaller groups as needed. My preference is to have the Kickoff the Friday before the project starts. This allows my distributed team to hit the ground running first thing Monday morning.
+
+
+### Weekly Hangout
+
+Once a week, our team will meet over a Google Hangout for about 20–30 minutes to discuss updates. We don’t necessarily try to solve problems in these meetings unless they’re quick and easy to figure out. The goal of these hangouts is to make sure we’re all on the same page throughout the course of the project.
+
+
+### Daily Slack Check-in
+
+Simply put, I hate _unnecessary_ meetings, and find that most others do too. They disrupt the flow of my work day, and I suspect they do for others too. I prefer daily check-ins on [Slack](https://slack.com/) because it’s asynchronous. It allows my to get updates as breaks occur naturally throughout my day. I ask teammates to write a one- or two-sentence update. Basically what are you working on and is anything blocking you from completing it. Short and sweet.
+
+Of course, if something is pressing or I’m blocking a todo from progressing, I ask my teammates to @ me, so that I get an immediate notification.
+
+I know some people are into multiple email check-ins throughout the week (such as Basecamp’s automated check-ins). Personally, I dislike these—primarily because it feels like extra clutter in my inbox.
+
+
+### Todos on Basecamp
+
+Previously I mentioned we all use [Basecamp](https://basecamp.com) at Harvest. I hold my teammates responsible for making todos, and keeping related discussions up-to-date. That means a developer may create multiple todos for building out a feature or creating a todo for me to apply some design polish.
+
+
+That’s the bulk of it. Of course there are little things here and there that I didn’t go over, but this should give you a glimpse into how I manage projects.</p></div><div class="box"><h3><a href="/posts/js13k-2018-retrospective/">JS13K 2018 Retrospective</a></h3><time datetime="Mon Oct 15 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">2018-10-15</time><p>In one of my weekly developer emails, I saw a link for [JS13KGames](https://2018.js13kgames.com/). I&#39;ve always wanted to create a video game. I asked my JavaScript-whiz buddy, [Brad](https://github.com/braddunbar), if he was interested in building a game with me. Without hesitation, he said “Yes!”
+
+### Concept
+
+A couple of years ago I came up with the basic concept/mechanic of toggling layers on and off to create various platforming challenges. I had even sketched out several level designs, and cobbled together a super basic prototype using [Phaser.io](http://phaser.io/). I was pretty happy with this simple mechanic. On top of that our character movement would consist of basic platforming: moving left/right and jumping.
+
+There are [other ideas](https://github.com/starzonmyarmz/js13k-2018) we had early on such as moving platforms/spikes, enemies, variances in gravity, as well as an in-game timer, but we ended up punting on those due to time and size constraints. Aside from adding complexity to our code, I think having the constraints challenged us to explore more with level design - as well as simplifying game play.
+
+### Art Style, Design, and UX
+
+Originally, I envisioned the game having a pixel art style, but with the 13K and 30 day limits, I decided to simplify. Designing a minimum of 20 levels would take up quite a bit of time. Exploring pixel sprite and background designs would have prevented me from being able to create enough levels to make the game worth playing. I decided to stick with two colors.
+
+I wanted to avoid using text to educate game mechanics. I took inspiration from countless video games (but specifically Super Mario World, Super Metroid, Megaman X), and started out by creating the first three levels that would introduce game mechanics one at a time. I then kept exploring various level designs until I had about six or seven solid levels.
+
+![original idea about education](/images/posts/js13k2018-education.png &quot;Original idea for educating game controls to player&quot;)
+
+While Brad was developing the mechanics, I solicited the help of my son to help me design the character. It went through some variations, but the final character was pretty similar to what we started with. In my mind I could see his legs moving and his head bobbing. He originally had rounded corners, but that ended up making the `svg` output more complicated, so in the end we ditched them.
+
+![character ideas](/images/posts/js13k2018-characters.png &quot;Other character ideas&quot;)
+
+I liked the idea of the _toggle_ concept being carried through all the various screens, and not just the levels. So I designed the title, end, and controller screens with this in mind.
+
+![typeface](/images/posts/js13k2018-font.png &quot;Custom typeface designed for ONOFF&quot;)
+
+### Music and Sound Effects
+
+I procrastinated with sound for two weeks or so. At first I got hung up on the options available for creating music and sound effects, until I came across [TinyMusic](https://github.com/kevincennis/TinyMusic). I really liked the simplicity of it, that I was able to focus on music, not getting hung up on the plethora of styles and effects.
+
+The [original track](http://jsfiddle.net/0k6tLnfd/8/) I wrote was more driving, but lacked personality. I hemmed and hawed for a week, then one morning I just started humming a really silly tune, and it felt just right for the game. The second part of that song (with the walking bass line) came a week later. I was experimenting to see if I could get chords [fade in and out](https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/src/sound.js#L327-L351). Once I got that working the bass line just worked itself out, and I had the second half to my song.
+
+For sound effects, I had found some effects I really liked on [OpenGameArt](https://opengameart.org/) - however the file sizes were huge. No amount of resampling got them even close to 13K. So I ended up trying to _recreate_ those sounds using TinyMusic.
+
+### Development
+
+We didn’t think it was necessary to use `canvas`, and opted use `svg`. This allowed us to easily scale graphics, use CSS to flip the colors when the layers were toggled, as well as easily develop graphics. In a lot of cases, I hard coded graphics such as the [death animation](https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L135-L159) or the death counter, and then Brad would step in and wire it up with JavaScript.
+
+I ran every graphic I created through [SVGOMG](https://jakearchibald.github.io/svgomg/) which helped keep our SVG super lightweight. In some cases, I found it more performant to use plain old `rect`s or take advantage of SVG `pattern`s for the [numbers used](https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L107-L118) in the death and level counter, as well as the [spikes](https://github.com/starzonmyarmz/js13k-2018/blob/gh-pages/index.html#L80-L93).
+
+I left the decision to Brad whether we should roll our own game mechanics or use an existing library. We both felt it would be more fun to write our own. This also gave us a lot more control over the file sizes and code quality. Using ES6 made the vast majority of the code easier to write, and we didn’t end up having to polyfill anything.
+
+For level design, Brad had created the ability to bootstrap levels quickly just by passing in an array of coordinates for the character, goal, and platforms (including the layer they should exist on). After getting a little burnt out on level design, I messed around with creating some dynamically generated levels.
+
+We developed right up to the very end. Within the last 12 hours before the deadline we rolled out Gamepad support, the ability to share and play custom levels, and wrote another song to play when the game is completed.
+
+### Tooling and 13k
+
+Our tooling was minimal. We would run our JS, CSS, and HTML through minifiers - that’s it. We decided to build everything as minimal as possible from the beginning, so we didn’t really have to go back and rework anything to hit the 13k limit.
+
+After building the game we were still far under 13k, so Brad decided to roll out a custom level editor! That actually turned out to be a huge help because it made it a lot faster to test out ideas, and generate level code that we could just paste into our game. We though it was so cool we decided to include it as a bonus with a day left before the deadline!
+
+### Playtesting
+
+Aside from having our kids play the game frequently (and they did!) we invited a few friends to play with about a week left in the competition. They felt that the game mechanics felt good, and were fairly easy to figure out. Looking back I wish we had people play it sooner - only because we were scrambling around with a few days left to finish building the game. If we had received more drastic feedback, we would have been in a really tight spot.
+
+### Wrap Up
+
+Brad and I had a blast working on the js13k this year! I’m really grateful to Brad and all his help, our friends who took the time to playtest and give us feedback, and especially our families who gave endless support, and endured hours and hours of that music loop!
+
+If you haven’t yet, make sure you check out our game [ONOFF](https://js13kgames.com/entries/onoff)!</p></div><div class="box"><h3><a href="/posts/my-first-sketch-plugin-and-what-i-learned/">My First Sketch Plugin and What I Learned</a></h3><time datetime="Mon May 16 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">2016-05-16</time><p>I’ve been Adobe Illustrator free for almost six months now, and what I miss most about it are some of the nice effects it ships with. I love Sketch, but I don’t think these effects will ever make their way into Sketch. Sketch does have the ability to add plugins, and I’ve always wanted to try my hand at creating one. I really miss is Illustrator’s _Roughen_ effect as it’s really useful for creating that trendy-old-timey-beat-up look. Since a Sketch plugin that _roughens_ a path doesn’t already exist (that I could find) I decided to create one!
+
+I’m going to be up front, and this is mostly a decompression of all the frustration I felt while working on the plugin.
+
+## Delete and reinstall * Infinity
+
+I spent a lot of time just uninstalling, reinstalling the plugin any time I made a change to the plugin script. This was super annoying, but I’m not entirely sure if there was a way around this. Using the **Custom Plugin** menu option was quick and useful for testing out snippets of code, but it’s not a fully fledged code editor, so I wouldn’t want to use it for sole development. Using `print()` was sometimes useful for logging data to the console, but a lot of the times what was being logged was utter nonsense and useless. This brings me to my next topic.
+
+## Documentation Wasn’t Too Useful
+
+I admit I’m not a hardcore developer, but I like to think I’m seasoned enough that I can review some documentation and forge ahead. Looking at the docs on Apple’s site was like reading a Unix software manual out of the 80’s. It didn’t help me out so much. Not only that, Googling Appkit or Cocoa (to be honest I don’t even understand which is which) methods didn’t help either. Is there a secret club you have to belong to to get useful examples and tutorials?
+
+I’m good with JavaScript, so CocoaScript was nice for bridging the gap. However it’s really weird to me that you can write code in Cocoa notation in CocoaScript. Pick a syntax variation and stick with it!
+
+The Sketch API docs are incomplete, and the examples that were there weren’t entirely useful. They must also be restructuring because halfway through development all the docs and links changed. Some content was removed entirely that I found kind of useful. Thank God for Google caching! I learned the most from looking at other plugins that did similar things I was looking to do. I also found [this resource](https://github.com/turbobabr/Sketch-Plugins-Cookbook) invaluable - there is so much great stuff in there.
+
+## Late to the Party
+
+So while I’m decompressing from this project I’m remembering I belong to the [Team Sketch](http://teamsketch.io/) Slack Team. I wish I had remembered this earlier because there’s a channel dedicated to plug in development, and I’m sure I could’ve have received a lot of help from there. Just scrolling through the last 50 or so messages I saw an assortment of links that would have been useful.
+
+## Wrap Up
+
+I know I complained a lot in this post. Despite the things that I felt held me back, I feel like I can improve my plugin quite a bit, so I wouldn’t say I’m done. I’d like to utilize the Team Sketch Slack Team and some of the resources I found.</p></div><div class="box"><h3><a href="/posts/install-mcrypt-php-extension-on-osx-yosemite/">Install Mcrypt PHP Extension on OSX Yosemite</a></h3><time datetime="Thu Jan 29 2015 00:00:00 GMT+0000 (Coordinated Universal Time)">2015-01-29</time><p>After updating [Statamic](http://statamic.com/) to 1.10.2, I started getting [Mcrypt](http://en.wikipedia.org/wiki/Mcrypt) errors. After some Googling, I found some complicated fixes. After some noodling around, here’s a simple way to fix it with [Homebrew](http://brew.sh/):
+
+First, figure out which version of PHP you’re running. You can do this by opening up Terminal, and running the following command:
+
+```bash
+&gt; php -v
+```
+
+I happen to be using PHP 5.5.21 locally, so I’ll use that in my examples. Next, _tap_ the `homebrew/php` cask:
+
+```bash
+&gt; brew tap homebrew/php
+```
+
+This next step is sort of optional. You can search for which versions of mcrypt is available to make sure it matches your version of PHP:
+
+```bash
+&gt; brew search mcrypt
+```
+
+Like I said earlier, I’m running PHP 5.5.21. Make sure you install the version that corresponds with your version of PHP.
+
+```bash
+&gt; brew install php55-mcrypt
+```
+
+That last command took several minutes to install it on my machine. After it is installed, restart the server, and you should be good to go!</p></div></main><script data-goatcounter="https://starzonmyarmz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
