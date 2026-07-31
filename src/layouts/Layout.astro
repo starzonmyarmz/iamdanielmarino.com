@@ -56,9 +56,15 @@ const { title } = Astro.props
       <slot />
     </main>
 
-    <script
-      data-goatcounter="https://starzonmyarmz.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"></script>
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          data-goatcounter="https://starzonmyarmz.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        />
+      )
+    }
   </body>
 </html>
