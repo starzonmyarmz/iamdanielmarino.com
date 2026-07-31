@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import FormattedDate from "../components/FormattedDate.astro"
 
 import { getCollection } from "astro:content"
-import { formatDate } from "../utils/date"
 
 const posts = (await getCollection("posts")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -33,7 +33,7 @@ const posts = (await getCollection("posts")).sort(
         <h3>
           <a href={`/posts/${post.id}/`}>{post.data.title}</a>
         </h3>
-        <time datetime={post.data.date}>{formatDate(post.data.date)}</time>
+        <FormattedDate date={post.data.date} />
         <p>{post.body}</p>
       </div>
     ))
