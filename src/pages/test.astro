@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { generateCluster, voxelsToGroups, groupsBounds, MAX_BLOCK_HEIGHT } from "../lib/voxelArt"
+import { getCollection } from "astro:content"
+
+const posts = await getCollection("posts")
+
+// Oldest first: the tower stacks upward chronologically, so the newest
+// article ends up on top.
+const chronological = [...posts].sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf())
+
+// Every article gets its own seeded voxel cluster, footprint unchanged,
+// stacked directly on top of the previous one so all articles blend into
+// a single tower, floor by floor. Blocks have variable height, so each
+// floor reserves `grid + MAX_BLOCK_HEIGHT` of headroom (worst case a
+// column's last block) to guarantee floors never collide.
+const grid = 3
+const floorHeight = grid + MAX_BLOCK_HEIGHT
+
+const combined = chronological.flatMap((post, i) => {
+  const href = `/posts/${post.id}/`
+  return generateCluster(post.data.title, grid).map((v) => ({
+    ...v,
+    zBottom: v.zBottom + i * floorHeight,
+    href,
+  }))
+})
+
+const size = 22
+const groups = voxelsToGroups(combined, size)
+const { minX, minY, w, h } = groupsBounds(groups, size * 0.5)
+---
+
+<svg
+  viewBox={`${minX} ${minY} ${w} ${h}`}
+  xmlns="http://www.w3.org/2000/svg"
+  class="article-art-combined"
+  shape-rendering="crispEdges"
+>
+  {
+    groups.map((g) => (
+      <a href={g.href}>
+        {g.faces.map((f) => (
+          <polygon points={f.points} fill={f.fill} stroke={f.fill} stroke-width="1" />
+        ))}
+      </a>
+    ))
+  }
+</svg>
+
+<style>
+  header,
+  .article-art-combined {
+    grid-column: 1 / -1;
+  }
+
+  .article-art-combined {
+    display: block;
+    width: auto;
+    height: 80vh;
+    margin: 40px auto;
+  }
+
+  .article-art-combined a {
+    cursor: pointer;
+  }
+
+  .article-art-combined a:hover polygon,
+  .article-art-combined a:focus-visible polygon {
+    filter: brightness(1.25);
+  }
+
+  .article-art-combined a:focus-visible {
+    outline: 2px solid #222;
+    outline-offset: 2px;
+  }
+</style>

@@ -1,12 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import FormattedDate from "../components/FormattedDate.astro"
-
-import { getCollection } from "astro:content"
-
-const posts = (await getCollection("posts")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-)
 ---
 
 <Layout title="Home">
@@ -26,16 +19,4 @@ const posts = (await getCollection("posts")).sort(
       >.
     </p>
   </div>
-
-  {
-    posts.map((post) => (
-      <div class="box">
-        <h3>
-          <a href={`/posts/${post.id}/`}>{post.data.title}</a>
-        </h3>
-        <FormattedDate date={post.data.date} />
-        <p>{post.body}</p>
-      </div>
-    ))
-  }
 </Layout>

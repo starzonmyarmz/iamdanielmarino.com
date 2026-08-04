@@ -1,0 +1,114 @@
+---
+import { generateCluster, voxelsToGroups, groupsBounds } from "../lib/voxelArt"
+
+interface Props {
+  seed: string
+  size?: number
+  grid?: number
+  href?: string
+}
+
+const { seed, size = 26, grid = 4, href } = Astro.props
+
+const voxels = generateCluster(seed, grid).map((v) => ({ ...v, href }))
+const groups = voxelsToGroups(voxels, size)
+const { minX, minY, w, h } = groupsBounds(groups, size * 0.5)
+---
+
+<svg
+  viewBox={`${minX} ${minY} ${w} ${h}`}
+  xmlns="http://www.w3.org/2000/svg"
+  class="article-art"
+  shape-rendering="crispEdges"
+>
+  {
+    groups.map((g) => (
+      <g class="voxel">
+        {g.href ? (
+          <a href={g.href}>
+            {g.faces.map((f) => (
+              <polygon
+                points={f.points}
+                fill={f.fill}
+                stroke="rgba(0, 0, 0, 1)"
+                stroke-width="0.2"
+                stroke-linejoin="round"
+              />
+            ))}
+          </a>
+        ) : (
+          g.faces.map((f) => (
+            <polygon
+              points={f.points}
+              fill={f.fill}
+              stroke="rgba(0, 0, 0, 1)"
+              stroke-width="0.2"
+              stroke-linejoin="round"
+            />
+          ))
+        )}
+      </g>
+    ))
+  }
+</svg>
+
+<style>
+  .article-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    align-self: start;
+    /* Sticks near the top of the viewport while scrolling down through
+       the article text beside it, then releases once its grid row (the
+       full-height article column) runs out — i.e. it rides along until
+       the article's own footer reaches it. */
+    position: sticky;
+    top: 2rem;
+  }
+
+  .voxel {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  /* Each voxel starts invisible and fades/slides into place as the page
+     scrolls. sibling-index() staggers every voxel's animation window
+     along the scroll timeline so they don't all pop in at once. Both
+     features are recent (2025) additions, so this is wrapped in
+     @supports and falls back to the plain, fully-visible render. */
+  @supports (animation-timeline: scroll()) {
+    /* Split across two selectors on purpose: the build's CSS minifier
+       folds animation-timeline/animation-range into the `animation`
+       shorthand if they're declared alongside it on the same rule,
+       and browsers reject that combined form (it isn't valid syntax),
+       silently dropping the whole animation. Keeping animation-timeline
+       and animation-range on a differently-shaped selector stops the
+       minifier from merging them in. */
+    .voxel {
+      animation: voxel-in 1ms linear both;
+    }
+
+    g.voxel {
+      animation-timeline: scroll(root block);
+      animation-range: calc((sibling-index() - 1) / sibling-count() * 70%)
+        calc((sibling-index() - 1) / sibling-count() * 70% + 20%);
+    }
+
+    @keyframes voxel-in {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .voxel {
+      animation: none;
+    }
+  }
+</style>
