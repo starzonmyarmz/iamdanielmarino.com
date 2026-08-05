@@ -6,6 +6,20 @@ interface Props {
 }
 
 const { title } = Astro.props
+
+const navLinks = [
+  { label: "Work", href: "/work" },
+  { label: "Posts", href: "/posts" },
+  { label: "Feed", href: "/feed.xml" },
+  { label: "Contact", href: "https://letterbird.co/iamdanielmarino" },
+]
+
+const moreLinks = [
+  { label: "Uses", href: "/uses" },
+  { label: "Subs", href: "/subs" },
+]
+
+const footerLinks = [...navLinks, ...moreLinks]
 ---
 
 <!doctype html>
@@ -37,24 +51,35 @@ const { title } = Astro.props
         <li>
           <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
         </li>
-        <li>
-          <a href="/work">Work</a>
-        </li>
-        <li>
-          <a href="/posts">Posts</a>
-        </li>
-        <li>
-          <a href="/feed.xml">Feed</a>
-        </li>
-        <li>
-          <a href="https://letterbird.co/iamdanielmarino">Contact</a>
-        </li>
+        {
+          navLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
 
     <main>
       <slot />
     </main>
+
+    <footer>
+      <nav>
+        <ul>
+          {
+            footerLinks.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <p>© 2026 Daniel Marino</p>
+    </footer>
 
     {
       import.meta.env.PROD && (

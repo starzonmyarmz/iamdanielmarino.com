@@ -7,6 +7,7 @@ import { getCollection, render } from "astro:content"
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
+
   return posts.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },
@@ -21,10 +22,10 @@ const { Content } = await render(entry)
   <article>
     <header>
       <h1>{entry.data.title}</h1>
-      <small><FormattedDate date={entry.data.date} /></small>
+      <FormattedDate date={entry.data.date} />
     </header>
 
-    <section class="post-content">
+    <section>
       <Content />
     </section>
   </article>
