@@ -2,8 +2,6 @@
   navigation: auto;
 }
 
-/* Self-hosted (latin subset, matching what Google Fonts serves this UA)
-   instead of the Google Fonts <link> — one origin fewer to connect to. */
 @font-face {
   font-family: "Work Sans";
   src: url("/WorkSansVariable.woff2") format("woff2-variations");
@@ -29,6 +27,12 @@
 }
 
 html {
+  --l: attr(data-l type(<percentage>));
+  --c: attr(data-c type(<number>));
+  --h: attr(data-h type(<number>));
+  --accent: oklch(var(--l) var(--c) var(--h));
+  --accent-bg: oklch(from var(--accent) l c h / 10%);
+
   font-size: 20px;
 }
 
@@ -50,6 +54,7 @@ header {
 nav {
   ul {
     display: inline-flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
@@ -60,13 +65,13 @@ nav {
 }
 
 main {
+  background: linear-gradient(to top, var(--accent-bg), transparent 40ch);
   flex-grow: 1;
   width: 100%;
-  background: linear-gradient(transparent calc(100% - 15ch), #e2e2e2);
 }
 
 footer {
-  background: #e2e2e2;
+  background: var(--accent-bg);
   padding-block: 2rem;
   text-align: center;
 }
@@ -80,7 +85,7 @@ h6 {
   line-height: 1.2;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  margin-block: 1.5em 1em;
+  margin-block: 1.5rem 1rem;
   text-wrap: balance;
 }
 
@@ -89,11 +94,20 @@ dl,
 ol,
 ul {
   line-height: 1.4;
-  margin-block: 1em;
+  margin-block: 1rem;
   text-wrap: pretty;
 }
 
+ol,
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-inline: 1.2rem;
+}
+
 a {
+  color: var(--accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
   touch-action: manipulation;
@@ -141,7 +155,8 @@ article {
 }
 
 .vox {
-  --cube-fill: attr(data-fill type(<color>));
+  --cube-hue: attr(data-hue type(<number>));
+  --cube-fill: oklch(from var(--accent) l c var(--cube-hue));
   --cube-stroke: rgb(0 0 0);
   --cube-stroke-width: 0.2;
   --cube-float-timing: 4s;
@@ -181,15 +196,15 @@ article {
   stroke-width: var(--cube-stroke-width);
 
   &[data-face="top"] {
-    fill: color-mix(in srgb, var(--cube-fill) 80%, white);
+    fill: color-mix(in oklch, var(--cube-fill) 80%, white);
   }
 
   &[data-face="left"] {
-    fill: color-mix(in srgb, var(--cube-fill) 70%, black);
+    fill: color-mix(in oklch, var(--cube-fill) 70%, black);
   }
 
   &[data-face="right"] {
-    fill: color-mix(in srgb, var(--cube-fill) 85%, black);
+    fill: color-mix(in oklch, var(--cube-fill) 85%, black);
   }
 }
 

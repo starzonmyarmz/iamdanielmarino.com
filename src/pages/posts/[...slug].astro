@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro"
 import FormattedDate from "../../components/FormattedDate.astro"
 import Voxels from "../../components/Voxels.astro"
+import { parseOklch, titleAccent } from "../../lib/accent"
 
 import { getCollection, render } from "astro:content"
 
@@ -16,9 +17,13 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await render(entry)
+
+// The title always seeds an accent; an explicit frontmatter color (if valid)
+// overrides it.
+const accent = (entry.data.color && parseOklch(entry.data.color)) || titleAccent(entry.data.title)
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} accent={accent}>
   <article>
     <header>
       <h1>{entry.data.title}</h1>
@@ -30,5 +35,5 @@ const { Content } = await render(entry)
     </section>
   </article>
 
-  <Voxels seed={entry.data.title} />
+  <Voxels seed={entry.data.title} hue={accent.h} />
 </Layout>

@@ -6,6 +6,11 @@ const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
+    // Optional accent color for this article: drives link color, voxel
+    // palette, and background tint. OKLCH so lightness/chroma/hue stay
+    // independently tunable (e.g. "oklch(60% 0.12 250)"). Unset articles
+    // keep the title-seeded voxel hue and no link/background tint.
+    color: z.string().optional(),
   }),
 })
 

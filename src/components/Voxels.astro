@@ -4,11 +4,12 @@ import VoxelArt from "./VoxelArt"
 
 interface Props {
   seed: string
+  hue: number
 }
 
-const { seed } = Astro.props
+const { seed, hue } = Astro.props
 const grid = 4
-const voxels = generateCluster(seed, grid)
+const voxels = generateCluster(seed, grid, hue)
 const groups = voxelsToGroups(voxels, 18)
 const { minX, minY, w, h } = groupsBounds(groups, 18)
 ---

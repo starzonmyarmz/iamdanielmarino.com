@@ -2,6 +2,7 @@
 // Style modeled on meodai/heerich (https://github.com/meodai/heerich):
 // unit cubes stacked into a random tower per grid cell, rendered as flat
 // isometric faces (top/left/right), painter's-algorithm sorted.
+import { seededRandom } from "./prng"
 
 export interface Block {
   x: number // grid column
@@ -16,34 +17,9 @@ export interface Face {
 }
 
 export interface VoxelGroup {
-  fill: string
+  hue: number
   faces: Face[]
   wavePhase: number
-}
-
-// Deterministic string -> uint32 hash (xmur3), feeds a mulberry32 PRNG
-// so the same seed always produces the same cluster.
-function xmur3(str: string) {
-  let h = 1779033703 ^ str.length
-  for (let i = 0; i < str.length; i++) {
-    h = Math.imul(h ^ str.charCodeAt(i), 3432918353)
-    h = (h << 13) | (h >>> 19)
-  }
-  return () => {
-    h = Math.imul(h ^ (h >>> 16), 2246822507)
-    h = Math.imul(h ^ (h >>> 13), 3266489909)
-    return (h ^= h >>> 16) >>> 0
-  }
-}
-
-function mulberry32(a: number) {
-  return () => {
-    a |= 0
-    a = (a + 0x6d2b79f5) | 0
-    let t = Math.imul(a ^ (a >>> 15), 1 | a)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
 }
 
 // Rounds to a whole number. The viewBox scales to whatever size the <svg>
@@ -71,10 +47,6 @@ const HUE_JITTER_X_COEFF = 13
 const HUE_JITTER_Y_COEFF = 7
 const HUE_JITTER_I_COEFF = 5
 const HUE_JITTER_RANGE = 20
-
-// Fixed saturation/lightness for every cube — only hue varies per block.
-const CUBE_SATURATION = 60
-const CUBE_LIGHTNESS = 50
 
 // One seeded stack of unit cubes for a single grid column. The base cube
 // is always present (every column has a floor); each cube above it is a
@@ -112,15 +84,22 @@ function stackCell(
   return blocks
 }
 
-// Builds one seeded stack per grid column (0..grid-1 in x/y).
-export function generateCluster(seed: string, grid: number, maxHeight = grid): Block[] {
-  const rand = mulberry32(xmur3(seed)())
-  const baseHue = Math.floor(rand() * 360)
+// Builds one seeded stack per grid column (0..grid-1 in x/y), all cubes
+// sharing the given base hue (jittered per-cube for texture). The seed still
+// drives stack heights and jitter, so each article's cluster stays visually
+// distinct even when hues match.
+export function generateCluster(
+  seed: string,
+  grid: number,
+  hue: number,
+  maxHeight = grid,
+): Block[] {
+  const rand = seededRandom(seed)
   const blocks: Block[] = []
 
   for (let x = 0; x < grid; x++) {
     for (let y = 0; y < grid; y++) {
-      blocks.push(...stackCell(rand, baseHue, x, y, maxHeight))
+      blocks.push(...stackCell(rand, hue, x, y, maxHeight))
     }
   }
 
@@ -178,7 +157,7 @@ export function voxelsToGroups(blocks: Block[], size: number): VoxelGroup[] {
     const leftDown = project(x0, y1, z0)
 
     return {
-      fill: `hsl(${v.hue}, ${CUBE_SATURATION}%, ${CUBE_LIGHTNESS}%)`,
+      hue: v.hue,
       wavePhase: v.x - v.y,
       faces: [
         { points: `${top} ${right} ${bottom} ${left}`, face: "top" },

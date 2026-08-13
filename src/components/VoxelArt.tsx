@@ -25,7 +25,7 @@ export default function VoxelArt({ groups, minX, minY, w, h }: Props) {
           key={i}
           class={shrunk.has(i) ? "vox vox-shrink" : "vox"}
           data-delay={g.wavePhase}
-          data-fill={g.fill}
+          data-hue={g.hue}
           onClick={() => setShrunk((prev) => new Set(prev).add(i))}
         >
           <g class="vox-float">

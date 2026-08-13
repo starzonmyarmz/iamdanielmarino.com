@@ -1,11 +1,13 @@
 ---
 import "../styles/style.css"
+import type { Accent } from "../lib/accent"
 
 interface Props {
   title: string
+  accent?: Accent
 }
 
-const { title } = Astro.props
+const { title, accent } = Astro.props
 
 const navLinks = [
   { label: "Posts", href: "/posts" },
@@ -16,7 +18,7 @@ const navLinks = [
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-l={accent && `${accent.l}%`} data-c={accent?.c} data-h={accent?.h}>
   <head>
     <meta charset="utf-8" />
     <title>{title} &mdash; Daniel Marino</title>
