@@ -10,16 +10,11 @@ const { title } = Astro.props
 const navLinks = [
   { label: "Work", href: "/work" },
   { label: "Posts", href: "/posts" },
+  { label: "Uses", href: "/uses" },
+  { label: "Subs", href: "/subs" },
   { label: "Feed", href: "/feed.xml" },
   { label: "Contact", href: "https://letterbird.co/iamdanielmarino" },
 ]
-
-const moreLinks = [
-  { label: "Uses", href: "/uses" },
-  { label: "Subs", href: "/subs" },
-]
-
-const footerLinks = [...navLinks, ...moreLinks]
 ---
 
 <!doctype html>
@@ -46,20 +41,21 @@ const footerLinks = [...navLinks, ...moreLinks]
   <body>
     <div id="redesign">👋🏻 Hey! This site is undergoing a live redesign. How fun!</div>
 
-    <nav>
-      <ul>
-        <li>
-          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
-        </li>
-        {
-          navLinks.map((link) => (
-            <li>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
+    <header>
+      <a href="/" id="logo" aria-label="Daniel Marino">Daniel Marino</a>
+
+      <nav>
+        <ul>
+          {
+            navLinks.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <div class="content">
@@ -68,18 +64,6 @@ const footerLinks = [...navLinks, ...moreLinks]
     </main>
 
     <footer>
-      <nav>
-        <ul>
-          {
-            footerLinks.map((link) => (
-              <li>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-
       <p>© 2026 Daniel Marino</p>
     </footer>
 

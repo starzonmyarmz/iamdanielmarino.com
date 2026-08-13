@@ -153,6 +153,68 @@ export function voxelsToGroups(blocks: Block[], size: number): VoxelGroup[] {
   })
 }
 
+// --- Prototype helpers below: for mixing multiple articles' clusters
+// together on one canvas (see test-skyline/test-mosaic/test-pile). Kept
+// separate from generateCluster so its output (and any published article's
+// art) never shifts.
+
+// Base hue for a seed alone, matching generateCluster's first RNG draw —
+// split out so a mixed layout can look up an article's color without
+// generating its whole cluster.
+export function baseHueFor(seed: string): number {
+  const rand = mulberry32(xmur3(seed)())
+  return Math.floor(rand() * 360)
+}
+
+// Independent per-cell coin-flip stack, keyed by (seed, x, y) rather than
+// generateCluster's single sequential stream — lets a layout populate
+// cells one at a time (e.g. a shared grid where each cell's owning article
+// is chosen independently) instead of generating a whole grid at once.
+export function generateCellStack(
+  seed: string,
+  baseHue: number,
+  x: number,
+  y: number,
+  maxHeight: number,
+): Block[] {
+  const rand = mulberry32(xmur3(`${seed}:${x}:${y}`)())
+  const blocks: Block[] = []
+  let zBottom = 0
+  let i = 0
+
+  while (zBottom < maxHeight) {
+    if (i > 0 && rand() >= 0.72 - i * 0.18) break
+
+    const hueJitter = ((x * 13 + y * 7 + i * 5) % 20) - 10
+    blocks.push({ x, y, zBottom, hue: (baseHue + hueJitter + 360) % 360 })
+
+    zBottom += MAX_BLOCK_HEIGHT
+    i++
+  }
+
+  return blocks
+}
+
+// Deterministic Fisher-Yates — same seed always produces the same shuffled
+// order, so a "mixed" layout is stable across builds instead of reshuffling
+// every render.
+export function seededShuffle<T>(arr: readonly T[], seed: string): T[] {
+  const rand = mulberry32(xmur3(seed)())
+  const out = [...arr]
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1))
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out
+}
+
+// Deterministically picks one item per seed — used to assign a shared
+// grid's cells to owning articles independently of each other.
+export function seededPick<T>(items: readonly T[], seed: string): T {
+  const rand = mulberry32(xmur3(seed)())
+  return items[Math.floor(rand() * items.length)]
+}
+
 export function groupsBounds(groups: VoxelGroup[], pad: number) {
   const points = groups.flatMap((g) => g.faces.flatMap((f) => f.points.split(" ")))
   const xs = points.map((p) => Number(p.split(",")[0]))
