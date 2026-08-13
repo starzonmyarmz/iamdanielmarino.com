@@ -60,11 +60,37 @@ function round(n: number) {
 // don't have a magic number to track.
 export const MAX_BLOCK_HEIGHT = 1
 
-// Builds one seeded stack of unit cubes per grid column (0..grid-1 in
-// x/y). The base cube in each column is always present (every cluster
-// has a floor); each cube above it is a coin-flip that gets less likely
-// the more cubes are already stacked. A column stops at the first gap or
-// once it clears `maxHeight` grid units (no floating cubes).
+// One seeded stack of unit cubes for a single grid column. The base cube
+// is always present (every column has a floor); each cube above it is a
+// coin-flip that gets less likely the more cubes are already stacked. A
+// column stops at the first gap or once it clears `maxHeight` grid units
+// (no floating cubes). Shared by generateCluster (one rand stream for the
+// whole grid) and generateCellStack (one rand stream per cell).
+function stackCell(
+  rand: () => number,
+  baseHue: number,
+  x: number,
+  y: number,
+  maxHeight: number,
+): Block[] {
+  const blocks: Block[] = []
+  let zBottom = 0
+  let i = 0
+
+  while (zBottom < maxHeight) {
+    if (i > 0 && rand() >= Math.max(0.72 - i * 0.18, 0.1)) break
+
+    const hueJitter = ((x * 13 + y * 7 + i * 5) % 20) - 10
+    blocks.push({ x, y, zBottom, hue: (baseHue + hueJitter + 360) % 360 })
+
+    zBottom += MAX_BLOCK_HEIGHT
+    i++
+  }
+
+  return blocks
+}
+
+// Builds one seeded stack per grid column (0..grid-1 in x/y).
 export function generateCluster(seed: string, grid: number, maxHeight = grid): Block[] {
   const rand = mulberry32(xmur3(seed)())
   const baseHue = Math.floor(rand() * 360)
@@ -72,18 +98,7 @@ export function generateCluster(seed: string, grid: number, maxHeight = grid): B
 
   for (let x = 0; x < grid; x++) {
     for (let y = 0; y < grid; y++) {
-      let zBottom = 0
-      let i = 0
-
-      while (zBottom < maxHeight) {
-        if (i > 0 && rand() >= Math.max(0.72 - i * 0.18, 0.1)) break
-
-        const hueJitter = ((x * 13 + y * 7 + i * 5) % 20) - 10
-        blocks.push({ x, y, zBottom, hue: (baseHue + hueJitter + 360) % 360 })
-
-        zBottom += MAX_BLOCK_HEIGHT
-        i++
-      }
+      blocks.push(...stackCell(rand, baseHue, x, y, maxHeight))
     }
   }
 
@@ -178,21 +193,7 @@ export function generateCellStack(
   maxHeight: number,
 ): Block[] {
   const rand = mulberry32(xmur3(`${seed}:${x}:${y}`)())
-  const blocks: Block[] = []
-  let zBottom = 0
-  let i = 0
-
-  while (zBottom < maxHeight) {
-    if (i > 0 && rand() >= Math.max(0.72 - i * 0.18, 0.1)) break
-
-    const hueJitter = ((x * 13 + y * 7 + i * 5) % 20) - 10
-    blocks.push({ x, y, zBottom, hue: (baseHue + hueJitter + 360) % 360 })
-
-    zBottom += MAX_BLOCK_HEIGHT
-    i++
-  }
-
-  return blocks
+  return stackCell(rand, baseHue, x, y, maxHeight)
 }
 
 // Deterministic Fisher-Yates — same seed always produces the same shuffled
