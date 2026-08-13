@@ -23,7 +23,7 @@ const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.
           <h2>
             <a href={`/work/${item.data.slug}/`}>{item.data.title}</a>
           </h2>
-          {item.data.blurb}
+          <p>{item.data.blurb}</p>
         </li>
       ))
     }
