@@ -226,5 +226,5 @@ export function groupsBounds(groups: VoxelGroup[], pad: number) {
   const maxX = round(Math.max(...xs) + pad)
   const minY = round(Math.min(...ys) - pad)
   const maxY = round(Math.max(...ys) + pad)
-  return { minX, minY, maxX, maxY, w: round(maxX - minX), h: round(maxY - minY) }
+  return { minX, minY, w: round(maxX - minX), h: round(maxY - minY) }
 }
