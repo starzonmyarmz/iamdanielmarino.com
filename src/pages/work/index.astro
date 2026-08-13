@@ -20,9 +20,9 @@ const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.
     {
       work.map((item) => (
         <li>
-          <h3>
+          <h2>
             <a href={`/work/${item.data.slug}/`}>{item.data.title}</a>
-          </h3>
+          </h2>
           {item.data.blurb}
         </li>
       ))
