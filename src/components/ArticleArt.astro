@@ -15,39 +15,36 @@ const groups = voxelsToGroups(voxels, size)
 const { minX, minY, w, h } = groupsBounds(groups, size * 0.5)
 ---
 
-<svg
-  viewBox={`${minX} ${minY} ${w} ${h}`}
-  xmlns="http://www.w3.org/2000/svg"
-  class="article-art"
-  shape-rendering="crispEdges"
->
-  {
-    groups.map((g) => (
-      <g class="voxel">
-        {g.href ? (
-          <a href={g.href}>
-            {g.faces.map((f) => (
-              <polygon
-                points={f.points}
-                fill={f.fill}
-                stroke="rgba(0, 0, 0, 1)"
-                stroke-width="0.2"
-                stroke-linejoin="round"
-              />
-            ))}
-          </a>
-        ) : (
-          g.faces.map((f) => (
-            <polygon
-              points={f.points}
-              fill={f.fill}
-              stroke="rgba(0, 0, 0, 1)"
-              stroke-width="0.2"
-              stroke-linejoin="round"
-            />
-          ))
-        )}
-      </g>
-    ))
-  }
-</svg>
+<div class="article-art-frame">
+  <svg
+    viewBox={`${minX} ${minY} ${w} ${h}`}
+    xmlns="http://www.w3.org/2000/svg"
+    class="article-art"
+    shape-rendering="crispEdges"
+  >
+    {
+      groups.map((g) => {
+        const cube = (
+          <g class="voxel-float">
+            <g class="voxel-cube">
+              {g.faces.map((f) => (
+                <polygon points={f.points} data-face={f.face} />
+              ))}
+            </g>
+          </g>
+        )
+
+        return (
+          // Left-to-right wave: cubes sharing an (x - y) column float in
+          // phase, neighboring columns lag behind, rippling across the grid.
+          // Both data attributes live here; CSS reads wave-delay directly
+          // and re-exposes fill as a custom property so descendants
+          // (.voxel-float, .voxel-cube, each face) can inherit it.
+          <g class="voxel" data-wave-delay={g.wavePhase} data-fill={g.fill}>
+            {g.href ? <a href={g.href}>{cube}</a> : cube}
+          </g>
+        )
+      })
+    }
+  </svg>
+</div>

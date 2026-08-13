@@ -72,51 +72,132 @@ article {
   }
 }
 
-.article-art {
-  display: block;
-  height: auto;
+.article-art-frame {
+  --cube-stroke: rgba(0, 0, 0, 1);
+  --cube-stroke-width: 0.2;
+  --cube-float-timing: 4s;
+  --cube-wave-delay-multiple: -240ms;
+  --cube-wave-distance: -6px;
+  --cube-hover-scale: scale(0.8);
+  --cube-hover-timing: 150ms;
+  --cube-blur-timing: 400ms;
+
   margin-inline: auto;
   max-width: 100%;
   position: relative;
   width: 20ch;
 }
 
+.article-art {
+  display: block;
+  height: auto;
+  width: 100%;
+
+  /* Shadow under the whole cluster so it reads as floating above the
+     page; the wave itself is per-cube, see .voxel-float below. */
+  filter: drop-shadow(0 14px 10px rgba(0, 0, 0, 0.18));
+}
+
+.article-art polygon {
+  stroke: var(--cube-stroke);
+  stroke-linejoin: round;
+  stroke-width: var(--cube-stroke-width);
+}
+
 .voxel {
+  /* Both re-exposed as custom properties so descendants can inherit them —
+     attr() only reads the attribute of the element it's declared on. */
+  --cube-fill: attr(data-fill type(<color>));
+  --cube-wave-delay: attr(data-wave-delay type(<number>), 0);
+
   transform-box: fill-box;
   transform-origin: center;
 }
 
+.article-art polygon[data-face="top"] {
+  fill: color-mix(in srgb, var(--cube-fill) 80%, white);
+}
+
+.article-art polygon[data-face="left"] {
+  fill: color-mix(in srgb, var(--cube-fill) 70%, black);
+}
+
+.article-art polygon[data-face="right"] {
+  fill: color-mix(in srgb, var(--cube-fill) 85%, black);
+}
+
+.voxel-float {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: voxel-wave var(--cube-float-timing) ease-in-out infinite;
+  animation-delay: calc(var(--cube-wave-delay) * var(--cube-wave-delay-multiple));
+}
+
+@keyframes voxel-wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(var(--cube-wave-distance));
+  }
+}
+
+.voxel-cube {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform var(--cube-blur-timing) ease;
+}
+
+.voxel:hover .voxel-cube,
+.voxel a:focus-visible .voxel-cube {
+  transform: var(--cube-hover-scale);
+  transition: transform var(--cube-hover-timing) ease;
+}
+
+.article-art {
+  view-timeline-name: --art-in-view;
+  view-timeline-axis: block;
+}
+
 @supports (animation-timeline: scroll()) {
   .voxel {
-    animation: voxel-in 1ms linear both;
+    animation: voxel-in 1ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
   }
 
   g.voxel {
-    animation-timeline: scroll(root block);
-    animation-range: calc((sibling-index() - 1) / sibling-count() * 90%)
-      calc((sibling-index() - 1) / sibling-count() * 90% + 5%);
+    /* Tied to the svg's own visibility (not page scroll). "contain" only
+       starts once the whole svg is inside the viewport. The contain phase
+       itself can span a lot of scroll distance (viewport height minus svg
+       height), so the stagger only eats a small slice of it — otherwise
+       short pages run out of scroll before the last cube finishes. */
+    animation-timeline: --art-in-view;
+    animation-range: contain calc((sibling-index() - 1) / sibling-count() * 20%) contain
+      calc((sibling-index() - 1) / sibling-count() * 20% + 15%);
   }
 
   @keyframes voxel-in {
     from {
       opacity: 0;
-      transform: translateY(16px);
+      transform: scale(0);
     }
 
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
     }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .voxel {
+  * {
     animation: none;
   }
 }
 
 footer {
+  background: #e2e2e2;
   padding-block: 2rem;
   text-align: center;
 }

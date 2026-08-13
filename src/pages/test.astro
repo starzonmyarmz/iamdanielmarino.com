@@ -41,7 +41,7 @@ const { minX, minY, w, h } = groupsBounds(groups, size * 0.5)
     groups.map((g) => (
       <a href={g.href}>
         {g.faces.map((f) => (
-          <polygon points={f.points} fill={f.fill} stroke={f.fill} stroke-width="1" />
+          <polygon points={f.points} fill={g.fill} stroke={g.fill} stroke-width="1" />
         ))}
       </a>
     ))
