@@ -16,7 +16,7 @@ const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.
     >, showcasing notable projects I was actively engaged in:
   </p>
 
-  <ul class="posts">
+  <ul>
     {
       work.map((item) => (
         <li>

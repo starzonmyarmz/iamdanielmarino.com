@@ -14,7 +14,7 @@ const posts = (await getCollection("posts")).sort(
     <h1>Posts</h1>
   </header>
 
-  <ul class="posts">
+  <ul>
     {
       posts.map((post) => (
         <li>
