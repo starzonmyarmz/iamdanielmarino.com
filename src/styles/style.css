@@ -3,19 +3,19 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Work Sans";
-  src: url("/WorkSansVariable.woff2") format("woff2-variations");
   font-style: normal;
   font-weight: 100 900;
-  font-display: swap;
+  src: url("/WorkSansVariable.woff2") format("woff2-variations");
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Montserrat";
-  src: url("/MontserratVariable.woff2") format("woff2-variations");
   font-style: normal;
   font-weight: 100 900;
-  font-display: swap;
+  src: url("/MontserratVariable.woff2") format("woff2-variations");
 }
 
 *,
@@ -27,11 +27,11 @@
 }
 
 html {
-  --l: attr(data-l type(<percentage>));
-  --c: attr(data-c type(<number>));
-  --h: attr(data-h type(<number>));
   --accent: oklch(var(--l) var(--c) var(--h));
   --accent-bg: oklch(from var(--accent) l c h / 10%);
+  --c: attr(data-c type(<number>));
+  --h: attr(data-h type(<number>));
+  --l: attr(data-l type(<percentage>));
 
   font-size: 20px;
 }
@@ -82,9 +82,9 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  line-height: 1.2;
   margin-block: 1.5rem 1rem;
   text-wrap: balance;
 }
@@ -144,29 +144,68 @@ article {
   }
 }
 
+.vox-frame {
+  margin-inline: auto;
+  position: relative;
+  width: 24ch;
+
+  .vox-reset {
+    background: none;
+    border: 0;
+    bottom: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+    opacity: 0.5;
+    padding: 0;
+    position: absolute;
+    right: 2rem;
+    transition: all 400ms 200ms;
+
+    .vox-reset-icon {
+      transition: all 200ms 100ms;
+    }
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+
+      .vox-reset-icon {
+        rotate: 30deg;
+      }
+    }
+
+    @starting-style {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+}
+
 .vox-art {
   display: block;
   filter: drop-shadow(0 14px 10px rgb(0 0 0 / 0.2));
   height: auto;
-  margin-inline: auto;
-  view-timeline-name: --art-in-view;
+
   view-timeline-axis: block;
-  width: 24ch;
+  view-timeline-name: --art-in-view;
+  width: 100%;
 }
 
 .vox {
-  --cube-hue: attr(data-hue type(<number>));
   --cube-fill: oklch(from var(--accent) l c var(--cube-hue));
+  --cube-float-timing: 4s;
+  --cube-hover-scale: scale(0.8);
+  --cube-hover-timing: 150ms;
+  --cube-hue: attr(data-hue type(<number>));
+  --cube-shrink-timing: 250ms;
   --cube-stroke: rgb(0 0 0);
   --cube-stroke-width: 0.2;
-  --cube-float-timing: 4s;
+  --cube-unhover-timing: 800ms;
   --cube-wave-delay: attr(data-delay type(<number>), 0);
   --cube-wave-delay-multiple: -240ms;
   --cube-wave-distance: -6px;
-  --cube-hover-scale: scale(0.8);
-  --cube-hover-timing: 150ms;
-  --cube-unhover-timing: 800ms;
-  --cube-shrink-timing: 250ms;
 
   transform-box: fill-box;
   transform-origin: center;
