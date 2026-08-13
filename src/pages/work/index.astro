@@ -16,14 +16,14 @@ const work = (await getCollection("work")).sort((a, b) => a.data.order - b.data.
     >, showcasing notable projects I was actively engaged in:
   </p>
 
-  <ul class="posts">
+  <ul>
     {
       work.map((item) => (
         <li>
-          <h3>
+          <h2>
             <a href={`/work/${item.data.slug}/`}>{item.data.title}</a>
-          </h3>
-          {item.data.blurb}
+          </h2>
+          <p>{item.data.blurb}</p>
         </li>
       ))
     }

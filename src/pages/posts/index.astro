@@ -14,13 +14,13 @@ const posts = (await getCollection("posts")).sort(
     <h1>Posts</h1>
   </header>
 
-  <ul class="posts">
+  <ul>
     {
       posts.map((post) => (
         <li>
-          <h3>
+          <h2>
             <a href={`/posts/${post.id}/`}>{post.data.title}</a>
-          </h3>
+          </h2>
           <FormattedDate date={post.data.date} />
         </li>
       ))
