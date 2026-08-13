@@ -9,10 +9,9 @@ const { title } = Astro.props
 
 const navLinks = [
   { label: "Posts", href: "/posts" },
+  { label: "Projects", href: "/projects" },
   { label: "Uses", href: "/uses" },
-  { label: "Subs", href: "/subs" },
   { label: "Feed", href: "/feed.xml" },
-  { label: "Contact", href: "https://letterbird.co/iamdanielmarino" },
 ]
 ---
 
@@ -63,6 +62,22 @@ const navLinks = [
     </main>
 
     <footer>
+      <nav>
+        <ul>
+          <li><a href="https://letterbird.co/iamdanielmarino">Contact</a></li>
+          <li><a href="https://github.com/starzonmyarmz">GitHub</a></li>
+          <li><a href="https://codepen.io/starzonmyarmz">CodePen</a></li>
+        </ul>
+      </nav>
+
+      <p>
+        Built with <a href="https://astro.build">Astro</a> and <a href="https://preactjs.com"
+          >Preact</a
+        >. Set in <a href="https://fonts.google.com/specimen/Work+Sans">Work Sans</a> and <a
+          href="https://fonts.google.com/specimen/Montserrat">Montserrat</a
+        >.
+      </p>
+
       <p>© 2026 Daniel Marino</p>
     </footer>
 

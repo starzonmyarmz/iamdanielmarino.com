@@ -6,6 +6,7 @@ export default defineConfig({
   integrations: [preact()],
   redirects: {
     "/uses": "/posts/what-im-using-2026/",
+    "/subs": "/projects",
   },
   markdown: {
     syntaxHighlight: "shiki",
