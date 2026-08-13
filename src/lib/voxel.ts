@@ -8,19 +8,17 @@ export interface Block {
   y: number // grid row
   zBottom: number // height (in grid units) where this block starts
   hue: number
-  href?: string
 }
 
 export interface Face {
   points: string
-  face: "top" | "left" | "right" // which cube face this is, for CSS to shade differently
+  face: "top" | "left" | "right"
 }
 
 export interface VoxelGroup {
-  href?: string
-  fill: string // single base color for the cube; CSS tints per face (see .voxel-cube)
+  fill: string
   faces: Face[]
-  wavePhase: number // x - y (screen-horizontal axis), lets callers stagger a float animation into a left-to-right wave
+  wavePhase: number
 }
 
 // Deterministic string -> uint32 hash (xmur3), feeds a mulberry32 PRNG
@@ -55,17 +53,34 @@ function round(n: number) {
   return Math.round(n)
 }
 
-// Every block is a unit cube (1x1x1 grid units) — kept as a constant so
-// callers that reserve headroom between stacked clusters (see test.astro)
-// don't have a magic number to track.
-export const MAX_BLOCK_HEIGHT = 1
+// Every block is a unit cube (1x1x1 grid units) — named so the +=  below
+// isn't a bare magic number.
+const MAX_BLOCK_HEIGHT = 1
+
+// Tuning knobs for stackCell's per-level coin flip: chance starts high and
+// decays each level up, floored so a stack can never become a sure thing
+// or a sure stop.
+const STACK_BASE_CHANCE = 0.72
+const STACK_DECAY_PER_LEVEL = 0.18
+const STACK_MIN_CHANCE = 0.1
+
+// Coefficients for hueJitter below. No individual significance — just
+// arbitrary multipliers on x/y/i chosen to decorrelate neighboring cells'
+// jitter (avoid visible repeating patterns), then folded into a +/-10 range.
+const HUE_JITTER_X_COEFF = 13
+const HUE_JITTER_Y_COEFF = 7
+const HUE_JITTER_I_COEFF = 5
+const HUE_JITTER_RANGE = 20
+
+// Fixed saturation/lightness for every cube — only hue varies per block.
+const CUBE_SATURATION = 60
+const CUBE_LIGHTNESS = 50
 
 // One seeded stack of unit cubes for a single grid column. The base cube
 // is always present (every column has a floor); each cube above it is a
 // coin-flip that gets less likely the more cubes are already stacked. A
 // column stops at the first gap or once it clears `maxHeight` grid units
-// (no floating cubes). Shared by generateCluster (one rand stream for the
-// whole grid) and generateCellStack (one rand stream per cell).
+// (no floating cubes).
 function stackCell(
   rand: () => number,
   baseHue: number,
@@ -78,9 +93,16 @@ function stackCell(
   let i = 0
 
   while (zBottom < maxHeight) {
-    if (i > 0 && rand() >= Math.max(0.72 - i * 0.18, 0.1)) break
+    if (
+      i > 0 &&
+      rand() >= Math.max(STACK_BASE_CHANCE - i * STACK_DECAY_PER_LEVEL, STACK_MIN_CHANCE)
+    )
+      break
 
-    const hueJitter = ((x * 13 + y * 7 + i * 5) % 20) - 10
+    const hueJitter =
+      ((x * HUE_JITTER_X_COEFF + y * HUE_JITTER_Y_COEFF + i * HUE_JITTER_I_COEFF) %
+        HUE_JITTER_RANGE) -
+      HUE_JITTER_RANGE / 2
     blocks.push({ x, y, zBottom, hue: (baseHue + hueJitter + 360) % 360 })
 
     zBottom += MAX_BLOCK_HEIGHT
@@ -112,8 +134,8 @@ const GAP = 0.12
 // Projects positioned blocks (grid coords, already placed in shared space)
 // into isometric SVG faces, sorted back-to-front for correct occlusion.
 // Each block's 3 faces stay grouped so a caller can wrap them in a single
-// clickable <a> (a whole box as one link target) without breaking the
-// paint order between blocks.
+// element (see Voxels.astro's <g>) without breaking the paint order between
+// blocks.
 export function voxelsToGroups(blocks: Block[], size: number): VoxelGroup[] {
   // Different (x, y) columns never overlap in 3D, so whichever is closer
   // to the camera (larger x + y) always draws on top, regardless of
@@ -156,8 +178,7 @@ export function voxelsToGroups(blocks: Block[], size: number): VoxelGroup[] {
     const leftDown = project(x0, y1, z0)
 
     return {
-      href: v.href,
-      fill: `hsl(${v.hue}, 60%, 50%)`,
+      fill: `hsl(${v.hue}, ${CUBE_SATURATION}%, ${CUBE_LIGHTNESS}%)`,
       wavePhase: v.x - v.y,
       faces: [
         { points: `${top} ${right} ${bottom} ${left}`, face: "top" },
@@ -166,55 +187,6 @@ export function voxelsToGroups(blocks: Block[], size: number): VoxelGroup[] {
       ],
     }
   })
-}
-
-// --- Prototype helpers below: for mixing multiple articles' clusters
-// together on one canvas (see test-skyline/test-mosaic/test-pile). Kept
-// separate from generateCluster so its output (and any published article's
-// art) never shifts.
-
-// Base hue for a seed alone, matching generateCluster's first RNG draw —
-// split out so a mixed layout can look up an article's color without
-// generating its whole cluster.
-export function baseHueFor(seed: string): number {
-  const rand = mulberry32(xmur3(seed)())
-  return Math.floor(rand() * 360)
-}
-
-// Independent per-cell coin-flip stack, keyed by (seed, x, y) rather than
-// generateCluster's single sequential stream — lets a layout populate
-// cells one at a time (e.g. a shared grid where each cell's owning article
-// is chosen independently) instead of generating a whole grid at once.
-export function generateCellStack(
-  seed: string,
-  baseHue: number,
-  x: number,
-  y: number,
-  maxHeight: number,
-): Block[] {
-  const rand = mulberry32(xmur3(`${seed}:${x}:${y}`)())
-  return stackCell(rand, baseHue, x, y, maxHeight)
-}
-
-// Deterministic Fisher-Yates — same seed always produces the same shuffled
-// order, so a "mixed" layout is stable across builds instead of reshuffling
-// every render.
-export function seededShuffle<T>(arr: readonly T[], seed: string): T[] {
-  const rand = mulberry32(xmur3(seed)())
-  const out = [...arr]
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1))
-    ;[out[i], out[j]] = [out[j], out[i]]
-  }
-  return out
-}
-
-// Deterministically picks one item per seed — used to assign a shared
-// grid's cells to owning articles independently of each other.
-export function seededPick<T>(items: readonly T[], seed: string): T {
-  if (items.length === 0) throw new Error("seededPick: items is empty")
-  const rand = mulberry32(xmur3(seed)())
-  return items[Math.floor(rand() * items.length)]
 }
 
 export function groupsBounds(groups: VoxelGroup[], pad: number) {

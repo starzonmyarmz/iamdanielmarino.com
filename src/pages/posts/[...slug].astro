@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
 import FormattedDate from "../../components/FormattedDate.astro"
-import ArticleArt from "../../components/ArticleArt.astro"
+import Voxels from "../../components/Voxels.astro"
 
 import { getCollection, render } from "astro:content"
 
@@ -30,5 +30,5 @@ const { Content } = await render(entry)
     </section>
   </article>
 
-  <ArticleArt seed={entry.data.title} size={18} />
+  <Voxels seed={entry.data.title} />
 </Layout>

@@ -130,28 +130,22 @@ article {
   }
 }
 
-.article-art-frame {
-  margin-inline: auto;
-  max-width: 100%;
-  position: relative;
-  width: 20ch;
-}
-
-.article-art {
+.vox-art {
   display: block;
   filter: drop-shadow(0 14px 10px rgb(0 0 0 / 0.2));
   height: auto;
+  margin-inline: auto;
   view-timeline-name: --art-in-view;
   view-timeline-axis: block;
-  width: 100%;
+  width: 24ch;
 }
 
-.voxel {
+.vox {
   --cube-fill: attr(data-fill type(<color>));
   --cube-stroke: rgb(0 0 0);
   --cube-stroke-width: 0.2;
   --cube-float-timing: 4s;
-  --cube-wave-delay: attr(data-wave-delay type(<number>), 0);
+  --cube-wave-delay: attr(data-delay type(<number>), 0);
   --cube-wave-delay-multiple: -240ms;
   --cube-wave-distance: -6px;
   --cube-hover-scale: scale(0.8);
@@ -162,7 +156,7 @@ article {
   transform-origin: center;
 }
 
-.voxel-float {
+.vox-float {
   animation: voxel-wave var(--cube-float-timing) ease-in-out infinite;
   animation-delay: calc(var(--cube-wave-delay) * var(--cube-wave-delay-multiple));
   transform-box: fill-box;
@@ -198,19 +192,19 @@ article {
   }
 }
 
-.voxel-cube {
+.vox-cube {
   transform-box: fill-box;
   transform-origin: center;
   transition: transform var(--cube-blur-timing) ease;
 }
 
-.voxel:hover .voxel-cube {
+.vox:hover .vox-cube {
   transform: var(--cube-hover-scale);
   transition: transform var(--cube-hover-timing) ease;
 }
 
 @supports (animation-timeline: scroll()) {
-  .voxel {
+  .vox {
     animation: voxel-in 1ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
     animation-range: contain calc((sibling-index() - 1) / sibling-count() * 20%) contain
       calc((sibling-index() - 1) / sibling-count() * 20% + 15%);

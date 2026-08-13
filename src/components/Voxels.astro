@@ -1,0 +1,35 @@
+---
+import { generateCluster, voxelsToGroups, groupsBounds } from "../lib/voxel"
+
+interface Props {
+  seed: string
+}
+
+const { seed } = Astro.props
+const grid = 4
+const voxels = generateCluster(seed, grid)
+const groups = voxelsToGroups(voxels, 18)
+const { minX, minY, w, h } = groupsBounds(groups, 18)
+---
+
+<svg
+  viewBox={`${minX} ${minY} ${w} ${h}`}
+  xmlns="http://www.w3.org/2000/svg"
+  class="vox-art"
+  shape-rendering="crispEdges"
+  aria-hidden="true"
+>
+  {
+    groups.map((g) => (
+      <g class="vox" data-delay={g.wavePhase} data-fill={g.fill}>
+        <g class="vox-float">
+          <g class="vox-cube">
+            {g.faces.map((f) => (
+              <polygon points={f.points} data-face={f.face} />
+            ))}
+          </g>
+        </g>
+      </g>
+    ))
+  }
+</svg>
