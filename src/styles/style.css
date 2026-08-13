@@ -2,6 +2,24 @@
   navigation: auto;
 }
 
+/* Self-hosted (latin subset, matching what Google Fonts serves this UA)
+   instead of the Google Fonts <link> — one origin fewer to connect to. */
+@font-face {
+  font-family: "Work Sans";
+  src: url("/WorkSansVariable.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/MontserratVariable.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -11,24 +29,29 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 body {
   background: #eee;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
+  font-weight: 350;
   min-height: 100vh;
 }
 
 main {
   flex-grow: 1;
+  width: 100%;
+  background: linear-gradient(transparent calc(100% - 15ch), #e2e2e2);
+}
+
+.content {
   margin-inline: auto;
   max-width: 80ch;
   padding: 2rem;
-  width: 100%;
 }
 
 h1,
@@ -38,6 +61,8 @@ h4,
 h5,
 h6 {
   line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   margin-block: 1.5em 1em;
   text-wrap: balance;
 }
