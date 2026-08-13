@@ -5,12 +5,11 @@ interface Props {
   seed: string
   size?: number
   grid?: number
-  href?: string
 }
 
-const { seed, size = 26, grid = 4, href } = Astro.props
+const { seed, size = 26, grid = 4 } = Astro.props
 
-const voxels = generateCluster(seed, grid).map((v) => ({ ...v, href }))
+const voxels = generateCluster(seed, grid)
 const groups = voxelsToGroups(voxels, size)
 const { minX, minY, w, h } = groupsBounds(groups, size * 0.5)
 ---
@@ -21,10 +20,16 @@ const { minX, minY, w, h } = groupsBounds(groups, size * 0.5)
     xmlns="http://www.w3.org/2000/svg"
     class="article-art"
     shape-rendering="crispEdges"
+    aria-hidden="true"
   >
     {
-      groups.map((g) => {
-        const cube = (
+      groups.map((g) => (
+        // Left-to-right wave: cubes sharing an (x - y) column float in
+        // phase, neighboring columns lag behind, rippling across the grid.
+        // Both data attributes live here; CSS reads wave-delay directly
+        // and re-exposes fill as a custom property so descendants
+        // (.voxel-float, .voxel-cube, each face) can inherit it.
+        <g class="voxel" data-wave-delay={g.wavePhase} data-fill={g.fill}>
           <g class="voxel-float">
             <g class="voxel-cube">
               {g.faces.map((f) => (
@@ -32,19 +37,8 @@ const { minX, minY, w, h } = groupsBounds(groups, size * 0.5)
               ))}
             </g>
           </g>
-        )
-
-        return (
-          // Left-to-right wave: cubes sharing an (x - y) column float in
-          // phase, neighboring columns lag behind, rippling across the grid.
-          // Both data attributes live here; CSS reads wave-delay directly
-          // and re-exposes fill as a custom property so descendants
-          // (.voxel-float, .voxel-cube, each face) can inherit it.
-          <g class="voxel" data-wave-delay={g.wavePhase} data-fill={g.fill}>
-            {g.href ? <a href={g.href}>{cube}</a> : cube}
-          </g>
-        )
-      })
+        </g>
+      ))
     }
   </svg>
 </div>
