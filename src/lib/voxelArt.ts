@@ -76,7 +76,7 @@ export function generateCluster(seed: string, grid: number, maxHeight = grid): B
       let i = 0
 
       while (zBottom < maxHeight) {
-        if (i > 0 && rand() >= 0.72 - i * 0.18) break
+        if (i > 0 && rand() >= Math.max(0.72 - i * 0.18, 0.1)) break
 
         const hueJitter = ((x * 13 + y * 7 + i * 5) % 20) - 10
         blocks.push({ x, y, zBottom, hue: (baseHue + hueJitter + 360) % 360 })
@@ -183,7 +183,7 @@ export function generateCellStack(
   let i = 0
 
   while (zBottom < maxHeight) {
-    if (i > 0 && rand() >= 0.72 - i * 0.18) break
+    if (i > 0 && rand() >= Math.max(0.72 - i * 0.18, 0.1)) break
 
     const hueJitter = ((x * 13 + y * 7 + i * 5) % 20) - 10
     blocks.push({ x, y, zBottom, hue: (baseHue + hueJitter + 360) % 360 })
