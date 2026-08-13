@@ -251,8 +251,8 @@ article {
 @supports (animation-timeline: scroll()) {
   .vox {
     animation: voxel-in 1ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
-    animation-range: contain calc((sibling-index() - 1) / sibling-count() * 20%) contain
-      calc((sibling-index() - 1) / sibling-count() * 20% + 15%);
+    animation-range: entry calc(50% + (sibling-index() - 1) / sibling-count() * 15%) contain
+      calc((sibling-index() - 1) / sibling-count() * 40% + 10%);
     animation-timeline: --art-in-view;
   }
 
