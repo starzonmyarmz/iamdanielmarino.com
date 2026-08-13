@@ -212,11 +212,13 @@ export function seededShuffle<T>(arr: readonly T[], seed: string): T[] {
 // Deterministically picks one item per seed — used to assign a shared
 // grid's cells to owning articles independently of each other.
 export function seededPick<T>(items: readonly T[], seed: string): T {
+  if (items.length === 0) throw new Error("seededPick: items is empty")
   const rand = mulberry32(xmur3(seed)())
   return items[Math.floor(rand() * items.length)]
 }
 
 export function groupsBounds(groups: VoxelGroup[], pad: number) {
+  if (groups.length === 0) throw new Error("groupsBounds: groups is empty")
   const points = groups.flatMap((g) => g.faces.flatMap((f) => f.points.split(" ")))
   const xs = points.map((p) => Number(p.split(",")[0]))
   const ys = points.map((p) => Number(p.split(",")[1]))
