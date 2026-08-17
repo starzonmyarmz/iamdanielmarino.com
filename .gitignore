@@ -2,5 +2,5 @@
 dist/
 node_modules/
 .astro/
-.playwrite-mcp/
+.playwright-mcp/
 .todo
