@@ -103,7 +103,31 @@ export function generateCluster(
     }
   }
 
-  return blocks
+  return removeOccludedBlocks(blocks)
+}
+
+// In this isometric projection, every block along a camera-facing diagonal
+// (x+1, y+1, zBottom+1 from the last) lands on the exact same screen
+// position as the one before it — same math as any true isometric view
+// looking straight down that diagonal. The nearer block (larger x + y)
+// fully covers the other, so the far one contributes no visible pixels...
+// until a hover/click animation moves the near one and reveals its hidden
+// twin sitting underneath. Cull the always-invisible one at generation
+// time instead of rendering a wasted (and glitchy) duplicate.
+function removeOccludedBlocks(blocks: Block[]): Block[] {
+  const front = new Map<string, Block>()
+
+  for (const block of blocks) {
+    // (x - y) and (x + y - 2 * zBottom) together pin down the screen
+    // position this block projects to, regardless of which grid column
+    // it actually came from.
+    const key = `${block.x - block.y},${block.x + block.y - 2 * block.zBottom}`
+    const existing = front.get(key)
+
+    if (!existing || block.x + block.y > existing.x + existing.y) front.set(key, block)
+  }
+
+  return [...front.values()]
 }
 
 // Fraction of a grid cell left empty around each cube (split evenly on
