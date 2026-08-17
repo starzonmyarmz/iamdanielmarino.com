@@ -187,6 +187,7 @@ article {
   display: block;
   filter: drop-shadow(0 14px 10px rgb(0 0 0 / 0.2));
   height: auto;
+  user-select: none;
 
   view-timeline-axis: block;
   view-timeline-name: --art-in-view;

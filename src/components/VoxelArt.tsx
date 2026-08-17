@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks"
+import { useEffect, useRef, useState } from "preact/hooks"
 import type { VoxelGroup } from "../lib/voxel"
 
 interface Props {
@@ -10,8 +10,12 @@ interface Props {
 }
 
 export default function VoxelArt({ groups, minX, minY, w, h }: Props) {
+  const DRAG_HIDE_INTERVAL = 80 // ms between hides while dragging
+
   const [dirty, setDirty] = useState<boolean>(false)
   const [hidden, setHidden] = useState<Set<number>>(new Set())
+  const dragging = useRef(false)
+  const lastHideTime = useRef(0)
 
   useEffect(() => {
     if (hidden.size === 0) return
@@ -19,9 +23,43 @@ export default function VoxelArt({ groups, minX, minY, w, h }: Props) {
     setDirty(true)
   }, [hidden])
 
+  useEffect(() => {
+    function stopDragging() {
+      dragging.current = false
+    }
+
+    window.addEventListener("pointerup", stopDragging)
+    window.addEventListener("pointercancel", stopDragging)
+
+    return () => {
+      window.removeEventListener("pointerup", stopDragging)
+      window.removeEventListener("pointercancel", stopDragging)
+    }
+  }, [])
+
   function resetVoxels() {
     setHidden(new Set())
     setDirty(false)
+  }
+
+  function hideVoxel(i: number) {
+    setHidden((prev) => (prev.has(i) ? prev : new Set(prev).add(i)))
+  }
+
+  function hideVoxelAt(x: number, y: number) {
+    const el = document.elementFromPoint(x, y)?.closest<HTMLElement>("[data-index]")
+    if (!el) return
+
+    hideVoxel(Number(el.dataset.index))
+  }
+
+  // Cap how fast dragging can hide cubes, so a fast swipe doesn't wipe the whole shape instantly.
+  function throttledHideVoxelAt(x: number, y: number) {
+    const now = performance.now()
+    if (now - lastHideTime.current < DRAG_HIDE_INTERVAL) return
+
+    lastHideTime.current = now
+    hideVoxelAt(x, y)
   }
 
   return (
@@ -31,6 +69,18 @@ export default function VoxelArt({ groups, minX, minY, w, h }: Props) {
         xmlns="http://www.w3.org/2000/svg"
         class="vox-art"
         shape-rendering="crispEdges"
+        onPointerDown={(e) => {
+          if (e.button !== 0) return
+
+          dragging.current = true
+          lastHideTime.current = performance.now()
+          hideVoxelAt(e.clientX, e.clientY)
+        }}
+        onPointerMove={(e) => {
+          if (!dragging.current) return
+
+          throttledHideVoxelAt(e.clientX, e.clientY)
+        }}
       >
         {groups.map((g, i) => (
           <g
@@ -38,7 +88,7 @@ export default function VoxelArt({ groups, minX, minY, w, h }: Props) {
             class={hidden.has(i) ? "vox vox-shrink" : "vox"}
             data-delay={g.wavePhase}
             data-hue={g.hue}
-            onClick={() => setHidden((prev) => new Set(prev).add(i))}
+            data-index={i}
           >
             <g class="vox-float">
               <g class="vox-cube">
