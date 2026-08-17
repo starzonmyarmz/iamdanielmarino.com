@@ -11,16 +11,16 @@ interface Props {
 
 export default function VoxelArt({ groups, minX, minY, w, h }: Props) {
   const [dirty, setDirty] = useState<boolean>(false)
-  const [shrunk, setShrunk] = useState<Set<number>>(new Set())
+  const [hidden, setHidden] = useState<Set<number>>(new Set())
 
   useEffect(() => {
-    if (shrunk.size === 0) return
+    if (hidden.size === 0) return
 
     setDirty(true)
-  }, [shrunk])
+  }, [hidden])
 
   function resetVoxels() {
-    setShrunk(new Set())
+    setHidden(new Set())
     setDirty(false)
   }
 
@@ -35,10 +35,10 @@ export default function VoxelArt({ groups, minX, minY, w, h }: Props) {
         {groups.map((g, i) => (
           <g
             key={i}
-            class={shrunk.has(i) ? "vox vox-shrink" : "vox"}
+            class={hidden.has(i) ? "vox vox-shrink" : "vox"}
             data-delay={g.wavePhase}
             data-hue={g.hue}
-            onClick={() => setShrunk((prev) => new Set(prev).add(i))}
+            onClick={() => setHidden((prev) => new Set(prev).add(i))}
           >
             <g class="vox-float">
               <g class="vox-cube">
