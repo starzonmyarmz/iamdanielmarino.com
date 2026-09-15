@@ -340,9 +340,24 @@ article {
     --h: attr(data-h type(<number>));
     --l: attr(data-l type(<percentage>));
 
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
+    flex: 0 0 85%;
+    max-width: 85%;
     scroll-snap-align: start;
+
+    @media (min-width: 480px) {
+      flex-basis: 60%;
+      max-width: 60%;
+    }
+
+    @media (min-width: 768px) {
+      flex-basis: 45%;
+      max-width: 45%;
+    }
+
+    @media (min-width: 1024px) {
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+    }
   }
 
   a {
