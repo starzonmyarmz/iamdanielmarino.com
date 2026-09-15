@@ -1,5 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import FormattedDate from "../components/FormattedDate.astro"
+import Voxels from "../components/Voxels.astro"
+import { parseOklch, titleAccent } from "../lib/accent"
+
+import { getCollection } from "astro:content"
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+)
 ---
 
 <Layout title="Home">
@@ -16,5 +25,27 @@ import Layout from "../layouts/Layout.astro"
         >generative art</a
       >.
     </p>
+  </div>
+
+  <div id="posts">
+    <ul role="list">
+      {
+        posts.map((post) => {
+          const accent = (post.data.color && parseOklch(post.data.color)) || titleAccent(post.data.title)
+
+          return (
+            <li data-l={`${accent.l}%`} data-c={accent.c} data-h={accent.h}>
+              <div class="vox-slot">
+                <Voxels seed={post.data.title} hue={accent.h} />
+              </div>
+              <h2>
+                <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+              </h2>
+              <FormattedDate date={post.data.date} />
+            </li>
+          )
+        })
+      }
+    </ul>
   </div>
 </Layout>

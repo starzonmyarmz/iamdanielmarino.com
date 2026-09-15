@@ -7,6 +7,7 @@ export default defineConfig({
   redirects: {
     "/uses": "/posts/what-im-using-2026/",
     "/subs": "/projects",
+    "/posts": "/",
   },
   markdown: {
     syntaxHighlight: "shiki",

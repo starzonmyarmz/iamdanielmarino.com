@@ -72,8 +72,13 @@ main {
 
 footer {
   background: var(--accent-bg);
+  font-size: 0.9em;
   padding-block: 2rem;
   text-align: center;
+
+  p {
+    margin-block: 0.4rem;
+  }
 }
 
 h1,
@@ -104,6 +109,12 @@ ul {
   flex-direction: column;
   gap: 0.5rem;
   margin-inline: 1.2rem;
+
+  &[role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 a {
@@ -303,5 +314,41 @@ article {
   * {
     animation: none;
     transition: none;
+  }
+}
+
+#posts {
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  li {
+    --accent: oklch(var(--l) var(--c) var(--h));
+    --c: attr(data-c type(<number>));
+    --h: attr(data-h type(<number>));
+    --l: attr(data-l type(<percentage>));
+
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    scroll-snap-align: start;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .vox-slot {
+    align-items: flex-end;
+    display: flex;
+    height: 14rem;
+    justify-content: center;
   }
 }
