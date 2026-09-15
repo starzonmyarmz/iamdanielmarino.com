@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  background: #eee;
+  background: #fff;
   display: flex;
   flex-direction: column;
   font-family: "Work Sans", sans-serif;
@@ -172,7 +172,7 @@ article {
       opacity: 1;
 
       .vox-reset-icon {
-        rotate: 30deg;
+        rotate: -30deg;
       }
     }
 
