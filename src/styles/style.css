@@ -357,3 +357,52 @@ article {
     justify-content: center;
   }
 }
+
+@supports (animation-timeline: scroll()) {
+  @property --fade-left {
+    inherits: false;
+    initial-value: 0;
+    syntax: "<length>";
+  }
+
+  @property --fade-right {
+    inherits: false;
+    initial-value: 0;
+    syntax: "<length>";
+  }
+
+  @keyframes posts-fade {
+    0% {
+      --fade-left: 0;
+      --fade-right: 3rem;
+    }
+
+    10% {
+      --fade-left: 3rem;
+      --fade-right: 3rem;
+    }
+
+    90% {
+      --fade-left: 3rem;
+      --fade-right: 3rem;
+    }
+
+    100% {
+      --fade-left: 3rem;
+      --fade-right: 0;
+    }
+  }
+
+  #posts {
+    animation: posts-fade linear;
+    animation-duration: auto;
+    animation-timeline: scroll(self inline);
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black var(--fade-left),
+      black calc(100% - var(--fade-right)),
+      transparent
+    );
+  }
+}
