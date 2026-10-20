@@ -5,7 +5,7 @@ date: 2025-03-31
 
 **Beware! This post includes spoilers!**
 
-I recently built an escape room game called [CSScape Room](https://csscape-room.iamdanielmarino.com/). This isn’t my first JavaScript-free web game, but HTML and CSS have evolved significantly since my previous attempts, with newer additions allowing for more complex selectors and native interactions. Rather than saving this idea for a game jam, I built it purely for fun, which freed me from theme constraints and time pressure.
+I recently built an escape room game called [CSScape Room](https://starzonmyarmz.itch.io/cssecape-room). This isn't my first JavaScript-free web game, but HTML and CSS have evolved significantly since my previous attempts, with newer additions allowing for more complex selectors and native interactions. Rather than saving this idea for a game jam, I built it purely for fun, which freed me from theme constraints and time pressure.
 
 ![Screenshot of CSScape Room](/images/posts/escape-room-north.png)
 
@@ -136,4 +136,4 @@ Sound would have been a nice addition, but I encountered the same issues as with
 
 ## Conclusion
 
-[CSScape Room](https://csscape-room.iamdanielmarino.com/) was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!
+[CSScape Room](https://starzonmyarmz.itch.io/cssecape-room) was a fun but exhausting four-month project. It began as an experiment to see if creating a JavaScript-free escape room was possible—and the answer is definitely yes. I’ve only touched on some aspects here, so if you’re interested in the technical details, check out the source code on GitHub. Finally, I’d like to thank all my playtesters for their valuable feedback!
