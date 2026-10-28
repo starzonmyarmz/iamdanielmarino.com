@@ -5,7 +5,7 @@ date: 2025-03-23
 
 I’m a bit late to this, but back in summer 2024 I participated in the [OST Composing Jam](https://itch.io/jam/ost-composing-jam-7). The goal of this jam is to compose an original soundtrack (minimum of 3 minutes) of any style for an imaginary game. While I’ve composed a lot of video game music, I’ve never created an entire soundtrack around a single concept.
 
-<iframe title="Self Avoiding Walk by Daniel Marino on Bandcamp" style="border: 0; width: 100%; height: 310px;" src="https://bandcamp.com/EmbeddedPlayer/album=3143278153/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=small/transparent=true/" seamless><a href="https://danielmarino.bandcamp.com/album/self-avoiding-walk">Self Avoiding Walk by Daniel Marino</a></iframe>
+<iframe loading="lazy" title="Self Avoiding Walk by Daniel Marino on Bandcamp" style="border: 0; width: 100%; height: 310px;" src="https://bandcamp.com/EmbeddedPlayer/album=3143278153/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=small/transparent=true/" seamless><a href="https://danielmarino.bandcamp.com/album/self-avoiding-walk">Self Avoiding Walk by Daniel Marino</a></iframe>
 
 To be honest, I wasn’t entirely sure where to start. I was torn between trying to come up with a story for a game to inspire the music, and just messing around with some synths and noodling on the keyboard. I did a little bit of both, but nothing really materialized.
 

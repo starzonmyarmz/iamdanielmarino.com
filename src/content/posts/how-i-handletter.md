@@ -5,7 +5,7 @@ date: 2025-09-19
 
 When I first got into hand-lettering, I had a hard time finding people who shared their *full* process—especially the digitizing phase. So here’s a look at how I typically work. Everyone’s process is different, and a lot depends on your style and how you plan to present the piece. For me, since I don’t have the steadiest hand, I tend to embrace rough, scrappy, distressed looks. Most of my work ends up digital anyway, so mistakes can be fixed later. Here’s a short process video I made a while back.
 
-<iframe title="How I Handletter video on YouTube" width="100%" src="https://www.youtube-nocookie.com/embed/5FnhKEcAM4E?si=65vKvS4Y2KdvPrhf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading="lazy" title="How I Handletter video on YouTube" width="100%" src="https://www.youtube-nocookie.com/embed/5FnhKEcAM4E?si=65vKvS4Y2KdvPrhf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Thumbnails & Sketching
