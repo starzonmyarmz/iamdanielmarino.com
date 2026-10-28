@@ -34,14 +34,14 @@ As the demands of busy schedules intensify, carving out dedicated time to fill o
 The project unfolded with a well-defined vision aimed at tackling the identified challenges head-on.
 
 <figure>
-  <img src="/images/work/ci-sketches.png" alt="Initial sketches for the project pitch" loading="lazy">
+  <img src="/images/work/ci-sketches.png" width="1267" height="268" alt="Initial sketches for the project pitch" loading="lazy">
   <figcaption>Initial sketches presented with the project pitch to executive leadership.</figcaption>
 </figure>
 
 In the initial phase, the engineering team dove into technical discovery and integration with Google and Outlook.com calandars, while my focus shifted towards materializing concepts into mockups and clickable prototypes.
 
 <figure>
-  <img src="/images/work/ci-variations.png" class="shadow" alt="Initial mockups expoloring ideas" loading="lazy">
+  <img src="/images/work/ci-variations.png" width="4336" height="3040" class="shadow" alt="Initial mockups expoloring ideas" loading="lazy">
   <figcaption>Several initial mockups were generated to explore creative concepts for presenting calendar events when initiating a new timer.</figcaption>
 </figure>
 
