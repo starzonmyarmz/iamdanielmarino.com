@@ -63,7 +63,7 @@ body {
 
 body {
   background: light-dark(var(--background-lt), var(--background-dk));
-  color: light-dark(var(--text-lt), var(--light-dk));
+  color: light-dark(var(--text-lt), var(--text-dk));
   font-family: var(--serif);
   font-feature-settings: 'liga', 'clig';
   font-size: 1.25rem;
