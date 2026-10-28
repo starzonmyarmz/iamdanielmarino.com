@@ -4,3 +4,6 @@ node_modules/
 .astro/
 .playwright-mcp/
 .todo
+
+# Local Netlify folder
+.netlify
