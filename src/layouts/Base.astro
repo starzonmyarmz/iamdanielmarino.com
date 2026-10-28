@@ -5,7 +5,7 @@ interface Props {
 
 const { title } = Astro.props
 const { pathname } = Astro.url
-const noindex = pathname.startsWith("/resume") || pathname.startsWith("/work")
+const noindex = pathname.startsWith("/resume")
 const showHeadshot = pathname === "/"
 ---
 
