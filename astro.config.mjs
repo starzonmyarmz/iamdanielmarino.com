@@ -4,11 +4,6 @@ import preact from "@astrojs/preact"
 export default defineConfig({
   site: "https://iamdanielmarino.com",
   integrations: [preact()],
-  redirects: {
-    "/uses": "/posts/what-im-using-2026/",
-    "/subs": "/projects",
-    "/posts": "/",
-  },
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {
