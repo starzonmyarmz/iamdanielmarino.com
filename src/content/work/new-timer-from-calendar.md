@@ -48,7 +48,7 @@ In the initial phase, the engineering team dove into technical discovery and int
 Over the span of two weeks, a continuous cycle of development, presentation, and refinement ensued as I iteratively shaped the mockups and prototypes. These iterations were subjected to design reviews, incorporating valuable feedback to enhance the user experience. The culmination of this design process involved subjecting the finalized prototype to thorough scrutiny, garnering the approval of the company founder and cementing the chosen approach.
 
 <figure>
-  <img src="/images/work/ci-final.gif" class="shadow" alt="Animation of the launched feature" loading="lazy">
+  <video src="/images/work/ci-final.mp4" class="shadow" width="1024" height="614" autoplay loop muted playsinline aria-label="Animation of the launched feature"></video>
   <figcaption>The final design landed on showing calendar events in a “drawer” fixed to the side of the browser window which could be toggled.</figcaption>
 </figure>
 

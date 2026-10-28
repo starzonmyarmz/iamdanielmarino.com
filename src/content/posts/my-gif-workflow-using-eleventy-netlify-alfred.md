@@ -15,6 +15,6 @@ I created a new site on Netlify that watches my GIFs repo, and runs a build proc
 
 I was still missing a component though—a quick and easy way to search for GIFs and copy their URLs. I built an [Alfred script](https://github.com/starzonmyarmz/gifz-alfred-workflow) using [Alfy](https://github.com/sindresorhus/alfy) to handle this part. Alfy is so cool to work with, allowing you to build Alfred workflows using JavaScript and Node. The Alfred Script takes an input, and searches for it against the [JSON file on the Netlify site](https://gifz.netlify.app/gifs.json). When I find the GIF I want, it copies the URL to the clipboard.
 
-![My gif flow using Alfred App](/images/posts/gif_workflow.gif)
+<video src="/images/posts/gif_workflow.mp4" width="1000" height="700" autoplay loop muted playsinline aria-label="My gif flow using Alfred App"></video>
 
 This update was well-needed, and I find myself using my personal GIFs much more often now! I only wish I had done something like this much sooner.

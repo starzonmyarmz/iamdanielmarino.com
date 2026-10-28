@@ -211,7 +211,8 @@ li + li {
   margin-top: 0.5rem;
 }
 
-article img {
+article :is(img, video) {
+  height: auto;
   width: 100%;
 
   &.shadow {
