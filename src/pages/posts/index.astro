@@ -17,9 +17,9 @@ const posts = (await getCollection("posts")).sort(
     {
       posts.map((post) => (
         <li>
-          <h3>
+          <h2>
             <a href={`/posts/${post.id}/`}>{post.data.title}</a>
-          </h3>
+          </h2>
           <small>{formatDate(post.data.date)}</small>
         </li>
       ))
