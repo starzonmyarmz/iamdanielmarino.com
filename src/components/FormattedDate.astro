@@ -1,0 +1,15 @@
+---
+interface Props {
+  date: Date
+}
+
+const { date } = Astro.props
+const formatted = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+}).format(date)
+---
+
+<time datetime={date.toISOString().slice(0, 10)}>{formatted}</time>
