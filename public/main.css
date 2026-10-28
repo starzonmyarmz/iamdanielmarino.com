@@ -160,7 +160,10 @@ nav {
     color: inherit;
     display: block;
     text-decoration: none;
-    transition: all 0.2s;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: color 0.2s;
+    }
 
     &:hover {
       color: light-dark(oklch(var(--primary-lt)), oklch(var(--primary-dk)));
