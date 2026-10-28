@@ -7,6 +7,8 @@ const { title } = Astro.props
 const { pathname } = Astro.url
 const noindex = pathname.startsWith("/resume")
 const showHeadshot = pathname === "/"
+const ariaCurrent = (href: string) =>
+  pathname.replace(/\/$/, "") === href.replace(/\/$/, "") ? "page" : undefined
 ---
 
 <!doctype html>
@@ -37,13 +39,13 @@ const showHeadshot = pathname === "/"
     <nav>
       <ul>
         <li>
-          <a href="/" id="logo" aria-label="Daniel Marino">DM</a>
+          <a href="/" id="logo" aria-label="Daniel Marino" aria-current={ariaCurrent("/")}>DM</a>
         </li>
         <li>
-          <a href="/work">Work</a>
+          <a href="/work" aria-current={ariaCurrent("/work")}>Work</a>
         </li>
         <li>
-          <a href="/posts">Posts</a>
+          <a href="/posts" aria-current={ariaCurrent("/posts")}>Posts</a>
         </li>
         <li>
           <a href="/feed.xml">Feed</a>
