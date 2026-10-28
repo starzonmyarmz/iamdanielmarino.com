@@ -18,15 +18,15 @@ Originally, I envisioned the game having a pixel art style, but with the 13K and
 
 I wanted to avoid using text to educate game mechanics. I took inspiration from countless video games (but specifically Super Mario World, Super Metroid, Megaman X), and started out by creating the first three levels that would introduce game mechanics one at a time. I then kept exploring various level designs until I had about six or seven solid levels.
 
-![original idea about education](/images/posts/js13k2018-education.png "Original idea for educating game controls to player")
+![original idea about education](../../assets/images/posts/js13k2018-education.png "Original idea for educating game controls to player")
 
 While Brad was developing the mechanics, I solicited the help of my son to help me design the character. It went through some variations, but the final character was pretty similar to what we started with. In my mind I could see his legs moving and his head bobbing. He originally had rounded corners, but that ended up making the `svg` output more complicated, so in the end we ditched them.
 
-![character ideas](/images/posts/js13k2018-characters.png "Other character ideas")
+![character ideas](../../assets/images/posts/js13k2018-characters.png "Other character ideas")
 
 I liked the idea of the _toggle_ concept being carried through all the various screens, and not just the levels. So I designed the title, end, and controller screens with this in mind.
 
-![typeface](/images/posts/js13k2018-font.png "Custom typeface designed for ONOFF")
+![typeface](../../assets/images/posts/js13k2018-font.png "Custom typeface designed for ONOFF")
 
 ### Music and Sound Effects
 

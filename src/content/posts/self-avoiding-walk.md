@@ -19,7 +19,7 @@ I love metal bands like Tesseract, Periphery, The Algorithm, Car Bomb, and Meshu
 
 The guitars were recorded using DI with my Fender Squire and [Behringer Interface](https://www.sweetwater.com/store/detail/UMC202HD--behringer-u-phoria-umc202hd-usb-audio-interface). I’m primarily using the ML Sound Labs [Amped Roots Free](https://ml-sound-lab.com/products/amped-roots) amp sim because the metal presets are fantastic and rarely need much fuss to get it sounding good. I also used [Blue Cat Audio free amp](https://www.bluecataudio.com/Products/Product_FreeAmp/) sim for clean guitars.
 
-![Screenshot Defrag in Reaper](/images/posts/self-avoiding-walk-reaper.webp)
+![Screenshot Defrag in Reaper](../../assets/images/posts/self-avoiding-walk-reaper.webp)
 
 All the other instruments were MIDI tracks either programmed via piano roll or recorded with my [Arturia MiniLab MKII](https://www.arturia.com/minilab-mkii/resources). I used a variety of synth effects from [my library of VSTs](https://iamdanielmarino.com/posts/what-im-using-2025/). I recorded this music before acquiring my Fender Squire Bass guitar, so bass was also programmed.
 
@@ -39,7 +39,7 @@ At some point I had five songs that all sounded like they could be from the same
 
 At the time I was messing around with [Self-avoiding walks](https://en.wikipedia.org/wiki/Self-avoiding_walk) in generative artwork explorations. I felt like the whole concept of avoiding the self within the context of addiction and recovery metaphorically worked. So I tweaked some algorithms and generated the self-avoiding walk using JavaScript and the [P5.js](https://p5js.org/) library. I then layered the self-avoiding walk over a [photo I found visually interesting](https://unsplash.com/photos/a-close-up-of-a-brown-and-yellow-substance-Smpy9LZmksY) on Unsplash using a [CSS blend mode](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode).
 
-![Self-avoiding Walk album art](/images/posts/self-avoiding-walk-artwork.jpg)
+![Self-avoiding Walk album art](../../assets/images/posts/self-avoiding-walk-artwork.jpg)
 
 ## Jam results
 

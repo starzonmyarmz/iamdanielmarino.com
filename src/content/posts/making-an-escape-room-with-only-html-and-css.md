@@ -7,7 +7,7 @@ date: 2025-03-31
 
 I recently built an escape room game called [CSScape Room](https://starzonmyarmz.itch.io/cssecape-room). This isn't my first JavaScript-free web game, but HTML and CSS have evolved significantly since my previous attempts, with newer additions allowing for more complex selectors and native interactions. Rather than saving this idea for a game jam, I built it purely for fun, which freed me from theme constraints and time pressure.
 
-![Screenshot of CSScape Room](/images/posts/escape-room-north.png)
+![Screenshot of CSScape Room](../../assets/images/posts/escape-room-north.png)
 
 I’ve enjoyed escape room games since childhood, and it was nostalgic to recreate that experience myself. This project pushed my artistic limits while challenging me to design puzzles and translate them into complex HTML and CSS. The learning process was fun, challenging, and sometimes tedious—mostly through trial and error.
 
@@ -27,7 +27,7 @@ Initially, progress was slow. I had to figure out 2D perspective with vanishing 
 
 One challenge I set for myself was using only 32 colors to capture the feeling of an older gaming console. Once I got comfortable with shading and dithering, working within this constraint became easier. An added benefit to using 32 colors was it resulted in smaller image sizes—the game’s 79 images account for only about 25% of the total payload.
 
-![Color palette](/images/posts/escape-room-colors.png)
+![Color palette](../../assets/images/posts/escape-room-colors.png)
 
 I attempted to design sprites using dimensions in multiples of eight, but I’ll admit I became less strict about this as the project progressed. At a certain point, I was struggling enough with the color and styling limitations that this guideline became more of a starting point than a rule.
 
@@ -35,7 +35,7 @@ I considered creating my own font, but after exhausting myself with all the artw
 
 Almost all animation frames were individually drawn (except for the “one” TV animation). This was tedious, but I was determined to stay true to old-school techniques! I did use CSS to streamline some animations—for instance, I used `animation-direction: alternate` on the poster page curl to create a palindrome effect, halving the number of required sprites.
 
-![Poster frames](/images/posts/escape-room-poster.png)
+![Poster frames](../../assets/images/posts/escape-room-poster.png)
 
 ## Mechanics
 
@@ -65,7 +65,7 @@ My solution is conceptually simple but difficult to explain! First, I used radio
 
 For example, if you’re facing east (having come from facing north), you have two possible directions to go: west (returning to face north) or east (to face south). I needed to make the radio buttons visible that would take you north from east, and south from west.
 
-![Visual explaining how navigation works](/images/posts/escape-room-navigation.png)
+![Visual explaining how navigation works](../../assets/images/posts/escape-room-navigation.png)
 
 The CSS looks something like this:
 
@@ -102,7 +102,7 @@ When the light switch checkbox is toggled, a `<div>` becomes visible with a dark
 
 This required [surprisingly complex CSS](https://github.com/starzonmyarmz/csscape-room/blob/main/styles/east.css#L204-L234). Each square has three letters plus a blank tile, meaning four radio buttons. The `:checked` letter has a `z-index` of 3 to display above other letters, but also has `pointer-events: none` so clicks pass through to the next letter underneath (with `z-index: 2`). The remaining tiles have a `z-index` of 1.
 
-![Visual explaining how crossword puzzle works](/images/posts/escape-room-crossword.png)
+![Visual explaining how crossword puzzle works](../../assets/images/posts/escape-room-crossword.png)
 
 The CSS becomes even trickier when the last tile is `:checked`, requiring some [creative selector gymnastics](https://github.com/starzonmyarmz/csscape-room/blob/main/styles/east.css#L227) to target the first radio button in the stack again.
 

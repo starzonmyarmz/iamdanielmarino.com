@@ -19,7 +19,7 @@ Also, I’m on a Mac. None of those titles feel native — they all feel like Wi
 
 So I’m taking a detour from the game. I’m now vibe coding a voxel editor called **Roxel**, and [I’m doing it in the open](https://github.com/starzonmyarmz/roxel).
 
-![Roxel](/images/posts/roxel.jpg)
+![Roxel](../../assets/images/posts/roxel.jpg)
 
 Rust is fast, and you can build good-looking native apps with it for Mac and Windows ([Zed](https://zed.dev/) is a great example). The stack ended up being Rust + [Bevy](https://bevy.org/) + [egui](https://www.egui.rs/) — or so Claude tells me.
 
