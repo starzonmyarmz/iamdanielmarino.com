@@ -40,7 +40,7 @@ I got a little carried away with audio, and put way more effort into it than I h
 
 I didn’t really intend to go all in with the jazz-style of music, but after writing the initial theme I was locked in. I started out composing a simple melody for the title screen. A few days later I had an album’s worth of music! The music is inspired by pianists like Vince Guaraldi and Danillo Perez. I love how they combine simple, playful, and whimsical-sounding melodies—with a little dissonance thrown in for good measure.
 
-<iframe style="border: 0; width: 100%; height: 406px;" src="https://bandcamp.com/EmbeddedPlayer/album=1082942060/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=none/transparent=true/" seamless><a href="https://danielmarino.bandcamp.com/album/trapped-soundtrack">trapped soundtrack by Daniel Marino</a></iframe>
+<iframe title="trapped soundtrack by Daniel Marino on Bandcamp" style="border: 0; width: 100%; height: 406px;" src="https://bandcamp.com/EmbeddedPlayer/album=1082942060/size=large/bgcol=ffffff/linkcol=eb4d55/artwork=none/transparent=true/" seamless><a href="https://danielmarino.bandcamp.com/album/trapped-soundtrack">trapped soundtrack by Daniel Marino</a></iframe>
 
 I’m a lot more proficient using [Ableton](https://www.ableton.com/en/live/) and my [Arturia MiniLab MKII](https://www.arturia.com/products/hybrid-synths/minilab-mkii/overview) since my [last game jam](/posts/gamedevjs-jam-2021-retrospective/) and found it much simpler this time to produce music. In keeping with the minimalistic artwork style, I kept the instrumentation minimal as well: piano and drums only.
 
