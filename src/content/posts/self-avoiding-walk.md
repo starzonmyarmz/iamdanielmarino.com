@@ -11,7 +11,7 @@ To be honest, I wasn’t entirely sure where to start. I was torn between trying
 
 ## Synth + Metal ≈ Synthmetal
 
-Feeling a bit paralyzed, I fired up the ’ole [RMG sequencer](https://rmg.iamdanielmarino.com/) for inspiration. I saved a handful of randomized melodies and experimented with them in Reaper. After a day or two I landed on something I liked which was about the first 30 seconds or so of the second track: "Defrag."
+Feeling a bit paralyzed, I fired up the ’ole [RMG sequencer](https://starzonmyarmz.itch.io/rmg) for inspiration. I saved a handful of randomized melodies and experimented with them in Reaper. After a day or two I landed on something I liked which was about the first 30 seconds or so of the second track: "Defrag."
 
 I love metal bands like Tesseract, Periphery, The Algorithm, Car Bomb, and Meshuggah. I tried experimenting with incorporating syncopated guttural guitar sounds with the synths. After several more days I finished "Defrag"—which also included "Kernel Panic" before splitting that into its own track. I didn’t have a clue what to do next, nor did I have a concept. Composing the rest of the music was a bit of a blur because I bounced around from song to song—iterating on the leitmotif over and over with different synths, envelopes, time signatures, rhythmic displacement, pitch shifting, and tweaking underlying chord structures.
 
