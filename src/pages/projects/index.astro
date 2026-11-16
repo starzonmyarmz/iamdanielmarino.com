@@ -1,5 +1,20 @@
 ---
-import Base from "../layouts/Base.astro"
+import { getCollection, type CollectionEntry } from "astro:content"
+import { Image } from "astro:assets"
+import Base from "../../layouts/Base.astro"
+import ProjectMeta from "../../components/ProjectMeta.astro"
+import { projectCategories } from "../../projectCategories"
+
+const projects = await getCollection("projects")
+
+const hasPage = (project: CollectionEntry<"projects">) => Boolean(project.body?.trim())
+
+const sections = Object.entries(projectCategories).map(([category, title]) => ({
+  title,
+  items: projects
+    .filter((project) => project.data.category === category)
+    .sort((a, b) => b.data.year - a.data.year || a.data.title.localeCompare(b.data.title)),
+}))
 ---
 
 <Base title="Projects">
@@ -8,67 +23,32 @@ import Base from "../layouts/Base.astro"
   </header>
 
   <p>
-    I’ve accumulated a lot of side projects and experiments over time. This is a place for me to
-    list them all for my own sanity!
+    Things I make outside of work: audio plugins, games, apps, art and music. Some are polished,
+    some are experiments, and a few are just for me.
   </p>
 
-  <ul class="posts">
-    <li>
-      <h2>
-        <a href="https://books.iamdanielmarino.com/">My Bookshelf</a>
-      </h2>
-      <small>A private listing of books I’ve read or want to read.</small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://starzonmyarmz.itch.io/cssecape-room">CSScape Room</a>
-      </h2>
-      <small>An escape room game built entirely with HTML and CSS.</small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://daily-inspirational-word.iamdanielmarino.com/">Daily Inspirational Word</a>
-      </h2>
-      <small>A daily motivational word delivered fresh each day.</small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://bible-in-a-year.iamdanielmarino.com/">Printable Bible in a Year</a>
-      </h2>
-      <small>A minimal, printable schedule to read the Bible in one year.</small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://remojibus.iamdanielmarino.com/">Remojibus</a>
-      </h2>
-      <small>A word-guessing puzzle game where you decode emojis.</small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://starzonmyarmz.itch.io/rmg">RMG</a>
-      </h2>
-      <small>A design project by Brandunino.</small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://states.iamdanielmarino.com/">State Mottos</a>
-      </h2>
-      <small>Hand-lettered illustrations of all 50 US state mottos.</small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://til.iamdanielmarino.com/">TIL</a>
-      </h2>
-      <small>
-        A vibe coded Astro blog explaining things Claude changed that I didn’t understand —
-        explained… by Claude.
-      </small>
-    </li>
-    <li>
-      <h2>
-        <a href="https://trapped.iamdanielmarino.com/">trapped</a>
-      </h2>
-      <small>A mobile game that uses device motion sensors.</small>
-    </li>
-  </ul>
+  {
+    sections.map(({ title, items }) => (
+      <section class="projects">
+        <h2>{title}</h2>
+        <ul>
+          {items.map((project) => {
+            const { title, blurb, url, icon } = project.data
+            return (
+              <li>
+                <Image src={icon} alt="" width={224} class="project-icon" />
+                <div>
+                  <h3>
+                    <a href={hasPage(project) ? `/projects/${project.id}/` : url}>{title}</a>
+                  </h3>
+                  <p>{blurb}</p>
+                  <ProjectMeta project={project} />
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </section>
+    ))
+  }
 </Base>

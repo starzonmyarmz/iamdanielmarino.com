@@ -206,6 +206,64 @@ nav {
   }
 }
 
+.projects {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    list-style: none;
+    margin: var(--space-md) 0 0;
+    padding: 0;
+  }
+
+  li {
+    align-items: start;
+    display: grid;
+    gap: var(--space-sm) var(--space-md);
+    grid-template-columns: 4.5rem 1fr;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 6rem 1fr;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-block: 0.25rem;
+  }
+}
+
+.project-icon {
+  aspect-ratio: 1;
+  border-radius: 22%;
+  height: auto;
+  outline: 1px solid light-dark(rgb(0 0 0 / 0.08), rgb(255 255 255 / 0.08));
+  outline-offset: -1px;
+  width: 100%;
+}
+
+.project-meta {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+}
+
+article .project-image {
+  margin-block-end: var(--space-md);
+  max-height: 36rem;
+  object-fit: contain;
+  object-position: left;
+  width: auto;
+  max-width: 100%;
+}
+
 header {
   margin-bottom: 2.75rem;
 }
