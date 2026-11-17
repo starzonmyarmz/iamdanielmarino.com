@@ -265,22 +265,6 @@ nav {
   width: 100%;
 }
 
-.project-meta {
-  align-items: baseline;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.75rem;
-}
-
-article .project-image {
-  margin-block-end: var(--space-md);
-  max-height: 36rem;
-  object-fit: contain;
-  object-position: left;
-  width: auto;
-  max-width: 100%;
-}
-
 header {
   margin-bottom: 2.75rem;
 }

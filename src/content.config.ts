@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from "astro:content"
+import { defineCollection, z } from "astro:content"
 import { glob } from "astro/loaders"
 import { projectCategories, type ProjectCategory } from "./projectCategories"
 
@@ -29,11 +29,7 @@ const projects = defineCollection({
       category: z.enum(Object.keys(projectCategories) as [ProjectCategory]),
       platforms: z.string().optional(),
       url: z.string().url().optional(),
-      links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
-      image: image().optional(),
       icon: image(),
-      imageAlt: z.string().optional(),
-      posts: z.array(reference("posts")).default([]),
     }),
 })
 
