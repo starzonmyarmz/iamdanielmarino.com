@@ -27,7 +27,6 @@ const projects = defineCollection({
       title: z.string(),
       blurb: z.string(),
       category: z.enum(Object.keys(projectCategories) as [ProjectCategory]),
-      year: z.number(),
       platforms: z.string().optional(),
       url: z.string().url().optional(),
       links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),

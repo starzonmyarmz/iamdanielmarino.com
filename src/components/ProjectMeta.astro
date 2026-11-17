@@ -5,10 +5,14 @@ interface ProjectMetaProps {
   project: CollectionEntry<"projects">
 }
 
-const { year, platforms } = Astro.props.project.data
+const { platforms } = Astro.props.project.data
 ---
 
-<small class="project-meta">
-  {[year, platforms].filter(Boolean).join(" · ")}
-  <slot />
-</small>
+{
+  (platforms || Astro.slots.has("default")) && (
+    <small class="project-meta">
+      {platforms}
+      <slot />
+    </small>
+  )
+}

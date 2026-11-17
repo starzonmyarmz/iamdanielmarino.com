@@ -13,7 +13,7 @@ const sections = Object.entries(projectCategories).map(([category, title]) => ({
   title,
   items: projects
     .filter((project) => project.data.category === category)
-    .sort((a, b) => b.data.year - a.data.year || a.data.title.localeCompare(b.data.title)),
+    .sort((a, b) => a.data.title.localeCompare(b.data.title)),
 }))
 ---
 
