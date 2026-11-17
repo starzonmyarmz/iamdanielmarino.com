@@ -134,6 +134,23 @@ svg {
   vertical-align: middle;
 }
 
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+}
+
+pre {
+  border-radius: var(--space-sm);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-block: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+
+  code {
+    font-size: inherit;
+  }
+}
+
 small {
   color: light-dark(var(--text-medium-lt), var(--text-medium-dk));
   font-size: 1rem;
