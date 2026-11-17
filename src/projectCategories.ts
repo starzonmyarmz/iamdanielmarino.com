@@ -4,7 +4,7 @@ export const projectCategories = {
   games: "Games",
   assets: "Game assets",
   art: "Art and lettering",
-  records: "Records",
+  music: "Music",
 } as const
 
 export type ProjectCategory = keyof typeof projectCategories
