@@ -24,26 +24,24 @@ const sections = Object.entries(projectCategories).map(([category, title]) => ({
     some are experiments, and a few are just for me.
   </p>
 
-  {
-    sections.map(({ title, items }) => (
-      <section class="projects">
-        <h2>{title}</h2>
-        <ul>
-          {items.map((project) => {
-            const { title, blurb, url, icon, platforms } = project.data
-            return (
-              <li>
-                <Image src={icon} alt="" width={224} class="project-icon" />
-                <div>
-                  <h3>{url ? <a href={url}>{title}</a> : title}</h3>
-                  <p>{blurb}</p>
-                  {platforms && <small>{platforms}</small>}
-                </div>
-              </li>
-            )
-          })}
-        </ul>
-      </section>
-    ))
-  }
+  {sections.map(({ title, items }) => (
+    <section class="projects">
+      <h2>{title}</h2>
+      <ul>
+        {items.map((project) => {
+          const { title, blurb, url, icon, platforms } = project.data
+          return (
+            <li>
+              <Image src={icon} alt="" width={224} class="project-icon" />
+              <div>
+                <h3>{url ? <a href={url}>{title}</a> : title}</h3>
+                <p>{blurb}</p>
+                {platforms && <small>{platforms}</small>}
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+    </section>
+  ))}
 </Base>

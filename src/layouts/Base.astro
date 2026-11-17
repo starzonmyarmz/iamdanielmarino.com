@@ -40,22 +40,31 @@ const ariaCurrent = (href: string) =>
       as="font"
       type="font/woff2"
       crossorigin
-    />  </head>
+    />
+  </head>
 
   <body>
     <nav>
       <ul>
         <li>
-          <a href="/" id="logo" aria-label="Daniel Marino" aria-current={ariaCurrent("/")}>DM</a>
+          <a href="/" id="logo" aria-label="Daniel Marino" aria-current={ariaCurrent("/")}>
+            DM
+          </a>
         </li>
         <li>
-          <a href="/work" aria-current={ariaCurrent("/work")}>Work</a>
+          <a href="/work" aria-current={ariaCurrent("/work")}>
+            Work
+          </a>
         </li>
         <li>
-          <a href="/projects" aria-current={ariaCurrent("/projects")}>Projects</a>
+          <a href="/projects" aria-current={ariaCurrent("/projects")}>
+            Projects
+          </a>
         </li>
         <li>
-          <a href="/posts" aria-current={ariaCurrent("/posts")}>Posts</a>
+          <a href="/posts" aria-current={ariaCurrent("/posts")}>
+            Posts
+          </a>
         </li>
         <li>
           <a href="/feed.xml">Feed</a>
@@ -64,29 +73,25 @@ const ariaCurrent = (href: string) =>
     </nav>
 
     <main>
-      {
-        showHeadshot && (
-          <img
-            src="/images/headshot.webp"
-            alt="Headshot of Daniel Marino"
-            width="128"
-            height="128"
-            id="headshot"
-          />
-        )
-      }
+      {showHeadshot && (
+        <img
+          src="/images/headshot.webp"
+          alt="Headshot of Daniel Marino"
+          width="128"
+          height="128"
+          id="headshot"
+        />
+      )}
       <slot />
     </main>
 
-    {
-      import.meta.env.PROD && (
-        <script
-          is:inline
-          data-goatcounter="https://starzonmyarmz.goatcounter.com/count"
-          async
-          src="//gc.zgo.at/count.js"
-        />
-      )
-    }
+    {import.meta.env.PROD && (
+      <script
+        is:inline
+        data-goatcounter="https://starzonmyarmz.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+      />
+    )}
   </body>
 </html>
