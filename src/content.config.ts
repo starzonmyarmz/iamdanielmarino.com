@@ -30,6 +30,7 @@ const projects = defineCollection({
       platforms: z.string().optional(),
       url: z.string().url().optional(),
       price: z.string().optional(),
+      storeUrl: z.string().url().optional(),
       icon: image(),
     }),
 })
