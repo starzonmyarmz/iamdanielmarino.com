@@ -4,5 +4,5 @@ blurb: Big, blocky and unapologetically square. A 10×16 monospaced pixel font, 
 icon: ../../assets/images/projects/icons/onoff-font.png
 category: assets
 platforms: OTF, TTF, WOFF2
-url: https://starzonmyarmz.itch.io/onoff
+url: https://danielmarino.gumroad.com/l/onoff
 ---
