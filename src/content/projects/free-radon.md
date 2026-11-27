@@ -4,5 +4,6 @@ blurb: Four lo-fi tracks I wrote during a hard stretch and released as a way of 
 icon: ../../assets/images/projects/icons/free-radon.png
 category: albums
 url: https://danielmarino.bandcamp.com/album/free-radon
+price: $3
 posts: [free-radon]
 ---

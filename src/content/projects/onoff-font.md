@@ -5,4 +5,5 @@ icon: ../../assets/images/projects/icons/onoff-font.png
 category: assets
 platforms: OTF, TTF, WOFF2
 url: https://danielmarino.gumroad.com/l/onoff
+price: $5
 ---

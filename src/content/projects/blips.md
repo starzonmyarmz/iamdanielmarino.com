@@ -5,4 +5,5 @@ icon: ../../assets/images/projects/icons/blips.svg
 category: assets
 platforms: WAV, OGG
 url: https://danielmarino.gumroad.com/l/blips
+price: $5
 ---

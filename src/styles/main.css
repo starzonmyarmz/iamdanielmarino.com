@@ -254,6 +254,10 @@ nav {
     font-size: 1rem;
     margin-block: 0.25rem;
   }
+
+  small a {
+    color: inherit;
+  }
 }
 
 .project-icon {

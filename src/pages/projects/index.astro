@@ -12,6 +12,16 @@ const sections = Object.entries(projectCategories).map(([category, title]) => ({
     .filter((project) => project.data.category === category)
     .sort((a, b) => a.data.title.localeCompare(b.data.title)),
 }))
+
+const buyLabels: Record<string, (price: string) => string> = {
+  "gumroad.com": (price) => `${price} on Gumroad`,
+  "bandcamp.com": (price) => `${price} on Bandcamp`,
+}
+
+const buyLabel = (url: string, price: string) => {
+  const { hostname } = new URL(url)
+  return Object.entries(buyLabels).find(([host]) => hostname.endsWith(host))?.[1](price)
+}
 ---
 
 <Base title="Projects">
@@ -29,14 +39,21 @@ const sections = Object.entries(projectCategories).map(([category, title]) => ({
       <h2>{title}</h2>
       <ul>
         {items.map((project) => {
-          const { title, blurb, url, icon, platforms } = project.data
+          const { title, blurb, url, icon, platforms, price } = project.data
+          const label = url && price && buyLabel(url, price)
           return (
             <li>
               <Image src={icon} alt="" width={224} class="project-icon" />
               <div>
                 <h3>{url ? <a href={url}>{title}</a> : title}</h3>
                 <p>{blurb}</p>
-                {platforms && <small>{platforms}</small>}
+                {(platforms || label) && (
+                  <small>
+                    {platforms}
+                    {platforms && label && " · "}
+                    {label && <a href={url}>{label}</a>}
+                  </small>
+                )}
               </div>
             </li>
           )
@@ -44,4 +61,6 @@ const sections = Object.entries(projectCategories).map(([category, title]) => ({
       </ul>
     </section>
   ))}
+
+  <script is:inline src="https://gumroad.com/js/gumroad.js" async></script>
 </Base>

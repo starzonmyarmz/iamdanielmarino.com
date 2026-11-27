@@ -29,6 +29,7 @@ const projects = defineCollection({
       category: z.enum(Object.keys(projectCategories) as [ProjectCategory]),
       platforms: z.string().optional(),
       url: z.string().url().optional(),
+      price: z.string().optional(),
       icon: image(),
     }),
 })

@@ -4,4 +4,5 @@ blurb: The jazzy, Vince Guaraldi–inspired soundtrack I wrote for trapped. It s
 icon: ../../assets/images/projects/icons/trapped-soundtrack.png
 category: albums
 url: https://danielmarino.bandcamp.com/album/trapped-soundtrack
+price: $5
 ---
